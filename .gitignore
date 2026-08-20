@@ -1,0 +1,18 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# MinerU / 转换产物缓存
+output/
+mineru.json
+
+# 模型与缓存
+*.pt
+*.onnx
+.models/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
