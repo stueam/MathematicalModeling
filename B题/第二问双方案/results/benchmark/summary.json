@@ -1,0 +1,112 @@
+{
+  "seed": 20260912,
+  "samples_per_view_and_radius": 100,
+  "unique_worlds": 900,
+  "observation_trials": 2700,
+  "algorithms": {
+    "bayes": {
+      "native": {
+        "trials": 900,
+        "valid_trials": 895,
+        "failed_trials": 5,
+        "mean_error_m": 9.541899541588574,
+        "median_error_m": 8.302027673995383,
+        "p90_error_m": 17.39745782606234,
+        "mean_cover_radius_m": 20.906999980704253,
+        "truth_coverage": 0.9,
+        "truth_coverage_with_arc_tolerance": 0.9044444444444445,
+        "clearance_success_rate": 0.9344444444444444,
+        "certified_20m_cover_rate": 0.5144444444444445
+      },
+      "common_unknown_R": {
+        "trials": 900,
+        "valid_trials": 900,
+        "failed_trials": 0,
+        "mean_error_m": 9.304010400168732,
+        "median_error_m": 8.063180824978135,
+        "p90_error_m": 17.04969726412382,
+        "mean_cover_radius_m": 20.928886836050125,
+        "truth_coverage": 1.0,
+        "truth_coverage_with_arc_tolerance": 1.0,
+        "clearance_success_rate": 0.9477777777777778,
+        "certified_20m_cover_rate": 0.5244444444444445
+      },
+      "direction_rate": 1.0,
+      "no_signal_rate": 0.0,
+      "mean_selection_seconds": 30.934035652000603,
+      "mean_move_to_second_point_m": 875.741098697654
+    },
+    "fixed_assumed": {
+      "native": {
+        "trials": 900,
+        "valid_trials": 833,
+        "failed_trials": 67,
+        "mean_error_m": 8.80155351235738,
+        "median_error_m": 7.434777144258429,
+        "p90_error_m": 15.28423071094822,
+        "mean_cover_radius_m": 18.668176612552937,
+        "truth_coverage": 0.9088888888888889,
+        "truth_coverage_with_arc_tolerance": 0.9088888888888889,
+        "clearance_success_rate": 0.8933333333333333,
+        "certified_20m_cover_rate": 0.5822222222222222
+      },
+      "common_unknown_R": {
+        "trials": 900,
+        "valid_trials": 900,
+        "failed_trials": 0,
+        "mean_error_m": 9.242710264488275,
+        "median_error_m": 7.7230695293459135,
+        "p90_error_m": 17.17161719090219,
+        "mean_cover_radius_m": 21.072043979212864,
+        "truth_coverage": 1.0,
+        "truth_coverage_with_arc_tolerance": 1.0,
+        "clearance_success_rate": 0.9422222222222222,
+        "certified_20m_cover_rate": 0.57
+      },
+      "direction_rate": 1.0,
+      "no_signal_rate": 0.0,
+      "mean_selection_seconds": 3.6259971659989483,
+      "mean_move_to_second_point_m": 840.7537722164315
+    },
+    "fixed_oracle": {
+      "native": {
+        "trials": 900,
+        "valid_trials": 900,
+        "failed_trials": 0,
+        "mean_error_m": 8.95617779304733,
+        "median_error_m": 7.821968398839365,
+        "p90_error_m": 16.264861520628568,
+        "mean_cover_radius_m": 20.06103510374977,
+        "truth_coverage": 1.0,
+        "truth_coverage_with_arc_tolerance": 1.0,
+        "clearance_success_rate": 0.9622222222222222,
+        "certified_20m_cover_rate": 0.5266666666666666
+      },
+      "common_unknown_R": {
+        "trials": 900,
+        "valid_trials": 900,
+        "failed_trials": 0,
+        "mean_error_m": 9.012464501286926,
+        "median_error_m": 7.810658961034691,
+        "p90_error_m": 16.545737674391784,
+        "mean_cover_radius_m": 20.30760353393131,
+        "truth_coverage": 1.0,
+        "truth_coverage_with_arc_tolerance": 1.0,
+        "clearance_success_rate": 0.9566666666666667,
+        "certified_20m_cover_rate": 0.5233333333333333
+      },
+      "direction_rate": 1.0,
+      "no_signal_rate": 0.0,
+      "mean_selection_seconds": 3.68819877866675,
+      "mean_move_to_second_point_m": 851.9876361686003
+    }
+  },
+  "paired_common_error_bayes_minus_fixed_assumed": {
+    "mean_difference_m": 0.06130013568045765,
+    "conditional_bootstrap_95_interval_m": [
+      -0.004789748219594952,
+      0.13174243922500298
+    ],
+    "interpretation": "Negative favors Bayesian; interval is conditional on the selected views/radii/plans, not generalization to all scenes."
+  }
+}
