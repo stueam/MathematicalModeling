@@ -1,0 +1,16 @@
+{
+  "input_label": "DEMO",
+  "x1": 0,
+  "y1": 0,
+  "theta1_deg": 359,
+  "R0": 1200,
+  "radial_bins": 48,
+  "angular_bins": 6,
+  "adaptive_refinement": true,
+  "max_refinement_level": 1,
+  "angle_bin_width_deg": 1,
+  "candidate_grid_step": 600,
+  "refine_levels": 2,
+  "refine_keep": 4,
+  "output_dir": "results/demo_fixed"
+}

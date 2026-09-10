@@ -1,0 +1,17 @@
+{
+  "input_label": "DEMO",
+  "x1": 0,
+  "y1": 0,
+  "theta1_deg": 359,
+  "R_min": 1000,
+  "R_max": 1500,
+  "credible_mass": 0.95,
+  "radial_bins": 256,
+  "angular_bins": 16,
+  "adaptive_refinement": false,
+  "angle_bin_width_deg": 0.5,
+  "candidate_grid_step": 600,
+  "refine_levels": 2,
+  "refine_keep": 4,
+  "output_dir": "results/demo_bayes"
+}

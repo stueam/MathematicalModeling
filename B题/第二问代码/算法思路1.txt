@@ -1,0 +1,328 @@
+Q2 Conduct Instructions
+Bayesian Selection of the Second Detection Point
+
+1. Objective
+
+Question 2 should be conducted by evaluating how much uncertainty remains after a second detection.
+
+Do not directly choose one geometrically “best” point. Instead, evaluate many possible second detection points S2 and compute the expected localization radius after the second observation.
+
+Use:
+
+J(S2) = E[rho(O, S2)]
+
+where O is the possible second observation and rho(O, S2) is the minimum-cover radius of the posterior source-location region after observing O.
+
+A smaller J(S2) means a better expected localization result.
+
+The final answer should be a near-optimal region of S2 rather than only one point.
+
+
+2. Hidden State and Prior
+
+The hidden state should include both the true source position
+
+G = (X, Y)
+
+and the fixed but unknown effective receiving radius
+
+R.
+
+The source position satisfies:
+
+X^2 + Y^2 <= 1800^2.
+
+The receiving radius satisfies:
+
+1000 <= R <= 1500.
+
+Maintain the joint posterior:
+
+p(G, R | observations).
+
+If no further distributional information is available, use a uniform prior over the target disk for G and a uniform prior on [1000,1500] for R.
+
+These are modeling assumptions because the problem statement only specifies ranges.
+
+
+3. Observation Model
+
+For a detection point S and hypothetical state (G,R), let d be the distance from S to G and let phi be the true bearing from S to G.
+
+There are three possible observation types.
+
+(1) near:
+If d <= 5 m, the detector returns near and no bearing is available.
+
+This is not a failed observation. It is highly informative because it means the source is within 5 m.
+
+(2) direction:
+If 5 m < d <= R, the detector returns a measured bearing.
+
+The bearing error is bounded by +/-1 degree. For Bayesian calculation, a simple assumption is a uniform error distribution over [-1 degree, +1 degree].
+
+(3) no_signal:
+If d > R, the detector returns no_signal.
+
+For the omnidirectional source in Question 2, no_signal is still informative because it implies that the current state must satisfy d > R.
+
+
+4. First Bayesian Update
+
+Suppose the first detection point is S1 and the measured bearing is theta1.
+
+For every possible state (G,R), compute:
+
+- the distance d1 from S1 to G;
+- the true bearing phi1 from S1 to G.
+
+A state is compatible with the first direction observation only if:
+
+5 < d1 <= R
+
+and the circular difference between phi1 and theta1 is no greater than 1 degree.
+
+Multiply the prior p(G,R) by the likelihood of this first observation and normalize.
+
+This produces:
+
+p(G,R | first observation).
+
+This update changes both the source-location distribution and the receiving-radius distribution.
+
+For example, if a possible source location is 1350 m from S1, that location is only compatible with receiving radii R >= 1350 m.
+
+Thus the first successful detection already provides information about R.
+
+
+5. Candidate Second Detection Points
+
+Generate a set of possible second detection points S2 over the relevant search area.
+
+A coarse-to-fine search is recommended:
+
+- first evaluate a relatively coarse spatial grid;
+- identify regions with small expected localization radius;
+- then refine only those regions with a finer spatial grid.
+
+For every candidate S2, perform the same prediction-and-update procedure described below.
+
+
+6. Predict the Full Second-Observation Distribution
+
+For each candidate S2 and every possible state (G,R) in the current posterior, determine what observation that state could generate at S2.
+
+The second-observation space consists of:
+
+- near;
+- no_signal;
+- all possible measured bearings from 0 to 360 degrees.
+
+Because bearing is continuous, discretize it into small angular bins for numerical evaluation, for example bins of width 0.5 degree.
+
+For each candidate S2, compute:
+
+P(near | S2),
+P(no_signal | S2),
+
+and
+
+P(bearing lies in bin k | S2)
+
+for every angular bin k.
+
+These probabilities must be obtained by integrating or summing over the current joint posterior p(G,R).
+
+The different bearing bins are not equally likely. Their probabilities depend on the first posterior distribution.
+
+
+7. Bearing Prediction with Measurement Error
+
+For a possible state (G,R), let phi2 be the true bearing from S2 to G.
+
+If 5 < distance(G,S2) <= R, then a direction observation is possible.
+
+Under the uniform +/-1 degree error assumption, the measured bearing may lie anywhere in:
+
+[phi2 - 1 degree, phi2 + 1 degree].
+
+Each state therefore contributes probability only to angular bins that overlap this interval.
+
+After summing over all posterior states, obtain the predictive probability of every possible second bearing bin.
+
+
+8. Posterior Update for Each Possible Second Observation
+
+Treat every possible second observation O separately.
+
+If O = near:
+retain only states satisfying distance(G,S2) <= 5 m.
+
+If O = no_signal:
+retain only states satisfying distance(G,S2) > R.
+
+If O is a bearing bin:
+retain or reweight only states that both
+
+5 < distance(G,S2) <= R
+
+and could produce a measured bearing inside that bin under the +/-1 degree error model.
+
+After applying the likelihood, normalize the distribution.
+
+This gives:
+
+p(G,R | first observation, second observation O, S2).
+
+
+9. Marginalize the Receiving Radius
+
+The localization quality concerns the source position, not R itself.
+
+Therefore, after each possible second observation, marginalize R out of the joint posterior and obtain:
+
+p(G | observations).
+
+In a particle representation, this means retaining the particle weights but ignoring the R coordinate when evaluating source-position uncertainty.
+
+
+10. Localization Radius After Each Possible Observation
+
+For the posterior source-location distribution after a possible second observation, construct a posterior location region, for example a 95% posterior credible region.
+
+Then compute the minimum enclosing circle of that region.
+
+Let:
+
+rho(O,S2)
+
+be the radius of that minimum enclosing circle.
+
+A smaller rho means that the source location is more concentrated after the second observation.
+
+If O = near, the localization radius should naturally be no greater than about 5 m.
+
+If O = no_signal, do not assign an arbitrary penalty. Perform the Bayesian update normally and compute the resulting localization radius, because no_signal still carries information.
+
+
+11. Main Evaluation Criterion
+
+For each candidate S2, combine all possible second observations using their predictive probabilities.
+
+Compute:
+
+J(S2)
+=
+P(near | S2) * rho(near,S2)
++
+P(no_signal | S2) * rho(no_signal,S2)
++
+sum over all bearing bins k:
+P(bin k | S2) * rho(bin k,S2).
+
+Thus:
+
+J(S2) = E[rho(O,S2)].
+
+This expected localization radius should be the main optimization criterion.
+
+A smaller J(S2) means that, on average, one more detection at S2 leaves less positional uncertainty.
+
+
+12. Why Expectation Should Be Used
+
+Expectation is preferable to a hard success threshold because it preserves the full difference between possible localization outcomes.
+
+For example, a threshold rule based only on whether rho <= 5 m treats 0.5 m and 4.9 m as equally good, and 5.1 m and 100 m as equally bad.
+
+Using E[rho] avoids this discontinuity.
+
+The 5 m threshold can still be reported as a useful high-precision reference, and 20 m can be reported as the practical clearance threshold, but neither needs to be the primary optimization objective.
+
+
+13. Candidate Region
+
+After calculating J(S2) over all candidate second detection points, determine:
+
+Jmin = min J(S2).
+
+Do not return only the point that attains Jmin.
+
+Instead define a near-optimal region, for example:
+
+C = {S2 : J(S2) <= 1.05 * Jmin}.
+
+This means every point in C has an expected localization radius no more than 5% worse than the theoretical optimum.
+
+The 5% tolerance is a modeling parameter and can be adjusted or examined in sensitivity analysis.
+
+This near-optimal level set is the final second-detection-point candidate region.
+
+
+14. Recommended Numerical Representation
+
+The joint posterior p(G,R) may be represented by either:
+
+- a discretized grid in position and receiving radius; or
+- a set of weighted particles representing possible states (G,R).
+
+The particle approach is usually more computationally convenient because it avoids constructing a full three-dimensional grid in X, Y, and R.
+
+Regardless of representation, the logic of the Bayesian update must remain the same.
+
+
+15. Recommended Final Outputs
+
+The final Question 2 analysis should report:
+
+1. the posterior source-location distribution after the first detection;
+2. the expected localization-radius field J(x,y) for candidate second detection points;
+3. a heatmap or contour plot of J(x,y);
+4. the minimum value Jmin;
+5. the near-optimal candidate region, such as J(x,y) <= 1.05 Jmin;
+6. representative second detection points and their expected localization radii;
+7. optionally, the probabilities of near, no_signal, and direction outcomes at representative points;
+8. sensitivity analysis for angular-bin width, posterior resolution, the assumed distribution of R, the assumed bearing-error distribution, and the near-optimal tolerance.
+
+
+16. Complete Procedure
+
+Step 1:
+Construct the prior joint distribution of source position G and receiving radius R.
+
+Step 2:
+Use the first detection point and first measured bearing to update the joint posterior p(G,R).
+
+Step 3:
+Generate candidate second detection points S2.
+
+Step 4:
+For each S2, predict the complete distribution of possible second observations:
+near, no_signal, and all bearing bins.
+
+Step 5:
+For each possible second observation, perform another Bayesian update of the joint state p(G,R).
+
+Step 6:
+Marginalize R and obtain the posterior distribution of source position G.
+
+Step 7:
+Construct the posterior source-location region and calculate its minimum enclosing-circle radius rho.
+
+Step 8:
+Weight all possible rho values by the probabilities of their corresponding second observations.
+
+Step 9:
+Compute:
+
+J(S2) = E[rho | S2].
+
+Step 10:
+Repeat the calculation for all candidate second detection points.
+
+Step 11:
+Find Jmin and define a near-optimal level set as the final candidate region.
+
+Central principle:
+
+Choose the region of second detection points that minimizes the expected remaining localization radius after one additional observation.

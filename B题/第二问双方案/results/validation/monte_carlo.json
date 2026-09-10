@@ -1,0 +1,80 @@
+{
+  "fixed": {
+    "n": 60000,
+    "point": [
+      600.0,
+      300.0
+    ],
+    "max_absolute_error": 0.002063331603897254,
+    "total_variation": 0.03515334159610843,
+    "near_mc": 0.0,
+    "near_predicted": 0.0,
+    "no_signal_mc": 0.0,
+    "no_signal_predicted": 0.0
+  },
+  "fixed_with_no_signal": {
+    "n": 60000,
+    "point": [
+      0.0,
+      800.0
+    ],
+    "max_absolute_error": 0.0018522272413613776,
+    "total_variation": 0.012827843018102615,
+    "near_mc": 0.0,
+    "near_predicted": 0.0,
+    "no_signal_mc": 0.46255,
+    "no_signal_predicted": 0.4614541090618822
+  },
+  "fixed_with_near": {
+    "n": 60000,
+    "point": [
+      800.0,
+      -14.0
+    ],
+    "max_absolute_error": 0.0019189681542513687,
+    "total_variation": 0.03566614818678643,
+    "near_mc": 0.003033333333333333,
+    "near_predicted": 0.003124353295609747,
+    "no_signal_mc": 0.0,
+    "no_signal_predicted": 0.0
+  },
+  "bayes": {
+    "n": 60000,
+    "point": [
+      600.0,
+      300.0
+    ],
+    "max_absolute_error": 0.0009265315024478167,
+    "total_variation": 0.03620789372284619,
+    "near_mc": 0.0,
+    "near_predicted": 0.0,
+    "no_signal_mc": 0.0,
+    "no_signal_predicted": 0.0
+  },
+  "bayes_with_no_signal": {
+    "n": 60000,
+    "point": [
+      0.0,
+      800.0
+    ],
+    "max_absolute_error": 0.002801392003234482,
+    "total_variation": 0.018668211872505464,
+    "near_mc": 0.0,
+    "near_predicted": 0.0,
+    "no_signal_mc": 0.4234833333333333,
+    "no_signal_predicted": 0.42068194133009884
+  },
+  "bayes_with_near": {
+    "n": 60000,
+    "point": [
+      800.0,
+      -14.0
+    ],
+    "max_absolute_error": 0.0013848259115836759,
+    "total_variation": 0.028516101238584494,
+    "near_mc": 0.003033333333333333,
+    "near_predicted": 0.0034693699510438686,
+    "no_signal_mc": 0.0,
+    "no_signal_predicted": 0.0
+  }
+}
