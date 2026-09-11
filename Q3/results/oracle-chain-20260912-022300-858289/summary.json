@@ -1,0 +1,52 @@
+{
+  "official_N_cases": 152,
+  "official_N_counts_10_to_16": [
+    20,
+    18,
+    22,
+    23,
+    22,
+    21,
+    26
+  ],
+  "uniform_N_test": {
+    "statistic": 1.7236842105263157,
+    "degrees_of_freedom": 6,
+    "p_value": 0.9432781968934942,
+    "expected_cases_each": 21.714285714285715
+  },
+  "MC_samples": 100000,
+  "oracle_official152_N_reweighted_pooled_s_per_source": 135.64547168305,
+  "oracle_official152_N_reweighted_case_equal_s_per_source": 137.3257958193339,
+  "official_algorithm3": {
+    "rounds": 50,
+    "sources": 669,
+    "all_cleared": true,
+    "pooled_s_per_source": 214.8760778251121,
+    "total_virtual_s": 143752.096065,
+    "cost_totals_s": {
+      "move_s": 107110.096065,
+      "switch_s": 5262.0,
+      "measure_s": 27735.0,
+      "clear_success_s": 3345.0,
+      "clear_failure_s": 300.0
+    },
+    "cost_s_per_source": {
+      "move_s": 160.10477737668162,
+      "switch_s": 7.865470852017937,
+      "measure_s": 41.45739910313901,
+      "clear_success_s": 5.0,
+      "clear_failure_s": 0.4484304932735426
+    },
+    "measurements_per_source": 8.291479820627803,
+    "mean_real_time_s": 3.308324745279715
+  },
+  "scale_comparison_NOT_paired": {
+    "pure_movement_oracle_s_per_source": 135.64547168305,
+    "oracle_plus_one_successful_clear_s_per_source": 140.64547168305,
+    "observed_minus_oracle_and_clear_s_per_source": 74.2306061420621,
+    "observed_movement_minus_oracle_s_per_source": 24.45930569363162,
+    "actual_full_cost_div_oracle_plus_clear": 1.5277852550371733
+  },
+  "limits": "Uniform spatial model; 20m-disk optimum not solved; mixed-map comparison is not an optimality ratio."
+}

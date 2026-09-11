@@ -1,0 +1,242 @@
+{
+  "snapshot_at": "2026-09-12T02:21:36.934738",
+  "official_Q3_practice_cases": 152,
+  "total_sources": 2000,
+  "mean_sources": 13.157894736842104,
+  "mean_approx_t95": [
+    12.835734211746209,
+    13.480055261938
+  ],
+  "median_sources": 13.0,
+  "sample_standard_deviation": 2.0102560317903784,
+  "frequencies": [
+    {
+      "source_count": 10,
+      "cases": 20,
+      "frequency": 0.13157894736842105,
+      "individual_wilson_95": [
+        0.08681711524141389,
+        0.1945037807028201
+      ]
+    },
+    {
+      "source_count": 11,
+      "cases": 18,
+      "frequency": 0.11842105263157894,
+      "individual_wilson_95": [
+        0.07623380996058976,
+        0.17941997512450975
+      ]
+    },
+    {
+      "source_count": 12,
+      "cases": 22,
+      "frequency": 0.14473684210526316,
+      "individual_wilson_95": [
+        0.09756513844061371,
+        0.2094228683627548
+      ]
+    },
+    {
+      "source_count": 13,
+      "cases": 23,
+      "frequency": 0.1513157894736842,
+      "individual_wilson_95": [
+        0.10299520465345144,
+        0.21682635757948435
+      ]
+    },
+    {
+      "source_count": 14,
+      "cases": 22,
+      "frequency": 0.14473684210526316,
+      "individual_wilson_95": [
+        0.09756513844061371,
+        0.2094228683627548
+      ]
+    },
+    {
+      "source_count": 15,
+      "cases": 21,
+      "frequency": 0.13815789473684212,
+      "individual_wilson_95": [
+        0.09217174495582145,
+        0.20198270641797986
+      ]
+    },
+    {
+      "source_count": 16,
+      "cases": 26,
+      "frequency": 0.17105263157894737,
+      "individual_wilson_95": [
+        0.11948758336532714,
+        0.2388346451563104
+      ]
+    }
+  ],
+  "uniform_10_to_16_test": {
+    "statistic": 1.7236842105263157,
+    "degrees_of_freedom": 6,
+    "p_value": 0.9432781968934942,
+    "expected_cases_each": 21.714285714285715
+  },
+  "data_checks": {
+    "scanned_summary_files": 420,
+    "matching_individual_records": 152,
+    "verified_duplicate_copies": 0,
+    "unresolved_unique_case_count": 0,
+    "aggregate_codes_without_verified_individual_record": [],
+    "count_conflicts": 0,
+    "unreadable_summary_files": 0,
+    "known_total_cases_with_errors_or_not_all_cleared": 0
+  },
+  "per_batch": [
+    {
+      "batch": "第三问-算法2/results/official-practice-20260911-121809",
+      "cases": 1,
+      "mean_sources": 10.0,
+      "frequencies_10_to_16": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "batch": "第三问-算法2/results/official-practice-20260911-122035",
+      "cases": 2,
+      "mean_sources": 11.5,
+      "frequencies_10_to_16": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "batch": "第三问-算法2/results/official-practice-20260911-154218",
+      "cases": 1,
+      "mean_sources": 15.0,
+      "frequencies_10_to_16": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "batch": "第三问-算法3/results/20260911-155751-695073",
+      "cases": 3,
+      "mean_sources": 13.333333333333334,
+      "frequencies_10_to_16": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "batch": "第三问-算法3/results/20260911-160539-264350",
+      "cases": 3,
+      "mean_sources": 11.333333333333334,
+      "frequencies_10_to_16": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "batch": "第三问-算法3/results/20260911-160851-534099",
+      "cases": 4,
+      "mean_sources": 11.25,
+      "frequencies_10_to_16": [
+        2,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "batch": "第三问-算法3/results/20260911-195016-431746",
+      "cases": 10,
+      "mean_sources": 14.1,
+      "frequencies_10_to_16": [
+        1,
+        0,
+        1,
+        2,
+        0,
+        3,
+        3
+      ]
+    },
+    {
+      "batch": "第三问-算法3/results/20260911-231356-412606",
+      "cases": 53,
+      "mean_sources": 13.39622641509434,
+      "frequencies_10_to_16": [
+        3,
+        8,
+        7,
+        9,
+        9,
+        7,
+        10
+      ]
+    },
+    {
+      "batch": "第三问-算法3/results/evolution-100-epochs-live/iterations/001/rollout",
+      "cases": 25,
+      "mean_sources": 13.0,
+      "frequencies_10_to_16": [
+        2,
+        4,
+        4,
+        7,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "batch": "第三问-算法3/results/evolution-100-epochs-live/iterations/001/validate",
+      "cases": 50,
+      "mean_sources": 13.14,
+      "frequencies_10_to_16": [
+        9,
+        4,
+        8,
+        3,
+        10,
+        8,
+        8
+      ]
+    }
+  ],
+  "interpretation_limits": [
+    "Only archived official Q3 practice cases with ended-UI total evidence; no local maps or Q4.",
+    "Case codes deduplicated; source_count never substituted by cleared_count.",
+    "Intervals and chi-square reference rely on approximately independent cases from a stable distribution.",
+    "A large p value does not prove the official RNG is uniform; a small p value does not identify its algorithm.",
+    "Archived practice data may have missingness/selection bias; count frequencies do not determine spatial distribution."
+  ]
+}
