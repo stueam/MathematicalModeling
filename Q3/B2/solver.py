@@ -1,0 +1,19 @@
+"""Stable strategy factory; receives observations through an action callback only."""
+from joint_strategy import JointStrategy
+from flexible_b3 import FlexibleB3
+from peripheral_prior import PeripheralProposal
+
+LATEST_CONFIG = dict(proposal_radius=1750, trigger_count=0, route_prior=True,
+                     share_range=1000, cross_threshold=.1, trial=80, lateral=30,
+                     sweeps=2, range_bias=0, reuse_sector=True, sectors=7, skip_far=True)
+VALIDATED_CONFIG = dict(share_range=1000, cross_threshold=.1, trial=80, lateral=30,
+                        sweeps=2, range_bias=0, reuse_sector=True, sectors=8)
+
+def build_strategy(action, method="latest"):
+    if method == "latest":
+        return PeripheralProposal(action, **LATEST_CONFIG)
+    if method == "b2":
+        return JointStrategy(action, stop_at_max=True)
+    if method == "validated":
+        return FlexibleB3(action, **VALIDATED_CONFIG)
+    raise ValueError(f"Unknown method: {method}")
