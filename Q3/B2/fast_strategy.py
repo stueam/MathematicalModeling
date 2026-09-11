@@ -28,7 +28,7 @@ class FastStrategy(Strategy):
                 continue
             if channel not in self.polys:
                 self.measure(point,channel)
-            elif envelope_circle(self.polys[channel])[1]>19.8:
+            elif self.region_circle(self.polys[channel])[1]>19.8:
                 if not any(np.linalg.norm(point-p)<1 for p,_ in self.measurements[channel]):
                     self.measure(point,channel)
         self.scan_points.append(point)
@@ -49,7 +49,7 @@ class FastStrategy(Strategy):
         # A single source is anywhere along a <=1500m ray segment. Moving
         # near its midpoint with a modest lateral offset avoids a 1000m dogleg.
         if len(self.measurements[channel])==1:
-            center,radius=envelope_circle(self.polys[channel])
+            center,radius=self.region_circle(self.polys[channel])
             point,bearing=self.measurements[channel][0]
             angle=math.radians(bearing)
             normal=np.array([-math.sin(angle),math.cos(angle)])
@@ -68,7 +68,7 @@ class FastStrategy(Strategy):
         while len(self.cleared|self.absent)<20:
             pending=set(self.polys)-self.cleared
             if pending:
-                channel=min(pending,key=lambda c:(np.linalg.norm(envelope_circle(self.polys[c])[0]-self.position),c))
+                channel=min(pending,key=lambda c:(np.linalg.norm(self.region_circle(self.polys[c])[0]-self.position),c))
                 self.localize(channel)
                 self.scan_here()
             else:

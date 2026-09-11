@@ -2,6 +2,17 @@
 
 本目录按项目约定命名为 **B2**，包含原始 B2 基线和最新优化候选。统一入口为 `solver.build_strategy`；最新候选内部类名为 `PeripheralProposal`，继承 `FlexibleB3`。这些内部名称表示迭代关系，不是另一道题。
 
+## Q2 期望选点增强（2026-09-11）
+
+新增可选方法 `mec`（最小包围圆）和 `q2`（最小包围圆 + 期望时间补测选点）；默认仍为 `latest`。在 140 个新种子场景中，三者均完成全部 1820 个源，`q2` 的平均每源虚拟耗时由 239.21 s 降至 235.74 s，改善约 1.45%；98 局更快，42 局更慢。单独 `mec` 基本持平。本地模拟结果不代表官方评测保证。
+
+```powershell
+python -B -X utf8 benchmark.py --methods latest mec q2 --generate-seed 2026091101 --output outputs/q2_reproduce
+python -B -X utf8 analyze_q2.py outputs/q2_reproduce
+```
+
+完整方法、假设、敏感性和运行命令见 [Q2 融合实验说明](Q2融合实验说明.md)。[逐场结果](evidence/q2_fresh140_20260911/cases.csv)、[配置与摘要](evidence/q2_fresh140_20260911/summary.json)、[配对统计](evidence/q2_fresh140_20260911/paired_analysis.json)及[对比图](evidence/q2_fresh140_20260911/comparison.png)已归档。策略接口使用 `build_strategy(action, method="q2")`；仍只接收观测反馈，未给未知接收半径设定概率分布。
+
 ## 快速复现
 
 建议 Python 3.12。在本目录打开终端：
@@ -39,7 +50,7 @@ python -B -X utf8 benchmark.py --methods latest --scenarios scenarios/screening2
 - [场景数据](scenarios/screening20.json)：固定种子 20261001 生成 140 个开发场景后按 `[::7]` 取 20 个。
 - [逐场结果](evidence/screening20/cases.csv)：包含移动距离、测量次数、清除失败次数、计算耗时和慢局。
 - [运行摘要](evidence/screening20/summary.json)：配置、源码 SHA-256、场景 SHA-256、依赖版本、执行时间。
-- [源码来源](source_provenance.json)：12 个算法模块直接复制自优化工作区；发布时保留算法行为。
+- [源码来源](source_provenance.json)：记录最初发布时复制的 12 个算法模块及其历史哈希；Q2 扩展后的运行源码哈希见对应实验摘要。
 
 统计口径：先计算每个场景的“总虚拟时间 / 成功清除数”，再对场景等权平均。计算机实际运行秒数另外记录为 `runtime_s`。若任意场景失败，聚合速度指标置空，失败场景不会被静默剔除。
 
@@ -90,4 +101,4 @@ result = strategy.run()
 - `q3_strategy.py`、`sweep_strategy.py`、`fast_strategy.py`：几何基础、基础策略与兜底。
 - `offline_environment.py`、`benchmark.py`：合成环境和可复现评价。
 
-本次提交只新增本目录，与 `Q3/method2` 的 PPO 实现分别运行；两者没有在同一环境与场景上重新对比，因此不据此声称优于 PPO。
+本目录与 `Q3/method2` 的 PPO 实现分别运行；两者没有在同一环境与场景上重新对比，因此不据此声称优于 PPO。

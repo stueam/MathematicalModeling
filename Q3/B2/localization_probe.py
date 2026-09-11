@@ -10,7 +10,7 @@ class CloseLocalize:
 
     def localize(self,c):
         for k in range(8):
-            poly=self.polys[c];center,radius=envelope_circle(poly)
+            poly=self.polys[c];center,radius=self.region_circle(poly)
             if radius<=19.8:
                 self.clear(center,c,must_succeed=True);return
             if radius<=self.trial:
@@ -23,6 +23,7 @@ class CloseLocalize:
             if np.max(np.linalg.norm(poly-point,axis=1))>999:break
             if np.linalg.norm(point-self.position)<1:
                 point=center+max(10,self.lateral)*normal
+            point=self.select_local_measurement(c,poly,center,radius,point)
             state=self.measure(point,c)
             if c in self.cleared:return
             if state=='no_signal':break

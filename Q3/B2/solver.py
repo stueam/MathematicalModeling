@@ -10,6 +10,10 @@ VALIDATED_CONFIG = dict(share_range=1000, cross_threshold=.1, trial=80, lateral=
                         sweeps=2, range_bias=0, reuse_sector=True, sectors=8)
 
 def build_strategy(action, method="latest"):
+    if method in ('mec', 'q2'):
+        from q2_lookahead import MECProposal, Q2Proposal
+        cls = MECProposal if method == 'mec' else Q2Proposal
+        return cls(action, **LATEST_CONFIG)
     if method == "latest":
         return PeripheralProposal(action, **LATEST_CONFIG)
     if method == "b2":

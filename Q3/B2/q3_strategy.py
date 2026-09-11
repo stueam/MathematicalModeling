@@ -47,11 +47,17 @@ def envelope_circle(poly):
 
 
 class Strategy:
+    region_circle = staticmethod(envelope_circle)
+
+    def select_local_measurement(self, channel, poly, center, radius, default):
+        return default
+
     def __init__(self, action, method='main'):
         if method not in ['main','baseline']:
             raise ValueError('Unknown method')
         self.action, self.method = action, method
         self.position = np.zeros(2)
+        self.receiver_channel = 1
         self.polys, self.measurements = {}, {}
         self.cleared, self.absent = set(), set()
         self.trace = []
@@ -66,6 +72,8 @@ class Strategy:
         result = self.action(path, None if point is None else list(map(float,point)), channel)
         if result.get('accepted') is not True:
             raise RuntimeError('Simulator rejected action')
+        if path == '/measure':
+            self.receiver_channel = channel
         if point is not None:
             self.position = np.array(point, dtype=float)
         self.trace.append({'path':path,'position':None if point is None else self.position.tolist(),
@@ -99,7 +107,7 @@ class Strategy:
     def localize(self, channel):
         for step in range(6):
             poly = self.polys[channel]
-            center, radius = envelope_circle(poly)
+            center, radius = self.region_circle(poly)
             if radius <= 19.8:
                 self.clear(center, channel, must_succeed=True)
                 return
@@ -153,7 +161,7 @@ class Strategy:
             if self.method == 'baseline':
                 channel = min(pending)
             else:
-                channel = min(pending,key=lambda c:(np.linalg.norm(envelope_circle(self.polys[c])[0]-self.position),c))
+                channel = min(pending,key=lambda c:(np.linalg.norm(self.region_circle(self.polys[c])[0]-self.position),c))
             self.localize(channel)
         assert len(self.cleared|self.absent) == 20
         exited = self.send('/exit')

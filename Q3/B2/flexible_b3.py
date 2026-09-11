@@ -31,7 +31,7 @@ class FlexibleB3(CoupledCloseB3):
     def select_task(self,tasks,route,sites,remaining):return tasks[route[0]]
 
     def routing_center(self,c):
-        center,r=envelope_circle(self.polys[c]);goal=center
+        center,r=self.region_circle(self.polys[c]);goal=center
         if len(self.measurements[c])==1:
             _,a=self.measurements[c][0];a=math.radians(a);goal=center+self.range_bias*r*np.array([math.cos(a),math.sin(a)])
         return goal

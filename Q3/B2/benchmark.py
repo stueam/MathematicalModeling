@@ -9,19 +9,32 @@ import time
 from pathlib import Path
 import numpy as np
 import scipy
-from offline_environment import StressEnvironment
+from offline_environment import StressEnvironment, make_cases
 from solver import build_strategy, LATEST_CONFIG, VALIDATED_CONFIG
 
 ROOT = Path(__file__).resolve().parent
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--methods', nargs='+', choices=['latest', 'b2', 'validated'],
+    parser.add_argument('--methods', nargs='+', choices=['latest', 'b2', 'validated', 'mec', 'q2'],
                         default=['latest', 'b2'])
-    parser.add_argument('--scenarios', type=Path, default=ROOT/'scenarios/screening20.json')
+    source=parser.add_mutually_exclusive_group()
+    source.add_argument('--scenarios', type=Path)
+    source.add_argument('--generate-seed', type=int, help='Generate all 140 cases with a new seed')
+    parser.add_argument('--q2-fine-power', type=int, choices=range(3,11))
+    parser.add_argument('--q2-residual-scale', type=float)
     parser.add_argument('--output', type=Path, default=ROOT/'outputs/benchmark')
     args = parser.parse_args()
-    cases = json.loads(args.scenarios.read_text(encoding='utf-8'))
+    if args.q2_residual_scale is not None and (not np.isfinite(args.q2_residual_scale) or args.q2_residual_scale<=0):
+        parser.error('Residual scale must be finite and positive')
+    args.output.mkdir(parents=True, exist_ok=True)
+    if args.generate_seed is not None:
+        cases=make_cases(args.generate_seed)
+        args.scenarios=args.output/'scenarios.json'
+        args.scenarios.write_text(json.dumps(cases,indent=2)+'\n',encoding='utf-8')
+    else:
+        args.scenarios=args.scenarios or ROOT/'scenarios/screening20.json'
+        cases = json.loads(args.scenarios.read_text(encoding='utf-8'))
     if not cases or len({c['id'] for c in cases}) != len(cases):
         raise ValueError('Cases must have distinct IDs and must not be empty')
     for case in cases:
@@ -40,6 +53,9 @@ def main():
             env = StressEnvironment(case)
             # Ground truth is held only by the evaluator; the strategy gets this callback.
             model = build_strategy(env.action, method)
+            if method=='q2':
+                if args.q2_fine_power is not None:model.q2_config['fine_power']=args.q2_fine_power
+                if args.q2_residual_scale is not None:model.q2_config['residual_scale']=args.q2_residual_scale
             tick = time.perf_counter()
             failure = None
             try:
@@ -58,7 +74,17 @@ def main():
                              s_per_source=env.clock/len(env.cleared) if env.cleared else None,
                              movement_m=env.movement, measurements=env.measures,
                              failed_clears=env.clear_attempts-len(env.cleared),
-                             runtime_s=time.perf_counter()-tick, failure=failure))
+                             runtime_s=time.perf_counter()-tick,
+                             planning_calls=getattr(model,'planning_calls',0),
+                             planning_time_s=getattr(model,'planning_time_s',0.),
+                             cover_searches=model.fallback_count, failure=failure))
+            if getattr(model,'planning_log',None):
+                logs=args.output/'planning'
+                logs.mkdir(exist_ok=True)
+                (logs/f'{method}_{case["id"]}.json').write_text(
+                    json.dumps(model.planning_log,indent=2)+'\n',encoding='utf-8')
+            if len(rows)%10==0:
+                print(f'{method}: case {case["id"]}, elapsed {time.perf_counter()-start:.1f}s',flush=True)
         print(f'{method}: {len(cases)} cases completed', flush=True)
     with (args.output/'cases.csv').open('w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0]))
@@ -76,11 +102,19 @@ def main():
             p90_s_per_source=float(np.quantile(values,.9)) if ok else None,
             worst_s_per_source=float(values.max()) if ok else None,
             cases_under200=int((values < 200).sum()) if ok else None)
+    from q2_lookahead import Q2_CONFIG
+    q2_config=dict(Q2_CONFIG)
+    if args.q2_fine_power is not None:q2_config['fine_power']=args.q2_fine_power
+    if args.q2_residual_scale is not None:q2_config['residual_scale']=args.q2_residual_scale
     summary = dict(status='PASS' if all(r['failure'] is None for r in rows) else 'FAIL',
-        scope='Development screening only; not an independent acceptance test or official evaluation',
+        scope=('Fresh seeded simulation comparison, same scenario generator; not official evaluation'
+               if args.generate_seed is not None else 'Development screening or supplied cases; not official evaluation'),
+        generation_seed=args.generate_seed,
         metric_definition='Unweighted mean of each case total virtual seconds / successfully cleared sources; null on any failure',
         methods=metrics, configurations=dict(latest=LATEST_CONFIG, validated=VALIDATED_CONFIG,
-                                            b2=dict(stop_at_max=True)),
+                                            b2=dict(stop_at_max=True),
+                                            mec=dict(base=LATEST_CONFIG,circle='minimum'),
+                                            q2=dict(base=LATEST_CONFIG,**q2_config)),
         scenario_sha256=hashlib.sha256(args.scenarios.read_bytes()).hexdigest(),
         source_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(ROOT.glob('*.py'))},
         environment=dict(python=platform.python_version(), numpy=np.__version__, scipy=scipy.__version__),

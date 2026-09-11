@@ -85,8 +85,8 @@ class StressEnvironment(OfflineEnvironment):
             response['svd_deg']=round(angle+error,2)%360
         return response
 
-def make_cases():
-    rng=np.random.default_rng(SEED);cases=[]
+def make_cases(seed=SEED):
+    rng=np.random.default_rng(seed);cases=[]
     for n in range(10,17):
         for family in FAMILIES:
             for rep in range(4):

@@ -25,7 +25,7 @@ class B3Strategy(NegativeTunedStrategy):
             if len(self.cleared)==16:break
             if c in self.cleared or c in self.absent:continue
             if c in self.polys:
-                center,r=envelope_circle(self.polys[c])
+                center,r=self.region_circle(self.polys[c])
                 if unknown_only or r<=19.8:continue
                 if np.linalg.norm(center-p)-r>1500.01:continue
                 if any(np.linalg.norm(p-q)<1 for q,_ in self.measurements[c]):continue
@@ -34,7 +34,7 @@ class B3Strategy(NegativeTunedStrategy):
 
     def shared_observations(self):
         for c in sorted(set(self.polys)-self.cleared):
-            poly=self.polys[c];center,r=envelope_circle(poly);dist=np.linalg.norm(center-self.position)
+            poly=self.polys[c];center,r=self.region_circle(poly);dist=np.linalg.norm(center-self.position)
             if r<=19.8 or dist<30:continue
             distance=np.max(np.linalg.norm(poly-self.position,axis=1)) if self.share_range<=999 else dist
             if distance>self.share_range:continue
@@ -52,7 +52,7 @@ class B3Strategy(NegativeTunedStrategy):
         best=float('inf');sites=None
         for offset in np.arange(self.rotation_samples)*math.tau/n/self.rotation_samples:
             trial=[self.station_radius*np.array([math.cos(k*math.tau/n+offset),math.sin(k*math.tau/n+offset)]) for k in range(n)]
-            goals=[envelope_circle(self.polys[c])[0] for c in sorted(set(self.polys)-self.cleared)]
+            goals=[self.region_circle(self.polys[c])[0] for c in sorted(set(self.polys)-self.cleared)]
             points=trial+goals;route=improved_tour(self.position,points)
             cost=sum(np.linalg.norm(points[b]-(self.position if j==0 else points[route[j-1]])) for j,b in enumerate(route))
             if cost<best:best=cost;sites=trial
@@ -64,7 +64,7 @@ class B3Strategy(NegativeTunedStrategy):
                 remaining.clear();self.absent=set(range(1,21))-set(self.polys)-self.cleared
             goals=[]
             for c in sorted(set(self.polys)-self.cleared):
-                center,r=envelope_circle(self.polys[c]);goal=center
+                center,r=self.region_circle(self.polys[c]);goal=center
                 if len(self.measurements[c])==1:
                     _,bearing=self.measurements[c][0];a=math.radians(bearing);goal=center+self.range_bias*r*np.array([math.cos(a),math.sin(a)])
                 goals.append(('clear',c,goal))

@@ -43,7 +43,7 @@ class JointStrategy(SweepStrategy):
             if self.stop_at_max and len(self.cleared)==16:break
             if channel in self.cleared or channel in self.absent:continue
             if channel in self.polys:
-                if unknown_only or envelope_circle(self.polys[channel])[1]<=19.8:continue
+                if unknown_only or self.region_circle(self.polys[channel])[1]<=19.8:continue
                 if any(np.linalg.norm(point-p)<1 for p,_ in self.measurements[channel]):continue
             self.measure(point,channel)
         self.scans.append(np.array(point).copy())
@@ -58,20 +58,20 @@ class JointStrategy(SweepStrategy):
                 self.absent=set(range(1,21))-self.cleared
                 break
             pending=sorted(set(self.polys)-self.cleared)
-            tasks=[('scan',i,sites[i]) for i in sorted(remaining)]+[('clear',c,envelope_circle(self.polys[c])[0]) for c in pending]
+            tasks=[('scan',i,sites[i]) for i in sorted(remaining)]+[('clear',c,self.region_circle(self.polys[c])[0]) for c in pending]
             route=open_tour(self.position,[task[2] for task in tasks]);self.routing_calls+=1
             chosen=route[0]
             if self.defer_uncertain and remaining:
                 for index in route:
                     kind,key,point=tasks[index]
-                    if kind=='scan' or len(self.measurements[key])>=2 or envelope_circle(self.polys[key])[1]<=100:
+                    if kind=='scan' or len(self.measurements[key])>=2 or self.region_circle(self.polys[key])[1]<=100:
                         chosen=index;break
             kind,key,point=tasks[chosen]
             if kind=='scan':
                 self.scan(point);remaining.remove(key)
             else:
                 if self.opportunistic:
-                    center,radius=envelope_circle(self.polys[key])
+                    center,radius=self.region_circle(self.polys[key])
                     if radius<=120 and self.clear(center,key):
                         pass
                     else:self.localize(key)

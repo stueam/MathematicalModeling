@@ -17,7 +17,7 @@ class SweepStrategy(FastStrategy):
             raise ValueError('Scan circle does not guarantee full reception coverage')
 
     def localize(self,channel):
-        center,radius=envelope_circle(self.polys[channel])
+        center,radius=self.region_circle(self.polys[channel])
         if self.trial_clear and 19.8<radius<=150:
             # Cheap attempt at region centre, never counted as certain success.
             # Failure leaves the envelope intact and resumes normal localization.
@@ -31,7 +31,7 @@ class SweepStrategy(FastStrategy):
         for i,point in enumerate(sites):
             for channel in range(1,21):
                 if channel not in self.cleared:
-                    if channel in self.polys and envelope_circle(self.polys[channel])[1]<=19.8:
+                    if channel in self.polys and self.region_circle(self.polys[channel])[1]<=19.8:
                         continue
                     self.measure(point,channel)
             following=sites[i+1] if i+1<len(sites) else None
@@ -42,14 +42,14 @@ class SweepStrategy(FastStrategy):
                 else:
                     eligible=[]
                     for channel in pending:
-                        center,radius=envelope_circle(self.polys[channel])
+                        center,radius=self.region_circle(self.polys[channel])
                         if len(self.measurements[channel])<2 and radius>150:
                             continue
                         extra=np.linalg.norm(center-self.position)+np.linalg.norm(center-following)-np.linalg.norm(following-self.position)
                         if extra<=self.detour:
                             eligible.append(channel)
                 if not eligible:break
-                channel=min(eligible,key=lambda c:(np.linalg.norm(envelope_circle(self.polys[c])[0]-self.position),c))
+                channel=min(eligible,key=lambda c:(np.linalg.norm(self.region_circle(self.polys[c])[0]-self.position),c))
                 self.localize(channel)
         self.absent=set(range(1,21))-set(self.polys)-self.cleared
         assert len(self.absent|self.cleared)==20

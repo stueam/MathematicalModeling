@@ -18,7 +18,7 @@ class TunedStrategy(JointStrategy):
 
     def shared_observations(self):
         for c in sorted(set(self.polys)-self.cleared):
-            poly=self.polys[c];center,r=envelope_circle(poly)
+            poly=self.polys[c];center,r=self.region_circle(poly)
             if r<=19.8 or np.linalg.norm(center-self.position)<30:continue
             if np.max(np.linalg.norm(poly-self.position,axis=1))>999:continue
             # Require a useful new line of sight and avoid repeated locations.
@@ -45,7 +45,7 @@ class TunedStrategy(JointStrategy):
             pending=sorted(set(self.polys)-self.cleared)
             goals=[]
             for c in pending:
-                center,r=envelope_circle(self.polys[c]);goal=center
+                center,r=self.region_circle(self.polys[c]);goal=center
                 if len(self.measurements[c])==1:
                     point,bearing=self.measurements[c][0];a=math.radians(bearing);u=np.array([math.cos(a),math.sin(a)])
                     goal=center+self.range_bias*r*u
@@ -56,7 +56,7 @@ class TunedStrategy(JointStrategy):
             if self.defer and remaining:
                 for i in route:
                     kind,key,p=tasks[i]
-                    if kind=='scan' or len(self.measurements[key])>=2 or envelope_circle(self.polys[key])[1]<=100:
+                    if kind=='scan' or len(self.measurements[key])>=2 or self.region_circle(self.polys[key])[1]<=100:
                         chosen=i;break
             kind,key,p=tasks[chosen]
             if kind=='scan':self.scan(p);remaining.remove(key)
