@@ -11,7 +11,7 @@ VALIDATED_CONFIG = dict(share_range=1000, cross_threshold=.1, trial=80, lateral=
 
 def build_strategy(action, method="latest"):
     if method == 'b5':
-        from b5_strategy import B5Strategy
+        from B5.b5_strategy import B5Strategy
         return B5Strategy(action, **LATEST_CONFIG)
     if method == 'b4':
         from b4_strategy import B4Strategy

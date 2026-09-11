@@ -4,14 +4,16 @@
 
 ## B5：分区推进与弹性检测、清除
 
+B5 独立目录：[B5/](B5/README.md)，包含策略、测试、实验入口和实验记录。
+
 新增 `method="b5"`。七个覆盖分区确定基本推进顺序，在允许小绕行的条件下共享检测停点；一次检测或清除之后就重排任务，不要求先做完一个源。加入同点观测去重、等待优先级、连续局部任务上限、完整覆盖证据，以及可逐点中断的光学兜底。当前仅适用于 Q3。
 
 修复后新种子 35 个场景全部完成，共 455 个源。B5 平均 **258.79 秒/源**，原 B2 为 283.75，B4 为 231.50：比 B2 快约 8.8%，但比 B4 慢约 11.8%。B5 保留为独立试验候选，默认仍为 `latest`，不宣称已经优于现有增强版。
 
-见 [B5 算法说明](B5算法说明.md)、[实验结果与消融](B5实验结果.md)、[策略代码](b5_strategy.py)。本版使用单独的 `benchmark_b5.py`，旧 `benchmark.py` 入口保持不变。
+见 [B5 算法说明](B5/B5算法说明.md)、[实验结果与消融](B5/B5实验结果.md)、[策略代码](B5/b5_strategy.py)。本版使用单独的 `B5/benchmark_b5.py`，旧 `benchmark.py` 入口保持不变。
 
 ```powershell
-.\.venv\Scripts\python.exe -B -X utf8 benchmark_b5.py --methods b2 q2 b4 b5 b5_global b5_single --seed 2026091122 --stratified35 --output outputs/b5_reproduce --plot
+.\.venv\Scripts\python.exe -B -X utf8 B5/benchmark_b5.py --methods b2 q2 b4 b5 b5_global b5_single --seed 2026091122 --stratified35 --output outputs/b5_reproduce --plot
 ```
 
 ## Q2 期望选点增强（2026-09-11）

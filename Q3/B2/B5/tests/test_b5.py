@@ -5,8 +5,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 import numpy as np
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from b5_strategy import B5Strategy
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from B5.b5_strategy import B5Strategy
 from offline_environment import OfflineEnvironment
 from solver import build_strategy
 

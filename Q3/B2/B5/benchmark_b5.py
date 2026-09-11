@@ -5,15 +5,20 @@ import datetime
 import hashlib
 import json
 import platform
+import sys
 import time
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+B2_ROOT = ROOT.parent
+if str(B2_ROOT) not in sys.path:
+    sys.path.insert(0, str(B2_ROOT))
+
 import numpy as np
 import scipy
 from offline_environment import StressEnvironment, make_cases, FAMILIES
 from solver import build_strategy, LATEST_CONFIG
-from b5_strategy import B5_CONFIG
-
-ROOT=Path(__file__).resolve().parent
+from B5.b5_strategy import B5_CONFIG
 
 
 def dump(path,value):
@@ -114,7 +119,8 @@ def main():
                           'stops counts movement destinations; outer transitions counts consecutive outer endpoint sector labels.',
         environment=dict(python=platform.python_version(),numpy=np.__version__,scipy=scipy.__version__),
         scenario_sha256=hashlib.sha256((args.output/'scenarios.json').read_bytes()).hexdigest(),
-        source_sha256={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(ROOT.glob('*.py'))},
+        source_sha256={f.relative_to(B2_ROOT).as_posix():hashlib.sha256(f.read_bytes()).hexdigest()
+                       for f in sorted([*B2_ROOT.glob('*.py'), *ROOT.glob('*.py')])},
         elapsed_s=time.perf_counter()-start,completed_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
         network_requests=0,formal_tests_used=0)
     dump(args.output/'summary.json',summary)
