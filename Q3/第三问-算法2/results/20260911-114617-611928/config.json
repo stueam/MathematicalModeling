@@ -1,0 +1,46 @@
+{
+  "arguments": {
+    "mode": "benchmark",
+    "policy": "pomcp",
+    "compare": [
+      "algorithm1",
+      "pomcp"
+    ],
+    "seed": 0,
+    "rounds": 3,
+    "n": null,
+    "scenario": "uniform",
+    "radius": null,
+    "error_mode": "iid",
+    "real_limit": 240.0,
+    "max_steps": 4000,
+    "cfg_seed": 2026,
+    "cfg_particles": 3000,
+    "cfg_candidates": 12,
+    "cfg_coarse_worlds": 8,
+    "cfg_fine_worlds": 32,
+    "cfg_finalists": 4,
+    "cfg_horizon": 6,
+    "cfg_fine_horizon": 8,
+    "cfg_budget_s": 5.0,
+    "cfg_workers": 16,
+    "cfg_tail": "completion",
+    "output": null,
+    "connect": false,
+    "robot_id": null,
+    "base_url": "http://127.0.0.1:2026"
+  },
+  "planner": {
+    "seed": 2026,
+    "particles": 3000,
+    "candidates": 12,
+    "coarse_worlds": 8,
+    "fine_worlds": 32,
+    "finalists": 4,
+    "horizon": 6,
+    "fine_horizon": 8,
+    "budget_s": 5.0,
+    "workers": 16,
+    "tail": "completion"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "certified_complete": true,
+  "virtual_time_s": 3663.595757,
+  "real_time_s": 0.12878345600620378,
+  "physical_steps": 123,
+  "stop_reason": "certified_complete",
+  "error": null,
+  "seed": 11,
+  "policy": "algorithm1",
+  "source_count": 10,
+  "cleared_count": 10,
+  "all_cleared": true,
+  "clearance_fraction": 1.0,
+  "costs": {
+    "move_s": 2941.5957570000005,
+    "switch_s": 107.0,
+    "measure_s": 565.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 0.0
+  },
+  "movement_m": 14707.978785000003,
+  "measure_count": 113,
+  "switch_count": 107,
+  "clear_failures": 0,
+  "average_per_source_s": 366.3595757,
+  "discovery_to_clear_s": {
+    "1": 361.965203,
+    "3": 558.911044,
+    "10": 834.590346,
+    "20": 832.387927,
+    "9": 1033.760747,
+    "7": 104.25070400000004,
+    "2": 141.45738400000005,
+    "12": 153.2585509999999,
+    "15": 85.79222500000014,
+    "18": 224.620817
+  },
+  "mc_decisions": 0,
+  "mc_changed": 0,
+  "mc_no_batch": 0
+}

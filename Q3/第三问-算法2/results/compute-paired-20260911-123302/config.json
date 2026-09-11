@@ -1,0 +1,35 @@
+{
+  "seed": 20,
+  "rounds": 1,
+  "configs": {
+    "1": {
+      "seed": 2026,
+      "particles": 3000,
+      "candidates": 12,
+      "coarse_worlds": 16,
+      "fine_worlds": 48,
+      "finalists": 4,
+      "horizon": 6,
+      "fine_horizon": 8,
+      "budget_s": 5.0,
+      "workers": 16,
+      "tail": "completion"
+    },
+    "3": {
+      "seed": 2026,
+      "particles": 9000,
+      "candidates": 36,
+      "coarse_worlds": 48,
+      "fine_worlds": 144,
+      "finalists": 12,
+      "horizon": 18,
+      "fine_horizon": 24,
+      "budget_s": 15.0,
+      "workers": 16,
+      "tail": "completion"
+    }
+  },
+  "scenario": "uniform",
+  "error_mode": "iid",
+  "real_limit": 1200
+}

@@ -1,0 +1,942 @@
+{
+  "worlds_per_action": 16,
+  "candidates": 8,
+  "complete_rollouts": 128,
+  "physical_steps": 13711,
+  "serial_s": 8.336848437997105,
+  "parallel_s_including_startup_shutdown": 1.0695386910010711,
+  "speedup": 7.79480771302808,
+  "workers_requested": 16,
+  "distinct_workers_used": 16,
+  "identical_costs_and_steps": true,
+  "results": [
+    [
+      {
+        "cost": 3436.231644,
+        "prefix": 303.302554,
+        "tail": 3132.92909,
+        "physical_steps": 118,
+        "terminal": true
+      },
+      {
+        "cost": 3492.484519,
+        "prefix": 335.56248,
+        "tail": 3156.922039,
+        "physical_steps": 119,
+        "terminal": true
+      },
+      {
+        "cost": 3407.828241,
+        "prefix": 320.230803,
+        "tail": 3087.5974380000002,
+        "physical_steps": 120,
+        "terminal": true
+      },
+      {
+        "cost": 3520.904164,
+        "prefix": 365.856122,
+        "tail": 3155.048042,
+        "physical_steps": 119,
+        "terminal": true
+      },
+      {
+        "cost": 3410.570694,
+        "prefix": 523.996069,
+        "tail": 2886.574625,
+        "physical_steps": 118,
+        "terminal": true
+      },
+      {
+        "cost": 3551.826468,
+        "prefix": 654.581493,
+        "tail": 2897.244975,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3188.2361060000003,
+        "prefix": 629.698588,
+        "tail": 2558.537518,
+        "physical_steps": 95,
+        "terminal": true
+      },
+      {
+        "cost": 3520.0234790000004,
+        "prefix": 605.29341,
+        "tail": 2914.730069,
+        "physical_steps": 105,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3132.584233,
+        "prefix": 322.659324,
+        "tail": 2809.924909,
+        "physical_steps": 96,
+        "terminal": true
+      },
+      {
+        "cost": 3194.90875,
+        "prefix": 241.464024,
+        "tail": 2953.444726,
+        "physical_steps": 129,
+        "terminal": true
+      },
+      {
+        "cost": 3261.852158,
+        "prefix": 309.83716,
+        "tail": 2952.014998,
+        "physical_steps": 138,
+        "terminal": true
+      },
+      {
+        "cost": 3162.342503,
+        "prefix": 409.641664,
+        "tail": 2752.700839,
+        "physical_steps": 125,
+        "terminal": true
+      },
+      {
+        "cost": 3252.948115,
+        "prefix": 410.31631100000004,
+        "tail": 2842.631804,
+        "physical_steps": 135,
+        "terminal": true
+      },
+      {
+        "cost": 3233.532729,
+        "prefix": 448.45363499999996,
+        "tail": 2785.079094,
+        "physical_steps": 114,
+        "terminal": true
+      },
+      {
+        "cost": 3520.526567,
+        "prefix": 499.06568400000003,
+        "tail": 3021.4608829999997,
+        "physical_steps": 97,
+        "terminal": true
+      },
+      {
+        "cost": 3423.358167,
+        "prefix": 515.610771,
+        "tail": 2907.7473959999998,
+        "physical_steps": 84,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3211.273907,
+        "prefix": 330.062344,
+        "tail": 2881.211563,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3364.980484,
+        "prefix": 283.25565,
+        "tail": 3081.724834,
+        "physical_steps": 117,
+        "terminal": true
+      },
+      {
+        "cost": 3350.014022,
+        "prefix": 265.993853,
+        "tail": 3084.020169,
+        "physical_steps": 117,
+        "terminal": true
+      },
+      {
+        "cost": 3387.487541,
+        "prefix": 311.434975,
+        "tail": 3076.052566,
+        "physical_steps": 116,
+        "terminal": true
+      },
+      {
+        "cost": 3356.453164,
+        "prefix": 392.90346,
+        "tail": 2963.549704,
+        "physical_steps": 117,
+        "terminal": true
+      },
+      {
+        "cost": 3563.535192,
+        "prefix": 379.090096,
+        "tail": 3184.445096,
+        "physical_steps": 95,
+        "terminal": true
+      },
+      {
+        "cost": 3308.382582,
+        "prefix": 571.17791,
+        "tail": 2737.2046720000003,
+        "physical_steps": 99,
+        "terminal": true
+      },
+      {
+        "cost": 3355.49864,
+        "prefix": 646.771991,
+        "tail": 2708.7266489999997,
+        "physical_steps": 96,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3822.286831,
+        "prefix": 322.866806,
+        "tail": 3499.420025,
+        "physical_steps": 96,
+        "terminal": true
+      },
+      {
+        "cost": 3313.964209,
+        "prefix": 363.588469,
+        "tail": 2950.3757400000004,
+        "physical_steps": 116,
+        "terminal": true
+      },
+      {
+        "cost": 3322.839844,
+        "prefix": 350.117876,
+        "tail": 2972.721968,
+        "physical_steps": 115,
+        "terminal": true
+      },
+      {
+        "cost": 3320.251068,
+        "prefix": 408.448988,
+        "tail": 2911.80208,
+        "physical_steps": 114,
+        "terminal": true
+      },
+      {
+        "cost": 3330.537434,
+        "prefix": 373.831913,
+        "tail": 2956.705521,
+        "physical_steps": 115,
+        "terminal": true
+      },
+      {
+        "cost": 3774.15572,
+        "prefix": 612.364458,
+        "tail": 3161.791262,
+        "physical_steps": 115,
+        "terminal": true
+      },
+      {
+        "cost": 3824.384875,
+        "prefix": 615.793917,
+        "tail": 3208.5909580000002,
+        "physical_steps": 92,
+        "terminal": true
+      },
+      {
+        "cost": 3540.966867,
+        "prefix": 455.104703,
+        "tail": 3085.862164,
+        "physical_steps": 103,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3604.975334,
+        "prefix": 369.615535,
+        "tail": 3235.3597990000003,
+        "physical_steps": 105,
+        "terminal": true
+      },
+      {
+        "cost": 3443.941379,
+        "prefix": 185.715511,
+        "tail": 3258.225868,
+        "physical_steps": 99,
+        "terminal": true
+      },
+      {
+        "cost": 3465.415193,
+        "prefix": 261.519655,
+        "tail": 3203.8955379999998,
+        "physical_steps": 98,
+        "terminal": true
+      },
+      {
+        "cost": 3456.350338,
+        "prefix": 208.41127799999998,
+        "tail": 3247.93906,
+        "physical_steps": 98,
+        "terminal": true
+      },
+      {
+        "cost": 3478.124084,
+        "prefix": 304.505734,
+        "tail": 3173.61835,
+        "physical_steps": 98,
+        "terminal": true
+      },
+      {
+        "cost": 3730.349333,
+        "prefix": 706.940044,
+        "tail": 3023.409289,
+        "physical_steps": 105,
+        "terminal": true
+      },
+      {
+        "cost": 3530.167764,
+        "prefix": 431.572319,
+        "tail": 3098.595445,
+        "physical_steps": 97,
+        "terminal": true
+      },
+      {
+        "cost": 3710.005207,
+        "prefix": 665.094185,
+        "tail": 3044.9110220000002,
+        "physical_steps": 104,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3278.969594,
+        "prefix": 278.645136,
+        "tail": 3000.324458,
+        "physical_steps": 132,
+        "terminal": true
+      },
+      {
+        "cost": 3176.901558,
+        "prefix": 232.782506,
+        "tail": 2944.119052,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3191.590709,
+        "prefix": 281.036619,
+        "tail": 2910.55409,
+        "physical_steps": 108,
+        "terminal": true
+      },
+      {
+        "cost": 3180.002131,
+        "prefix": 295.939965,
+        "tail": 2884.062166,
+        "physical_steps": 106,
+        "terminal": true
+      },
+      {
+        "cost": 3193.911634,
+        "prefix": 381.123315,
+        "tail": 2812.7883190000002,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3268.051804,
+        "prefix": 484.60854900000004,
+        "tail": 2783.443255,
+        "physical_steps": 100,
+        "terminal": true
+      },
+      {
+        "cost": 3535.981147,
+        "prefix": 556.071042,
+        "tail": 2979.910105,
+        "physical_steps": 95,
+        "terminal": true
+      },
+      {
+        "cost": 3452.261191,
+        "prefix": 470.97859600000004,
+        "tail": 2981.282595,
+        "physical_steps": 98,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3090.871288,
+        "prefix": 364.072559,
+        "tail": 2726.7987289999996,
+        "physical_steps": 99,
+        "terminal": true
+      },
+      {
+        "cost": 3245.128636,
+        "prefix": 285.067638,
+        "tail": 2960.060998,
+        "physical_steps": 116,
+        "terminal": true
+      },
+      {
+        "cost": 3245.577594,
+        "prefix": 294.709677,
+        "tail": 2950.867917,
+        "physical_steps": 115,
+        "terminal": true
+      },
+      {
+        "cost": 3254.178455,
+        "prefix": 340.212341,
+        "tail": 2913.9661140000003,
+        "physical_steps": 115,
+        "terminal": true
+      },
+      {
+        "cost": 3231.293481,
+        "prefix": 324.292584,
+        "tail": 2907.0008970000004,
+        "physical_steps": 115,
+        "terminal": true
+      },
+      {
+        "cost": 3156.126593,
+        "prefix": 406.637388,
+        "tail": 2749.489205,
+        "physical_steps": 96,
+        "terminal": true
+      },
+      {
+        "cost": 3186.102852,
+        "prefix": 618.975019,
+        "tail": 2567.127833,
+        "physical_steps": 94,
+        "terminal": true
+      },
+      {
+        "cost": 3229.753546,
+        "prefix": 467.817267,
+        "tail": 2761.936279,
+        "physical_steps": 101,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3743.754894,
+        "prefix": 369.278344,
+        "tail": 3374.4765500000003,
+        "physical_steps": 130,
+        "terminal": true
+      },
+      {
+        "cost": 3607.640076,
+        "prefix": 231.372389,
+        "tail": 3376.267687,
+        "physical_steps": 116,
+        "terminal": true
+      },
+      {
+        "cost": 3615.2526289999996,
+        "prefix": 307.391253,
+        "tail": 3307.861376,
+        "physical_steps": 117,
+        "terminal": true
+      },
+      {
+        "cost": 3642.254828,
+        "prefix": 346.274644,
+        "tail": 3295.980184,
+        "physical_steps": 115,
+        "terminal": true
+      },
+      {
+        "cost": 3610.80745,
+        "prefix": 432.856233,
+        "tail": 3177.951217,
+        "physical_steps": 115,
+        "terminal": true
+      },
+      {
+        "cost": 3918.650522,
+        "prefix": 488.903691,
+        "tail": 3429.746831,
+        "physical_steps": 131,
+        "terminal": true
+      },
+      {
+        "cost": 3828.578985,
+        "prefix": 505.03384800000003,
+        "tail": 3323.545137,
+        "physical_steps": 119,
+        "terminal": true
+      },
+      {
+        "cost": 4391.784024,
+        "prefix": 614.281966,
+        "tail": 3777.5020579999996,
+        "physical_steps": 121,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3482.744609,
+        "prefix": 336.425467,
+        "tail": 3146.319142,
+        "physical_steps": 111,
+        "terminal": true
+      },
+      {
+        "cost": 3370.9924409999994,
+        "prefix": 252.805611,
+        "tail": 3118.1868299999996,
+        "physical_steps": 108,
+        "terminal": true
+      },
+      {
+        "cost": 3411.678752,
+        "prefix": 343.957841,
+        "tail": 3067.720911,
+        "physical_steps": 109,
+        "terminal": true
+      },
+      {
+        "cost": 3390.657802,
+        "prefix": 275.379985,
+        "tail": 3115.277817,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3381.009311,
+        "prefix": 387.737859,
+        "tail": 2993.271452,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3570.986274,
+        "prefix": 596.775593,
+        "tail": 2974.210681,
+        "physical_steps": 97,
+        "terminal": true
+      },
+      {
+        "cost": 3591.564226,
+        "prefix": 578.486707,
+        "tail": 3013.077519,
+        "physical_steps": 118,
+        "terminal": true
+      },
+      {
+        "cost": 4105.990656,
+        "prefix": 441.322987,
+        "tail": 3664.667669,
+        "physical_steps": 97,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 2689.896294,
+        "prefix": 391.797269,
+        "tail": 2298.099025,
+        "physical_steps": 94,
+        "terminal": true
+      },
+      {
+        "cost": 2935.194981,
+        "prefix": 264.725457,
+        "tail": 2670.469524,
+        "physical_steps": 114,
+        "terminal": true
+      },
+      {
+        "cost": 2973.946979,
+        "prefix": 302.837079,
+        "tail": 2671.1099,
+        "physical_steps": 114,
+        "terminal": true
+      },
+      {
+        "cost": 2941.247401,
+        "prefix": 228.34293100000002,
+        "tail": 2712.90447,
+        "physical_steps": 112,
+        "terminal": true
+      },
+      {
+        "cost": 2936.6204819999994,
+        "prefix": 292.982972,
+        "tail": 2643.6375099999996,
+        "physical_steps": 113,
+        "terminal": true
+      },
+      {
+        "cost": 3233.322603,
+        "prefix": 448.68685500000004,
+        "tail": 2784.635748,
+        "physical_steps": 106,
+        "terminal": true
+      },
+      {
+        "cost": 2905.944003,
+        "prefix": 479.53596600000003,
+        "tail": 2426.408037,
+        "physical_steps": 92,
+        "terminal": true
+      },
+      {
+        "cost": 2976.0346310000004,
+        "prefix": 514.221902,
+        "tail": 2461.812729,
+        "physical_steps": 90,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3679.976711,
+        "prefix": 314.375101,
+        "tail": 3365.6016099999997,
+        "physical_steps": 126,
+        "terminal": true
+      },
+      {
+        "cost": 3730.447589,
+        "prefix": 322.416949,
+        "tail": 3408.03064,
+        "physical_steps": 122,
+        "terminal": true
+      },
+      {
+        "cost": 3733.721748,
+        "prefix": 288.835772,
+        "tail": 3444.885976,
+        "physical_steps": 122,
+        "terminal": true
+      },
+      {
+        "cost": 3749.286144,
+        "prefix": 298.782359,
+        "tail": 3450.5037850000003,
+        "physical_steps": 123,
+        "terminal": true
+      },
+      {
+        "cost": 3717.787751,
+        "prefix": 312.576589,
+        "tail": 3405.2111619999996,
+        "physical_steps": 122,
+        "terminal": true
+      },
+      {
+        "cost": 3817.042971,
+        "prefix": 433.73580100000004,
+        "tail": 3383.30717,
+        "physical_steps": 109,
+        "terminal": true
+      },
+      {
+        "cost": 3903.807982,
+        "prefix": 456.261075,
+        "tail": 3447.546907,
+        "physical_steps": 118,
+        "terminal": true
+      },
+      {
+        "cost": 3893.770765,
+        "prefix": 487.85493899999994,
+        "tail": 3405.9158260000004,
+        "physical_steps": 102,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3436.926244,
+        "prefix": 268.969146,
+        "tail": 3167.9570980000003,
+        "physical_steps": 94,
+        "terminal": true
+      },
+      {
+        "cost": 3397.782723,
+        "prefix": 347.325394,
+        "tail": 3050.457329,
+        "physical_steps": 92,
+        "terminal": true
+      },
+      {
+        "cost": 3405.30137,
+        "prefix": 357.72906,
+        "tail": 3047.57231,
+        "physical_steps": 91,
+        "terminal": true
+      },
+      {
+        "cost": 3397.084242,
+        "prefix": 256.019738,
+        "tail": 3141.064504,
+        "physical_steps": 91,
+        "terminal": true
+      },
+      {
+        "cost": 3404.926569,
+        "prefix": 383.639837,
+        "tail": 3021.286732,
+        "physical_steps": 93,
+        "terminal": true
+      },
+      {
+        "cost": 3597.667396,
+        "prefix": 533.805654,
+        "tail": 3063.861742,
+        "physical_steps": 91,
+        "terminal": true
+      },
+      {
+        "cost": 3727.277783,
+        "prefix": 580.532288,
+        "tail": 3146.745495,
+        "physical_steps": 100,
+        "terminal": true
+      },
+      {
+        "cost": 3394.178822,
+        "prefix": 439.720695,
+        "tail": 2954.458127,
+        "physical_steps": 86,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3306.8829,
+        "prefix": 328.911086,
+        "tail": 2977.971814,
+        "physical_steps": 100,
+        "terminal": true
+      },
+      {
+        "cost": 3638.64002,
+        "prefix": 231.25154099999997,
+        "tail": 3407.3884789999997,
+        "physical_steps": 101,
+        "terminal": true
+      },
+      {
+        "cost": 3602.491753,
+        "prefix": 355.322495,
+        "tail": 3247.169258,
+        "physical_steps": 104,
+        "terminal": true
+      },
+      {
+        "cost": 3647.913385,
+        "prefix": 303.348072,
+        "tail": 3344.565313,
+        "physical_steps": 100,
+        "terminal": true
+      },
+      {
+        "cost": 3601.534819,
+        "prefix": 410.0422,
+        "tail": 3191.492619,
+        "physical_steps": 103,
+        "terminal": true
+      },
+      {
+        "cost": 3659.729096,
+        "prefix": 634.376916,
+        "tail": 3025.35218,
+        "physical_steps": 97,
+        "terminal": true
+      },
+      {
+        "cost": 3286.927874,
+        "prefix": 670.650643,
+        "tail": 2616.277231,
+        "physical_steps": 90,
+        "terminal": true
+      },
+      {
+        "cost": 3546.527728,
+        "prefix": 655.129812,
+        "tail": 2891.397916,
+        "physical_steps": 92,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3025.33038,
+        "prefix": 280.303748,
+        "tail": 2745.026632,
+        "physical_steps": 117,
+        "terminal": true
+      },
+      {
+        "cost": 3314.626809,
+        "prefix": 476.849875,
+        "tail": 2837.776934,
+        "physical_steps": 106,
+        "terminal": true
+      },
+      {
+        "cost": 3314.619436,
+        "prefix": 313.808079,
+        "tail": 3000.811357,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3277.700987,
+        "prefix": 558.235521,
+        "tail": 2719.465466,
+        "physical_steps": 104,
+        "terminal": true
+      },
+      {
+        "cost": 3320.491489,
+        "prefix": 481.190211,
+        "tail": 2839.301278,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3280.9960740000006,
+        "prefix": 530.00496,
+        "tail": 2750.9911140000004,
+        "physical_steps": 108,
+        "terminal": true
+      },
+      {
+        "cost": 3421.49999,
+        "prefix": 562.803164,
+        "tail": 2858.696826,
+        "physical_steps": 109,
+        "terminal": true
+      },
+      {
+        "cost": 3599.634722,
+        "prefix": 467.71067300000004,
+        "tail": 3131.9240489999997,
+        "physical_steps": 111,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3053.344985,
+        "prefix": 341.988098,
+        "tail": 2711.3568870000004,
+        "physical_steps": 104,
+        "terminal": true
+      },
+      {
+        "cost": 3426.830476,
+        "prefix": 295.914836,
+        "tail": 3130.91564,
+        "physical_steps": 96,
+        "terminal": true
+      },
+      {
+        "cost": 3385.794717,
+        "prefix": 263.59025,
+        "tail": 3122.204467,
+        "physical_steps": 101,
+        "terminal": true
+      },
+      {
+        "cost": 3438.303398,
+        "prefix": 307.357482,
+        "tail": 3130.945916,
+        "physical_steps": 96,
+        "terminal": true
+      },
+      {
+        "cost": 3368.925233,
+        "prefix": 479.99466800000005,
+        "tail": 2888.9305649999997,
+        "physical_steps": 98,
+        "terminal": true
+      },
+      {
+        "cost": 3542.438411,
+        "prefix": 465.55600200000003,
+        "tail": 3076.882409,
+        "physical_steps": 99,
+        "terminal": true
+      },
+      {
+        "cost": 3202.222736,
+        "prefix": 529.04752,
+        "tail": 2673.175216,
+        "physical_steps": 99,
+        "terminal": true
+      },
+      {
+        "cost": 3509.359979,
+        "prefix": 577.976462,
+        "tail": 2931.3835169999998,
+        "physical_steps": 95,
+        "terminal": true
+      }
+    ],
+    [
+      {
+        "cost": 3796.184249,
+        "prefix": 362.076854,
+        "tail": 3434.107395,
+        "physical_steps": 114,
+        "terminal": true
+      },
+      {
+        "cost": 3762.146879,
+        "prefix": 268.125903,
+        "tail": 3494.020976,
+        "physical_steps": 109,
+        "terminal": true
+      },
+      {
+        "cost": 3816.184367,
+        "prefix": 246.06262600000002,
+        "tail": 3570.121741,
+        "physical_steps": 111,
+        "terminal": true
+      },
+      {
+        "cost": 3778.023625,
+        "prefix": 297.633673,
+        "tail": 3480.389952,
+        "physical_steps": 108,
+        "terminal": true
+      },
+      {
+        "cost": 3819.282901,
+        "prefix": 374.247855,
+        "tail": 3445.035046,
+        "physical_steps": 110,
+        "terminal": true
+      },
+      {
+        "cost": 3827.85755,
+        "prefix": 390.90008,
+        "tail": 3436.9574700000003,
+        "physical_steps": 107,
+        "terminal": true
+      },
+      {
+        "cost": 3853.955721,
+        "prefix": 543.102626,
+        "tail": 3310.853095,
+        "physical_steps": 113,
+        "terminal": true
+      },
+      {
+        "cost": 3802.250791,
+        "prefix": 455.98975499999995,
+        "tail": 3346.261036,
+        "physical_steps": 103,
+        "terminal": true
+      }
+    ]
+  ]
+}
