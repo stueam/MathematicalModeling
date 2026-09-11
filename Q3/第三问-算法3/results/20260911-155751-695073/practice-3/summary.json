@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-sector",
+  "case_code": "NHDV-SNY4-GVK3-2H9H",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 16,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 16,
+  "virtual_time_s": 3050.879614,
+  "real_time_s": 4.704942828997446,
+  "actions": 114,
+  "costs": {
+    "move_s": 2390.879614,
+    "switch_s": 92.0,
+    "measure_s": 485.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 3.0
+  },
+  "movement_m": 11954.39807,
+  "measure_count": 97,
+  "switch_count": 92,
+  "clear_failures": 1,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 190.679975875,
+  "clearance_fraction": 1.0
+}

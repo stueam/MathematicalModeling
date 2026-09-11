@@ -1,0 +1,53 @@
+{
+  "mode": "validate",
+  "policy": "bayes-tsp",
+  "compare": [
+    "baseline",
+    "baseline-ring",
+    "bayes-tsp"
+  ],
+  "seed": 0,
+  "rounds": 6,
+  "workers": 16,
+  "n": null,
+  "radius": null,
+  "scenario": "uniform",
+  "error_mode": "iid",
+  "ring": 1200.0,
+  "resolution": 24,
+  "bearing_bin": 1.0,
+  "p0": 0.65,
+  "speculative_clear": true,
+  "real_limit": 1200.0,
+  "max_steps": 4000,
+  "output": null,
+  "connect": false,
+  "robot_id": null,
+  "base_url": "http://127.0.0.1:2026",
+  "algorithm_config": {
+    "ring": 1200.0,
+    "resolution": 24,
+    "bearing_bin": 1.0,
+    "p0": 0.65,
+    "shared": true,
+    "dynamic_tsp": true,
+    "speculative_clear": true,
+    "max_bearings": 8,
+    "completion_after": 600,
+    "reserve_s": 30.0
+  },
+  "code_sha256": {
+    "第三问-算法3/bayes_tsp/posterior.py": "bca41a136b699536a443c91264124410ddc3125021af97df66481f31c6a0202f",
+    "第三问-算法3/bayes_tsp/routing.py": "5d70a641250b187ab5c846f1331443502b27feadd3d2db7a0c7d8acec81d241c",
+    "第三问-算法3/bayes_tsp/policy.py": "cc3d753247580d97a1153457c8829797c8fd218df497ead7ad58c2fdc6e5312a",
+    "第三问-算法3/bayes_tsp/__init__.py": "c6b877ac50223572ea9507e93f37e4cf85ecd74c070b6aa1a57164a34d836e2b",
+    "第三问-算法3/bayes_tsp/shared.py": "96ad5e45051a9a481f9ef301d8c8e366820939b0769de83f10eb374a08dd459c",
+    "第三问-算法3/run.py": "5884c613828b5498a19bd61f1ea065d2d1eddcef962eedbec4980cec120c4563",
+    "第三问-算法1/q3/core.py": "6a602ed77a305d88e622570ab5204f1a38177110814ec894f92ad0c063591c69",
+    "第三问-算法1/q3/policy.py": "a67cb7848726a7dea0224b1e0902d002b54492e5828897fc39164b8990d77e32",
+    "第三问-算法1/q3/simulator.py": "7202b3337fab9537bea07eb49edb80dffe3fe5d8d2f11ff15b2ea85cb56ef668",
+    "第三问-算法1/q3/client.py": "6538b9c0a1bebba6abcc890a2ef5dd19ad220996adb1416fb288ed37589b3979",
+    "第三问-算法1/q3/movement.py": "83ab1ccb5aaf674a1e3ddd5ec6aa709dab754ef9c273484ec9d8e2bdbc9ba55b",
+    "第三问-算法1/q3/sampling.py": "367a384374eeee20420661fa3371f61fa344789e0a8292033e9dcbed2684fb89"
+  }
+}

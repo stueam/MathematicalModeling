@@ -1,0 +1,4754 @@
+[
+  {
+    "name": "无线电干扰源环境模拟器",
+    "type": "ControlType.Pane",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "无线电干扰源环境模拟器 - Web 内容",
+    "type": "ControlType.Pane",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "无线电干扰源环境模拟器",
+    "type": "ControlType.Document",
+    "id": "RootWebArea",
+    "enabled": true
+  },
+  {
+    "name": "环境模拟器",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "主导航",
+    "type": "ControlType.Group",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测试",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "演练测试",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": false
+  },
+  {
+    "name": "正式测试",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "问题3正式测试",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": false
+  },
+  {
+    "name": "问题4正式测试",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": false
+  },
+  {
+    "name": "其他",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "公告",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": false
+  },
+  {
+    "name": "账号",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": false
+  },
+  {
+    "name": "设置",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": false
+  },
+  {
+    "name": "关于",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": false
+  },
+  {
+    "name": "v1.1",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "无线电干扰源环境模拟器",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2026年9月13日17:30之后无法启动新的演练测试或正式测试",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "服务器已连接",
+    "type": "ControlType.StatusBar",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "已连接",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "队号 <已隐去>",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "退出登录",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": false
+  },
+  {
+    "name": "- 重要提醒：正式测试没有上传完成时，不要退出模拟器！\n- 重要提醒：各参赛队在附录中、支撑材料中提交代码时，注意将参赛队号隐去或使用占位符代替，以免违规。建议不要将参赛队号在程序中写死，而是以命令行参数等方式提供。",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "关闭公告",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "问题3 演练 测试",
+    "type": "ControlType.Group",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "问题3 演练 测试",
+    "type": "ControlType.Text",
+    "id": "test-run-title",
+    "enabled": true
+  },
+  {
+    "name": "测试已结束",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测试案例编码",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "38JP-2MPS-DVUB-8J27",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测试窗口剩余",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "24:56",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "机器狗程序剩余",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:57",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "接口端口",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2026",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "返回演练测试",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "本次演练测试干扰源数量",
+    "type": "ControlType.Group",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "本次演练测试干扰源数量",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "共",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "个， 全向",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "个， 定向",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "0",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "个",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "行为日志已保存",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "practice-p3-7323024456247170459-38JP-2MPS-DVUB-8J27.jlog",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "40.1 KiB",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "指令与反馈",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "仅显示最新1000条",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "接收时间",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "指令",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "位置",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "频道",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "响应摘要",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "虚拟时间",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "进入",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "--",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "--",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "进入成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "0.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "5.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "11.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "17.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "4",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "23.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "5",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "29.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "35.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "7",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 73.58°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "41.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "8",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 238.85°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "47.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "9",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 163.09°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "53.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "10",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "59.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "11",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 236.45°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "65.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "12",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 179.93°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "71.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "13",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 209.22°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "77.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "14",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "83.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "15",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 274.35°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "89.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "95.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "17",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "101.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "18",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "107.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "113.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(0.00, 0.00)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "20",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 53.68°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "119.000 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(230.88, 254.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "20",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 56.23°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "192.795 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(230.88, 254.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "15",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 264.57°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "198.795 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:58",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(230.88, 254.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "12",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 196.23°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "204.795 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(230.88, 254.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "13",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "210.795 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(230.88, 254.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "9",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 179.93°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "216.795 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(230.88, 254.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "8",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 234.07°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "222.795 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(230.88, 254.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "11",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "228.795 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(230.88, 254.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "7",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 93.97°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "234.795 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(570.74, 700.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "20",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 59.88°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "352.910 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "20",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "436.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 145.88°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "442.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "448.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "454.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "4",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "460.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "5",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "466.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "472.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "10",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "478.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "14",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "484.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "490.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "17",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 119.97°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "496.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "18",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "502.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(763.11, 1040.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "508.039 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:50:59",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(678.84, 1256.87)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "17",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 124.24°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "560.427 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(503.66, 1576.69)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "17",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 143.22°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "638.357 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(503.66, 1576.69)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 198.53°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "644.357 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(414.39, 1643.55)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "17",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "671.664 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(147.57, 1457.47)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "741.723 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "820.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 171.16°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "826.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "4",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "832.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "5",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "838.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "844.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "10",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "850.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "14",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "856.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "862.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "18",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "868.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-141.37, 1233.62)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "874.825 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(203.68, 685.97)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "7",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "范围内无目标",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1007.282 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:00",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(203.68, 685.97)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 143.73°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1013.282 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(203.68, 685.97)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "7",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 89.77°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1019.282 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(204.14, 723.18)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "7",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1031.723 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-653.79, 1313.68)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1245.024 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1433.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "4",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1439.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "5",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1445.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1451.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "10",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1457.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "14",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1463.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1469.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "18",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1475.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 203.08°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1481.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-904.62, 434.07)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "9",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 275.83°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1487.959 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-887.74, 270.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "9",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1525.792 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-887.74, 270.78)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 187.95°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1531.792 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1335.21, 172.15)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 170.16°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1628.434 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1466.35, 194.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "范围内无目标",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1658.057 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1466.35, 194.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "13",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 307.92°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1664.057 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1466.35, 194.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 354.97°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1670.057 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1463.88, 194.75)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1675.554 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-965.76, -447.35)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1844.086 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-965.76, -447.35)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "4",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1850.086 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-965.76, -447.35)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "5",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1856.086 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-965.76, -447.35)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1862.086 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-965.76, -447.35)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "10",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1868.086 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-965.76, -447.35)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "14",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 218.99°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1874.086 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-965.76, -447.35)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1880.086 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-965.76, -447.35)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "18",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 188.09°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1886.086 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-915.49, -512.20)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "13",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1907.496 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-915.49, -512.20)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "14",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 211.11°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1913.496 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-915.49, -512.20)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "8",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 16.31°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1919.496 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-915.49, -512.20)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "15",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 328.23°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1925.496 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-915.49, -512.20)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "12",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 57.76°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "1931.496 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1300.18, -787.09)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "14",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 200.15°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2032.059 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1462.34, -846.76)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "14",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2071.617 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1462.34, -846.76)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "18",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 121.74°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2077.617 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1462.34, -846.76)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "11",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 3.41°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2083.617 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-1648.22, -546.79)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "18",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2159.195 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:01",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-590.90, 2.46)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "12",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2402.489 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-178.82, -297.56)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "8",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2509.435 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-525.09, -791.19)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "11",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2635.029 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-198.92, -973.26)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2715.738 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-198.92, -973.26)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "4",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2721.738 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-198.92, -973.26)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "5",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2727.738 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-198.92, -973.26)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 358.56°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2733.738 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-198.92, -973.26)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "10",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2739.738 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(-198.92, -973.26)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2745.738 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(90.91, -1135.04)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "15",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2817.123 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(668.12, -1035.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 7.72°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2939.253 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(668.12, -1035.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2945.253 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(668.12, -1035.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "4",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2951.253 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(668.12, -1035.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "5",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2957.253 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(668.12, -1035.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "10",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "未检测到信号",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2963.253 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(668.12, -1035.98)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 170.97°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "2969.253 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(395.64, -991.85)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "范围内无目标",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3027.458 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(395.64, -991.85)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 2.97°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3033.458 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(376.31, -989.68)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 180.74°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3043.349 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(358.47, -989.67)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "6",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3051.918 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(1117.17, -917.92)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 355.97°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3210.337 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "测量",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(1335.63, -897.90)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "示向度 332.91°",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3259.211 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "(1414.96, -938.15)",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "16",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "清除成功",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3282.001 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "19:51:02",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "退出",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "--",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "--",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "正常退出",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "3282.001 s",
+    "type": "ControlType.DataItem",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "问题3演练测试完成",
+    "type": "ControlType.Window",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "问题3演练测试完成",
+    "type": "ControlType.Text",
+    "id": "action-dialog-title",
+    "enabled": true
+  },
+  {
+    "name": "问题3演练测试：机器狗已发送 /exit 指令，测试正常结束。\n本次案例含干扰源16个，其中全向16个、定向0个。\n行为日志已保存。",
+    "type": "ControlType.Text",
+    "id": "",
+    "enabled": true
+  },
+  {
+    "name": "确认",
+    "type": "ControlType.Button",
+    "id": "",
+    "enabled": true
+  }
+]

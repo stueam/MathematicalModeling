@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "case_code": "WNCX-E8BC-THVM-NSXB",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 10,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 10,
+  "virtual_time_s": 3063.584639,
+  "real_time_s": 0.8463144739998825,
+  "actions": 140,
+  "costs": {
+    "move_s": 2239.5846389999997,
+    "switch_s": 124.0,
+    "measure_s": 650.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 0.0
+  },
+  "movement_m": 11197.923195,
+  "measure_count": 130,
+  "switch_count": 124,
+  "clear_failures": 0,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 306.3584639,
+  "clearance_fraction": 1.0
+}

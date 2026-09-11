@@ -1,0 +1,11 @@
+{
+  "aggregate": "/home/zypca/mathmodel/B题/第三问-算法3/results/20260911-161320-101822",
+  "target_s_per_source": 150.0,
+  "numeric_margin_m": 0.01,
+  "reference_exact_limit": 16,
+  "source_sha256": {
+    "audit_movement.py": "8aa38e26a51479c0e417bd2485c669c808444f501d46cea6e2f9fd91e3db189a",
+    "open_routes.py": "54fc4c4590380e17e38ed9c13da2ee05ddcd1888fdcf7d498459aaf39d70ada4"
+  },
+  "limitations": "Hindsight diagnosis, no policy calls, no simulator connection; point TSP is not mission cost; fixed-operation bound holds only if total nonmovement cost is unchanged."
+}

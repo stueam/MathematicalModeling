@@ -1,0 +1,34 @@
+{
+  "rounds": 10,
+  "totals": {
+    "source_count": 119,
+    "actual_m": 107216.14594478668,
+    "clear_order_m": 92499.90070442494,
+    "hindsight_point_tsp_m": 81823.88625945017,
+    "source_travel_lower_bound_m": 72703.78625945016,
+    "intermediate_and_tail_excess_m": 14716.245240361735,
+    "hindsight_order_gap_m": 10676.014444974768,
+    "nonmovement_s": 7506.0,
+    "virtual_time_s": 28949.229188999998,
+    "target_distance_same_operations_m": 51720.0
+  },
+  "mean_case": {
+    "source_count": 11.9,
+    "actual_m": 10721.614594478668,
+    "clear_order_m": 9249.990070442494,
+    "hindsight_point_tsp_m": 8182.388625945017,
+    "source_travel_lower_bound_m": 7270.378625945016,
+    "intermediate_and_tail_excess_m": 1471.6245240361736,
+    "hindsight_order_gap_m": 1067.6014444974767,
+    "nonmovement_s": 750.6,
+    "virtual_time_s": 2894.9229189,
+    "target_distance_same_operations_m": 5172.0
+  },
+  "pooled_actual_s_per_source": 243.2708335210084,
+  "pooled_move_s_per_source": 180.19520326854902,
+  "pooled_nonmovement_s_per_source": 63.075630252100844,
+  "fixed_operations_lower_bound_s_per_source": 185.26686766294145,
+  "target_nonmovement_budget_at_travel_lower_bound_s_per_source": 27.808762589159386,
+  "analysis_real_time_s": 0.06155344899997317,
+  "new_policy_runs": 0
+}

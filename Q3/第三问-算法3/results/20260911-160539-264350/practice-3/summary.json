@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-sector",
+  "case_code": "BGAU-BQ7C-DPXN-7XU8",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 10,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 10,
+  "virtual_time_s": 2768.548884,
+  "real_time_s": 1.488466641996638,
+  "actions": 124,
+  "costs": {
+    "move_s": 2043.5488839999998,
+    "switch_s": 107.0,
+    "measure_s": 565.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 3.0
+  },
+  "movement_m": 10217.744419999999,
+  "measure_count": 113,
+  "switch_count": 107,
+  "clear_failures": 1,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 276.8548884,
+  "clearance_fraction": 1.0
+}

@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "case_code": "EC9R-5G9M-TPFV-JA7U",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 15,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 15,
+  "virtual_time_s": 2533.968178,
+  "real_time_s": 3.9235028419998343,
+  "actions": 125,
+  "costs": {
+    "move_s": 1819.9681779999999,
+    "switch_s": 99.0,
+    "measure_s": 525.0,
+    "clear_success_s": 75.0,
+    "clear_failure_s": 15.0
+  },
+  "movement_m": 9099.84089,
+  "measure_count": 105,
+  "switch_count": 99,
+  "clear_failures": 5,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 168.93121186666667,
+  "clearance_fraction": 1.0
+}

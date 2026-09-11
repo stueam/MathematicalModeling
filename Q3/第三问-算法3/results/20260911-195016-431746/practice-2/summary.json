@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "case_code": "XQES-MV5K-PJH7-6Q3A",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 12,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 12,
+  "virtual_time_s": 3137.049273,
+  "real_time_s": 1.4691874740001367,
+  "actions": 141,
+  "costs": {
+    "move_s": 2313.049273,
+    "switch_s": 121.0,
+    "measure_s": 640.0,
+    "clear_success_s": 60.0,
+    "clear_failure_s": 3.0
+  },
+  "movement_m": 11565.246365,
+  "measure_count": 128,
+  "switch_count": 121,
+  "clear_failures": 1,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 261.42077275,
+  "clearance_fraction": 1.0
+}

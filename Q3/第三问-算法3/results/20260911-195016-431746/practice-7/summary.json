@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "case_code": "M9FW-4JUR-Z8UP-A2RT",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 13,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 13,
+  "virtual_time_s": 3077.160263,
+  "real_time_s": 1.3477023689993075,
+  "actions": 124,
+  "costs": {
+    "move_s": 2350.1602629999998,
+    "switch_s": 107.0,
+    "measure_s": 555.0,
+    "clear_success_s": 65.0,
+    "clear_failure_s": 0.0
+  },
+  "movement_m": 11750.801314999999,
+  "measure_count": 111,
+  "switch_count": 107,
+  "clear_failures": 0,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 236.70463561538463,
+  "clearance_fraction": 1.0
+}

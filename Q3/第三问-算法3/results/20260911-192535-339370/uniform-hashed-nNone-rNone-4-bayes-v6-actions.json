@@ -1,0 +1,74 @@
+[
+  {
+    "request_id": "local-0",
+    "action": {
+      "kind": "measure",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "channel": 1
+    },
+    "response": {
+      "accepted": true,
+      "virtual_time_s": 5.0,
+      "real_timestamp_ms": 1789125935419,
+      "measure_result": "no_signal"
+    },
+    "planning_s": 0.026922971999738365
+  },
+  {
+    "request_id": "local-1",
+    "action": {
+      "kind": "measure",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "channel": 2
+    },
+    "response": {
+      "accepted": true,
+      "virtual_time_s": 11.0,
+      "real_timestamp_ms": 1789125935436,
+      "measure_result": "no_signal"
+    },
+    "planning_s": 0.015963737000220135
+  },
+  {
+    "request_id": "local-2",
+    "action": {
+      "kind": "measure",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "channel": 3
+    },
+    "response": {
+      "accepted": true,
+      "virtual_time_s": 17.0,
+      "real_timestamp_ms": 1789125935439,
+      "measure_result": "no_signal"
+    },
+    "planning_s": 0.0029492829999071546
+  },
+  {
+    "request_id": "local-3",
+    "action": {
+      "kind": "measure",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "channel": 4
+    },
+    "response": {
+      "accepted": true,
+      "virtual_time_s": 23.0,
+      "real_timestamp_ms": 1789125935442,
+      "measure_result": "no_signal"
+    },
+    "planning_s": 0.003016454000317026
+  }
+]

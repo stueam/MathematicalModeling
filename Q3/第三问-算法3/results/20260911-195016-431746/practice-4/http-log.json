@@ -1,0 +1,2139 @@
+[
+  {
+    "path": "enter",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "c1911e41e805496caf3f4aef3dcee8b1"
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476858,
+      "virtual_time_s": 0,
+      "max_virtual_duration_s": 360000,
+      "max_real_duration_s": 1200,
+      "remaining_real_duration_s": 1200
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "248ae14c6aba4ab5817c889af6f19f15",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 1
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476876,
+      "virtual_time_s": 5,
+      "measure_result": "direction",
+      "svd_deg": 329.1
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "a0020097fb1549998519debf9b8c6e8c",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476890,
+      "virtual_time_s": 11,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "e409670b55444a749fdd8d74f6119c91",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 3
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476910,
+      "virtual_time_s": 17,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "0a1bc18ae7434de8926b0a29be390e20",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 4
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476918,
+      "virtual_time_s": 23,
+      "measure_result": "direction",
+      "svd_deg": 312.08
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "4449891d1f6a43578bcc357cd78bf95c",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 5
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476932,
+      "virtual_time_s": 29,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "8b6388fdf59e4f959de7aa66ff286a86",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 6
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476941,
+      "virtual_time_s": 35,
+      "measure_result": "direction",
+      "svd_deg": 37.65
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "f29ada91302b428e8116975be0b681ca",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 7
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476954,
+      "virtual_time_s": 41,
+      "measure_result": "direction",
+      "svd_deg": 185.51
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "323ddea8326e4d948b2c4d3406da0f40",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 8
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476970,
+      "virtual_time_s": 47,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "3863b14fd3c24cf4a4e1564237043b06",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 9
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476978,
+      "virtual_time_s": 53,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "1e536686a3d44da3a0215896c210ef46",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476986,
+      "virtual_time_s": 59,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "fff5cd56cf484a5db2238e91ce1def23",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 11
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127476995,
+      "virtual_time_s": 65,
+      "measure_result": "direction",
+      "svd_deg": 278.13
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "d68070a39ff247709eb247d024db25a9",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 12
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477011,
+      "virtual_time_s": 71,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "03872b5f53244d75b1040212447fddfb",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 13
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477019,
+      "virtual_time_s": 77,
+      "measure_result": "direction",
+      "svd_deg": 335.23
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "6faa8025e74d4c23a6cd32dfd834df20",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 14
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477032,
+      "virtual_time_s": 83,
+      "measure_result": "direction",
+      "svd_deg": 243.37
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "e5a02bf1e8e34f75898c060d3fd0c92d",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 15
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477046,
+      "virtual_time_s": 89,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "a650249796f647608d6030efb159fa0d",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 16
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477054,
+      "virtual_time_s": 95,
+      "measure_result": "direction",
+      "svd_deg": 355.75
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "ee1cdb7a5d1f4eebb574f9761ff3eba2",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 17
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477068,
+      "virtual_time_s": 101,
+      "measure_result": "direction",
+      "svd_deg": 310.36
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "4f527d1eb972432ba10ca939451b36ff",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 18
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477083,
+      "virtual_time_s": 107,
+      "measure_result": "direction",
+      "svd_deg": 207.19
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "f1e4a6f54a6c41d5923de5c07dabde71",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 19
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477095,
+      "virtual_time_s": 113,
+      "measure_result": "direction",
+      "svd_deg": 169.48
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "5de66845e80544eda24fdb3c725e2809",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "channel": 20
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477107,
+      "virtual_time_s": 119,
+      "measure_result": "direction",
+      "svd_deg": 56.88
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "f6c34fed158b4e9593de896e509177d4",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 20
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477400,
+      "virtual_time_s": 192.783636,
+      "measure_result": "direction",
+      "svd_deg": 53.87
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "4ab32a26d9d741be9cb133401b9538db",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 18
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477604,
+      "virtual_time_s": 198.783636,
+      "measure_result": "direction",
+      "svd_deg": 216.85
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "7f16d31c97234a69a2c087aadf155cc2",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 7
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477761,
+      "virtual_time_s": 204.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "d020a78182db4926b11307a90c96bfab",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 11
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127477880,
+      "virtual_time_s": 210.783636,
+      "measure_result": "direction",
+      "svd_deg": 266.23
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "d73062eff0a84302979410845a84dd3a",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 19
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478018,
+      "virtual_time_s": 216.783636,
+      "measure_result": "direction",
+      "svd_deg": 195.59
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "6533d39c37ca4410a70b406eed4af107",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 16
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478182,
+      "virtual_time_s": 222.783636,
+      "measure_result": "direction",
+      "svd_deg": 335.42
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "0ba6a58dd91d4135b0cf59f46188e805",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 13
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478329,
+      "virtual_time_s": 228.783636,
+      "measure_result": "direction",
+      "svd_deg": 272.88
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "f044cfeef45e448485873d37c43d9ce2",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478454,
+      "virtual_time_s": 234.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "ef7bb9f8b1ba45abb1c0ec8c4eb76331",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 3
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478504,
+      "virtual_time_s": 240.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "9dcdab655e3d44ba9847dc8dea44074d",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 5
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478564,
+      "virtual_time_s": 246.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "000b8ee1b77047d3ae0c078b266bcb84",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 8
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478623,
+      "virtual_time_s": 252.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "2cfddc0fd1944ecc9deb5381d8e0148c",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 9
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478690,
+      "virtual_time_s": 258.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "837fe28f572e456dbdaa0f453c742d08",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478766,
+      "virtual_time_s": 264.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "b60265141d0f41a4950018158435a635",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 12
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478815,
+      "virtual_time_s": 270.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "2352d70198e84046aa18cfeedeecace9",
+      "position": {
+        "x": 157.62606421,
+        "y": 305.66932755
+      },
+      "channel": 15
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478859,
+      "virtual_time_s": 276.783636,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "71dbef77bcfe41b199edfad5cd591314",
+      "position": {
+        "x": 176.7566059630615,
+        "y": -72.07064198970704
+      },
+      "channel": 13
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127478908,
+      "virtual_time_s": 357.428454,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "c12c6e04f0dd407cb888510332379014",
+      "position": {
+        "x": 176.7566059630615,
+        "y": -72.07064198970704
+      },
+      "channel": 6
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127479090,
+      "virtual_time_s": 363.428454,
+      "measure_result": "direction",
+      "svd_deg": 64.78
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "9816c22c20034de9ad6561dc0d59cfa9",
+      "position": {
+        "x": 176.7566059630615,
+        "y": -72.07064198970704
+      },
+      "channel": 14
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127479355,
+      "virtual_time_s": 369.428454,
+      "measure_result": "direction",
+      "svd_deg": 234.48
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "f7bb3dbb4f2647f3b2350dbf6c9f1616",
+      "position": {
+        "x": 331.5353730939257,
+        "y": 256.03730920854485
+      },
+      "channel": 6
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127479580,
+      "virtual_time_s": 446.984996,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "12908da47bd941978c8dad516cbb9941",
+      "position": {
+        "x": 331.5353730939257,
+        "y": 256.03730920854485
+      },
+      "channel": 17
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127479688,
+      "virtual_time_s": 452.984996,
+      "measure_result": "direction",
+      "svd_deg": 233.59
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "f880e850bbac428fa997700b3077d282",
+      "position": {
+        "x": 331.5353730939257,
+        "y": 256.03730920854485
+      },
+      "channel": 1
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127479847,
+      "virtual_time_s": 458.984996,
+      "measure_result": "direction",
+      "svd_deg": 302.18
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "2e7718614b5f4e3bb4b75878412fa25d",
+      "position": {
+        "x": 331.5353730939257,
+        "y": 256.03730920854485
+      },
+      "channel": 4
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480047,
+      "virtual_time_s": 464.984996,
+      "measure_result": "direction",
+      "svd_deg": 280.79
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "069894f4f4c547fb905f44788988002b",
+      "position": {
+        "x": 331.5353730939257,
+        "y": 256.03730920854485
+      },
+      "channel": 20
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480207,
+      "virtual_time_s": 470.984996,
+      "measure_result": "direction",
+      "svd_deg": 77.43
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "1cba68dfbf2c42b4a782cf06f101791e",
+      "position": {
+        "x": 83.18446932588638,
+        "y": -80.80681726689701
+      },
+      "channel": 17
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480381,
+      "virtual_time_s": 559.684969,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "46c42240a03c458fa4b7e38695104fdc",
+      "position": {
+        "x": -565.7049006514426,
+        "y": 104.57619205868474
+      },
+      "channel": 19
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480510,
+      "virtual_time_s": 697.655229,
+      "clear_result": "no_target_in_range"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "ac9ec2730a6a42ec8ce5329a54a1ed81",
+      "position": {
+        "x": -565.7049006514426,
+        "y": 104.57619205868474
+      },
+      "channel": 19
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480678,
+      "virtual_time_s": 703.655229,
+      "measure_result": "direction",
+      "svd_deg": 180.61
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "3e620e16778743b0a7e7c0e717b92d33",
+      "position": {
+        "x": -598.6259335462787,
+        "y": 103.94088288341867
+      },
+      "channel": 19
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480815,
+      "virtual_time_s": 715.240661,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "af0af55969a342bfa599e79bfa34bdea",
+      "position": {
+        "x": -927.8047628747488,
+        "y": 430.4511551228092
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480925,
+      "virtual_time_s": 813.969871,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "da7fd7d6d26a4c15babe6dcf54272884",
+      "position": {
+        "x": -927.8047628747488,
+        "y": 430.4511551228092
+      },
+      "channel": 3
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480927,
+      "virtual_time_s": 819.969871,
+      "measure_result": "direction",
+      "svd_deg": 177.0
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "b471246547fd4cffa46255608f437c0e",
+      "position": {
+        "x": -927.8047628747488,
+        "y": 430.4511551228092
+      },
+      "channel": 5
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480929,
+      "virtual_time_s": 825.969871,
+      "measure_result": "direction",
+      "svd_deg": 220.33
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "1ba49a6f1c0b4ef9bd19e9f6752d3a76",
+      "position": {
+        "x": -927.8047628747488,
+        "y": 430.4511551228092
+      },
+      "channel": 8
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480931,
+      "virtual_time_s": 831.969871,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "dc7488e80e954d06b93dd3ea578f7f6f",
+      "position": {
+        "x": -927.8047628747488,
+        "y": 430.4511551228092
+      },
+      "channel": 9
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480934,
+      "virtual_time_s": 837.969871,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "13536d5c419846089ca608705656f519",
+      "position": {
+        "x": -927.8047628747488,
+        "y": 430.4511551228092
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480936,
+      "virtual_time_s": 843.969871,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "4ecac2d216b3418e9c13c3fc7f1d6f81",
+      "position": {
+        "x": -927.8047628747488,
+        "y": 430.4511551228092
+      },
+      "channel": 12
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480938,
+      "virtual_time_s": 849.969871,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "e18427801fd24ec6840d26c48375542c",
+      "position": {
+        "x": -927.8047628747488,
+        "y": 430.4511551228092
+      },
+      "channel": 15
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127480939,
+      "virtual_time_s": 855.969871,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "82ef317739b14b1e9d7b9a7a29fc4434",
+      "position": {
+        "x": -1161.67595739,
+        "y": 407.64838671
+      },
+      "channel": 3
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481089,
+      "virtual_time_s": 908.965914,
+      "measure_result": "direction",
+      "svd_deg": 161.38
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "d88aacaf9083440ca9248f9b4efdea29",
+      "position": {
+        "x": -1288.1591978357592,
+        "y": 447.9189590064912
+      },
+      "channel": 3
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481202,
+      "virtual_time_s": 940.51378,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "5b89ddb054bb41e6b36ea10b8e415a44",
+      "position": {
+        "x": -1288.1591978357592,
+        "y": 447.9189590064912
+      },
+      "channel": 5
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481288,
+      "virtual_time_s": 946.51378,
+      "measure_result": "direction",
+      "svd_deg": 237.9
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "33b21acdbdb9414ea954e05366b810d2",
+      "position": {
+        "x": -1721.9396406315961,
+        "y": -243.70650613921276
+      },
+      "channel": 5
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481367,
+      "virtual_time_s": 1112.794061,
+      "clear_result": "no_target_in_range"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "3ef0e9743fa04360bd6f368eb737cb71",
+      "position": {
+        "x": -1721.9396406315961,
+        "y": -243.70650613921276
+      },
+      "channel": 5
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481446,
+      "virtual_time_s": 1117.794061,
+      "measure_result": "direction",
+      "svd_deg": 58.57
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "eb66063ddc484b089016a1cdfed87b31",
+      "position": {
+        "x": -1701.6878970461983,
+        "y": -211.19859528119156
+      },
+      "channel": 5
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481533,
+      "virtual_time_s": 1130.45408,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "87676d2867de4a20865b2ebd11ad4313",
+      "position": {
+        "x": -1701.6878970461983,
+        "y": -211.19859528119156
+      },
+      "channel": 7
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481627,
+      "virtual_time_s": 1136.45408,
+      "measure_result": "direction",
+      "svd_deg": 7.87
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "aaf25d0bc16d432a97836a7f22f36e66",
+      "position": {
+        "x": -1174.78053205,
+        "y": -169.00983644
+      },
+      "channel": 7
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481710,
+      "virtual_time_s": 1247.172813,
+      "measure_result": "direction",
+      "svd_deg": 20.55
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "cb4f34f29467464eb7cf612f6843c696",
+      "position": {
+        "x": -1013.8825688982613,
+        "y": -108.98513579516583
+      },
+      "channel": 7
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481788,
+      "virtual_time_s": 1284.51877,
+      "clear_result": "no_target_in_range"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "ce167600642b49e9b73ac97e253b9b7d",
+      "position": {
+        "x": -1013.8825688982613,
+        "y": -108.98513579516583
+      },
+      "channel": 7
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481885,
+      "virtual_time_s": 1289.51877,
+      "measure_result": "direction",
+      "svd_deg": 199.54
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "187fbb6ae6954500b2e64c2d38b81c84",
+      "position": {
+        "x": -1025.6422937284958,
+        "y": -113.10355141538265
+      },
+      "channel": 7
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127481991,
+      "virtual_time_s": 1297.010777,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "2b045242228a4b92a9c7308b09bd5d92",
+      "position": {
+        "x": -1025.6422937284958,
+        "y": -113.10355141538265
+      },
+      "channel": 18
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482093,
+      "virtual_time_s": 1303.010777,
+      "measure_result": "direction",
+      "svd_deg": 316.07
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "5ffc6451efca4556b076bf45e7c2957a",
+      "position": {
+        "x": -878.8772050871743,
+        "y": -441.50461695675665
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482202,
+      "virtual_time_s": 1380.951656,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "44d77a5c89e347b89093acd9f1cbe059",
+      "position": {
+        "x": -878.8772050871743,
+        "y": -441.50461695675665
+      },
+      "channel": 8
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482205,
+      "virtual_time_s": 1386.951656,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "8f46841adde34e1c80f39ea81ea35d9c",
+      "position": {
+        "x": -878.8772050871743,
+        "y": -441.50461695675665
+      },
+      "channel": 9
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482208,
+      "virtual_time_s": 1392.951656,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "3faa8c77e747406fb12b7432166846f8",
+      "position": {
+        "x": -878.8772050871743,
+        "y": -441.50461695675665
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482209,
+      "virtual_time_s": 1398.951656,
+      "measure_result": "direction",
+      "svd_deg": 244.96
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "31819ac621fe462c9aad206ae9f4c54a",
+      "position": {
+        "x": -878.8772050871743,
+        "y": -441.50461695675665
+      },
+      "channel": 12
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482211,
+      "virtual_time_s": 1404.951656,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "6774381ba1d84ab7bed09eaece319b5f",
+      "position": {
+        "x": -878.8772050871743,
+        "y": -441.50461695675665
+      },
+      "channel": 15
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482214,
+      "virtual_time_s": 1410.951656,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "2cb6b61e65654cba95014dede14823f2",
+      "position": {
+        "x": -750.9949294665894,
+        "y": -382.1422759724401
+      },
+      "channel": 18
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482329,
+      "virtual_time_s": 1444.149361,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "cef85ec88b95415f93b8e9cc5f5888a5",
+      "position": {
+        "x": -750.9949294665894,
+        "y": -382.1422759724401
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482389,
+      "virtual_time_s": 1450.149361,
+      "measure_result": "direction",
+      "svd_deg": 237.62
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "72b7478575794c05a0bc63f2cae28ffd",
+      "position": {
+        "x": -1022.41915168,
+        "y": -880.05414246
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482445,
+      "virtual_time_s": 1568.566703,
+      "measure_result": "direction",
+      "svd_deg": 229.01
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "b23db936a24e4632bb251e06801654f3",
+      "position": {
+        "x": -1160.3500415093279,
+        "y": -1039.1205802406612
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482496,
+      "virtual_time_s": 1613.674689,
+      "clear_result": "no_target_in_range"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "025c8b4f3590450f9eec33a99131f82d",
+      "position": {
+        "x": -1160.3500415093279,
+        "y": -1039.1205802406612
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482536,
+      "virtual_time_s": 1618.674689,
+      "measure_result": "direction",
+      "svd_deg": 231.05
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "93e23274d4ff4a889eaa034e163f2bde",
+      "position": {
+        "x": -1176.6340166021732,
+        "y": -1059.5536959147169
+      },
+      "channel": 10
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482570,
+      "virtual_time_s": 1628.900318,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "e0c77b907900445585ca3e206f86ee30",
+      "position": {
+        "x": -1176.6340166021732,
+        "y": -1059.5536959147169
+      },
+      "channel": 14
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482601,
+      "virtual_time_s": 1634.900318,
+      "measure_result": "direction",
+      "svd_deg": 345.6
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "1bf6a132922344c695606dd076f3936c",
+      "position": {
+        "x": -616.220391556636,
+        "y": -1203.1550976169754
+      },
+      "channel": 14
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482629,
+      "virtual_time_s": 1755.604215,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "8740424b45674a959cbf1fc5a86930a4",
+      "position": {
+        "x": -221.85809236176635,
+        "y": -976.4633311790982
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482657,
+      "virtual_time_s": 1852.579108,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "c462b2ec93a54c6eb08c7a052ebf9976",
+      "position": {
+        "x": -221.85809236176635,
+        "y": -976.4633311790982
+      },
+      "channel": 8
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482659,
+      "virtual_time_s": 1858.579108,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "233dda044ef04e2b847a045276608fc3",
+      "position": {
+        "x": -221.85809236176635,
+        "y": -976.4633311790982
+      },
+      "channel": 9
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482660,
+      "virtual_time_s": 1864.579108,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "4679e47dfea04d69973d2b537b91c3ea",
+      "position": {
+        "x": -221.85809236176635,
+        "y": -976.4633311790982
+      },
+      "channel": 12
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482661,
+      "virtual_time_s": 1870.579108,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "0287cedf8a8f468f8696ff25df1195ea",
+      "position": {
+        "x": -221.85809236176635,
+        "y": -976.4633311790982
+      },
+      "channel": 15
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482663,
+      "virtual_time_s": 1876.579108,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "818a886cc15740dfb3f76f0b4073bb2d",
+      "position": {
+        "x": -221.85809236176635,
+        "y": -976.4633311790982
+      },
+      "channel": 11
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482693,
+      "virtual_time_s": 1882.579108,
+      "measure_result": "direction",
+      "svd_deg": 52.19
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "d30c13af555f47e8967dad95d4070362",
+      "position": {
+        "x": 85.96685846529542,
+        "y": -579.2511464552448
+      },
+      "channel": 11
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482719,
+      "virtual_time_s": 1988.084575,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "4ca5003ca041460c89c57caaa1e758a8",
+      "position": {
+        "x": 483.0174448101982,
+        "y": -535.6830083486287
+      },
+      "channel": 4
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482744,
+      "virtual_time_s": 2072.971333,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "f0cd1c3f993148ddb38959b888840a79",
+      "position": {
+        "x": 624.7838574801347,
+        "y": -780.8194399506973
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482767,
+      "virtual_time_s": 2135.606865,
+      "measure_result": "direction",
+      "svd_deg": 338.62
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "db92275e48b44b2ab55b0432284ac2aa",
+      "position": {
+        "x": 624.7838574801347,
+        "y": -780.8194399506973
+      },
+      "channel": 8
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482769,
+      "virtual_time_s": 2141.606865,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "3fae0020bab94d6cb5b1baccd6b6c0cf",
+      "position": {
+        "x": 624.7838574801347,
+        "y": -780.8194399506973
+      },
+      "channel": 9
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482770,
+      "virtual_time_s": 2147.606865,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "166c661a213845359f1a74a10d4d55e9",
+      "position": {
+        "x": 624.7838574801347,
+        "y": -780.8194399506973
+      },
+      "channel": 12
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482772,
+      "virtual_time_s": 2153.606865,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "a471c3685df940ca9acd376916f0243f",
+      "position": {
+        "x": 624.7838574801347,
+        "y": -780.8194399506973
+      },
+      "channel": 15
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482774,
+      "virtual_time_s": 2159.606865,
+      "measure_result": "no_signal"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "12f85a2237fa409daebac84170fed0d0",
+      "position": {
+        "x": 858.70423423,
+        "y": -909.94810498
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482799,
+      "virtual_time_s": 2219.045785,
+      "measure_result": "direction",
+      "svd_deg": 341.09
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "9e809671f9b041109c925e844876e0eb",
+      "position": {
+        "x": 1222.83118232,
+        "y": -1068.61045606
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482824,
+      "virtual_time_s": 2303.484359,
+      "measure_result": "direction",
+      "svd_deg": 354.41
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "99c1ed1b12054a33a6b515eefe37572e",
+      "position": {
+        "x": 1379.7399007108509,
+        "y": -1083.636148737944
+      },
+      "channel": 2
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482847,
+      "virtual_time_s": 2340.009661,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "40abbe391c0a475098df43bc655e6255",
+      "position": {
+        "x": 792.528826717347,
+        "y": -475.23573017012126
+      },
+      "channel": 1
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482862,
+      "virtual_time_s": 2512.121212,
+      "clear_result": "no_target_in_range"
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "d6a1cb5272b4479abb3fbd37dd04f3bc",
+      "position": {
+        "x": 792.528826717347,
+        "y": -475.23573017012126
+      },
+      "channel": 16
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482881,
+      "virtual_time_s": 2518.121212,
+      "measure_result": "direction",
+      "svd_deg": 61.71
+    }
+  },
+  {
+    "path": "measure",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "3c221030f74c4119b8979b79984a5396",
+      "position": {
+        "x": 792.528826717347,
+        "y": -475.23573017012126
+      },
+      "channel": 1
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482896,
+      "virtual_time_s": 2524.121212,
+      "measure_result": "direction",
+      "svd_deg": 312.93
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "90ee734f25e4447282f8b813d45d4f44",
+      "position": {
+        "x": 820.4980303171835,
+        "y": -504.6727480686426
+      },
+      "channel": 1
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482914,
+      "virtual_time_s": 2537.242331,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "bf9fb6b4ea53450bb6ed553614af0af7",
+      "position": {
+        "x": 1004.2548465334999,
+        "y": -82.83145290919771
+      },
+      "channel": 16
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482923,
+      "virtual_time_s": 2634.267685,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "clear",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "a4945e48e06f4c0ba4986cfcc6a3d9e8",
+      "position": {
+        "x": 423.88909745079457,
+        "y": 666.8303300618754
+      },
+      "channel": 20
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482930,
+      "virtual_time_s": 2828.879625,
+      "clear_result": "success"
+    }
+  },
+  {
+    "path": "exit",
+    "request": {
+      "arena_id": "default",
+      "robot_id": "<参赛队号已隐去>",
+      "request_id": "7b4e3be60bb347799e623244581a77fe"
+    },
+    "http_status": 200,
+    "response": {
+      "accepted": true,
+      "real_timestamp_ms": 1789127482932,
+      "virtual_time_s": 2828.879625,
+      "exit_reason": "user_exit"
+    }
+  }
+]

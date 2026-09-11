@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "case_code": "ET6H-55DX-DS5N-XGXQ",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 13,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 13,
+  "virtual_time_s": 2895.146793,
+  "real_time_s": 3.215059672999814,
+  "actions": 120,
+  "costs": {
+    "move_s": 2198.1467930000003,
+    "switch_s": 99.0,
+    "measure_s": 530.0,
+    "clear_success_s": 65.0,
+    "clear_failure_s": 3.0
+  },
+  "movement_m": 10990.733965000001,
+  "measure_count": 106,
+  "switch_count": 99,
+  "clear_failures": 1,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 222.70359946153846,
+  "clearance_fraction": 1.0
+}

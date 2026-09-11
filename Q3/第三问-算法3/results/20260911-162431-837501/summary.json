@@ -1,0 +1,41 @@
+{
+  "rounds": 10,
+  "totals": {
+    "localize_clear_movement_m": 65586.6037629877,
+    "localize_clear_move_actions": 204,
+    "status:station_scan": 200,
+    "search_measurements": 958,
+    "search_operation_s": 5723,
+    "same_channel_same_point_repeats": 0,
+    "eventually_absent_channel_measurements": 651,
+    "eventually_absent_operation_s": 3886,
+    "discovered_at_origin": 58,
+    "status:route_decision": 278,
+    "known_localization_measurements": 196,
+    "known_localization_operation_s": 1146,
+    "station_optimizer_calls": 2264,
+    "station_optimizer_successes": 2264,
+    "station_optimizer_accepted": 388,
+    "optimizer_success_but_infeasible": 2538,
+    "optimizer_tiny_constraint_violation": 2538,
+    "status:shared_measure": 115,
+    "survey_movement_m": 41629.54218179896,
+    "survey_move_actions": 64,
+    "discovered_elsewhere": 61,
+    "status:joint_search_batch": 642,
+    "after_last_clear_m": 1276.3577687188326,
+    "status:task_clear_search": 41,
+    "status:incidental_scan": 11
+  },
+  "costs": {
+    "move_s": 21443.229188999998,
+    "switch_s": 1099.0,
+    "measure_s": 5770.0,
+    "clear_success_s": 595.0,
+    "clear_failure_s": 42.0
+  },
+  "total_virtual_time_s": 28949.229188999998,
+  "mean_after_last_clear_s": 43.52715539999999,
+  "mean_after_last_clear_m": 127.63577687188327,
+  "replay_mismatches": 0
+}

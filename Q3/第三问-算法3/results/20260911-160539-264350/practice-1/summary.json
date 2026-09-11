@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-sector",
+  "case_code": "HKKD-9NQB-D5ZM-TZ8U",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 11,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 11,
+  "virtual_time_s": 2854.04106,
+  "real_time_s": 3.372659966997162,
+  "actions": 121,
+  "costs": {
+    "move_s": 2143.0410599999996,
+    "switch_s": 106.0,
+    "measure_s": 550.0,
+    "clear_success_s": 55.0,
+    "clear_failure_s": 0.0
+  },
+  "movement_m": 10715.205299999998,
+  "measure_count": 110,
+  "switch_count": 106,
+  "clear_failures": 0,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 259.4582781818182,
+  "clearance_fraction": 1.0
+}

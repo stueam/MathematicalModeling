@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "case_code": "UX6G-YJE2-B6QC-46PV",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 16,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 16,
+  "virtual_time_s": 3319.47205,
+  "real_time_s": 3.3474073400002453,
+  "actions": 116,
+  "costs": {
+    "move_s": 2649.4720500000003,
+    "switch_s": 94.0,
+    "measure_s": 490.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 6.0
+  },
+  "movement_m": 13247.360250000002,
+  "measure_count": 98,
+  "switch_count": 94,
+  "clear_failures": 2,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 207.467003125,
+  "clearance_fraction": 1.0
+}

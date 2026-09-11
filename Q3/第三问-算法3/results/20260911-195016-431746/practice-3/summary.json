@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "case_code": "38JP-2MPS-DVUB-8J27",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 16,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 16,
+  "virtual_time_s": 3282.001323,
+  "real_time_s": 3.3451921229998334,
+  "actions": 120,
+  "costs": {
+    "move_s": 2593.001323,
+    "switch_s": 95.0,
+    "measure_s": 505.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 9.0
+  },
+  "movement_m": 12965.006615,
+  "measure_count": 101,
+  "switch_count": 95,
+  "clear_failures": 3,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 205.1250826875,
+  "clearance_fraction": 1.0
+}

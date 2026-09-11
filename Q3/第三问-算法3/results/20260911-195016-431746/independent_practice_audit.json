@@ -1,0 +1,418 @@
+{
+  "status": "verified",
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "rounds": 10,
+  "source_count": 141,
+  "cleared_count": 141,
+  "current_source_manifest_matches": true,
+  "code_sha256": {
+    "第三问-算法3/bayes_tsp/efficient.py": "98e4a8fda932907943de3c2b1bd5afb6b4451680f648716772e6eb3dc4377df7",
+    "第三问-算法3/bayes_tsp/repair.py": "700294976ea6778b817420bea52e97c481b1a055416ae0dc6dd738b382e60d51",
+    "第三问-算法3/bayes_tsp/posterior.py": "bca41a136b699536a443c91264124410ddc3125021af97df66481f31c6a0202f",
+    "第三问-算法3/bayes_tsp/refinement.py": "2ac4ff155c06def8f4572045ffe3f10c95124c7f960cf1fe926286ca42e243c6",
+    "第三问-算法3/bayes_tsp/routing.py": "5d70a641250b187ab5c846f1331443502b27feadd3d2db7a0c7d8acec81d241c",
+    "第三问-算法3/bayes_tsp/policy.py": "cc3d753247580d97a1153457c8829797c8fd218df497ead7ad58c2fdc6e5312a",
+    "第三问-算法3/bayes_tsp/sectors.py": "ce081bd58dcdcce9656235ab5209ea0e1bf9180ad2b055bd7deb6a7ab82eddbf",
+    "第三问-算法3/bayes_tsp/coupling.py": "e5ea1b6439bce29858192f80f199f82730d2f9f31918a9786cd441f5b3d760fd",
+    "第三问-算法3/bayes_tsp/open_routes.py": "54fc4c4590380e17e38ed9c13da2ee05ddcd1888fdcf7d498459aaf39d70ada4",
+    "第三问-算法3/bayes_tsp/__init__.py": "c6b877ac50223572ea9507e93f37e4cf85ecd74c070b6aa1a57164a34d836e2b",
+    "第三问-算法3/bayes_tsp/shared.py": "96ad5e45051a9a481f9ef301d8c8e366820939b0769de83f10eb374a08dd459c",
+    "第三问-算法3/bayes_tsp/cached.py": "948e4e823dfb8dd8dd3e419c20aeeda66a046b196ce19343d15e7c5290e509fd",
+    "第三问-算法3/bayes_tsp/scheduling.py": "97c5068dc8e4dfc1294c6dca806274c3e115dd2e86240072b46db3e260bf3546",
+    "第三问-算法3/bayes_tsp/joint.py": "0d9d952b76a17f56d1e34858e7e568140fb69686d6f3ade6c3177394cd0db07c",
+    "第三问-算法3/run.py": "a3b60127938a0ea7d5f2d75774e5878c0d8aaf8b19c86834015c615c2c175a77",
+    "第三问-算法3/analyze.py": "227f620892cec27f14dd4ce9b8980589ff22fa0bd0835afa534e60279527b124",
+    "第三问-算法3/audit_routes.py": "d44db55692c8f302e04497cc7084acda4f06b37081a57d580f15abf4298b7373",
+    "第三问-算法3/practice_windows.py": "21623b8e7b5c57b3fd2a3a412ee9bfb970297dcbeb377e0c74e30739bc16ad54",
+    "第三问-算法1/q3/core.py": "6a602ed77a305d88e622570ab5204f1a38177110814ec894f92ad0c063591c69",
+    "第三问-算法1/q3/policy.py": "a67cb7848726a7dea0224b1e0902d002b54492e5828897fc39164b8990d77e32",
+    "第三问-算法1/q3/simulator.py": "7202b3337fab9537bea07eb49edb80dffe3fe5d8d2f11ff15b2ea85cb56ef668",
+    "第三问-算法1/q3/client.py": "6538b9c0a1bebba6abcc890a2ef5dd19ad220996adb1416fb288ed37589b3979",
+    "第三问-算法1/q3/movement.py": "83ab1ccb5aaf674a1e3ddd5ec6aa709dab754ef9c273484ec9d8e2bdbc9ba55b",
+    "第三问-算法1/q3/sampling.py": "367a384374eeee20420661fa3371f61fa344789e0a8292033e9dcbed2684fb89"
+  },
+  "total_virtual_time_s": 29841.844171,
+  "pooled_per_source_s": 211.64428490070924,
+  "mean_case_per_source_s": 216.58212144352564,
+  "mean_client_real_time_s": 3.1701802987999144,
+  "total_movement_m": 113994.220855,
+  "mean_movement_m": 11399.4220855,
+  "total_actions": 1216,
+  "total_measurements": 1057,
+  "total_failed_clears": 18,
+  "total_http_retries": 0,
+  "max_cost_difference_s": 0.0,
+  "rounds_under_170_s_per_source": 1,
+  "rounds_under_200_s_per_source": 4,
+  "cases": [
+    {
+      "folder": "practice-1",
+      "case_code": "ET6H-55DX-DS5N-XGXQ",
+      "source_count": 13,
+      "cleared_count": 13,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "cleared": 13,
+        "absent_certified": 7
+      },
+      "virtual_time_s": 2895.146793,
+      "per_source_s": 222.70359946153846,
+      "movement_m": 10990.733965000001,
+      "raw_coordinate_movement_m": 10990.733966765312,
+      "actions": 120,
+      "measurements": 106,
+      "failed_clears": 1,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 3.215059672999814,
+      "costs": {
+        "move_s": 2198.1467930000003,
+        "switch_s": 99,
+        "measure_s": 530,
+        "clear_success_s": 65,
+        "clear_failure_s": 3
+      },
+      "input_sha256": {
+        "summary.json": "5e7a2201cf2f4af4d08b6f467dce7341963ca9577892e81fff9aa740c4b154ff",
+        "actions.jsonl": "828dd7d673da8b07c1626ce7d6ba3136c7807efe6e75fcb45fbd3f220907ecc8",
+        "decisions.jsonl": "b8b62ef5e2ea69c772d57531240184f172e2b43c80df7703b9cbada39b91e10f",
+        "http-log.json": "bd227703ca4b3b27362dcf07b4033faeb7d98dfe91019baac502a42cc0279716",
+        "practice-before.json": "42aa328876f6d4b53005bb05cf39d3141180bca25b8571e14a0ebe00ab7294eb",
+        "practice-after.json": "fa507839d37ddd4689c5c972f2893329ffd7778eeee5bd9abe3671a1c389d2a6"
+      }
+    },
+    {
+      "folder": "practice-2",
+      "case_code": "XQES-MV5K-PJH7-6Q3A",
+      "source_count": 12,
+      "cleared_count": 12,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "cleared": 12,
+        "absent_certified": 8
+      },
+      "virtual_time_s": 3137.049273,
+      "per_source_s": 261.42077275,
+      "movement_m": 11565.246365,
+      "raw_coordinate_movement_m": 11565.246373973316,
+      "actions": 141,
+      "measurements": 128,
+      "failed_clears": 1,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 1.4691874740001367,
+      "costs": {
+        "move_s": 2313.049273,
+        "switch_s": 121,
+        "measure_s": 640,
+        "clear_success_s": 60,
+        "clear_failure_s": 3
+      },
+      "input_sha256": {
+        "summary.json": "ab987302a215ca065b1c02e40bd493b860ea0e029a466560b30c3e2988ef0537",
+        "actions.jsonl": "74c813e27367844179013bc280609ffba8f61414d0587ace2d0b94dec4926562",
+        "decisions.jsonl": "d95b43726ebb085cfc6510f23d6b2662c4401af66043d7022cc6077fbea0ae03",
+        "http-log.json": "cbb94217436a965874c64d63c73ba8958698b88ec9a42ecf9c8c03fa63062519",
+        "practice-before.json": "2a6a869078fe3a48ee6c66f7f5dd00d9128213fa89ace2958654c22a2dc492e5",
+        "practice-after.json": "896d7ea111f704f7418468ba8710f45f81ca61d475cd122db14aa7c976196d8f"
+      }
+    },
+    {
+      "folder": "practice-3",
+      "case_code": "38JP-2MPS-DVUB-8J27",
+      "source_count": 16,
+      "cleared_count": 16,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "cleared": 16,
+        "unresolved": 4
+      },
+      "virtual_time_s": 3282.001323,
+      "per_source_s": 205.1250826875,
+      "movement_m": 12965.006615,
+      "raw_coordinate_movement_m": 12965.00661334707,
+      "actions": 120,
+      "measurements": 101,
+      "failed_clears": 3,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 3.3451921229998334,
+      "costs": {
+        "move_s": 2593.001323,
+        "switch_s": 95,
+        "measure_s": 505,
+        "clear_success_s": 80,
+        "clear_failure_s": 9
+      },
+      "input_sha256": {
+        "summary.json": "e2d028f91849d36ee3fcc1879c5fc094159ba86777a1caaf451e2ce248536f4b",
+        "actions.jsonl": "0d201293007da3390538891181c00bd1caaa8629bdb834f218edc96b4d366960",
+        "decisions.jsonl": "c34785e7eb51f8714a50cb7f560dc80811266f9474a5cf5c01d1d1031397e944",
+        "http-log.json": "fd0da6754f3f125d274b4571f89c5a0f4ad43a95e76b31725111fa297c798fc8",
+        "practice-before.json": "c3559141594efb4d5475347d43026e188261b1a8f00ebb675aa34a151023ac66",
+        "practice-after.json": "559ba6522c83735eb8cf223a37ddc92ad46c6892663ca11dda91df57b4aa92eb"
+      }
+    },
+    {
+      "folder": "practice-4",
+      "case_code": "E4BF-SZYA-BKY3-AWX4",
+      "source_count": 16,
+      "cleared_count": 16,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "cleared": 16,
+        "unresolved": 4
+      },
+      "virtual_time_s": 2828.879625,
+      "per_source_s": 176.8049765625,
+      "movement_m": 11249.398125000003,
+      "raw_coordinate_movement_m": 11249.398120228056,
+      "actions": 103,
+      "measurements": 82,
+      "failed_clears": 5,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 5.596297079000578,
+      "costs": {
+        "move_s": 2249.8796250000005,
+        "switch_s": 74,
+        "measure_s": 410,
+        "clear_success_s": 80,
+        "clear_failure_s": 15
+      },
+      "input_sha256": {
+        "summary.json": "97df44468b0a1f2a302185810902b57f8016623ca2db5f5faa35a83d7a7826f9",
+        "actions.jsonl": "9a3ba659545d6fddc2fcd5b69374d16551bb06670e34f8bcec3bfa321df1e106",
+        "decisions.jsonl": "5454f90530ea416beda494eb180414dd8b358a4d98ea85e203828fb3c6732371",
+        "http-log.json": "ed2bc04476dd3e5fcc767676207a115ca712f1b313cd743d23da180b58e4fbc6",
+        "practice-before.json": "f7b54cea6701f80f42adcff603d16c6159e700370b85afa4e54c549810b0e39f",
+        "practice-after.json": "b70fe4080898a8f06bedda245dc6cd1bac2a26006c4d397c50d3f09809ae8f60"
+      }
+    },
+    {
+      "folder": "practice-5",
+      "case_code": "UX6G-YJE2-B6QC-46PV",
+      "source_count": 16,
+      "cleared_count": 16,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "cleared": 16,
+        "unresolved": 4
+      },
+      "virtual_time_s": 3319.47205,
+      "per_source_s": 207.467003125,
+      "movement_m": 13247.360250000002,
+      "raw_coordinate_movement_m": 13247.360265548192,
+      "actions": 116,
+      "measurements": 98,
+      "failed_clears": 2,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 3.3474073400002453,
+      "costs": {
+        "move_s": 2649.4720500000003,
+        "switch_s": 94,
+        "measure_s": 490,
+        "clear_failure_s": 6,
+        "clear_success_s": 80
+      },
+      "input_sha256": {
+        "summary.json": "540c1eaeddd59376c5381fd2976bbc47da8b6f9bc42c70a26d2469ad61d4891c",
+        "actions.jsonl": "28a7f569d4d0207def7ce5edbbe2001ccfdb5c35033ef140596a4cdc9d37264a",
+        "decisions.jsonl": "05296125274fb0782d892460cdcb36923310da179d5ae945811a9832baf21db5",
+        "http-log.json": "cb857b1da641d401683f3faf30c8130d6a33ceeaaf9906d09edc152c211d4b94",
+        "practice-before.json": "6a02b84ea5a1849dea4d9a76acc808f25af1d1868dab5c62a6a7c9da321c7c07",
+        "practice-after.json": "a29a138ca563dc81cf87156864ef7cfbe7e4f3499505bd03d71ae98d4785ca3c"
+      }
+    },
+    {
+      "folder": "practice-6",
+      "case_code": "EC9R-5G9M-TPFV-JA7U",
+      "source_count": 15,
+      "cleared_count": 15,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "cleared": 15,
+        "absent_certified": 5
+      },
+      "virtual_time_s": 2533.968178,
+      "per_source_s": 168.93121186666667,
+      "movement_m": 9099.84089,
+      "raw_coordinate_movement_m": 9099.840899309842,
+      "actions": 125,
+      "measurements": 105,
+      "failed_clears": 5,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 3.9235028419998343,
+      "costs": {
+        "move_s": 1819.9681779999999,
+        "switch_s": 99,
+        "measure_s": 525,
+        "clear_success_s": 75,
+        "clear_failure_s": 15
+      },
+      "input_sha256": {
+        "summary.json": "4ff6e23d781b27edf2977de073481a093810acd890b7109f61fdd978239013b0",
+        "actions.jsonl": "104219be01e737035790220852419657a9e1603b0529c7878806728cdd59673a",
+        "decisions.jsonl": "652212c4b391646f9af3126fbf7e9f4a8fff22ad19483941f11fd633ed945928",
+        "http-log.json": "60ac727b949ab1a6eac9177f89a1617c80c32a6705bf40b8e2d1a52854d50371",
+        "practice-before.json": "3d63737a0ab34638654d77f29f3d01f50eb84485d3b99604ebd37fcee94574ed",
+        "practice-after.json": "7b60f552d1a8db1efb37a639eb8b2d410f8d7ee8ff297cd0ef2638d50c37cf00"
+      }
+    },
+    {
+      "folder": "practice-7",
+      "case_code": "M9FW-4JUR-Z8UP-A2RT",
+      "source_count": 13,
+      "cleared_count": 13,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "absent_certified": 7,
+        "cleared": 13
+      },
+      "virtual_time_s": 3077.160263,
+      "per_source_s": 236.70463561538463,
+      "movement_m": 11750.801314999999,
+      "raw_coordinate_movement_m": 11750.801305967036,
+      "actions": 124,
+      "measurements": 111,
+      "failed_clears": 0,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 1.3477023689993075,
+      "costs": {
+        "move_s": 2350.1602629999998,
+        "switch_s": 107,
+        "measure_s": 555,
+        "clear_success_s": 65
+      },
+      "input_sha256": {
+        "summary.json": "dcb6a528af15a9d645c4f0485c3bcca0a13c85dec54a19745e9ce518e2fb493d",
+        "actions.jsonl": "5ddebe5fc597c7be43bb9209af52e7897b1892f206ff43a86bd5bc3548513735",
+        "decisions.jsonl": "ae0f08d51249d5d1a1d08a8081dce939fc03afb503eaac87ede2cedd57cb92c3",
+        "http-log.json": "73210fab43e227a5920b1c63b08d4b2656dee2995b81aa16e09052bbce14b781",
+        "practice-before.json": "8be0be098661f62110f59966834b4aa5a5ae8c4c2cef68ea3f1d0fa28e85a8be",
+        "practice-after.json": "69768d71691417e0b8b48d474cc7a71aa44c990f24313873f2bcefb7719061cd"
+      }
+    },
+    {
+      "folder": "practice-8",
+      "case_code": "U96A-SGXB-3GKA-DECK",
+      "source_count": 15,
+      "cleared_count": 15,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "cleared": 15,
+        "absent_certified": 5
+      },
+      "virtual_time_s": 2849.428686,
+      "per_source_s": 189.96191240000002,
+      "movement_m": 11022.143429999998,
+      "raw_coordinate_movement_m": 11022.14343333202,
+      "actions": 111,
+      "measurements": 96,
+      "failed_clears": 0,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 4.144418082999437,
+      "costs": {
+        "move_s": 2204.4286859999997,
+        "switch_s": 90,
+        "measure_s": 480,
+        "clear_success_s": 75
+      },
+      "input_sha256": {
+        "summary.json": "b2f5a0c58d779bf1eef7ee4f411ac63316f3d7ca255f97823b45d58b82b4cf78",
+        "actions.jsonl": "9bea135ebd6d9279becf80eab78f9efb62f32a8bb41e6e765a547ef9e47e5058",
+        "decisions.jsonl": "2eea7cbf2694460520974a84f1599d75dfbeca2f03b9d40ae237429ebccb39ed",
+        "http-log.json": "b57c17a6effb84ff192053bce03d93edae64d6f0a577b034a6611a98aff39a5a",
+        "practice-before.json": "6185816b89a5d262c00aaa1e1c4001f7fef3b6a5145f8e10e49aba9ddedc22e2",
+        "practice-after.json": "eedaf0a1f87a52d339767e288fa51bb8f13b1d2c4479acccc880e15084bf0c1b"
+      }
+    },
+    {
+      "folder": "practice-9",
+      "case_code": "WNCX-E8BC-THVM-NSXB",
+      "source_count": 10,
+      "cleared_count": 10,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "cleared": 10,
+        "absent_certified": 10
+      },
+      "virtual_time_s": 3063.584639,
+      "per_source_s": 306.3584639,
+      "movement_m": 11197.923195,
+      "raw_coordinate_movement_m": 11197.923198824394,
+      "actions": 140,
+      "measurements": 130,
+      "failed_clears": 0,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 0.8463144739998825,
+      "costs": {
+        "move_s": 2239.5846389999997,
+        "switch_s": 124,
+        "measure_s": 650,
+        "clear_success_s": 50
+      },
+      "input_sha256": {
+        "summary.json": "dea98eb11364485a7ef8e5fe791fb09dcfb52e159bb6edd7b927c02a0220a63c",
+        "actions.jsonl": "35aa1dd49720ffb9f29d2ce76466970964a6448bac0940f2aa46e4508fdd2329",
+        "decisions.jsonl": "3861d64f83047350b7c2d4f663c6eaaf480e56e1c25ba819a2cf524297c31de2",
+        "http-log.json": "71eab78990e376f80ee6862095c52d219f1ae3da5cdd9513e9d835f39a14751d",
+        "practice-before.json": "e3bd19abc912829f8024dac74646f9395ea34a66c6b96c39a15b538f45d31081",
+        "practice-after.json": "b5186e9cf56a1460b35cbd3f729e07d78bb53dfce355e4f7f5d5fb88b573c5b6"
+      }
+    },
+    {
+      "folder": "practice-10",
+      "case_code": "4C8X-GGF8-2VJA-3P9D",
+      "source_count": 15,
+      "cleared_count": 15,
+      "certified_complete_from_feedback": true,
+      "channel_status_counts": {
+        "absent_certified": 5,
+        "cleared": 15
+      },
+      "virtual_time_s": 2855.153341,
+      "per_source_s": 190.34355606666668,
+      "movement_m": 10905.766704999998,
+      "raw_coordinate_movement_m": 10905.766702184494,
+      "actions": 116,
+      "measurements": 100,
+      "failed_clears": 1,
+      "http_retries": 0,
+      "max_cost_difference_s": 0.0,
+      "actual_deadline_s": 1200,
+      "client_real_time_s": 4.466721531000076,
+      "costs": {
+        "move_s": 2181.1533409999997,
+        "switch_s": 96,
+        "measure_s": 500,
+        "clear_success_s": 75,
+        "clear_failure_s": 3
+      },
+      "input_sha256": {
+        "summary.json": "59a5166b5feb9d091a0fe9e31a5a499f0a698d8a3a99082aed01d9b177e04b7f",
+        "actions.jsonl": "1d1247088a593db85709f9d8635be200a79a8f9c918423a7cde75e0ee493f701",
+        "decisions.jsonl": "ae3df9e06790530ae497cfbc2c45c0055809f319d9168415956069638fea3946",
+        "http-log.json": "444808e300b81999019c558a578bed2714097f6b36f9bc0a3d1bcd4f6ee9bd7c",
+        "practice-before.json": "1fecfecb657736c922cd796d3682a1ffd0b507408e85793d441af8de638b5460",
+        "practice-after.json": "d611f4f3dd90539543590533a25db91c2e93fe3d43d755a51b0702faafafc11d"
+      }
+    }
+  ],
+  "method": "Read-only reconstruction of accepted actual feedback; no policy choose, simulated world, UI call, or network operation."
+}

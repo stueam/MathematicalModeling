@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-sector",
+  "case_code": "N93T-WPC4-9GYR-G5UY",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 13,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 13,
+  "virtual_time_s": 2939.464066,
+  "real_time_s": 6.72940150800423,
+  "actions": 124,
+  "costs": {
+    "move_s": 2218.464066,
+    "switch_s": 105.0,
+    "measure_s": 545.0,
+    "clear_success_s": 65.0,
+    "clear_failure_s": 6.0
+  },
+  "movement_m": 11092.32033,
+  "measure_count": 109,
+  "switch_count": 105,
+  "clear_failures": 2,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 226.11262046153846,
+  "clearance_fraction": 1.0
+}

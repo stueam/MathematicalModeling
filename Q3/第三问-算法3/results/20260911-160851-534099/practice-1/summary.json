@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-sector",
+  "case_code": "GPDD-KNJV-RHAE-2RBZ",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 12,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 12,
+  "virtual_time_s": 2964.175317,
+  "real_time_s": 2.342612514999928,
+  "actions": 131,
+  "costs": {
+    "move_s": 2195.1753169999997,
+    "switch_s": 114.0,
+    "measure_s": 595.0,
+    "clear_success_s": 60.0,
+    "clear_failure_s": 0.0
+  },
+  "movement_m": 10975.876584999998,
+  "measure_count": 119,
+  "switch_count": 114,
+  "clear_failures": 0,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 247.01460975,
+  "clearance_fraction": 1.0
+}

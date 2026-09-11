@@ -1,0 +1,56 @@
+[
+  {
+    "request_id": "local-0",
+    "action": {
+      "kind": "measure",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "channel": 1
+    },
+    "response": {
+      "accepted": true,
+      "virtual_time_s": 5.0,
+      "real_timestamp_ms": 1789125935417,
+      "measure_result": "no_signal"
+    },
+    "planning_s": 0.02833375500040347
+  },
+  {
+    "request_id": "local-1",
+    "action": {
+      "kind": "measure",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "channel": 2
+    },
+    "response": {
+      "accepted": true,
+      "virtual_time_s": 11.0,
+      "real_timestamp_ms": 1789125935439,
+      "measure_result": "no_signal"
+    },
+    "planning_s": 0.02171999100028188
+  },
+  {
+    "request_id": "local-2",
+    "action": {
+      "kind": "measure",
+      "position": [
+        0.0,
+        0.0
+      ],
+      "channel": 3
+    },
+    "response": {
+      "accepted": true,
+      "virtual_time_s": 17.0,
+      "real_timestamp_ms": 1789125935444,
+      "measure_result": "no_signal"
+    },
+    "planning_s": 0.004427413000030356
+  }
+]

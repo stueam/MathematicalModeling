@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-sector",
+  "case_code": "HJ89-8UW9-R586-484A",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 10,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 10,
+  "virtual_time_s": 2601.778918,
+  "real_time_s": 1.6510966679998091,
+  "actions": 136,
+  "costs": {
+    "move_s": 1799.7789179999997,
+    "switch_s": 122.0,
+    "measure_s": 630.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 0.0
+  },
+  "movement_m": 8998.894589999998,
+  "measure_count": 126,
+  "switch_count": 122,
+  "clear_failures": 0,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 260.1778918,
+  "clearance_fraction": 1.0
+}

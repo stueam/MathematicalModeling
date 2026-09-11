@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-sector",
+  "case_code": "SP7D-BTAY-B345-74KD",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 10,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 10,
+  "virtual_time_s": 2789.395342,
+  "real_time_s": 2.8054453219956486,
+  "actions": 133,
+  "costs": {
+    "move_s": 2010.395342,
+    "switch_s": 116.0,
+    "measure_s": 610.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 3.0
+  },
+  "movement_m": 10051.97671,
+  "measure_count": 122,
+  "switch_count": 116,
+  "clear_failures": 1,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 278.93953419999997,
+  "clearance_fraction": 1.0
+}

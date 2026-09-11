@@ -1,0 +1,30 @@
+{
+  "mode": "problem3_practice_only",
+  "policy": "bayes-fast",
+  "case_code": "E4BF-SZYA-BKY3-AWX4",
+  "entered": true,
+  "exited": true,
+  "error": null,
+  "source_count": 16,
+  "remaining_real_duration_s": 1200,
+  "certified_complete": true,
+  "cleared_count": 16,
+  "virtual_time_s": 2828.879625,
+  "real_time_s": 5.596297079000578,
+  "actions": 103,
+  "costs": {
+    "move_s": 2249.8796250000005,
+    "switch_s": 74.0,
+    "measure_s": 410.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 15.0
+  },
+  "movement_m": 11249.398125000003,
+  "measure_count": 82,
+  "switch_count": 74,
+  "clear_failures": 5,
+  "max_cost_difference_s": 0.0,
+  "belief_implementation": "CoupledBelief",
+  "average_per_cleared_s": 176.8049765625,
+  "clearance_fraction": 1.0
+}
