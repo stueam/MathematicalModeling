@@ -1,0 +1,1205 @@
+[
+  {
+    "macro": 0,
+    "kind": "probe",
+    "active_sector": 1,
+    "position_before": [
+      0.0,
+      0.0
+    ],
+    "point": [
+      397.1716686487697,
+      643.1520887398569
+    ],
+    "planned_channels": [
+      5
+    ],
+    "served_channels": [
+      5
+    ],
+    "gain_s": 298.79293135464593,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      1,
+      0,
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 0,
+      "7": 0,
+      "8": 0,
+      "13": 0,
+      "14": 0,
+      "17": 1
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 1,
+    "kind": "probe",
+    "active_sector": 1,
+    "position_before": [
+      397.1716686487697,
+      643.1520887398569
+    ],
+    "point": [
+      433.0790961542199,
+      625.5266341374689
+    ],
+    "planned_channels": [
+      17
+    ],
+    "served_channels": [
+      17
+    ],
+    "gain_s": 213.33520177347896,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      1,
+      0,
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "8": 0,
+      "13": 0,
+      "14": 0,
+      "17": 0
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 2,
+    "kind": "probe",
+    "active_sector": 1,
+    "position_before": [
+      433.0790961542199,
+      625.5266341374689
+    ],
+    "point": [
+      573.1356860986664,
+      405.962050435326
+    ],
+    "planned_channels": [
+      14
+    ],
+    "served_channels": [
+      14
+    ],
+    "gain_s": 222.3628738924566,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      1,
+      0,
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 2,
+      "7": 0,
+      "8": 0,
+      "13": 0,
+      "14": 0,
+      "17": 1
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 3,
+    "kind": "probe",
+    "active_sector": 1,
+    "position_before": [
+      573.1356860986664,
+      405.962050435326
+    ],
+    "point": [
+      622.2442221976545,
+      780.2695727178332
+    ],
+    "planned_channels": [
+      17
+    ],
+    "served_channels": [
+      17
+    ],
+    "gain_s": 42.41567487048147,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      1,
+      0,
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 3,
+      "7": 0,
+      "8": 0,
+      "13": 0,
+      "14": 0,
+      "17": 0
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 4,
+    "kind": "scan_reused",
+    "active_sector": 1,
+    "position_before": [
+      622.2442221976545,
+      780.2695727178332
+    ],
+    "point": [
+      622.2442221976545,
+      780.2695727178332
+    ],
+    "planned_channels": [],
+    "served_channels": [
+      5,
+      7,
+      13,
+      14
+    ],
+    "gain_s": null,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      0,
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 0,
+      "7": 0,
+      "8": 0,
+      "13": 0,
+      "14": 0,
+      "17": 1
+    },
+    "cleared_channels": [],
+    "action_count": 19
+  },
+  {
+    "macro": 5,
+    "kind": "probe",
+    "active_sector": 0,
+    "position_before": [
+      622.2442221976545,
+      780.2695727178332
+    ],
+    "point": [
+      646.0625911056054,
+      -70.61764827586819
+    ],
+    "planned_channels": [
+      8
+    ],
+    "served_channels": [
+      8
+    ],
+    "gain_s": 26.68578851305267,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      0,
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "8": 0,
+      "13": 0,
+      "14": 1,
+      "17": 2
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 6,
+    "kind": "probe",
+    "active_sector": 0,
+    "position_before": [
+      646.0625911056054,
+      -70.61764827586819
+    ],
+    "point": [
+      1040.9833101521813,
+      -32.469360694962916
+    ],
+    "planned_channels": [
+      5
+    ],
+    "served_channels": [
+      5
+    ],
+    "gain_s": 20.60444016358775,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      0,
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 0,
+      "7": 0,
+      "8": 0,
+      "13": 0,
+      "14": 2,
+      "17": 3
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 7,
+    "kind": "scan_reused",
+    "active_sector": 0,
+    "position_before": [
+      1040.9833101521813,
+      -32.469360694962916
+    ],
+    "point": [
+      1040.9833101521813,
+      -32.469360694962916
+    ],
+    "planned_channels": [],
+    "served_channels": [
+      8,
+      11,
+      14,
+      15,
+      16
+    ],
+    "gain_s": null,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "8": 0,
+      "13": 0,
+      "14": 0,
+      "17": 4
+    },
+    "cleared_channels": [],
+    "action_count": 16
+  },
+  {
+    "macro": 8,
+    "kind": "probe",
+    "active_sector": 6,
+    "position_before": [
+      1040.9833101521813,
+      -32.469360694962916
+    ],
+    "point": [
+      1348.163341472901,
+      -423.3099878207488
+    ],
+    "planned_channels": [
+      16
+    ],
+    "served_channels": [
+      16
+    ],
+    "gain_s": 143.6647834951208,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "8": 1,
+      "11": 1,
+      "13": 0,
+      "14": 1,
+      "15": 1,
+      "16": 0,
+      "17": 4
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 9,
+    "kind": "probe",
+    "active_sector": 6,
+    "position_before": [
+      1348.163341472901,
+      -423.3099878207488
+    ],
+    "point": [
+      1348.163341472901,
+      -423.3099878207488
+    ],
+    "planned_channels": [
+      11
+    ],
+    "served_channels": [
+      11
+    ],
+    "gain_s": 120.32974996413736,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "8": 2,
+      "11": 0,
+      "13": 0,
+      "14": 2,
+      "15": 2,
+      "16": 1,
+      "17": 4
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 10,
+    "kind": "probe",
+    "active_sector": 6,
+    "position_before": [
+      1348.163341472901,
+      -423.3099878207488
+    ],
+    "point": [
+      1064.3236913013857,
+      -624.1019102390469
+    ],
+    "planned_channels": [
+      15
+    ],
+    "served_channels": [
+      15
+    ],
+    "gain_s": 169.39955785114682,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "8": 3,
+      "11": 1,
+      "13": 0,
+      "14": 3,
+      "15": 0,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 11,
+    "kind": "probe",
+    "active_sector": 6,
+    "position_before": [
+      1064.3236913013857,
+      -624.1019102390469
+    ],
+    "point": [
+      1064.3236913013857,
+      -624.1019102390469
+    ],
+    "planned_channels": [
+      11
+    ],
+    "served_channels": [
+      11
+    ],
+    "gain_s": 27.43819512527459,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "8": 4,
+      "11": 0,
+      "13": 0,
+      "14": 4,
+      "15": 1,
+      "16": 3,
+      "17": 4
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 12,
+    "kind": "probe",
+    "active_sector": 6,
+    "position_before": [
+      1064.3236913013857,
+      -624.1019102390469
+    ],
+    "point": [
+      1064.3236913013857,
+      -624.1019102390469
+    ],
+    "planned_channels": [
+      16
+    ],
+    "served_channels": [
+      16
+    ],
+    "gain_s": 13.74703096749252,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "8": 5,
+      "11": 1,
+      "13": 0,
+      "14": 5,
+      "15": 2,
+      "16": 0,
+      "17": 4
+    },
+    "cleared_channels": [],
+    "action_count": 1
+  },
+  {
+    "macro": 13,
+    "kind": "clear",
+    "active_sector": 6,
+    "position_before": [
+      1064.3236913013857,
+      -624.1019102390469
+    ],
+    "point": [
+      1162.9251549850906,
+      -711.973719748183
+    ],
+    "planned_channels": [
+      8
+    ],
+    "served_channels": [
+      8
+    ],
+    "gain_s": 0.0,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "11": 2,
+      "13": 0,
+      "14": 6,
+      "15": 3,
+      "16": 1,
+      "17": 4
+    },
+    "cleared_channels": [
+      8
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 14,
+    "kind": "scan",
+    "active_sector": 6,
+    "position_before": [
+      1162.9251549850906,
+      -711.973719748183
+    ],
+    "point": [
+      782.7053554485589,
+      -1289.025109932347
+    ],
+    "planned_channels": [],
+    "served_channels": [
+      11,
+      15,
+      16
+    ],
+    "gain_s": null,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "11": 0,
+      "13": 0,
+      "14": 7,
+      "15": 0,
+      "16": 0,
+      "17": 4
+    },
+    "cleared_channels": [
+      8
+    ],
+    "action_count": 14
+  },
+  {
+    "macro": 15,
+    "kind": "clear",
+    "active_sector": 5,
+    "position_before": [
+      782.7053554485589,
+      -1289.025109932347
+    ],
+    "point": [
+      670.3070099866395,
+      -1360.4190702192132
+    ],
+    "planned_channels": [
+      15
+    ],
+    "served_channels": [
+      15
+    ],
+    "gain_s": 13.456397253703383,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      5,
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "11": 0,
+      "13": 0,
+      "14": 7,
+      "16": 1,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      15
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 16,
+    "kind": "scan",
+    "active_sector": 5,
+    "position_before": [
+      670.3070099866395,
+      -1360.4190702192132
+    ],
+    "point": [
+      -222.07639179201686,
+      -972.9802456887082
+    ],
+    "planned_channels": [],
+    "served_channels": [],
+    "gain_s": null,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      4,
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "11": 0,
+      "13": 0,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      15
+    ],
+    "action_count": 11
+  },
+  {
+    "macro": 17,
+    "kind": "scan",
+    "active_sector": 4,
+    "position_before": [
+      -222.07639179201686,
+      -972.9802456887082
+    ],
+    "point": [
+      -899.1689534121334,
+      -433.0169459826647
+    ],
+    "planned_channels": [],
+    "served_channels": [],
+    "gain_s": null,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 0,
+      "11": 0,
+      "13": 0,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      15
+    ],
+    "action_count": 12
+  },
+  {
+    "macro": 18,
+    "kind": "probe",
+    "active_sector": 3,
+    "position_before": [
+      -899.1689534121334,
+      -433.0169459826647
+    ],
+    "point": [
+      -899.1689534175233,
+      433.0169459844173
+    ],
+    "planned_channels": [
+      13
+    ],
+    "served_channels": [
+      13
+    ],
+    "gain_s": 7.601604445503103,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      3,
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 1,
+      "11": 0,
+      "13": 0,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      15
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 19,
+    "kind": "scan_reused",
+    "active_sector": 3,
+    "position_before": [
+      -899.1689534175233,
+      433.0169459844173
+    ],
+    "point": [
+      -899.1689534175233,
+      433.0169459844173
+    ],
+    "planned_channels": [],
+    "served_channels": [
+      9
+    ],
+    "gain_s": null,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 2,
+      "11": 0,
+      "13": 0,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      15
+    ],
+    "action_count": 11
+  },
+  {
+    "macro": 20,
+    "kind": "probe",
+    "active_sector": 2,
+    "position_before": [
+      -899.1689534175233,
+      433.0169459844173
+    ],
+    "point": [
+      -1144.1139189881085,
+      879.6392339354686
+    ],
+    "planned_channels": [
+      9
+    ],
+    "served_channels": [
+      9
+    ],
+    "gain_s": 92.26062441546344,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 3,
+      "9": 0,
+      "11": 0,
+      "13": 1,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      15
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 21,
+    "kind": "probe",
+    "active_sector": 2,
+    "position_before": [
+      -1144.1139189881085,
+      879.6392339354686
+    ],
+    "point": [
+      -1376.085457620781,
+      1065.9952634513793
+    ],
+    "planned_channels": [
+      9
+    ],
+    "served_channels": [
+      9
+    ],
+    "gain_s": 20.805858207609948,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 4,
+      "9": 0,
+      "11": 0,
+      "13": 2,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      15
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 22,
+    "kind": "clear",
+    "active_sector": 2,
+    "position_before": [
+      -1376.085457620781,
+      1065.9952634513793
+    ],
+    "point": [
+      -1405.5885593719872,
+      1099.2897256684334
+    ],
+    "planned_channels": [
+      9
+    ],
+    "served_channels": [
+      9
+    ],
+    "gain_s": 12.472319713843621,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 5,
+      "11": 0,
+      "13": 3,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      9,
+      15
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 23,
+    "kind": "clear",
+    "active_sector": 2,
+    "position_before": [
+      -1405.5885593719872,
+      1099.2897256684334
+    ],
+    "point": [
+      -296.9817854760793,
+      928.3069367239298
+    ],
+    "planned_channels": [
+      13
+    ],
+    "served_channels": [
+      13
+    ],
+    "gain_s": 0.0,
+    "urgent_channel": null,
+    "remaining_sectors": [
+      2
+    ],
+    "wait_age": {
+      "5": 1,
+      "7": 6,
+      "11": 0,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      9,
+      13,
+      15
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 24,
+    "kind": "scan",
+    "active_sector": 2,
+    "position_before": [
+      -296.9817854760793,
+      928.3069367239298
+    ],
+    "point": [
+      -222.0763917901361,
+      972.980245693046
+    ],
+    "planned_channels": [],
+    "served_channels": [],
+    "gain_s": null,
+    "urgent_channel": null,
+    "remaining_sectors": [],
+    "wait_age": {
+      "5": 1,
+      "7": 7,
+      "11": 0,
+      "14": 7,
+      "16": 2,
+      "17": 4
+    },
+    "cleared_channels": [
+      8,
+      9,
+      13,
+      15
+    ],
+    "action_count": 10
+  },
+  {
+    "macro": 25,
+    "kind": "clear",
+    "active_sector": null,
+    "position_before": [
+      -222.0763917901361,
+      972.980245693046
+    ],
+    "point": [
+      -83.22602271028072,
+      71.17536812765412
+    ],
+    "planned_channels": [
+      7
+    ],
+    "served_channels": [
+      7
+    ],
+    "gain_s": 0.0,
+    "urgent_channel": null,
+    "remaining_sectors": [],
+    "wait_age": {
+      "5": 2,
+      "11": 1,
+      "14": 8,
+      "16": 3,
+      "17": 5
+    },
+    "cleared_channels": [
+      7,
+      8,
+      9,
+      13,
+      15
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 26,
+    "kind": "clear",
+    "active_sector": null,
+    "position_before": [
+      -83.22602271028072,
+      71.17536812765412
+    ],
+    "point": [
+      531.5909234692971,
+      1057.852418857891
+    ],
+    "planned_channels": [
+      17
+    ],
+    "served_channels": [
+      17
+    ],
+    "gain_s": 0.0,
+    "urgent_channel": null,
+    "remaining_sectors": [],
+    "wait_age": {
+      "5": 3,
+      "11": 2,
+      "14": 9,
+      "16": 4
+    },
+    "cleared_channels": [
+      7,
+      8,
+      9,
+      13,
+      15,
+      17
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 27,
+    "kind": "clear",
+    "active_sector": null,
+    "position_before": [
+      531.5909234692971,
+      1057.852418857891
+    ],
+    "point": [
+      840.3649150537807,
+      855.9662603655675
+    ],
+    "planned_channels": [
+      5
+    ],
+    "served_channels": [
+      5
+    ],
+    "gain_s": 0.0,
+    "urgent_channel": null,
+    "remaining_sectors": [],
+    "wait_age": {
+      "11": 3,
+      "14": 10,
+      "16": 5
+    },
+    "cleared_channels": [
+      5,
+      7,
+      8,
+      9,
+      13,
+      15,
+      17
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 28,
+    "kind": "clear",
+    "active_sector": null,
+    "position_before": [
+      840.3649150537807,
+      855.9662603655675
+    ],
+    "point": [
+      1377.6682169609937,
+      285.76355777660194
+    ],
+    "planned_channels": [
+      14
+    ],
+    "served_channels": [
+      14
+    ],
+    "gain_s": -5.684341886080802e-14,
+    "urgent_channel": null,
+    "remaining_sectors": [],
+    "wait_age": {
+      "11": 4,
+      "16": 6
+    },
+    "cleared_channels": [
+      5,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      17
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 29,
+    "kind": "clear",
+    "active_sector": null,
+    "position_before": [
+      1377.6682169609937,
+      285.76355777660194
+    ],
+    "point": [
+      1611.3400886625018,
+      -650.470511919415
+    ],
+    "planned_channels": [
+      11
+    ],
+    "served_channels": [
+      11
+    ],
+    "gain_s": 4.263256414560601e-14,
+    "urgent_channel": null,
+    "remaining_sectors": [],
+    "wait_age": {
+      "16": 7
+    },
+    "cleared_channels": [
+      5,
+      7,
+      8,
+      9,
+      11,
+      13,
+      14,
+      15,
+      17
+    ],
+    "action_count": 1
+  },
+  {
+    "macro": 30,
+    "kind": "clear",
+    "active_sector": null,
+    "position_before": [
+      1611.3400886625018,
+      -650.470511919415
+    ],
+    "point": [
+      1231.0333049154215,
+      -1059.5852188294211
+    ],
+    "planned_channels": [
+      16
+    ],
+    "served_channels": [
+      16
+    ],
+    "gain_s": 0.0,
+    "urgent_channel": null,
+    "remaining_sectors": [],
+    "wait_age": {},
+    "cleared_channels": [
+      5,
+      7,
+      8,
+      9,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "action_count": 1
+  }
+]

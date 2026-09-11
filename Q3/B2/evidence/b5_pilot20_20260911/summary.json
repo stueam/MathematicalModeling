@@ -1,0 +1,200 @@
+{
+  "status": "PASS",
+  "scope": "Offline synthetic paired comparison; no official tests. See report for development/holdout designation.",
+  "seed": null,
+  "stratified35": false,
+  "metrics": {
+    "b2": {
+      "cases": 20,
+      "complete": 20,
+      "sources": 257,
+      "cleared": 257,
+      "mean_s_per_source": 281.5678874335762,
+      "mean_movement_m": 13873.560024411054,
+      "mean_measurements": 124.8,
+      "mean_stops": 38.15,
+      "mean_outer_sector_transitions": 6.3,
+      "mean_failed_clears": 0.0,
+      "mean_runtime_s": 0.04116615999955684,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 377.92402314111274
+    },
+    "q2": {
+      "cases": 20,
+      "complete": 20,
+      "sources": 257,
+      "cleared": 257,
+      "mean_s_per_source": 232.0242402508245,
+      "mean_movement_m": 10534.894398075607,
+      "mean_measurements": 122.9,
+      "mean_stops": 28.25,
+      "mean_outer_sector_transitions": 4.4,
+      "mean_failed_clears": 3.15,
+      "mean_runtime_s": 0.5062050499975157,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 278.6581718166546
+    },
+    "b4": {
+      "cases": 20,
+      "complete": 20,
+      "sources": 257,
+      "cleared": 257,
+      "mean_s_per_source": 231.8318381546042,
+      "mean_movement_m": 10517.03733306413,
+      "mean_measurements": 123.25,
+      "mean_stops": 28.15,
+      "mean_outer_sector_transitions": 4.35,
+      "mean_failed_clears": 3.1,
+      "mean_runtime_s": 0.9376127550000092,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 278.4033395171736
+    },
+    "b5": {
+      "cases": 20,
+      "complete": 20,
+      "sources": 257,
+      "cleared": 257,
+      "mean_s_per_source": 315.0481423091,
+      "mean_movement_m": 15872.061832278667,
+      "mean_measurements": 125.35,
+      "mean_stops": 24.95,
+      "mean_outer_sector_transitions": 6.8,
+      "mean_failed_clears": 0.45,
+      "mean_runtime_s": 2.9291311250002763,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 440.92602427233834
+    }
+  },
+  "paired_b5_minus_baseline": {
+    "b2": {
+      "mean_delta_s": 33.48025487552384,
+      "ci95": [
+        10.925624630127663,
+        58.1090469055274
+      ],
+      "faster": 8,
+      "slower": 12,
+      "percent_change": 11.890651018725308,
+      "families": {
+        "coverage_seams": -31.043003838626944,
+        "narrow_sector": -10.498433485237161,
+        "outer_ring": 63.091620423596225,
+        "two_clusters": 44.66453188596278,
+        "uniform_disk": 101.1865593919243
+      }
+    },
+    "q2": {
+      "mean_delta_s": 83.02390205827555,
+      "ci95": [
+        62.174200164676485,
+        104.64510504831924
+      ],
+      "faster": 1,
+      "slower": 19,
+      "percent_change": 35.78242599502725,
+      "families": {
+        "coverage_seams": 89.8589878915762,
+        "narrow_sector": 16.448033315546816,
+        "outer_ring": 132.27393431664038,
+        "two_clusters": 61.10930716169382,
+        "uniform_disk": 115.42924760592052
+      }
+    },
+    "b4": {
+      "mean_delta_s": 83.21630415449583,
+      "ci95": [
+        62.67124490407314,
+        105.16313482947396
+      ],
+      "faster": 1,
+      "slower": 19,
+      "percent_change": 35.89511467316255,
+      "families": {
+        "coverage_seams": 89.8589878915762,
+        "narrow_sector": 17.009695906234157,
+        "outer_ring": 132.27393431664038,
+        "two_clusters": 60.872574303405486,
+        "uniform_disk": 116.06632835462295
+      }
+    }
+  },
+  "config": {
+    "base": {
+      "proposal_radius": 1750,
+      "trigger_count": 0,
+      "route_prior": true,
+      "share_range": 1000,
+      "cross_threshold": 0.1,
+      "trial": 80,
+      "lateral": 30,
+      "sweeps": 2,
+      "range_bias": 0,
+      "reuse_sector": true,
+      "sectors": 7,
+      "skip_far": true
+    },
+    "b5": {
+      "sectors": 7,
+      "ring_radius": 1000.0,
+      "proposals_per_source": 3,
+      "proposal_slack_s": 25.0,
+      "active_sources": 5,
+      "max_candidates": 22,
+      "max_batch": 5,
+      "coarse_power": 2,
+      "fine_power": 4,
+      "error_order": 3,
+      "finalists": 3,
+      "cross_detour_m": 250.0,
+      "sector_action_limit": 6,
+      "max_wait": 18,
+      "max_probes": 8,
+      "min_gain_s": 2.0,
+      "min_measure_gain_s": 7.0,
+      "trial_radius_m": 80.0,
+      "max_macros": 2000,
+      "adaptive_sectors": true,
+      "batching": true
+    }
+  },
+  "ablations": {
+    "b5_global": "No soft sector eligibility filter; same backbone and progress caps",
+    "b5_single": "At most one known-source probe per local stop; same other rules"
+  },
+  "metric_definition": "Scene-equal mean of virtual time / source count, null if any scene fails. stops counts movement destinations; outer transitions counts consecutive outer endpoint sector labels.",
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.4.0",
+    "scipy": "1.17.1"
+  },
+  "scenario_sha256": "3b1e02f741bebdf7571d5f6bf3a75a8322e218e4e84a17d313b7d0a258aef081",
+  "source_sha256": {
+    "analyze_q2.py": "802af76701b63ed1aedad3461e48dc33a4ee188bd133a79ad1b622c254cf452d",
+    "b3_strategy.py": "6c6e72c788565074a74d0e2928787bd59fdbb6a24f28594c56a1cbd42a29e409",
+    "b41_strategy.py": "29db47d4772aff1d0f978dc4195cd93a133f94bfee8f3f5aaa764887c9b6728b",
+    "b4_strategy.py": "66d0797e1920d80e7a39bac82c6e1fb7a7d1a93b9af0d6771dced69605ce38c7",
+    "b5_strategy.py": "9696687b96e365ba2a14c2b6f458199bbcbd6aa6e886f7456d98fb6112aa91b8",
+    "benchmark.py": "fb78ff5e0fc3f9f4cd9c88e1e85ca7d76d72df03cab4b9cce0979e516776d4f5",
+    "benchmark_b5.py": "3f745f11a69273cd4f0f1a4483d4cda33687b2c7471681f60387af8ba3e4184d",
+    "fast_strategy.py": "876a09c6c1ee54f869960c4cc6e72b55099c2ab82659b27b66e4b8f8883f0243",
+    "flexible_b3.py": "e6e3be8147a9323540b2762808e3d9190492c714ce9dcfade4f90d49390ee6e5",
+    "joint_strategy.py": "eaeb9070f30b08561ec59b159dfbffe74a34960c9ecc305e2c236fc94f7b8eef",
+    "localization_probe.py": "1ebb7cae508e5491c51b7b1dbe021c195af04bc44324154c274f4f59852054e2",
+    "negative_strategy.py": "7250a751925a6db3e51cf3e657fdad5c96ea271eb27fba8a28577a30d0eadbba",
+    "offline_environment.py": "d502210d97c2fee0ba56fa4685cfacd319a56db4668f8aaf46219da91e64748d",
+    "peripheral_prior.py": "e31186d53dffc030d68dc6463c882253e5b43eaad770b0315f8cc43a00b07f6b",
+    "plot_b41_case.py": "f5fd2b943590e51794cde04a82dfae3895292cb1372a571b678d86a738c740c8",
+    "q2_geometry.py": "142de65f75a6e21513e3df1a56497c7c21c7cb75b1fe0b98ba5f3394ad263607",
+    "q2_lookahead.py": "af6f26d38aa6df25c44f386d9a6eb1805ad31a5efd5ec630758a1cb8c4c361b7",
+    "q3_strategy.py": "c67dde4dc9eabb3821d9fbbf545e00fdad05cfeb257c8f12d6853331bbe21a31",
+    "radius_coupling.py": "2be3424d660853ea85a3cbe97cce3f9d17d4a74d130e3bc9465014c73201c40c",
+    "route_search_probe.py": "928495487f4256b7396c663777f08844ce5cebde205fe78483ca9b2fd90ce426",
+    "route_tuning.py": "ecc1f2dad57a9203da9954b6f44309ec7251187b05e8cb748875f481f3cd2cbd",
+    "solver.py": "09e25eb6eb0db947ee685aa6cbb6457c6f04f483700c957e993be7ce63836a9f",
+    "sweep_strategy.py": "ca85246ada0e8bd29587fc19a771c573bfe2cb79934bbdd4e16ca236945fc4d8"
+  },
+  "elapsed_s": 88.61328249999497,
+  "completed_at": "2026-09-11T11:37:44.199897+00:00",
+  "network_requests": 0,
+  "formal_tests_used": 0
+}

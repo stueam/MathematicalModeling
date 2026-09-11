@@ -1,0 +1,266 @@
+{
+  "status": "PASS",
+  "scope": "Offline synthetic paired comparison; no official tests. See report for development/holdout designation.",
+  "seed": 2026091122,
+  "stratified35": true,
+  "metrics": {
+    "b2": {
+      "cases": 35,
+      "complete": 35,
+      "sources": 455,
+      "cleared": 455,
+      "mean_s_per_source": 283.75096777487045,
+      "mean_movement_m": 13927.244427780148,
+      "mean_measurements": 127.94285714285714,
+      "mean_stops": 37.885714285714286,
+      "mean_outer_sector_transitions": 6.828571428571428,
+      "mean_failed_clears": 0.0,
+      "mean_runtime_s": 0.04339331714270104,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 402.5988354442558
+    },
+    "q2": {
+      "cases": 35,
+      "complete": 35,
+      "sources": 455,
+      "cleared": 455,
+      "mean_s_per_source": 231.395114149799,
+      "mean_movement_m": 10583.494902274279,
+      "mean_measurements": 124.74285714285715,
+      "mean_stops": 28.714285714285715,
+      "mean_outer_sector_transitions": 4.485714285714286,
+      "mean_failed_clears": 3.657142857142857,
+      "mean_runtime_s": 0.7223962999996729,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 293.79155057325465
+    },
+    "b4": {
+      "cases": 35,
+      "complete": 35,
+      "sources": 455,
+      "cleared": 455,
+      "mean_s_per_source": 231.50387224427885,
+      "mean_movement_m": 10589.492503351012,
+      "mean_measurements": 124.82857142857142,
+      "mean_stops": 28.685714285714287,
+      "mean_outer_sector_transitions": 4.485714285714286,
+      "mean_failed_clears": 3.6285714285714286,
+      "mean_runtime_s": 1.1409014285712535,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 293.79155057325465
+    },
+    "b5": {
+      "cases": 35,
+      "complete": 35,
+      "sources": 455,
+      "cleared": 455,
+      "mean_s_per_source": 258.7884868353711,
+      "mean_movement_m": 12505.427774564152,
+      "mean_measurements": 123.37142857142857,
+      "mean_stops": 27.428571428571427,
+      "mean_outer_sector_transitions": 5.228571428571429,
+      "mean_failed_clears": 0.17142857142857143,
+      "mean_runtime_s": 2.370106602857621,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 329.37232784516806
+    },
+    "b5_global": {
+      "cases": 35,
+      "complete": 35,
+      "sources": 455,
+      "cleared": 455,
+      "mean_s_per_source": 305.55745129998377,
+      "mean_movement_m": 15676.22339414553,
+      "mean_measurements": 120.65714285714286,
+      "mean_stops": 28.2,
+      "mean_outer_sector_transitions": 5.8,
+      "mean_failed_clears": 0.22857142857142856,
+      "mean_runtime_s": 2.763618328572816,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 395.6673955553606
+    },
+    "b5_single": {
+      "cases": 35,
+      "complete": 35,
+      "sources": 455,
+      "cleared": 455,
+      "mean_s_per_source": 285.4213117564745,
+      "mean_movement_m": 14173.998778867945,
+      "mean_measurements": 123.77142857142857,
+      "mean_stops": 28.2,
+      "mean_outer_sector_transitions": 5.828571428571428,
+      "mean_failed_clears": 0.5714285714285714,
+      "mean_runtime_s": 2.569079231427999,
+      "mean_recovery_actions": 0.0,
+      "p90_s_per_source": 398.21501399176884
+    }
+  },
+  "paired_b5_minus_baseline": {
+    "b2": {
+      "mean_delta_s": -24.96248093949934,
+      "ci95": [
+        -41.59685656035142,
+        -8.671531865861066
+      ],
+      "faster": 22,
+      "slower": 13,
+      "percent_change": -8.79732010616603,
+      "families": {
+        "coverage_seams": -96.73438475445391,
+        "narrow_sector": -8.737583355613063,
+        "outer_ring": -43.55669828907914,
+        "two_clusters": 9.066685364623519,
+        "uniform_disk": 15.149576337025918
+      }
+    },
+    "q2": {
+      "mean_delta_s": 27.39337268557209,
+      "ci95": [
+        18.717772047138457,
+        36.816226629889755
+      ],
+      "faster": 4,
+      "slower": 31,
+      "percent_change": 11.83835397139732,
+      "families": {
+        "coverage_seams": 15.537299844130331,
+        "narrow_sector": 13.01344586107057,
+        "outer_ring": 35.43095665981114,
+        "two_clusters": 29.580399402167668,
+        "uniform_disk": 43.40476166068076
+      }
+    },
+    "b4": {
+      "mean_delta_s": 27.284614591092215,
+      "ci95": [
+        18.776566236438374,
+        36.56064114080615
+      ],
+      "faster": 4,
+      "slower": 31,
+      "percent_change": 11.785813484062157,
+      "families": {
+        "coverage_seams": 15.537299844130331,
+        "narrow_sector": 12.77200127906695,
+        "outer_ring": 35.43095665981114,
+        "two_clusters": 29.793587924880825,
+        "uniform_disk": 42.88922724757184
+      }
+    },
+    "b5_global": {
+      "mean_delta_s": -46.76896446461255,
+      "ci95": [
+        -58.675499686502526,
+        -34.701652971629194
+      ],
+      "faster": 28,
+      "slower": 1,
+      "percent_change": -15.30611158904347,
+      "families": {
+        "coverage_seams": -64.43944895687962,
+        "narrow_sector": -19.265771290535177,
+        "outer_ring": -36.73174694582953,
+        "two_clusters": -51.24163420896247,
+        "uniform_disk": -62.16622092085603
+      }
+    },
+    "b5_single": {
+      "mean_delta_s": -26.632824921103385,
+      "ci95": [
+        -39.65474119678494,
+        -14.463623445803302
+      ],
+      "faster": 24,
+      "slower": 11,
+      "percent_change": -9.331056870703092,
+      "families": {
+        "coverage_seams": -45.815702560147784,
+        "narrow_sector": -7.528151355102314,
+        "outer_ring": -72.37243494223274,
+        "two_clusters": -3.214550367653447,
+        "uniform_disk": -4.233285380380615
+      }
+    }
+  },
+  "config": {
+    "base": {
+      "proposal_radius": 1750,
+      "trigger_count": 0,
+      "route_prior": true,
+      "share_range": 1000,
+      "cross_threshold": 0.1,
+      "trial": 80,
+      "lateral": 30,
+      "sweeps": 2,
+      "range_bias": 0,
+      "reuse_sector": true,
+      "sectors": 7,
+      "skip_far": true
+    },
+    "b5": {
+      "sectors": 7,
+      "ring_radius": 1000.0,
+      "proposals_per_source": 3,
+      "proposal_slack_s": 25.0,
+      "active_sources": 5,
+      "max_candidates": 22,
+      "max_batch": 5,
+      "coarse_power": 2,
+      "fine_power": 4,
+      "error_order": 3,
+      "finalists": 3,
+      "cross_detour_m": 250.0,
+      "sector_action_limit": 6,
+      "max_wait": 18,
+      "max_probes": 8,
+      "min_gain_s": 2.0,
+      "min_measure_gain_s": 7.0,
+      "trial_radius_m": 80.0,
+      "max_macros": 2000,
+      "adaptive_sectors": true,
+      "batching": true,
+      "movable_anchors": true,
+      "reuse_coverage": true
+    }
+  },
+  "ablations": {
+    "b5_global": "No soft sector eligibility filter; same backbone and progress caps",
+    "b5_single": "At most one known-source probe per local stop; same other rules"
+  },
+  "metric_definition": "Scene-equal mean of virtual time / source count, null if any scene fails. stops counts movement destinations; outer transitions counts consecutive outer endpoint sector labels.",
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.4.0",
+    "scipy": "1.17.1"
+  },
+  "scenario_sha256": "db79a7ce2996ad9dab5c8ce7665b886584664d5e0d8ccb8c18af8a44ce3a9beb",
+  "source_sha256": {
+    "analyze_q2.py": "802af76701b63ed1aedad3461e48dc33a4ee188bd133a79ad1b622c254cf452d",
+    "b3_strategy.py": "6c6e72c788565074a74d0e2928787bd59fdbb6a24f28594c56a1cbd42a29e409",
+    "b41_strategy.py": "29db47d4772aff1d0f978dc4195cd93a133f94bfee8f3f5aaa764887c9b6728b",
+    "b4_strategy.py": "66d0797e1920d80e7a39bac82c6e1fb7a7d1a93b9af0d6771dced69605ce38c7",
+    "b5_strategy.py": "0d4d93502a1f7a1c27bbe17f0eca9e72a9c462c583028e91ce5452a87997f845",
+    "benchmark.py": "fb78ff5e0fc3f9f4cd9c88e1e85ca7d76d72df03cab4b9cce0979e516776d4f5",
+    "benchmark_b5.py": "3f745f11a69273cd4f0f1a4483d4cda33687b2c7471681f60387af8ba3e4184d",
+    "fast_strategy.py": "876a09c6c1ee54f869960c4cc6e72b55099c2ab82659b27b66e4b8f8883f0243",
+    "flexible_b3.py": "e6e3be8147a9323540b2762808e3d9190492c714ce9dcfade4f90d49390ee6e5",
+    "joint_strategy.py": "eaeb9070f30b08561ec59b159dfbffe74a34960c9ecc305e2c236fc94f7b8eef",
+    "localization_probe.py": "1ebb7cae508e5491c51b7b1dbe021c195af04bc44324154c274f4f59852054e2",
+    "negative_strategy.py": "7250a751925a6db3e51cf3e657fdad5c96ea271eb27fba8a28577a30d0eadbba",
+    "offline_environment.py": "d502210d97c2fee0ba56fa4685cfacd319a56db4668f8aaf46219da91e64748d",
+    "peripheral_prior.py": "e31186d53dffc030d68dc6463c882253e5b43eaad770b0315f8cc43a00b07f6b",
+    "plot_b41_case.py": "f5fd2b943590e51794cde04a82dfae3895292cb1372a571b678d86a738c740c8",
+    "q2_geometry.py": "142de65f75a6e21513e3df1a56497c7c21c7cb75b1fe0b98ba5f3394ad263607",
+    "q2_lookahead.py": "af6f26d38aa6df25c44f386d9a6eb1805ad31a5efd5ec630758a1cb8c4c361b7",
+    "q3_strategy.py": "c67dde4dc9eabb3821d9fbbf545e00fdad05cfeb257c8f12d6853331bbe21a31",
+    "radius_coupling.py": "2be3424d660853ea85a3cbe97cce3f9d17d4a74d130e3bc9465014c73201c40c",
+    "route_search_probe.py": "928495487f4256b7396c663777f08844ce5cebde205fe78483ca9b2fd90ce426",
+    "route_tuning.py": "ecc1f2dad57a9203da9954b6f44309ec7251187b05e8cb748875f481f3cd2cbd",
+    "solver.py": "09e25eb6eb0db947ee685aa6cbb6457c6f04f483700c957e993be7ce63836a9f",
+    "sweep_strategy.py": "ca85246ada0e8bd29587fc19a771c573bfe2cb79934bbdd4e16ca236945fc4d8"
+  },
+  "elapsed_s": 337.37998060000245,
+  "completed_at": "2026-09-11T11:50:51.525013+00:00",
+  "network_requests": 0,
+  "formal_tests_used": 0
+}
