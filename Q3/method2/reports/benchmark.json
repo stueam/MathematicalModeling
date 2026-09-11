@@ -1,0 +1,42 @@
+[
+  {
+    "num_envs": 1,
+    "actions": 500,
+    "physics_s": 0.03700119999120943,
+    "physics_actions_per_s": 13513.075254823832,
+    "env_belief_candidates_s": 0.08401070001127664,
+    "env_actions_per_s": 5951.622828197905,
+    "heuristic_episodes": 1,
+    "heuristic_success_rate": 1.0
+  },
+  {
+    "num_envs": 16,
+    "actions": 8000,
+    "physics_s": 0.03681020000658464,
+    "physics_actions_per_s": 217331.06580700332,
+    "env_belief_candidates_s": 0.13071150000905618,
+    "env_actions_per_s": 61203.4901247842,
+    "heuristic_episodes": 17,
+    "heuristic_success_rate": 1.0
+  },
+  {
+    "num_envs": 64,
+    "actions": 32000,
+    "physics_s": 0.0362606999988202,
+    "physics_actions_per_s": 882498.1316147005,
+    "env_belief_candidates_s": 0.254909499999485,
+    "env_actions_per_s": 125534.74860711214,
+    "heuristic_episodes": 70,
+    "heuristic_success_rate": 1.0
+  },
+  {
+    "num_envs": 256,
+    "actions": 128000,
+    "physics_s": 0.049119100003736094,
+    "physics_actions_per_s": 2605910.938723716,
+    "env_belief_candidates_s": 0.7823677999986103,
+    "env_actions_per_s": 163605.91527441103,
+    "heuristic_episodes": 271,
+    "heuristic_success_rate": 1.0
+  }
+]

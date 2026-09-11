@@ -1,0 +1,10 @@
+{
+  "num_envs": 64,
+  "channels": 4,
+  "min_sources": 2,
+  "max_sources": 3,
+  "max_steps": 128,
+  "time_scale": 1000,
+  "failure_penalty": 400,
+  "shaping": 2
+}

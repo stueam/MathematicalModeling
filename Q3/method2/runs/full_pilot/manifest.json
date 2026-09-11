@@ -1,0 +1,38 @@
+{
+  "args": {
+    "config": "configs/full.json",
+    "out": "runs/full_pilot",
+    "steps": 1048576,
+    "seed": 1234,
+    "device": "cuda",
+    "rollout": 128,
+    "minibatch": 512,
+    "epochs": 4,
+    "lr": 0.0003,
+    "entropy": 0.01,
+    "hidden": 64,
+    "threads": 4,
+    "resume": null,
+    "max_seconds": 600.0
+  },
+  "environment": {
+    "num_envs": 64,
+    "channels": 20,
+    "min_sources": 10,
+    "max_sources": 16,
+    "max_steps": 512,
+    "max_virtual_s": 360000,
+    "time_scale": 1000,
+    "failure_penalty": 400,
+    "shaping": 2,
+    "layout": "uniform",
+    "radius_mode": "uniform",
+    "error_mode": "hash"
+  },
+  "torch": "2.11.0+cu128",
+  "numpy": "2.5.3",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "prior_steps": 0,
+  "objective": "undiscounted time + finite failure penalty; potential shaping"
+}

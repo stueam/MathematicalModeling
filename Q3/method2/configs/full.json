@@ -1,0 +1,14 @@
+{
+  "num_envs": 64,
+  "channels": 20,
+  "min_sources": 10,
+  "max_sources": 16,
+  "max_steps": 512,
+  "max_virtual_s": 360000,
+  "time_scale": 1000,
+  "failure_penalty": 400,
+  "shaping": 2,
+  "layout": "uniform",
+  "radius_mode": "uniform",
+  "error_mode": "hash"
+}

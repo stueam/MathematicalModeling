@@ -1,0 +1,13 @@
+__pycache__/
+*.nbc
+*.nbi
+.pytest_cache/
+runs/*
+!runs/full_pilot/
+runs/full_pilot/*
+!runs/full_pilot/final.pt
+!runs/full_pilot/manifest.json
+!runs/full_pilot/progress.csv
+!runs/full_pilot/episodes.jsonl
+!runs/full_pilot/timing.json
+.venv/
