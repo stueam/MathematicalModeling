@@ -1,0 +1,24 @@
+{
+  "shifted_station_m": [
+    1196.3836293947206,
+    20.05406861111024
+  ],
+  "route_length_m": [
+    5016.11968193242,
+    3473.5992411560474,
+    1701.3726003005822
+  ],
+  "saving_by_step_m": [
+    1542.5204407763722,
+    1772.2266408554651
+  ],
+  "max_vertex_distance_m": {
+    "U_region1": 559.0169943749474,
+    "A_region1": 901.3878188659974,
+    "V_region2": 494.9747468305833,
+    "W_region2": 996.9999999999469
+  },
+  "coverage_radius_m": 997.0,
+  "coverage_proof": "Each search region is convex. If all its vertices lie in the convex coverage disk, the entire region lies in it.",
+  "interpretation": "Constructed mechanism illustration, not an actual run or performance benchmark."
+}
