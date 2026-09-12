@@ -1,0 +1,170 @@
+{
+  "vendor/q3/__init__.py": {
+    "source": "Q3/第三问-算法1/q3/__init__.py",
+    "sha256": "143d8eb94c93f6774113706025c8b82b9d72b4c2ea3f788d0038ed70557557dc"
+  },
+  "vendor/q3/client.py": {
+    "source": "Q3/第三问-算法1/q3/client.py",
+    "sha256": "6538b9c0a1bebba6abcc890a2ef5dd19ad220996adb1416fb288ed37589b3979"
+  },
+  "vendor/q3/core.py": {
+    "source": "Q3/第三问-算法1/q3/core.py",
+    "sha256": "6a602ed77a305d88e622570ab5204f1a38177110814ec894f92ad0c063591c69"
+  },
+  "vendor/q3/mission.py": {
+    "source": "Q3/第三问-算法1/q3/mission.py",
+    "sha256": "08e2b22c2a76a841a06c4e083ee4e31fecc39a588bdb6712be368e362df8df6e"
+  },
+  "vendor/q3/movement.py": {
+    "source": "Q3/第三问-算法1/q3/movement.py",
+    "sha256": "83ab1ccb5aaf674a1e3ddd5ec6aa709dab754ef9c273484ec9d8e2bdbc9ba55b"
+  },
+  "vendor/q3/planner.py": {
+    "source": "Q3/第三问-算法1/q3/planner.py",
+    "sha256": "74e2e8c97862d82efe2920369fdcfed452021a052ff65e3d21a01679f9e53ef9"
+  },
+  "vendor/q3/policy.py": {
+    "source": "Q3/第三问-算法1/q3/policy.py",
+    "sha256": "a67cb7848726a7dea0224b1e0902d002b54492e5828897fc39164b8990d77e32"
+  },
+  "vendor/q3/racing.py": {
+    "source": "Q3/第三问-算法1/q3/racing.py",
+    "sha256": "01ec50886226c230519f05fbdcf6f2234857765e5f56497194068df1c6bf727c"
+  },
+  "vendor/q3/rollout_engine.py": {
+    "source": "Q3/第三问-算法1/q3/rollout_engine.py",
+    "sha256": "00ce076471fe6cd19ab84f4886c61b77bb28e097d6d27857f070485909bed1d6"
+  },
+  "vendor/q3/sampling.py": {
+    "source": "Q3/第三问-算法1/q3/sampling.py",
+    "sha256": "367a384374eeee20420661fa3371f61fa344789e0a8292033e9dcbed2684fb89"
+  },
+  "vendor/q3/simulator.py": {
+    "source": "Q3/第三问-算法1/q3/simulator.py",
+    "sha256": "7202b3337fab9537bea07eb49edb80dffe3fe5d8d2f11ff15b2ea85cb56ef668"
+  },
+  "analyze.py": {
+    "source": "Q3/第三问-算法3/analyze.py",
+    "sha256": "227f620892cec27f14dd4ce9b8980589ff22fa0bd0835afa534e60279527b124"
+  },
+  "audit_movement.py": {
+    "source": "Q3/第三问-算法3/audit_movement.py",
+    "sha256": "8aa38e26a51479c0e417bd2485c669c808444f501d46cea6e2f9fd91e3db189a"
+  },
+  "audit_practice.py": {
+    "source": "Q3/第三问-算法3/audit_practice.py",
+    "sha256": "7dd746fca2f3bb8c10c9d24c60670da3da9268a063cba7e6f5c805e14e07f827"
+  },
+  "audit_routes.py": {
+    "source": "Q3/第三问-算法3/audit_routes.py",
+    "sha256": "d44db55692c8f302e04497cc7084acda4f06b37081a57d580f15abf4298b7373"
+  },
+  "bayes_tsp/__init__.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/__init__.py",
+    "sha256": "c6b877ac50223572ea9507e93f37e4cf85ecd74c070b6aa1a57164a34d836e2b"
+  },
+  "bayes_tsp/cached.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/cached.py",
+    "sha256": "948e4e823dfb8dd8dd3e419c20aeeda66a046b196ce19343d15e7c5290e509fd"
+  },
+  "bayes_tsp/coupling.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/coupling.py",
+    "sha256": "e5ea1b6439bce29858192f80f199f82730d2f9f31918a9786cd441f5b3d760fd"
+  },
+  "bayes_tsp/efficient.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/efficient.py",
+    "sha256": "98e4a8fda932907943de3c2b1bd5afb6b4451680f648716772e6eb3dc4377df7"
+  },
+  "bayes_tsp/joint.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/joint.py",
+    "sha256": "0d9d952b76a17f56d1e34858e7e568140fb69686d6f3ade6c3177394cd0db07c"
+  },
+  "bayes_tsp/open_routes.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/open_routes.py",
+    "sha256": "54fc4c4590380e17e38ed9c13da2ee05ddcd1888fdcf7d498459aaf39d70ada4"
+  },
+  "bayes_tsp/policy.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/policy.py",
+    "sha256": "cc3d753247580d97a1153457c8829797c8fd218df497ead7ad58c2fdc6e5312a"
+  },
+  "bayes_tsp/posterior.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/posterior.py",
+    "sha256": "bca41a136b699536a443c91264124410ddc3125021af97df66481f31c6a0202f"
+  },
+  "bayes_tsp/refinement.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/refinement.py",
+    "sha256": "2ac4ff155c06def8f4572045ffe3f10c95124c7f960cf1fe926286ca42e243c6"
+  },
+  "bayes_tsp/repair.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/repair.py",
+    "sha256": "700294976ea6778b817420bea52e97c481b1a055416ae0dc6dd738b382e60d51"
+  },
+  "bayes_tsp/routing.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/routing.py",
+    "sha256": "5d70a641250b187ab5c846f1331443502b27feadd3d2db7a0c7d8acec81d241c"
+  },
+  "bayes_tsp/scheduling.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/scheduling.py",
+    "sha256": "97c5068dc8e4dfc1294c6dca806274c3e115dd2e86240072b46db3e260bf3546"
+  },
+  "bayes_tsp/sectors.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/sectors.py",
+    "sha256": "ce081bd58dcdcce9656235ab5209ea0e1bf9180ad2b055bd7deb6a7ab82eddbf"
+  },
+  "bayes_tsp/shared.py": {
+    "source": "Q3/第三问-算法3/bayes_tsp/shared.py",
+    "sha256": "96ad5e45051a9a481f9ef301d8c8e366820939b0769de83f10eb374a08dd459c"
+  },
+  "practice_windows.py": {
+    "source": "Q3/第三问-算法3/practice_windows.py",
+    "sha256": "21623b8e7b5c57b3fd2a3a412ee9bfb970297dcbeb377e0c74e30739bc16ad54"
+  },
+  "pytest.ini": {
+    "source": "Q3/第三问-算法3/pytest.ini",
+    "sha256": "c809c969ec7e11b9ff37784e9c6fcc0b7c5148d168e18b05aed797e03fbd6ead"
+  },
+  "requirements.txt": {
+    "source": "Q3/第三问-算法3/requirements.txt",
+    "sha256": "28d0b159f7287cdd095aec67cf0a2443c373ef05c1b647379db68c58bb5fd893"
+  },
+  "run.py": {
+    "source": "Q3/第三问-算法3/run.py",
+    "sha256": "a3b60127938a0ea7d5f2d75774e5878c0d8aaf8b19c86834015c615c2c175a77"
+  },
+  "summarize_practice.py": {
+    "source": "Q3/第三问-算法3/summarize_practice.py",
+    "sha256": "e84762bd4cc9ea142d1c6d3139329bb5ceb6e3cce21ff7618f1489b1711983ba"
+  },
+  "tests/test_bayes_tsp.py": {
+    "source": "Q3/第三问-算法3/tests/test_bayes_tsp.py",
+    "sha256": "dc6350c2507bb08b9a28a066c09a393df674f13b18b03b7d7eb22951df34bcbb"
+  },
+  "tests/test_cached.py": {
+    "source": "Q3/第三问-算法3/tests/test_cached.py",
+    "sha256": "6035164c518b60ffcc8056dd4362504e6ce5b8ec0e9c771b182906e39221c69d"
+  },
+  "tests/test_joint_routes.py": {
+    "source": "Q3/第三问-算法3/tests/test_joint_routes.py",
+    "sha256": "8e2456cc018b0790330686f17aabc3d187ad9fb00e728392d0b6e751e428b514"
+  },
+  "tests/test_movement_audit.py": {
+    "source": "Q3/第三问-算法3/tests/test_movement_audit.py",
+    "sha256": "4ec2b63aed05e221e097c014bac1c1ef09605c9352894f9c965daeea41511077"
+  },
+  "tests/test_practice_audit.py": {
+    "source": "Q3/第三问-算法3/tests/test_practice_audit.py",
+    "sha256": "c1166714ca0417c2a24ce03943b201948e5999fcd4145684062f6b5d8a3a0390"
+  },
+  "tests/test_practice_guard.py": {
+    "source": "Q3/第三问-算法3/tests/test_practice_guard.py",
+    "sha256": "18c692b5bd681f7bf82257e02d73b87517e2429a9431a1647d105993315492b8"
+  },
+  "tests/test_scheduling.py": {
+    "source": "Q3/第三问-算法3/tests/test_scheduling.py",
+    "sha256": "c0e7876dddb5889bf0a6ecabef43f76f163d2d783748a6a6ecbfac232ba68015"
+  },
+  "tests/test_sectors.py": {
+    "source": "Q3/第三问-算法3/tests/test_sectors.py",
+    "sha256": "28793c94d0757519a7f35ae6b17180c5d33f7e0dd8e9a273608b55bf1b27e549"
+  }
+}
