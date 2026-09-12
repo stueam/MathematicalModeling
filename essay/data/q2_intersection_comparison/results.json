@@ -1,0 +1,55 @@
+{
+  "purpose": "Constructed result visualization; not expected performance or validation",
+  "source_m": [
+    900.0,
+    0.0
+  ],
+  "first_point_m": [
+    0,
+    0
+  ],
+  "first_bearing_deg": 0,
+  "first_error_deg": 0,
+  "second_error_deg": 0.35,
+  "reception_m": 1200,
+  "initial_radius_m": 597.5925455417879,
+  "arc_quadrant_segments": 128,
+  "cases": [
+    {
+      "strategy": "沿示向前进",
+      "qx": 300.0,
+      "qy": 0.0,
+      "distance_m": 600.0,
+      "bearing_deg": 0.35,
+      "error_deg": 0.35,
+      "radius_m": 447.5879645957249,
+      "diameter_m": 895.0639580872456,
+      "center_x": 752.5745301123432,
+      "center_y": 3.3659226188439106
+    },
+    {
+      "strategy": "侧向移动",
+      "qx": 0.0,
+      "qy": 300.0,
+      "distance_m": 948.6832980505138,
+      "bearing_deg": 341.915051177078,
+      "error_deg": 0.35,
+      "radius_m": 105.95478317728954,
+      "diameter_m": 211.9095663545792,
+      "center_x": 930.1447904305403,
+      "center_y": -1.8276058894929719
+    },
+    {
+      "strategy": "推荐测点",
+      "qx": 840.0,
+      "qy": 495.0,
+      "distance_m": 498.62310415783986,
+      "bearing_deg": 277.2612271190247,
+      "error_deg": 0.35,
+      "radius_m": 19.109143392361414,
+      "diameter_m": 38.218286784722885,
+      "center_x": 903.3937779487708,
+      "center_y": -0.1884050909790176
+    }
+  ]
+}

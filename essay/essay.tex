@@ -14,6 +14,7 @@
 
 % 插入图片
 \usepackage{graphicx}
+\usepackage{placeins}
 
 % 表格
 \usepackage{booktabs}
@@ -71,8 +72,9 @@
 
 \subsection{问题二}
 第一次检测只能确定干扰源的大致方向，第二个检测点的位置会影响两次检测后的定位范围。
-因此，先用最小覆盖圆半径衡量定位效果，再根据第一次观测建立位置概率，
-比较各候选测点在不同反馈下的期望定位效果，给出第二检测点及其候选区域。
+选点既需改善测向交会的几何关系，也需考虑接收范围对反馈的影响。
+因此，以最小覆盖圆半径衡量定位效果，根据首次观测预测各测点的全部可能反馈，
+比较反馈后的期望覆盖半径，给出推荐测点及近优候选区域，并通过两组初始条件和简单策略对照解释选点结果。
 \subsection{问题三}
 ···
 \subsection{问题四}
@@ -128,7 +130,7 @@ $j,k=1,\ldots,m$ 表示多边形顶点；坐标分量用下标 $x,y$ 区分。
 
 
 
-本问的定位区域指全部示向约束形成的交集，在区域非空、有界且具有非空内部时，为凸多边形。不叠加距离或圆形活动范围的裁剪；
+本问的定位多边形指全部示向约束形成的楔形交集，不叠加距离或圆形活动范围的裁剪；
 若加入这些约束，边界可能含有圆弧，需另行处理。
 示向度误差为 $\pm1^\circ$，因此干扰源应在 $\theta_i-\varepsilon$ 与
 $\theta_i+\varepsilon$ 两条射线夹成的楔形内。直接比较角度需要处理跨越 $0^\circ$ 的情况，
@@ -140,7 +142,7 @@ $\theta_i+\varepsilon$ 两条射线夹成的楔形内。直接比较角度需要
     \boldsymbol n_i^+&=\bigl(\sin(\theta_i+\varepsilon),\ -\cos(\theta_i+\varepsilon)\bigr)^{\mathsf T}.
   \end{aligned}
 \]
-这两个单位法向量均指向楔形内测，于是
+这两个单位法向量分别朝向各自边界包含楔形的那一侧，于是
 \begin{equation}
   W_i=\left\{\boldsymbol x\in\mathbb R^2:
   (\boldsymbol n_i^-)^{\mathsf T}(\boldsymbol x-\boldsymbol p_i)\geq0,\quad
@@ -150,20 +152,28 @@ $\theta_i+\varepsilon$ 两条射线夹成的楔形内。直接比较角度需要
 
 
 式~\eqref{eq:q1-wedge} 中，$\boldsymbol x-\boldsymbol p_i$ 是从检测点指向待判断位置的向量，
-它与单位法向量$\boldsymbol n_i^-$的内积，就是到边界直线的有向距离，当且仅当两项同时非负说明该点位于闭楔形区域内。
+它与单位法向量的内积，就是沿该法向量的投影，也就是到边界直线的有向距离。
+\textbf{内积为正时，点在朝向楔形内部的一侧；为零时在边界上；为负时在外侧。}
+两项必须同时非负，才能说明该点位于两条射线之间。
 例如，沿示向方向前进距离 $t>0$，两项内积都为 $t\sin\varepsilon>0$；
 若反向移动，则两项均为负。因此，该判据也排除了检测点后方的区域。
 
 
 
 
-综合全部检测结果，定位区域为
+将每次检测的两个约束合并，可得
 \begin{equation}
-  P=\bigcap_{i=1}^{n}W_i.
+  P=\bigcap_{i=1}^{n}W_i=\{\boldsymbol x:H\boldsymbol x\leq\boldsymbol g\}.
   \label{eq:q1-intersection}
 \end{equation}
-如图~\ref{fig:q1-wedges} 所示，多次测向分别形成楔形约束，其共同部分构成定位区域。
-每个 $W_i$ 均为两个闭半平面的交集，因此 $P$ 为闭凸集。
+矩阵 $H$ 的第 $2i-1,2i$ 行分别为 $-(\boldsymbol n_i^-)^{\mathsf T}$、
+$-(\boldsymbol n_i^+)^{\mathsf T}$，$\boldsymbol g$ 的对应分量为这两行与 $\boldsymbol p_i$ 的乘积。
+对任意 $\boldsymbol x,\boldsymbol y\in P$ 及 $\lambda\in[0,1]$，有
+\[
+  H\bigl(\lambda\boldsymbol x+(1-\lambda)\boldsymbol y\bigr)
+  \leq\lambda\boldsymbol g+(1-\lambda)\boldsymbol g=\boldsymbol g.
+\]
+因此两点间的整条线段仍在 $P$ 内，故 $P$ 为凸集，这也是交集保凸性的直接体现。
 下文先讨论 $P$ 非空、有界且内部非空的情形，此时它是凸多边形。
 由有界多面体的顶点表示定理\cite{boyd2004convex}，
 $P=\operatorname{conv}(V)$，其中 $V=\{\boldsymbol v_1,\ldots,\boldsymbol v_m\}$ 为全部顶点集合，
@@ -182,19 +192,26 @@ $\operatorname{conv}(V)$ 表示顶点所有凸组合构成的集合。
 
 \label{sec:q1-filter}
 \label{sec:q1-polygon}
-求解前先进行区域状态预检：以线性规划检查全部半平面约束是否可行；对非空区域，
-根据单位法向量是否位于同一闭半圆判别无界性，位于同一闭半圆时存在无界方向。
-对有界区域，再通过线性规划求最大内切圆半径，按数值容差区分二维区域与退化区域。
-当前算例主流程仅处理非空有界二维区域，特殊状态另行测试；下述复杂度仅计区域构造，不含状态预检。
+求取多边形时，最直接的办法是\textbf{枚举边界交点}。
+将 $2n$ 条边界射线所在的直线作为候选边界，仅对不平行的直线求交，
+再用式~\eqref{eq:q1-intersection} 的全部约束筛选；平行或重合直线不作为唯一交点的来源。
+保留点去重后求凸包，得到按逆时针排列的顶点，无须额外判断射线参数。
+记保留点集为 $S_{\mathrm f}$。每个多边形顶点至少位于两条不平行的活跃边界上
+（即对应不等式在该点取等号），否则该点可沿边界方向向两侧移动而仍保持可行，不能成为顶点。
+因此枚举不会遗漏顶点，且筛选保证 $V\subseteq S_{\mathrm f}\subseteq P$，从而
+\[
+  P=\operatorname{conv}(V)\subseteq\operatorname{conv}(S_{\mathrm f})\subseteq P.
+\]
+这证明所得凸包恰好是完整定位区域。候选交点为 $O(n^2)$ 个，每点检查 $2n$ 个约束，
+连同去重和凸包计算，区域构造复杂度为 $O(n^3)$。
 
-求取多边形时，我们主要采用半平面交算法构造定位区域。对于非空、有界的二维交集，将边界按方向角排序，同向平行约束仅保留较严格者，
-再用双端队列维护有效边界，由相邻边界交点得到多边形顶点。排序耗时为 $O(n\log n)$，
-每条边界至多入队、出队一次，故区域构造复杂度为 $O(n\log n)$。
+另一种办法是直接求\textbf{半平面交}。先将边界统一为可行半平面位于左侧的有向直线，
+按方向角排序，同向平行边界仅保留较严格者；再用双端队列维护有效边界。
+加入新约束时，删除队首或队尾使相邻交点落在新半平面外侧的边界，最后检查首尾闭合。
+排序耗时 $O(n\log n)$，每条边界至多入队、出队一次，故区域构造复杂度为 $O(n\log n)$。
+交点枚举便于逐项检查约束，半平面交降低构造阶段的渐近复杂度；两者基于同一模型，结果比较用于核对实现。
 
-另可用边界交点枚举法核验：枚举不平行边界的交点，筛选满足全部约束的点后求凸包。
-该方法不会遗漏多边形顶点，复杂度为 $O(n^3)$。
-
-对于定位区域$P$的其他情况：空集表示观测约束不相容，应检查输入数据及误差设定;非空无界区域没有有限直径；
+算法还需识别区域状态：空集表示约束不相容，非空无界区域没有有限直径；
 退化为点或有界线段时，直径分别为零或线段长度。
 不能仅凭没有找到交点判断为空，也不能以人为边框将无界区域当成有界多边形。
 
@@ -204,7 +221,8 @@ $\operatorname{conv}(V)$ 表示顶点所有凸组合构成的集合。
 
 
 
-得到定位多边形的全部顶点后，进一步计算区域直径，即区域内任意两点之间的最大距离。
+
+区域直径描述仍与观测相容的任意两个位置之间的最大距离。
 由于 $P$ 是闭且有界的非空多边形，该最大值能够取得。
 
 \noindent\textbf{命题1（顶点直径）}\quad 定位多边形的直径可由一对顶点取得，即
@@ -215,7 +233,7 @@ $\operatorname{conv}(V)$ 表示顶点所有凸组合构成的集合。
 \end{equation}
 \noindent\textbf{证明：}由 $P=\operatorname{conv}(V)$，任意 $\boldsymbol x,\boldsymbol y\in P$ 均可写成顶点的凸组合
 $\boldsymbol x=\sum_j\alpha_j\boldsymbol v_j$、$\boldsymbol y=\sum_k\beta_k\boldsymbol v_k$，
-其中系数均非负，且 $\sum_j\alpha_j=\sum_k\beta_k=1$。利用系数和为 $1$ 及三角不等式，有
+其中权重非负且各自的和为 $1$。由三角不等式，
 \[
   \|\boldsymbol x-\boldsymbol y\|_2
   =\left\|\sum_{j,k}\alpha_j\beta_k(\boldsymbol v_j-\boldsymbol v_k)\right\|_2
@@ -224,18 +242,16 @@ $\boldsymbol x=\sum_j\alpha_j\boldsymbol v_j$、$\boldsymbol y=\sum_k\beta_k\bol
 \]
 又因顶点本身属于 $P$，等号可以由一对最远顶点取得。
 因此，无须对区域内部进行空间采样，枚举顶点对即可在 $O(m^2)$ 时间内求出 $D$，
-并记录对应端点 $\boldsymbol a,\boldsymbol b$,，用于下一节的直径圆覆盖判断。
-该化简消除了空间网格近似，但计算仍受浮点精度影响。
+并记录对应端点 $\boldsymbol a,\boldsymbol b$。该化简消除了空间网格近似，但计算仍受浮点精度影响。
 
 
-\subsubsection{直径圆覆盖判定}
+\subsubsection{圆的覆盖}
 \label{sec:q1-cover-counterexample}
 \label{sec:q1-cover-condition}
 
 
 
 
-已知区域直径 \(D\)，进一步判断是否存在半径为 \(D/2\) 的圆盘覆盖整个定位区域。
 下文所称覆盖圆均指包含内部及边界的闭圆盘，记
 $B(\boldsymbol c,r)=\{\boldsymbol x:\|\boldsymbol x-\boldsymbol c\|_2\leq r\}$。
 取直径端点 $\boldsymbol a,\boldsymbol b$，记其中点为 $\boldsymbol c_D=(\boldsymbol a+\boldsymbol b)/2$。
@@ -281,111 +297,101 @@ $P=\operatorname{conv}(V)$，整个多边形也在其中，充分性成立。
 采用半平面交、顶点对枚举和上述判据时，区域构造、直径计算与覆盖判断的总复杂度为
 $O(n\log n+m^2)$；此处不包括下面作为补充的最小覆盖圆计算。
 
-在真实源位于 $P$ 的前提下，以 $\boldsymbol c$ 作为位置估计时，最坏情况误差为
-$\max_{\boldsymbol x\in P}\|\boldsymbol x-\boldsymbol c\|_2$。选择使该误差最小的位置，得到最小覆盖圆半径
+为描述不能由直径圆覆盖时所需的尺度，定义最小覆盖圆半径
 \begin{equation}
-  R_*=\min_{\boldsymbol c\in\mathbb R^2}
-      \max_{\boldsymbol x\in P}\|\boldsymbol x-\boldsymbol c\|_2.
+  R_*=\min_{\boldsymbol c\in\mathbb R^2}\max_j\|\boldsymbol v_j-\boldsymbol c\|_2
+  \geq D/2.
   \label{eq:q1-minimum-circle}
 \end{equation}
-因此，$D$ 描述两个可行位置之间的最大跨度，$R_*$ 则表示选择单个位置作为估计时能够达到的最小最坏情况误差。
-第二问据此采用 $R_*$ 衡量定位效果，并比较不同候选检测点的期望覆盖半径。
+下界由任一覆盖圆必须包含直径两端点得到，等号成立当且仅当式~\eqref{eq:q1-cover-test} 成立。
+有限点集的最小覆盖圆由至多三个边界点确定：非退化时由两点作为直径端点，
+或由三个不共线点确定外接圆。因此算例枚举不同两点的直径圆及不共线三点的外接圆，
+在包含全部顶点的候选圆中取半径最小者；单点情形取零半径。
 
-任一覆盖圆均须包含直径两端点，故 $R_*\geq D/2$，等号成立当且仅当式~\eqref{eq:q1-cover-test} 成立。
-计算时，枚举顶点对的直径圆与不共线顶点三元组的外接圆，在覆盖全部顶点的候选圆中取半径最小者；单点情形取零半径。
 
-
-\subsubsection{算例检验}
+\subsubsection{数值算例与结果可视化}
 \label{sec:q1-experiment}
 
-取 $n=10$，随机种子为 $20260911$，坐标均以米计。先在正方形 $[-200,200]^2$ 内均匀生成真实源位置，
-再在 $[-750,750]^2$ 内独立采样检测点，保留距源 $100$--$950\,\mathrm m$ 的位置。
-示向度由真实方位角叠加 $[-1^\circ,1^\circ]$ 内的独立均匀误差得到。
-这里的均匀分布只是模拟设定；定位算法只读取检测点坐标和示向度，真实源位置用于事后核对。
-检测点没有按方位等分布置，示向线也不要求共点。
-
-
-
-
-两种算法均得到一个七边形，结果见表~\ref{tab:q1-experiment}。
-将顶点反代为方位角后，均满足全部 $\pm1^\circ$ 约束；
-从每条边的中点沿该边的外法向移动 $1\,\mathrm{mm}$，则至少违反一项约束。该检查用于核对边界方向，区域构造的完整性仍由前述凸包关系保证。
-真实源位于区域内部，图~\ref{fig:q1-experiment} 展示了整体布置和局部细节，
-细节图用\textbf{最小覆盖圆}围住定位区域。
+构造两组各含 $10$ 个检测点、满足 $\pm1^\circ$ 测向误差约束的示向数据。
+根据上述半平面交算法，能够得到表~\ref{tab:q1-experiment} 及图~\ref{fig:q1-experiment} 所示的定位结果。
+检测点坐标与示向度见支撑材料。
 
 \begin{table}[htbp]
   \centering
-  \caption{$n=10$ 算例结果}
+  \caption{两组算例的定位结果与直径圆覆盖关系}
   \label{tab:q1-experiment}
   \begin{tabular}{lcc}
     \toprule
-    指标 & 边界交点枚举法 & 半平面交算法 \\
+    指标 & 算例1 & 算例2 \\
     \midrule
-    顶点数 & 7 & 7 \\
-    区域面积（$\mathrm m^2$） & 35.53 & 35.53 \\
-    区域直径（$\mathrm m$） & 12.67 & 12.67 \\
-    最小覆盖圆半径（$\mathrm m$） & 6.33 & 6.33 \\
-    直径圆能否覆盖 & 能 & 能 \\
+    顶点数 & 6 & 6 \\
+    区域直径 $D$（$\mathrm m$） & 20.00 & 20.02 \\
+    直径圆半径 $D/2$（$\mathrm m$） & 10.00 & 10.01 \\
+    最大覆盖超差 $\delta$（$\mathrm m$） & 0.00 & 5.52 \\
+    直径圆能否覆盖 & 能 & 不能 \\
     \bottomrule
   \end{tabular}
   \par\smallskip
-  {\footnotesize 注：数值分别保留两位小数，不宜用舍入后的数值重新判断覆盖关系。}
+  \parbox{0.94\linewidth}{\footnotesize 注：$\delta=\max_j\|\boldsymbol v_j-\boldsymbol c_D\|_2-D/2$。
+  数值保留两位小数，覆盖判定使用未舍入结果，计算容差为 $10^{-8}\,\mathrm m$。}
 \end{table}
 
-本例中，区域直径约为 $12.67\,\mathrm m$，表示所有满足示向约束的位置之间的最大跨度，
-并不直接等于某个位置估计的误差。按表中报告的覆盖结果，全部顶点满足式~\eqref{eq:q1-cover-test}，
-因而 $R_*=D/2$，以直径端点中点为圆心的相应圆盘可包含全部可行位置。
+图~\ref{fig:q1-experiment} 左侧展示检测点的整体布置，右侧放大相应定位区域。
+其中，$AB$ 为直径线段，$O$ 为其中点。算例1的全部顶点均位于直径圆内或圆周上；
+算例2中，顶点 $C$ 到圆心的距离约为 $15.53\,\mathrm m$，超出圆半径约 $5.52\,\mathrm m$，
+因而不能覆盖。两组区域的直径接近，但覆盖结果不同，展示了区域形状对覆盖关系的影响。
 
-
-\begin{figure}[htbp]
+\begin{figure}[!htbp]
   \centering
-  \includegraphics[width=\linewidth]{data/q1_n10_geometry/q1_n10_geometry.png}
-  \caption{$10$ 个检测点的整体布置与定位区域局部放大}
+  \includegraphics[width=0.94\linewidth]{data/q1_two_cases/q1_two_cases.png}
+  \caption{两组算例的检测点布置、定位区域与直径圆}
   \label{fig:q1-experiment}
 \end{figure}
 
-
-
-
-\begin{samepage}
-进一步将种子逐次加 $1$，共生成 $200$ 组数据，两种算法所得顶点及直径均在
-$10^{-6}\,\mathrm m$ 的比较容差内一致；这一容差用于检查实现一致性，不表示实际定位精度。其中 $111$ 组可由直径圆覆盖，$89$ 组不能覆盖，
-说明覆盖关系确实需要单独检验。这些数量只反映本次采样结果，不代表实际场景的覆盖概率。
-此外，平行边界、角度跨零、空集和退化区域等共 $18$ 项程序检查均通过。
-\par
-\end{samepage}
-% 数值来源：data/q1_n10/q1_n10_summary.json；复现脚本：data/q1_n10/q1_n10_test.py。
-% 作者核实：200 组是全部生成样本还是筛选后的有效样本；如有排除，补明数量和筛选规则。
-% 作者核实：表中覆盖结论应由未舍入数据得到；本次仅沿用原稿数值，未重新运行实验。
-综上，使用枚举边界交点或半平面交求出满足全部示向约束的定位区域，顶点化证明保证直径计算不遗漏连续区域的最远点，
-圆心唯一性则将覆盖问题化为一次顶点检查。算例中的两类覆盖结果说明该判定不可省略；
-两种实现的一致性支持计算流程，但不构成对测量假设的独立验证。
-上述结论针对已知测点坐标、同一静止源及给定误差界下的纯测向区域。
+% 数值与输入：data/q1_two_cases/results.json、case1_observations.csv、case2_observations.csv。
+% 绘图与主算法：data/q1_two_cases/generate.py、geometry.py。
 \label{sec:q1-end}
 
 
 \subsection{问题二模型建立与求解}
 \label{sec:q2}
-% 前两处模型示意图已插入；算例图位、参数和结果待补。
+% 本节沿用固定R0模型；表述与基线对照按第二问审查意见前五项整理。
 
-\subsubsection{定位效果的衡量指标}
+\subsubsection{定位指标与选点准则}
 \label{sec:q2-effect}
 
-问题一给出了由多次示向度确定可行区域的方法。在此基础上，问题二进一步讨论
-第二检测点的选择，即利用第一次检测的信息，使再次观测后的定位范围尽可能缩小。
-由于不同测点对应的交会区域形状存在差异，仅以面积评价定位效果，
-可能使面积较小但沿某一方向延伸较长的区域获得较高评价，难以反映位置的不确定程度。
-因此，本问沿用前文的\textbf{最小覆盖圆半径 $R_*$}作为主要评价指标。
-该指标能够同时考虑可行区域在各方向上的分布，半径越小，表示\textbf{所有可行位置越集中}。
-区域直径作为辅助指标保留，其计算方法仍采用问题一的结论。
+第一次测向通常留下沿示向方向延伸的狭长楔形区域。第二检测点的位置既影响两次测向的交会几何，
+也影响能否接收到信号，因此选点时需同时考虑\textbf{观测后区域能缩小多少}与\textbf{各种反馈出现的概率}。
+本问以第二次检测后的期望定位范围为依据，给出推荐测点及其附近的近优候选区域。
 
-第二次示向度在选点时尚未确定，同一检测点\textbf{在不同观测结果下也会产生不同的定位范围}。
-为评价测点的整体效果，需要将这些结果及其发生概率一并纳入考虑。
-为此，我们根据第一次观测建立目标位置的概率分布，分别预测各候选测点的反馈，
-并以\textbf{第二次观测后最小覆盖圆半径的期望}作为选点依据。
-这一准则衡量的是给定概率模型下的平均定位效果。
+沿用第一问的\textbf{最小覆盖圆半径 $R_*$}评价定位范围。相比面积，该指标能够反映狭长区域
+在最不确定方向上的尺度；以最小覆盖圆圆心作为位置估计时，$R_*$ 即全部可行位置对应的
+最坏情况误差。区域直径保留为辅助指标。
 
-\subsubsection{贝叶斯选点}
+对候选点 $\boldsymbol q$，记可能反馈的集合为 $\mathcal Y$，其中包括正常示向的角度档、
+“距离过近”和“无信号”。记反馈 $y$ 的预测概率为 $\pi_y(\boldsymbol q)$，
+反馈后的完整可行区域为 $P_2(\boldsymbol q,y)$，则选点评价函数为
+\begin{equation}
+  J(\boldsymbol q)=\sum_{y\in\mathcal Y}
+    \pi_y(\boldsymbol q)R_*\!\left(P_2(\boldsymbol q,y)\right).
+  \label{eq:q2-objective}
+\end{equation}
+概率用于综合尚未发生的观测结果，各反馈下的覆盖半径则描述相应的几何定位范围。
+因此，$J$ 能够衡量给定概率模型下的平均定位效果。
+
+在目标圆域内建立候选网格 $\mathcal G$，定义推荐点与近优候选集合为
+\begin{equation}
+  \begin{aligned}
+    \boldsymbol q_*&\in\underset{\boldsymbol q\in\mathcal G}{\operatorname{argmin}}\,J(\boldsymbol q),\\
+    \mathcal C_\eta&=\left\{\boldsymbol q\in\mathcal G:
+    J(\boldsymbol q)\leq(1+\eta)J(\boldsymbol q_*)\right\}.
+  \end{aligned}
+  \label{eq:q2-candidate-set}
+\end{equation}
+下文取 $\eta=0.1$ 展示 $10\%$ 近优区域，表示允许期望覆盖半径相对推荐点增加不超过 $10\%$。
+这一阈值是候选区域的选取约定。下面先建立首次观测后的位置信息，再给出反馈预测与数值计算方法。
+
+\subsubsection{首次观测后的位置信息}
 \label{sec:q2-bayes}
 
 首先，由于\textbf{同一目标干扰源的发射功率及测向机的灵敏度确定}，本问针对同一目标干扰源进行的两次检测，将接收半径
@@ -406,6 +412,11 @@ $R_0\in[1000,1500]\,\mathrm m$ 当成\textbf{固定参数}进行处理，在两�
 似然密度均为 $1/(2\varepsilon)$，经贝叶斯更新后，位置分布在 $P_1$ 内仍保持均匀。
 因此，$P_1$ 内任一子区域的概率等于其面积占比。这一关系为位置离散后的概率赋值提供了依据。
 
+\subsubsection{反馈预测与数值计算}
+\label{sec:q2-numerics}
+
+为计算式~\eqref{eq:q2-objective}，将位置积分、反馈预测和区域更新结合起来。
+位置积分采用扇环单元，尚未获得的示向度采用角度分档；二者分别用于近似位置分布和反馈分布。
 计算时，将圆形区域划分为小扇环，并保留与 $P_1$ 相交的部分。
 用 $\ell$ 表示位置单元编号，$E_\ell$ 表示裁剪后的单元，
 $\boldsymbol z_\ell$ 为其中的代表点，则该单元的概率权重为
@@ -496,73 +507,126 @@ $|\cdot|_{\mathrm{circ}}$ 为圆周角长。“距离过近”和“无信号”
 对于“无信号”，$P_2$ 为 $P_1$ 中距离 $\boldsymbol q$ 超过 $R_0$ 的部分。
 两类反馈均通过\textbf{距离约束}更新可行区域，其定位效果同样由更新后区域的覆盖半径评价。
 
-由此，将各反馈下的覆盖半径按预测概率加权，得到候选测点的评价函数
-\begin{equation}
-  J(\boldsymbol q)=\sum_{y\in\mathcal Y}
-    \pi_y(\boldsymbol q)R_*\!\left(P_2(\boldsymbol q,y)\right).
-  \label{eq:q2-objective}
-\end{equation}
-式中，$\pi_y$ 表示\textbf{相应反馈在选点评价中的权重}，$R_*(P_2)$ 则表示\textbf{该反馈下
-全部可行位置的覆盖尺度}。因此，概率用于综合不同观测结果，
-而每次观测的几何评价仍以完整可行区域为对象。
+将得到的反馈概率与区域覆盖半径代入式~\eqref{eq:q2-objective}，即可计算各候选点的 $J$，
+并按式~\eqref{eq:q2-candidate-set} 确定推荐点与候选区域。
 
-在目标圆域内布置候选网格 $\mathcal G$，对网格中每一候选点，依次完成上述\textbf{反馈预测、区域更新及期望计算}的过程，
-最终取\textbf{ $J$ 最小的候选点或 $J$ 足够小的一片区域}作为第二检测点的可选集合。
+按题设，同一位置重复检测的读数不变，故第一检测点可以单独取
+$J(\boldsymbol p_1)=R_*(P_1)$。
 
-按题设，同一位置重复检测的读数不变，故第一检测点单独取
-$J(\boldsymbol p_1)=R_*(P_1)$，直接特殊化处理。
+下文位置积分采用 $80\times16$ 个扇环单元，示向度档宽为 $0.125^\circ$。
+候选网格间距为 $60\,\mathrm m$，在粗网格最佳点附近的 $\pm90\,\mathrm m$ 范围内加密至
+$15\,\mathrm m$；对称情形同时考察镜像邻域。推荐坐标与目标值均对应这一离散计算设置。
 
-\subsubsection{实例与可视化}
+\subsubsection{结果可视化与策略比较}
 \label{sec:q2-experiment}
 
-为考察初始几何关系对第二检测点选择的影响，设置对称与不对称两组情形。
+为考察初始几何关系对第二检测点选择的影响，我们设置了对称与不对称两组情形。
 目标圆域半径均取 $1800\,\mathrm m$，接收半径固定为 $R_0=1200\,\mathrm m$，
 测角误差半宽为 $1^\circ$。对称情形取 $\boldsymbol p_1=(0,0)\,\mathrm m$、
 初次示向度 $0^\circ$；不对称情形取 $\boldsymbol p_1=(1200,400)\,\mathrm m$、
-初次示向度 $65^\circ$，此时第一楔形受到目标圆域边界的裁剪。
+初次示向度 $65^\circ$。下面先展示推荐区域，再用一个构造情形呈现交会结果，
+最后比较不同选点策略的期望定位效果。
 
-图~\ref{fig:q2-experiment} 展示两组情形下候选第二检测点的期望覆盖半径。
-两图采用\textbf{相同的对数色标}，颜色越深表示 $J$ 越小，预期定位效果越好。
-星标为网格搜索得到的推荐点，白色虚线围出的近优区域满足
-$J(\boldsymbol q)\leq 1.1\min_{\boldsymbol u\in\mathcal G}J(\boldsymbol u)$。
-图中数值为位置离散与示向度分档下的近似结果，推荐点对应所搜索网格，
-不代表连续区域内的严格全局最优解。
+\textbf{推荐测点与候选区域。}图~\ref{fig:q2-experiment} 展示两组情形的期望覆盖半径。
+两图共用对数色标，颜色由紫色经蓝绿色趋向黄色时，$J$ 逐渐减小。
+星标为网格搜索得到的推荐点，虚线为式~\eqref{eq:q2-candidate-set} 中
+$\eta=0.1$ 所对应阈值的网格插值等值线，用于展示近优区域。
+颜色块对应实际网格计算值，虚线用于可视化；推荐点不代表连续区域内的严格全局最优解。
 
 \begin{figure}[htbp]
   \centering
-  \begin{minipage}[t]{0.495\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{data/q2_heatmap_symmetric_selected/q2_heatmap_symmetric_selected.png}
-    \par\smallskip
-    {\small (a) 对称情形}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.495\linewidth}
-    \centering
-    \includegraphics[width=\linewidth]{data/q2_heatmap_asymmetric_selected/q2_heatmap_asymmetric_selected.png}
-    \par\smallskip
-    {\small (b) 不对称情形}
-  \end{minipage}
-  \caption{不同初始条件下第二检测点的期望定位效果}
+  \includegraphics[width=\linewidth]{data/q2_strategy_heatmaps/q2_strategy_heatmaps.png}
+  \caption{两组初始条件下的推荐测点及近优候选区域（共用对数色标）}
   \label{fig:q2-experiment}
 \end{figure}
 
-对称情形中的低值区域分布于第一示向方向两侧，呈镜像关系；
-不对称情形中，初始区域受边界裁剪，低值区域的位置与形状随之改变。
-因此，第二检测点的选择需要结合\textbf{第一次检测后的完整可行区域}，
-仅依据两次示向方向的夹角难以充分反映预期定位效果。
-% 后续补充：具体反馈下的可行区域与最小覆盖圆、网格加密及控制变量检验。
+对称情形下，目标圆域、首测点及首次楔形均关于 $x$ 轴对称，位置先验和误差模型
+也保持这一对称性，故上下镜像测点的 $J$ 相同，推荐点为 $(840,\pm495)\,\mathrm m$。
+不对称情形中，目标圆域的裁剪打破了关于首示向线的对称性，
+推荐点变为 $(1140,945)\,\mathrm m$，需依据裁剪后的初始区域重新选点。
 
-在对称情形下，进一步固定 $\boldsymbol p_1=(0,0)\,\mathrm m$、初次示向度 $0^\circ$
+\textbf{不同选点下的交会结果。}为直观展示第二次观测带来的区域变化，
+以沿首示向前进 $300\,\mathrm m$、朝其左侧垂直方向移动 $300\,\mathrm m$
+作为两种简单选点策略，与推荐点比较。
+在对称情形中构造源位置 $\boldsymbol s=(900,0)\,\mathrm m$，首次测角误差取 $0^\circ$，
+三种第二测点的测角误差均取 $+0.35^\circ$，均返回正常示向。
+根据上述区域更新算法，得到图~\ref{fig:q2-intersection-comparison} 所示的交会区域及最小覆盖圆。
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=\linewidth]{data/q2_intersection_comparison/q2_intersection_comparison.png}
+  \caption{三种第二测点下的交会结果：上排为整体位置关系，下排为虚框内的局部放大}
+  \label{fig:q2-intersection-comparison}
+  \par\smallskip
+  \parbox{0.96\linewidth}{\footnotesize 注：各列的整体视图采用相同坐标范围，局部视图也采用相同坐标范围。
+  左下图的覆盖圆超出局部窗口，其完整形状见左上图。该图展示固定构造情形的单次结果，图中半径不是期望值 $J$。}
+\end{figure}
+
+\begin{samepage}
+这一构造情形中，初始覆盖半径为 $597.59\,\mathrm m$。
+沿示向前进后，两次楔形接近同向，交会区域仍然狭长，覆盖半径为 $447.59\,\mathrm m$；
+侧向移动后，第二楔形从不同方向切割初始区域，覆盖半径降至 $105.95\,\mathrm m$；
+在推荐点观测后，覆盖半径为 $19.11\,\mathrm m$。
+这些结果用于展示区域收缩的几何过程，策略的平均效果仍由各类反馈加权后的 $J$ 评价。
+\par
+\end{samepage}
+
+\textbf{期望定位效果比较。}表~\ref{tab:q2-baselines} 将测点坐标、期望覆盖半径和无信号概率
+集中列出，两组初始覆盖半径分别为 $597.59\,\mathrm m$ 和 $340.22\,\mathrm m$。
+所有期望值均采用前述相同数值参数计算。
+
+\begin{table}[!htb]
+  \centering
+  \caption{推荐测点与简单选点策略的期望定位效果}
+  \label{tab:q2-recommendations}
+  \label{tab:q2-baselines}
+  \small
+  \setlength{\tabcolsep}{5pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{llcrr}
+    \toprule
+    情形 & 选点策略 & 测点坐标/m & $J$/m & 无信号概率/\% \\
+    \midrule
+    对称 & 沿示向前进 & $(300,0)$ & 409.03 & 0.00 \\
+         & 侧向移动 & $(0,300)$ & 72.74 & 6.25 \\
+         & 推荐点 & $(840,\pm495)$ & 23.15 & 0.00 \\
+    \midrule
+    不对称 & 沿示向前进 & $(1326.79,671.89)$ & 157.36 & 0.00 \\
+           & 侧向移动 & $(928.11,526.79)$ & 31.15 & 0.00 \\
+           & 推荐点 & $(1140,945)$ & 12.93 & 0.00 \\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip
+  \parbox{0.96\linewidth}{\footnotesize 注：两种简单策略均相对首测点移动 $300\,\mathrm m$；
+  $\pm$ 表示一对镜像推荐点。坐标按显示精度取舍，计算使用未舍入坐标。
+  无信号概率为位置求积近似值。本表比较定位范围，各策略移动距离不同，未计移动时间。}
+\end{table}
+% 期望指标沿用 src/Q2/results/paper_baselines/results.json；构造交会结果见 data/q2_intersection_comparison/。
+
+两组情形中，侧移策略的 $J$ 均小于沿示向前进策略；进一步选择前方侧向的推荐点后，
+相比侧移 $300\,\mathrm m$，两组 $J$ 分别降低约 $68.2\%$ 和 $58.5\%$。
+这一比较综合了可能的第二次反馈，与图~\ref{fig:q2-intersection-comparison} 的单次交会结果相互补充。
+
+选点还受到接收范围的制约。例如，对称情形的侧移测点有约 $6.25\%$ 的无信号概率，
+原因是初始区域远端的一部分位置距该测点超过 $R_0$。推荐点则兼顾交会几何与接收条件，
+因此应结合整个初始区域比较各种反馈，而不能只依据某个假定源位置的交会角选点。
+\FloatBarrier
+
+
+\subsubsection{给定接收半径下的尺度变化}
+\label{sec:q2-scale}
+
+为说明给定接收半径如何改变推荐点和定位范围的尺度，在对称情形下固定
+$\boldsymbol p_1=(0,0)\,\mathrm m$、初次示向度 $0^\circ$
 及测角误差半宽 $1^\circ$，在题设允许的 $[1000,1500]\,\mathrm m$ 范围内，
 以 $100\,\mathrm m$ 为间隔选取六组接收半径 $R_0$，比较第二检测点的选择结果。
 目标圆域半径仍为 $1800\,\mathrm m$，每组实验均按相应的 $R_0$ 更新初始可行区域，
-并重新搜索第二检测点。位置积分采用 $80\times16$ 个扇环单元，示向度档宽取
-$0.125^\circ$；候选网格间距为 $60\,\mathrm m$，低值区域内加密至 $15\,\mathrm m$。
-利用镜像对称性，仅搜索上半圆域，并核验对应镜像点的期望值一致。
+并按上述数值设置重新搜索第二检测点。利用镜像对称性，仅搜索上半圆域，
+并核验对应镜像点的期望值一致。
 
 \begin{table}[htbp]
   \centering
-  \caption{对称情形下接收半径对期望定位效果的影响}
+  \caption{给定接收半径下推荐点与期望定位范围的尺度变化}
   \label{tab:q2-r0}
   \small
   \setlength{\tabcolsep}{7pt}
@@ -588,14 +652,19 @@ $0.125^\circ$；候选网格间距为 $60\,\mathrm m$，低值区域内加密至
   半径降幅为 $[1-J/R_*(P_1)]\times100\%$。}
 \end{table}
 
-由表~\ref{tab:q2-r0} 可见，在本组对称条件及题设接收半径范围内，$R_0$ 增大时，推荐点逐渐外移，
-期望覆盖半径也近似按比例增加，而相对初始半径的降幅均约为 $96.1\%$。
-这一结果与初始扇形区域随 $R_0$ 扩展相一致。
-\textbf{绝对期望半径的增大不能直接解释为接收能力增强使定位效果变差}，
-因为各组在第一次正常测向后对应的目标位置分布也随之改变。
+表~\ref{tab:q2-r0} 中，推荐点随 $R_0$ 增大而外移，且归一化坐标
+$x_2/R_0$ 约为 $0.692$--$0.705$，$|y_2|/R_0$ 约为 $0.409$--$0.420$，
+$J/R_0$ 均约为 $0.0193$，表现出近似的尺度关系。
+本组首测点位于圆心且 $R_0<1800\,\mathrm m$，初始区域未受目标圆域外边界裁剪；
+除固定的 $5\,\mathrm m$ 近距离排除范围外，几何尺度主要随 $R_0$ 同步变化。
+这一关系不宜直接推广到受圆域边界裁剪的其他初始条件。
 
-同时，如果将位置积分\textbf{加密}至 $160\times32$、示向度档宽\textbf{减半}，并\textbf{加密}圆弧近似后进行计算，
-在各组推荐点处重新计算的期望值相对原值变化\textbf{均不超过 $1.3\%$}，表中趋势保持稳定。
+各组相对初始半径的降幅均约为 $96.1\%$，但绝对期望半径随 $R_0$ 增大，
+不能据此解释为接收能力增强使定位变差，因为首次正常测向对应的条件位置分布也发生了变化。
+本表展示分别给定 $R_0$ 时的尺度变化。
+
+此外，将位置积分加密至 $160\times32$、示向度档宽减半，并加密圆弧近似后，
+在各组原推荐点处重算的期望值变化均不超过 $1.3\%$。这一检查支持表中固定测点目标值的数值稳定性。
 
 \subsection{问题三模型建立与求解}
 \label{sec:q3}

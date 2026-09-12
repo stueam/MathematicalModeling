@@ -28,7 +28,7 @@ essay/
 
 ## 生成环境与当前例外
 
-绘图采用Python 3.10+及numpy、scipy、shapely>=2、matplotlib。中文字体为Microsoft YaHei/SimHei，跨平台替换字体可能影响版式。Q2热力图数值核心来自`src/Q2`的固定R0版本；Q1的n=10算例默认随机种子20260911、验证次数200。
+绘图采用Python 3.10+及numpy、scipy、shapely>=2、matplotlib。中文字体为Microsoft YaHei/SimHei，跨平台替换字体可能影响版式。Q2热力图数值核心来自`src/Q2`的固定R0版本；当前结果小节使用`data/q2_strategy_heatmaps/`中的共用色标组合图，冻结数值与原热图一致。`data/q2_intersection_comparison/`展示三种选点下的构造交会结果，单次覆盖半径与期望指标分别标示。Q1第5.1.4节使用`data/q1_two_cases/`中的两组固定构造数据，每组10个检测点，由半平面交主算法求得区域后可视化。三个新增图目录均保存生成代码和必要数据；旧图保留。
 
 经确认，下列三图保留当前PNG，生成源码待补；各目录以`SOURCE_PENDING.tex`说明，不提供伪造的生成脚本：
 
@@ -44,5 +44,6 @@ essay/
 |---|---|---|---|
 | v0.1 | 2026-09-12 | stueam | add Part 1 & Part3 |
 | v0.2 | 2026-09-12 | Lost_Xia | 修订第一问区域构造、直径证明与覆盖判定，补充最小覆盖圆指标解释 |
+| v0.3 | 2026-09-12 | stueam（Codex协助） | 同步当前论文；Q1改为两组构造结果展示，Q2补选点准则、基线比较及紫—蓝绿—黄色组合图，新增三种选点交会对比 |
 
 Part 1为“问题背景与重述”，Part 3为“模型假设”。本次同时统一主文件名为`essay.tex`，并将推送要求迁入README。
