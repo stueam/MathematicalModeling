@@ -140,7 +140,7 @@ $\theta_i+\varepsilon$ 两条射线夹成的楔形内。直接比较角度需要
     \boldsymbol n_i^+&=\bigl(\sin(\theta_i+\varepsilon),\ -\cos(\theta_i+\varepsilon)\bigr)^{\mathsf T}.
   \end{aligned}
 \]
-这两个单位法向量均指向楔形内侧，于是
+这两个单位法向量均指向楔形内测，于是
 \begin{equation}
   W_i=\left\{\boldsymbol x\in\mathbb R^2:
   (\boldsymbol n_i^-)^{\mathsf T}(\boldsymbol x-\boldsymbol p_i)\geq0,\quad
@@ -151,6 +151,8 @@ $\theta_i+\varepsilon$ 两条射线夹成的楔形内。直接比较角度需要
 
 式~\eqref{eq:q1-wedge} 中，$\boldsymbol x-\boldsymbol p_i$ 是从检测点指向待判断位置的向量，
 它与单位法向量$\boldsymbol n_i^-$的内积，就是到边界直线的有向距离，当且仅当两项同时非负说明该点位于闭楔形区域内。
+例如，沿示向方向前进距离 $t>0$，两项内积都为 $t\sin\varepsilon>0$；
+若反向移动，则两项均为负。因此，该判据也排除了检测点后方的区域。
 
 
 
@@ -222,7 +224,7 @@ $\boldsymbol x=\sum_j\alpha_j\boldsymbol v_j$、$\boldsymbol y=\sum_k\beta_k\bol
 \]
 又因顶点本身属于 $P$，等号可以由一对最远顶点取得。
 因此，无须对区域内部进行空间采样，枚举顶点对即可在 $O(m^2)$ 时间内求出 $D$，
-并记录对应端点 $\boldsymbol a,\boldsymbol b$，用于下一节的直径圆覆盖判断。
+并记录对应端点 $\boldsymbol a,\boldsymbol b$,，用于下一节的直径圆覆盖判断。
 该化简消除了空间网格近似，但计算仍受浮点精度影响。
 
 
@@ -250,8 +252,7 @@ $B(\boldsymbol c,r)=\{\boldsymbol x:\|\boldsymbol x-\boldsymbol c\|_2\leq r\}$�
 任取一条边，其对顶点到该边中点的距离为 $\sqrt{3}D/2>D/2$。
 结合圆心唯一性可知，不存在半径为 $D/2$ 的圆盘覆盖该三角形。
 图~\ref{fig:q1-cover-cases} 给出了三个检测点的楔形交形成三角形时，不能覆盖与可以覆盖的两种情形，
-各楔形张角均为 $2^\circ$。构造时，使三条楔形边界分别支撑三角形的三条边，其余边界均不切入三角形内部，故交集恰为该三角形。
-测点坐标、示向度及交集顶点见支撑材料 \path{data/q1_cover_cases/q1_cover_cases.json}。
+各楔形张角均为 $2^\circ$。
 
 
 \begin{figure}[htbp]
@@ -275,17 +276,10 @@ $B(\boldsymbol c,r)=\{\boldsymbol x:\|\boldsymbol x-\boldsymbol c\|_2\leq r\}$�
 全部顶点均满足距离条件。反之，若全部顶点都在该圆盘内，由圆盘的凸性及
 $P=\operatorname{conv}(V)$，整个多边形也在其中，充分性成立。
 
-为说明浮点计算下的判定方式，定义覆盖超差
-\[
-  \delta=\max_{1\leq j\leq m}\|\boldsymbol v_j-\boldsymbol c_D\|_2-D/2.
-\]
-理论判据为 $\delta\leq0$；现有米制坐标实现采用绝对距离容差 $\tau=10^{-8}\,\mathrm m$，
-当 $\delta\leq\tau$ 时报告在该容差内满足覆盖判据。该容差用于浮点计算，不表示测量误差或实际定位精度。
-
 因此无须搜索圆心，得到任一对直径端点后，用 $O(m)$ 时间检查全部顶点即可完成判定。
 点和有界线段分别可由零半径圆盘和以该线段为直径的圆盘覆盖。
-对已确认的非空有界二维区域，采用半平面交、顶点对枚举和上述判据时，
-区域构造、直径计算与覆盖判断的总复杂度为 $O(n\log n+m^2)$，不含状态预检及最小覆盖圆计算。
+采用半平面交、顶点对枚举和上述判据时，区域构造、直径计算与覆盖判断的总复杂度为
+$O(n\log n+m^2)$；此处不包括下面作为补充的最小覆盖圆计算。
 
 在真实源位于 $P$ 的前提下，以 $\boldsymbol c$ 作为位置估计时，最坏情况误差为
 $\max_{\boldsymbol x\in P}\|\boldsymbol x-\boldsymbol c\|_2$。选择使该误差最小的位置，得到最小覆盖圆半径
