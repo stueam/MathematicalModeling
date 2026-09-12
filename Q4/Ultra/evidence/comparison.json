@@ -1,0 +1,139 @@
+{
+  "random": {
+    "pairs": 16,
+    "s21_wins": 11,
+    "s22_wins": 5,
+    "mean_difference_s": -122.51755787499997,
+    "difference_bootstrap95_s": [
+      -261.65017134375,
+      5.504606850000079
+    ],
+    "mean_time_change_pct": -2.1185128629723327,
+    "paired_t_p": 0.10219799113962343,
+    "s22": {
+      "virtual_time_s": 5783.1868768125005,
+      "movement_m": 21236.55936423069,
+      "measure_count": 247.9375,
+      "per_cleared_s": 470.5898441558476,
+      "failed_clears": 1.3125,
+      "real_time_s": 5.516458162499475,
+      "mean_costs": {
+        "move_s": 4247.311876812499,
+        "switch_s": 229.4375,
+        "measure_s": 1239.6875,
+        "clear_success_s": 62.8125,
+        "clear_failure_s": 3.9375
+      }
+    },
+    "s21": {
+      "virtual_time_s": 5660.6693189375,
+      "movement_m": 20787.096590280657,
+      "measure_count": 242.3125,
+      "per_cleared_s": 461.16921159203997,
+      "failed_clears": 1.0625,
+      "real_time_s": 5.120839918752608,
+      "mean_costs": {
+        "move_s": 4157.4193189375,
+        "switch_s": 225.6875,
+        "measure_s": 1211.5625,
+        "clear_success_s": 62.8125,
+        "clear_failure_s": 3.1875
+      }
+    }
+  },
+  "stress": {
+    "pairs": 14,
+    "s21_wins": 10,
+    "s22_wins": 4,
+    "mean_difference_s": -230.16896221428573,
+    "difference_bootstrap95_s": [
+      -526.1772586410715,
+      36.899530283928534
+    ],
+    "mean_time_change_pct": -3.8677149100331154,
+    "paired_t_p": 0.14865506861010438,
+    "s22": {
+      "virtual_time_s": 5951.032265000001,
+      "movement_m": 20794.0898862152,
+      "measure_count": 290.2857142857143,
+      "per_cleared_s": 490.1516563089286,
+      "failed_clears": 2.5714285714285716,
+      "real_time_s": 5.164828407144731,
+      "mean_costs": {
+        "move_s": 4158.817979285714,
+        "switch_s": 268.07142857142856,
+        "measure_s": 1451.4285714285713,
+        "clear_success_s": 65.0,
+        "clear_failure_s": 7.714285714285714
+      }
+    },
+    "s21": {
+      "virtual_time_s": 5720.863302785714,
+      "movement_m": 19876.102223601913,
+      "measure_count": 281.85714285714283,
+      "per_cleared_s": 474.2109729946429,
+      "failed_clears": 3.0714285714285716,
+      "real_time_s": 4.527675464285754,
+      "mean_costs": {
+        "move_s": 3975.220445642858,
+        "switch_s": 262.14285714285717,
+        "measure_s": 1409.2857142857142,
+        "clear_success_s": 65.0,
+        "clear_failure_s": 9.214285714285714
+      }
+    }
+  },
+  "all": {
+    "pairs": 30,
+    "s21_wins": 21,
+    "s22_wins": 9,
+    "mean_difference_s": -172.7548799,
+    "difference_bootstrap95_s": [
+      -333.4185411249998,
+      -28.52529980250001
+    ],
+    "mean_time_change_pct": -2.94727366586639,
+    "paired_t_p": 0.0359390684689513,
+    "s22": {
+      "virtual_time_s": 5861.514724633332,
+      "movement_m": 21030.07360782346,
+      "measure_count": 267.7,
+      "per_cleared_s": 479.71868982728523,
+      "failed_clears": 1.9,
+      "real_time_s": 5.352364276667261,
+      "mean_costs": {
+        "move_s": 4206.014724633334,
+        "switch_s": 247.46666666666667,
+        "measure_s": 1338.5,
+        "clear_success_s": 63.833333333333336,
+        "clear_failure_s": 5.7
+      }
+    },
+    "s21": {
+      "virtual_time_s": 5688.759844733333,
+      "movement_m": 20361.965885830574,
+      "measure_count": 260.76666666666665,
+      "per_cleared_s": 467.25536691325465,
+      "failed_clears": 2.0,
+      "real_time_s": 4.84402984000141,
+      "mean_costs": {
+        "move_s": 4072.3931780666667,
+        "switch_s": 242.7,
+        "measure_s": 1303.8333333333333,
+        "clear_success_s": 63.833333333333336,
+        "clear_failure_s": 6.0
+      }
+    }
+  },
+  "static_open_route_m": {
+    "s22": 17639.324939012124,
+    "s21": 17908.930064895845
+  },
+  "audit": {
+    "identical_world_pairs": 30,
+    "cost_checks": 60,
+    "replayed_runs": 60,
+    "complete_runs": 60,
+    "reproduced_old_baselines": 0
+  }
+}
