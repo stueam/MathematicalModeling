@@ -1,0 +1,525 @@
+{
+  "maps": 32,
+  "episodes": 96,
+  "source_count_per_strategy": 403,
+  "audits_complete": 96,
+  "accepted_actions": 24349,
+  "truth_support_checks": 162276,
+  "absence_certificates_checked": 618,
+  "max_clock_error_s": 0.0,
+  "paired_ledger_verified_states": 213,
+  "original_complete_rollouts": 3171,
+  "paired_alternative_labels": 844,
+  "missing_labels_preserved": true,
+  "identical_world_bootstraps": true,
+  "models": {
+    "frozen": {
+      "encoder_changed_keys": 0,
+      "bc_teacher_exactly_frozen": true,
+      "best_epoch": 32,
+      "epochs_run": 40,
+      "attention_gradient_norm": 0.0,
+      "cuda_training_s": 38.91737503699915,
+      "calibration_mae_s": 106.24884520863232
+    },
+    "finetuned": {
+      "encoder_changed_keys": 60,
+      "bc_teacher_exactly_frozen": true,
+      "best_epoch": 13,
+      "epochs_run": 21,
+      "attention_gradient_norm": 3.1641852855682373,
+      "cuda_training_s": 6.90455701600149,
+      "calibration_mae_s": 113.77507817745209
+    }
+  },
+  "variants": {
+    "frozen_advantage": {
+      "decisions": 1813,
+      "overrides": 173,
+      "override_rate": 0.0954219525648097,
+      "override_kind_transitions": {
+        "measure -> measure": 142,
+        "measure -> clear": 14,
+        "clear -> measure": 13,
+        "clear -> clear": 4
+      },
+      "cost_increase_vs_baseline_s": {
+        "move_s": 174.26092699999617,
+        "switch_s": -51.0,
+        "measure_s": -555.0,
+        "clear_success_s": 0.0,
+        "clear_failure_s": -21.0
+      },
+      "macro_continuation_actions": 6281,
+      "owner_costs_s": {
+        "baseline": 164053.0770570004,
+        "network_override": 15575.285860000002
+      },
+      "improved_maps": 14,
+      "worsened_maps": 17,
+      "tied_maps": 1,
+      "map_changes": [
+        {
+          "seed": 280020019,
+          "saved_s": -459.1444840000004,
+          "saved_m": -2045.722423907624,
+          "overrides": 6
+        },
+        {
+          "seed": 280020018,
+          "saved_s": -425.9904209999995,
+          "saved_m": -1969.9520822307386,
+          "overrides": 3
+        },
+        {
+          "seed": 280020005,
+          "saved_s": -394.33845100000053,
+          "saved_m": -1541.6922637338612,
+          "overrides": 9
+        },
+        {
+          "seed": 280020016,
+          "saved_s": -343.7317159999993,
+          "saved_m": -1828.6585890120223,
+          "overrides": 3
+        },
+        {
+          "seed": 280020007,
+          "saved_s": -242.80216699999983,
+          "saved_m": -1124.0108430475593,
+          "overrides": 9
+        },
+        {
+          "seed": 280020022,
+          "saved_s": -194.26327700000002,
+          "saved_m": -246.31638879565435,
+          "overrides": 8
+        },
+        {
+          "seed": 280020002,
+          "saved_s": -156.68441100000018,
+          "saved_m": -508.42207560325187,
+          "overrides": 5
+        },
+        {
+          "seed": 280020000,
+          "saved_s": -151.6170119999997,
+          "saved_m": -543.0850763727103,
+          "overrides": 10
+        },
+        {
+          "seed": 280020017,
+          "saved_s": -144.45129400000042,
+          "saved_m": -667.2564633121474,
+          "overrides": 12
+        },
+        {
+          "seed": 280020024,
+          "saved_s": -66.05266100000063,
+          "saved_m": -300.2632975321467,
+          "overrides": 5
+        },
+        {
+          "seed": 280020020,
+          "saved_s": -54.595760000000155,
+          "saved_m": -27.97881334259,
+          "overrides": 6
+        },
+        {
+          "seed": 280020026,
+          "saved_s": -35.61764099999982,
+          "saved_m": 136.91179077907145,
+          "overrides": 4
+        },
+        {
+          "seed": 280020030,
+          "saved_s": -33.253577999999834,
+          "saved_m": -226.26788131315698,
+          "overrides": 6
+        },
+        {
+          "seed": 280020001,
+          "saved_s": -30.862333000000035,
+          "saved_m": 190.6883294182444,
+          "overrides": 5
+        },
+        {
+          "seed": 280020010,
+          "saved_s": -13.652707000000191,
+          "saved_m": 1.7364579445129493,
+          "overrides": 3
+        },
+        {
+          "seed": 280020011,
+          "saved_s": -11.218670000000202,
+          "saved_m": 88.90663678901547,
+          "overrides": 4
+        },
+        {
+          "seed": 280020009,
+          "saved_s": -0.21352800000022398,
+          "saved_m": -1.0676299410952197,
+          "overrides": 1
+        },
+        {
+          "seed": 280020028,
+          "saved_s": 0.0,
+          "saved_m": 0.0,
+          "overrides": 0
+        },
+        {
+          "seed": 280020008,
+          "saved_s": 3.959893000000193,
+          "saved_m": 19.799458046818472,
+          "overrides": 1
+        },
+        {
+          "seed": 280020025,
+          "saved_s": 9.296932000000197,
+          "saved_m": 6.484661630543997,
+          "overrides": 5
+        },
+        {
+          "seed": 280020015,
+          "saved_s": 12.7539969999998,
+          "saved_m": 53.76998770640421,
+          "overrides": 4
+        },
+        {
+          "seed": 280020003,
+          "saved_s": 25.907327000000805,
+          "saved_m": 174.53665178612573,
+          "overrides": 5
+        },
+        {
+          "seed": 280020012,
+          "saved_s": 51.76492099999996,
+          "saved_m": 23.82461578858056,
+          "overrides": 5
+        },
+        {
+          "seed": 280020013,
+          "saved_s": 56.48046599999998,
+          "saved_m": 67.40233140003693,
+          "overrides": 5
+        },
+        {
+          "seed": 280020031,
+          "saved_s": 71.54312800000025,
+          "saved_m": 357.7156590010636,
+          "overrides": 4
+        },
+        {
+          "seed": 280020014,
+          "saved_s": 77.71767600000021,
+          "saved_m": 328.5883883295319,
+          "overrides": 5
+        },
+        {
+          "seed": 280020023,
+          "saved_s": 185.20849699999962,
+          "saved_m": 801.0424605513363,
+          "overrides": 8
+        },
+        {
+          "seed": 280020029,
+          "saved_s": 193.60753099999965,
+          "saved_m": 358.03765670007124,
+          "overrides": 7
+        },
+        {
+          "seed": 280020006,
+          "saved_s": 289.8608460000005,
+          "saved_m": 309.30422198848464,
+          "overrides": 5
+        },
+        {
+          "seed": 280020027,
+          "saved_s": 514.2982320000001,
+          "saved_m": 1236.4911514596897,
+          "overrides": 5
+        },
+        {
+          "seed": 280020004,
+          "saved_s": 767.1202400000002,
+          "saved_m": 3105.601194567127,
+          "overrides": 7
+        },
+        {
+          "seed": 280020021,
+          "saved_s": 951.7094979999993,
+          "saved_m": 2898.5474721129576,
+          "overrides": 8
+        }
+      ]
+    },
+    "finetuned_advantage": {
+      "decisions": 1847,
+      "overrides": 182,
+      "override_rate": 0.09853817000541419,
+      "override_kind_transitions": {
+        "measure -> measure": 138,
+        "measure -> clear": 17,
+        "clear -> measure": 24,
+        "clear -> clear": 3
+      },
+      "cost_increase_vs_baseline_s": {
+        "move_s": -712.1935899999958,
+        "switch_s": -140.0,
+        "measure_s": -860.0,
+        "clear_success_s": 0.0,
+        "clear_failure_s": 9.0
+      },
+      "macro_continuation_actions": 6196,
+      "owner_costs_s": {
+        "baseline": 164357.97662800038,
+        "network_override": 14019.931772000005
+      },
+      "improved_maps": 14,
+      "worsened_maps": 18,
+      "tied_maps": 0,
+      "map_changes": [
+        {
+          "seed": 280020019,
+          "saved_s": -549.9604660000005,
+          "saved_m": -2584.802314839675,
+          "overrides": 6
+        },
+        {
+          "seed": 280020016,
+          "saved_s": -343.7317159999993,
+          "saved_m": -1828.6585890120223,
+          "overrides": 3
+        },
+        {
+          "seed": 280020007,
+          "saved_s": -229.41204299999936,
+          "saved_m": -1052.060223815195,
+          "overrides": 10
+        },
+        {
+          "seed": 280020002,
+          "saved_s": -211.67255100000057,
+          "saved_m": -748.3627740873562,
+          "overrides": 6
+        },
+        {
+          "seed": 280020000,
+          "saved_s": -197.57295599999998,
+          "saved_m": -1142.8648017357737,
+          "overrides": 12
+        },
+        {
+          "seed": 280020017,
+          "saved_s": -179.57632600000034,
+          "saved_m": -812.8816250302589,
+          "overrides": 9
+        },
+        {
+          "seed": 280020014,
+          "saved_s": -167.31018399999994,
+          "saved_m": -586.550909192978,
+          "overrides": 8
+        },
+        {
+          "seed": 280020001,
+          "saved_s": -143.23114499999974,
+          "saved_m": -391.1557273161452,
+          "overrides": 5
+        },
+        {
+          "seed": 280020020,
+          "saved_s": -92.16050799999994,
+          "saved_m": -145.80255107418634,
+          "overrides": 8
+        },
+        {
+          "seed": 280020008,
+          "saved_s": -68.42856399999982,
+          "saved_m": -167.14281881281204,
+          "overrides": 2
+        },
+        {
+          "seed": 280020023,
+          "saved_s": -64.05005600000004,
+          "saved_m": -270.250296609629,
+          "overrides": 2
+        },
+        {
+          "seed": 280020026,
+          "saved_s": -35.61764099999982,
+          "saved_m": 136.91179077907145,
+          "overrides": 4
+        },
+        {
+          "seed": 280020030,
+          "saved_s": -26.63077599999997,
+          "saved_m": -218.15387203264618,
+          "overrides": 5
+        },
+        {
+          "seed": 280020012,
+          "saved_s": -24.30982700000004,
+          "saved_m": -241.54912647750098,
+          "overrides": 5
+        },
+        {
+          "seed": 280020003,
+          "saved_s": -12.888234000000011,
+          "saved_m": -39.44116627938274,
+          "overrides": 8
+        },
+        {
+          "seed": 280020011,
+          "saved_s": -7.453730000000178,
+          "saved_m": 107.73134386457241,
+          "overrides": 3
+        },
+        {
+          "seed": 280020013,
+          "saved_s": -3.2566729999998643,
+          "saved_m": 393.71664870678796,
+          "overrides": 7
+        },
+        {
+          "seed": 280020009,
+          "saved_s": -0.21352800000022398,
+          "saved_m": -1.0676299410952197,
+          "overrides": 1
+        },
+        {
+          "seed": 280020015,
+          "saved_s": 6.644638999999188,
+          "saved_m": 58.22319395030354,
+          "overrides": 5
+        },
+        {
+          "seed": 280020005,
+          "saved_s": 25.916274000000158,
+          "saved_m": 279.58136865071356,
+          "overrides": 4
+        },
+        {
+          "seed": 280020022,
+          "saved_s": 29.180515000000014,
+          "saved_m": 110.90256273141131,
+          "overrides": 9
+        },
+        {
+          "seed": 280020024,
+          "saved_s": 35.12616900000012,
+          "saved_m": 180.6308420696805,
+          "overrides": 6
+        },
+        {
+          "seed": 280020025,
+          "saved_s": 68.09170300000005,
+          "saved_m": 290.4585000064617,
+          "overrides": 6
+        },
+        {
+          "seed": 280020031,
+          "saved_s": 69.5430980000001,
+          "saved_m": 347.71550802680576,
+          "overrides": 5
+        },
+        {
+          "seed": 280020029,
+          "saved_s": 73.75381900000048,
+          "saved_m": 373.7690857701855,
+          "overrides": 5
+        },
+        {
+          "seed": 280020006,
+          "saved_s": 170.970147,
+          "saved_m": 224.85072507453515,
+          "overrides": 2
+        },
+        {
+          "seed": 280020010,
+          "saved_s": 255.02269399999932,
+          "saved_m": 555.1134739898262,
+          "overrides": 3
+        },
+        {
+          "seed": 280020018,
+          "saved_s": 466.25852100000066,
+          "saved_m": 1846.292600001616,
+          "overrides": 9
+        },
+        {
+          "seed": 280020027,
+          "saved_s": 507.21501499999977,
+          "saved_m": 1236.075064278397,
+          "overrides": 6
+        },
+        {
+          "seed": 280020028,
+          "saved_s": 666.6052579999996,
+          "saved_m": 1788.0263135352543,
+          "overrides": 3
+        },
+        {
+          "seed": 280020004,
+          "saved_s": 767.1202400000002,
+          "saved_m": 3105.601194567127,
+          "overrides": 7
+        },
+        {
+          "seed": 280020021,
+          "saved_s": 919.2224219999998,
+          "saved_m": 2756.1120813424823,
+          "overrides": 8
+        }
+      ]
+    }
+  },
+  "baseline_exactly_reproduced_previous_round": true,
+  "total_round_wall_s": 1016.0571866035461,
+  "live_workers_after_round": [],
+  "actual_execution_segments": 2,
+  "experiment_rounds": 1,
+  "post_launch_source_changes": {
+    "nnq4/round_control.py": "80e13a831a227b6847fa9647fd4f0e14d8e800b93e488baef3803c817a17630c",
+    "nnq4/relative_round.py": "463ffa2a5abc6df3ca265ea05f384f05d139e0bb7dca6ed55324328cadcd5579",
+    "nnq4/advantage_round.py": "02bcd5bcb240a06c58eb59b2d7897ab37f133727eb8e1067b3b6bab1bd0e5931"
+  },
+  "source_change_reason": "Only budget defaults changed to 30/27 minutes. Additional advantage_resume.py continues 29 unstarted jobs using original start time.",
+  "post_run_source_sha256": {
+    "nnq4/__init__.py": "f70f0e5e0ee15a769cfdb1833d444ea503ad1051c61603900e5ae8445b3561e5",
+    "nnq4/advantage.py": "584631d9b69361dc862237dd4e0aa01f0de654c5886424aa58e337682cd9f749",
+    "nnq4/advantage_data.py": "40492c8e0f6ab7e0ccb95d8e417c430b66ff66ae362831a4b7878e6dc0953fc2",
+    "nnq4/advantage_resume.py": "15edbce857898a08cba5f69e16a99dc5f76c34d21433c4f31e1a43256c448051",
+    "nnq4/advantage_round.py": "02bcd5bcb240a06c58eb59b2d7897ab37f133727eb8e1067b3b6bab1bd0e5931",
+    "nnq4/advantage_training.py": "3b56c5ccdf11e89b06b3f39e37710eefac2626a902bde8a29d635be8b304f884",
+    "nnq4/audit.py": "229b40cdd9d0445549936c78e51f0505a96f4b390102ac250688365227f70b42",
+    "nnq4/bridge.py": "1294dc35ed2cbc16b29dad3bf28c54ba2b2eceb155ee704e4fd6124df77e8bc9",
+    "nnq4/cost_learning.py": "83e8de23f857c3de2c9954eb0e130951a1dbf090d1b7a6a744af5884c01511af",
+    "nnq4/diagnostics.py": "1cbdd56d5c70b3d0b0e9bda7d4cde87b3dca9056b2b591a15435b74e4674f074",
+    "nnq4/experiment.py": "90895bca0080ac75ea15c2d49db013ffec0333f1480ce19b15446631d1a168ef",
+    "nnq4/features_v2.py": "8c42e7061fb481edf7df0fb5368aa7ff88061401349b83f415f4553d60ad7973",
+    "nnq4/network.py": "5618aec57ad0597ba567964ef82a90df944ab75a5987738c946c334e89c45e57",
+    "nnq4/policy.py": "3ad46334f2e13158b32ebf214b9365f4e7ff75cc4612dfe9ce8f16ae010bb2fa",
+    "nnq4/proposals.py": "af79816c34d6d7b79bdbbf808a48e17e2e0dda1cd79162d5cf587074a09020af",
+    "nnq4/relative.py": "84ea0bede086e00d16347e1fcc3e385645f4fb8b4a126f39fd1a305059063610",
+    "nnq4/relative_data.py": "7abac3843be55c5b0df5f4f173968907fd5a2d1316f5c01efdd2859091a2f76e",
+    "nnq4/relative_round.py": "463ffa2a5abc6df3ca265ea05f384f05d139e0bb7dca6ed55324328cadcd5579",
+    "nnq4/relative_training.py": "bb8cfe0e6c268fe65dda4e0afe76d0ae870c1379e994064a73d0f5cde4d7e7b7",
+    "nnq4/round_control.py": "80e13a831a227b6847fa9647fd4f0e14d8e800b93e488baef3803c817a17630c",
+    "nnq4/state.py": "01f0fece80580573874a85302d8d7c155d656dced480c52ab3eefb064b19287a",
+    "nnq4/training.py": "f7b1d6dc0a823206ba84fbccafe512ea9fd02e56065ebb6ef8fd06a6b0ade223",
+    "tests/test_advantage.py": "24424c57f8b3add7b1fbb0c9e402fb2ccc5e102570db5b5ee1cc9e95646f723a",
+    "tests/test_cost_learning.py": "285d40dee07e8442592a32d3d2a91874a9f0343e9e37ade0a19c28e3a101cde2",
+    "tests/test_features_v2.py": "c3d3cfc53bcfe98fb646120b0598a3622b5a835d558f2ff03caa76f25630fecc",
+    "tests/test_network.py": "1c4ec11608e96b75201a1f70bea93ca42b61ea440d01e50ac1f6e5fe3a9b1fe1",
+    "tests/test_physics.py": "297a61657040733d356ed932de7dca427e344b14d2d25112142e15ffbd6a780c",
+    "tests/test_proposals.py": "ef1e1d4c4722346600f1f5854b9cf72dbcc054c15cbe61a3d056f54f2bee871b",
+    "tests/test_relative.py": "812a9ed0492d868d4e0ee81dd5ba5ec6bff9abf7f566c658c12014f56d69c724",
+    "tests/test_state.py": "4218ce3e6c31417f30d93ef67290c5c2e07e1fd11111941069726fd2a202851d",
+    "tests/test_training.py": "32ea023b1430722cae611ad86432b0ab1704624c6ba7bcf5d16f2a1e561cebe1"
+  },
+  "local_simulator_only": true,
+  "simulation_rerun": false,
+  "training_repeated": false,
+  "reserved_test_or_stress_run": false
+}

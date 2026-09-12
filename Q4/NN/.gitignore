@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+results/
+*.tmp
+!models/*.pt
+!training_data/states/*.pt

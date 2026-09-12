@@ -1,0 +1,79 @@
+{
+  "case": "uniform-iid-280020020-frozen_advantage",
+  "seed": 280020020,
+  "mode": "frozen_advantage",
+  "source_count": 11,
+  "cleared_count": 11,
+  "all_cleared": true,
+  "clearance_fraction": 1.0,
+  "directional_count": 6,
+  "world_sha256": "c0e82b712ee763849111dee784de0025cb07684ab746722d61e2ebd3983c5d8f",
+  "complete": true,
+  "public_complete": true,
+  "error": null,
+  "virtual_time_s": 5972.960483,
+  "seconds_per_source": 542.9964075454545,
+  "costs": {
+    "move_s": 4290.960483,
+    "switch_s": 254.0,
+    "measure_s": 1370.0,
+    "clear_success_s": 55.0,
+    "clear_failure_s": 3.0
+  },
+  "movement_m": 21454.80240817666,
+  "long_moves_over_1km": 2,
+  "long_move_distance_m": 2471.4508786315173,
+  "real_time_s": 55.274300871999,
+  "audit_time_s": 0.37328885000169976,
+  "environment_kind": "local_simulator",
+  "official_connection": false,
+  "audit_ok": true,
+  "actions": 286,
+  "measure_count": 274,
+  "failed_clears": 1,
+  "executor_actions": {
+    "network": 0,
+    "teacher": 0,
+    "macro_continuation": 230,
+    "fallback": 0,
+    "probes": 0,
+    "network_override": 6,
+    "baseline": 50
+  },
+  "executor_costs_s": {
+    "network": 0.0,
+    "teacher": 0.0,
+    "macro_continuation": 1380.0,
+    "fallback": 0.0,
+    "probes": 0.0,
+    "network_override": 311.4920249999999,
+    "baseline": 4281.468458
+  },
+  "stats": {
+    "neural_decisions": 56,
+    "teacher_decisions": 0,
+    "macro_continuation_actions": 230,
+    "fallback_actions": 0,
+    "forward_s": 1.70825430900004,
+    "encode_menu_s": 53.01234769000439,
+    "network_overrides": 6,
+    "baseline_decisions": 50
+  },
+  "menu_stats": {
+    "frames": 56,
+    "reference_missing": 0,
+    "posterior_failures": 0,
+    "candidate_families": {
+      "survey": 639,
+      "local": 1763
+    }
+  },
+  "menu": "full",
+  "layout": "ring22",
+  "features": "v2",
+  "planner_config": {},
+  "folder": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-210143-406723-advantage-round/benchmark/uniform-iid-280020020-frozen_advantage",
+  "supervised_states": 0,
+  "source_group": "uniform:iid:280020020:None:None:None",
+  "split": "development"
+}

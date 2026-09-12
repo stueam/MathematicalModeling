@@ -1,0 +1,4175 @@
+{
+  "format": "q4-all-paired-costs-v2",
+  "feature_version": "q4-public-service-directed-v2",
+  "candidate_rule": "baseline-local_proxy-survey_proxy-bc_other-fill_proxy-v1",
+  "records": [
+    {
+      "path": "training_data/states/00bda3aa3a56c7ab4c3acc3b.pt",
+      "group": "uniform:iid:280000027:None:None:None",
+      "split": "calibration",
+      "step": 92,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00027/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/025a5a9eea69d21381bc3dff.pt",
+      "group": "uniform:iid:280000153:None:None:None",
+      "split": "calibration",
+      "step": 153,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00151/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/02710609bd4262f4553a9c15.pt",
+      "group": "uniform:iid:280000026:None:None:None",
+      "split": "train",
+      "step": 129,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00030/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/042118ac53dbedecfd082806.pt",
+      "group": "uniform:iid:280000092:None:None:None",
+      "split": "train",
+      "step": 128,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00090/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/05bcbdf5ecd5a9a63f5b6b95.pt",
+      "group": "uniform:iid:280000139:None:None:None",
+      "split": "train",
+      "step": 253,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00142/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/071831e64cd23782293ba641.pt",
+      "group": "uniform:iid:280000062:None:None:None",
+      "split": "train",
+      "step": 41,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00063/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/0824e06a8d0273212176639b.pt",
+      "group": "uniform:iid:280000133:None:None:None",
+      "split": "train",
+      "step": 71,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00132/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/0a0c244a982258bbab88a283.pt",
+      "group": "uniform:iid:280000086:None:None:None",
+      "split": "train",
+      "step": 161,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00086/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/0b74fc8647561703538d099a.pt",
+      "group": "uniform:iid:280000107:None:None:None",
+      "split": "train",
+      "step": 177,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00109/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/0c889756a599f8186fb7075a.pt",
+      "group": "uniform:iid:280000171:None:None:None",
+      "split": "train",
+      "step": 150,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00173/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/0cb361380923303a25698116.pt",
+      "group": "uniform:iid:280000016:None:None:None",
+      "split": "calibration",
+      "step": 231,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00016/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/0d91a9973a53861380839244.pt",
+      "group": "uniform:iid:280000092:None:None:None",
+      "split": "train",
+      "step": 115,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00090/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/0de07ce82f62f0af8d933ff9.pt",
+      "group": "uniform:iid:280000085:None:None:None",
+      "split": "train",
+      "step": 186,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00085/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/10579d9ec50f52f7ba93da5b.pt",
+      "group": "uniform:iid:280000006:None:None:None",
+      "split": "train",
+      "step": 139,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00001/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/10e98a88462829b348c76779.pt",
+      "group": "uniform:iid:280000034:None:None:None",
+      "split": "train",
+      "step": 116,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00038/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/12e06b6e400efda537633202.pt",
+      "group": "uniform:iid:280000077:None:None:None",
+      "split": "train",
+      "step": 201,
+      "stage": "80-100%",
+      "labeled_alternatives": 3,
+      "deploy_labeled_alternatives": 3,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00077/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/1301a52fa1f766d941950117.pt",
+      "group": "uniform:iid:280000141:None:None:None",
+      "split": "train",
+      "step": 194,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00139/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/13a189a939bfe0457678154e.pt",
+      "group": "uniform:iid:280000052:None:None:None",
+      "split": "calibration",
+      "step": 273,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00055/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/17a8a1423d29cdfaaa97fcb5.pt",
+      "group": "uniform:iid:280000034:None:None:None",
+      "split": "train",
+      "step": 213,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00038/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/181565f450c9d660b328574e.pt",
+      "group": "uniform:iid:280000154:None:None:None",
+      "split": "train",
+      "step": 140,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00153/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/190a978e140c725961ff0efd.pt",
+      "group": "uniform:iid:280000010:None:None:None",
+      "split": "train",
+      "step": 42,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00013/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/1c010398a5cd67e4dba88406.pt",
+      "group": "uniform:iid:280000041:None:None:None",
+      "split": "calibration",
+      "step": 52,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00042/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/1c3cc62389574079c23d3f40.pt",
+      "group": "uniform:iid:280000063:None:None:None",
+      "split": "train",
+      "step": 175,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00065/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/1edeb9c31b1dc44f79c702e3.pt",
+      "group": "uniform:iid:280000030:None:None:None",
+      "split": "calibration",
+      "step": 103,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00024/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/1ff496b9a11e43041af3970e.pt",
+      "group": "uniform:iid:280000040:None:None:None",
+      "split": "train",
+      "step": 106,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00039/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/201cc3b4ca2e6ab45bdec97a.pt",
+      "group": "uniform:iid:280000032:None:None:None",
+      "split": "train",
+      "step": 144,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00032/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/2033cbf04a1fc1706fdcdd32.pt",
+      "group": "uniform:iid:280000160:None:None:None",
+      "split": "calibration",
+      "step": 81,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00157/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/247ef6fe2609ee85bfed02ec.pt",
+      "group": "uniform:iid:280000110:None:None:None",
+      "split": "calibration",
+      "step": 22,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00119/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/24a8d8802eb25048212b2c83.pt",
+      "group": "uniform:iid:280000061:None:None:None",
+      "split": "train",
+      "step": 192,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00057/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/24c7efd416c4a491f4d15659.pt",
+      "group": "uniform:iid:280000017:None:None:None",
+      "split": "train",
+      "step": 141,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00019/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/2986ea7611a523fb61c1473c.pt",
+      "group": "uniform:iid:280000020:None:None:None",
+      "split": "train",
+      "step": 94,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00028/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/2a4b99bbeb1f639687ef3f32.pt",
+      "group": "uniform:iid:280000076:None:None:None",
+      "split": "calibration",
+      "step": 237,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00078/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/2aacc2cca28e7a28865b23c2.pt",
+      "group": "uniform:iid:280000064:None:None:None",
+      "split": "train",
+      "step": 190,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00062/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/2d5e0721e8bee86b9a21551d.pt",
+      "group": "uniform:iid:280000026:None:None:None",
+      "split": "train",
+      "step": 79,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00030/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/2fa2753176fc57d9b40655e0.pt",
+      "group": "uniform:iid:280000131:None:None:None",
+      "split": "train",
+      "step": 201,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00134/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/2ff806d7d45fa3fe30092279.pt",
+      "group": "uniform:iid:280000088:None:None:None",
+      "split": "train",
+      "step": 27,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00088/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/3096482db2fca809502e733b.pt",
+      "group": "uniform:iid:280000074:None:None:None",
+      "split": "train",
+      "step": 23,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00074/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/31649dc9413d713b16c4968d.pt",
+      "group": "uniform:iid:280000006:None:None:None",
+      "split": "train",
+      "step": 157,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00001/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/3185a9179553ed052e39b3cb.pt",
+      "group": "uniform:iid:280000057:None:None:None",
+      "split": "train",
+      "step": 59,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00060/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/32d94b31860e931ead87c194.pt",
+      "group": "uniform:iid:280000086:None:None:None",
+      "split": "train",
+      "step": 40,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00086/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/33654b3409b870f151516ad7.pt",
+      "group": "uniform:iid:280000113:None:None:None",
+      "split": "train",
+      "step": 70,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00110/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/3448f975984bf6e2a74e0b06.pt",
+      "group": "uniform:iid:280000055:None:None:None",
+      "split": "train",
+      "step": 97,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00056/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/34ecbc7baae06d3a4490d677.pt",
+      "group": "uniform:iid:280000028:None:None:None",
+      "split": "train",
+      "step": 68,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00025/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/38a0f7cd69e93dd9f87cefe2.pt",
+      "group": "uniform:iid:280000155:None:None:None",
+      "split": "train",
+      "step": 229,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00159/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/38d4ad9d8569b943ced90c60.pt",
+      "group": "uniform:iid:280000129:None:None:None",
+      "split": "train",
+      "step": 253,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00128/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/393de53e660a2068c6144e56.pt",
+      "group": "uniform:iid:280000092:None:None:None",
+      "split": "train",
+      "step": 159,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00090/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/3966a93e50e3c6252b90ada8.pt",
+      "group": "uniform:iid:280000112:None:None:None",
+      "split": "train",
+      "step": 22,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00115/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/3a3b3bf15665fc37adbca61e.pt",
+      "group": "uniform:iid:280000018:None:None:None",
+      "split": "train",
+      "step": 194,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00017/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/3aff5ddd511577f93a7380f1.pt",
+      "group": "uniform:iid:280000061:None:None:None",
+      "split": "train",
+      "step": 131,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00057/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/3bf90e6d4126896197fdcc63.pt",
+      "group": "uniform:iid:280000073:None:None:None",
+      "split": "train",
+      "step": 101,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00072/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/4033f28c0d2e641a75e45c22.pt",
+      "group": "uniform:iid:280000166:None:None:None",
+      "split": "train",
+      "step": 73,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00165/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/41228474ec50a4825629795b.pt",
+      "group": "uniform:iid:280000067:None:None:None",
+      "split": "train",
+      "step": 175,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00070/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/437434efd40bbdbe10e5296e.pt",
+      "group": "uniform:iid:280000017:None:None:None",
+      "split": "train",
+      "step": 216,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00019/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/4376d4504835152bf0a32ae2.pt",
+      "group": "uniform:iid:280000038:None:None:None",
+      "split": "train",
+      "step": 22,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00037/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/44a852d44700d7d6b2f79642.pt",
+      "group": "uniform:iid:280000181:None:None:None",
+      "split": "calibration",
+      "step": 142,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00179/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/47f8ca4c6edba946dcab0815.pt",
+      "group": "uniform:iid:280000030:None:None:None",
+      "split": "calibration",
+      "step": 0,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00024/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/484877169f736d5c10efc581.pt",
+      "group": "uniform:iid:280000034:None:None:None",
+      "split": "train",
+      "step": 197,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00038/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/492bdac020439e5120bbe3cf.pt",
+      "group": "uniform:iid:280000000:None:None:None",
+      "split": "calibration",
+      "step": 109,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00009/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/4987c546f8ca699ac196ee6c.pt",
+      "group": "uniform:iid:280000035:None:None:None",
+      "split": "train",
+      "step": 60,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00036/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/4d6149ec2a03b85f9d67923c.pt",
+      "group": "uniform:iid:280000053:None:None:None",
+      "split": "train",
+      "step": 218,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00051/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/4ee9f9004dd1495f7d38e3b4.pt",
+      "group": "uniform:iid:280000168:None:None:None",
+      "split": "train",
+      "step": 180,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00167/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/4f7b951c6a24ac1291c4e7ce.pt",
+      "group": "uniform:iid:280000096:None:None:None",
+      "split": "calibration",
+      "step": 44,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00097/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/4f7c9b0d4c16c095bcba8f74.pt",
+      "group": "uniform:iid:280000084:None:None:None",
+      "split": "calibration",
+      "step": 52,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00083/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/50ee5aa1c89e3fdf4ced4fb4.pt",
+      "group": "uniform:iid:280000088:None:None:None",
+      "split": "train",
+      "step": 162,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00088/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/51022911909110dfacc09052.pt",
+      "group": "uniform:iid:280000145:None:None:None",
+      "split": "calibration",
+      "step": 94,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00145/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/5119caea58f5951d129c6003.pt",
+      "group": "uniform:iid:280000110:None:None:None",
+      "split": "calibration",
+      "step": 132,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00119/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/53f53545bfe3a12d95c2fea6.pt",
+      "group": "uniform:iid:280000074:None:None:None",
+      "split": "train",
+      "step": 83,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00074/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/542dd6a12b3be7eebf5482f1.pt",
+      "group": "uniform:iid:280000058:None:None:None",
+      "split": "train",
+      "step": 0,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00059/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/542ea6edce79a9e7f5943586.pt",
+      "group": "uniform:iid:280000063:None:None:None",
+      "split": "train",
+      "step": 203,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00065/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/55aae9e2871cb66d70f5984b.pt",
+      "group": "uniform:iid:280000091:None:None:None",
+      "split": "train",
+      "step": 186,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00089/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/55cd3d963c85baf5c46f3f10.pt",
+      "group": "uniform:iid:280000153:None:None:None",
+      "split": "calibration",
+      "step": 230,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00151/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/56730343fe7d5956f8bca83f.pt",
+      "group": "uniform:iid:280000105:None:None:None",
+      "split": "train",
+      "step": 130,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00104/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/57a6e7ab73d2c8294be5a5f8.pt",
+      "group": "uniform:iid:280000108:None:None:None",
+      "split": "train",
+      "step": 193,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00105/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/5b9768944ee073be6ec69d07.pt",
+      "group": "uniform:iid:280000118:None:None:None",
+      "split": "calibration",
+      "step": 153,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00117/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/5bfed84ba00f229f3bbd931a.pt",
+      "group": "uniform:iid:280000026:None:None:None",
+      "split": "train",
+      "step": 160,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00030/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/5e18bfaff3b21515679f40cd.pt",
+      "group": "uniform:iid:280000020:None:None:None",
+      "split": "train",
+      "step": 109,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00028/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/5e3d5ccf6f3b737d7e8315f3.pt",
+      "group": "uniform:iid:280000055:None:None:None",
+      "split": "train",
+      "step": 143,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00056/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/5e8fefab4d3788387de8844b.pt",
+      "group": "uniform:iid:280000080:None:None:None",
+      "split": "calibration",
+      "step": 68,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00082/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/5f29c0a780e824f52514d98c.pt",
+      "group": "uniform:iid:280000129:None:None:None",
+      "split": "train",
+      "step": 58,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00128/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/5f2c691488bd4acf42416ebb.pt",
+      "group": "uniform:iid:280000117:None:None:None",
+      "split": "train",
+      "step": 76,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00116/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/62024eabe227b5ebd42eeea8.pt",
+      "group": "uniform:iid:280000047:None:None:None",
+      "split": "train",
+      "step": 126,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00048/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/62ceb71e0456a7caf673730f.pt",
+      "group": "uniform:iid:280000112:None:None:None",
+      "split": "train",
+      "step": 257,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00115/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/65d2d4b33209f352b59f9c37.pt",
+      "group": "uniform:iid:280000009:None:None:None",
+      "split": "train",
+      "step": 179,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00005/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/667153972c857081346f1330.pt",
+      "group": "uniform:iid:280000066:None:None:None",
+      "split": "train",
+      "step": 20,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00066/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/66c504f69d1b8c3d13375b17.pt",
+      "group": "uniform:iid:280000046:None:None:None",
+      "split": "calibration",
+      "step": 200,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00043/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/671814db447241571fb671a8.pt",
+      "group": "uniform:iid:280000154:None:None:None",
+      "split": "train",
+      "step": 204,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00153/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/6c488f9d78c2d6a438aaa836.pt",
+      "group": "uniform:iid:280000021:None:None:None",
+      "split": "train",
+      "step": 112,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00026/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/6d615c7a6287e549e8d6935c.pt",
+      "group": "uniform:iid:280000030:None:None:None",
+      "split": "calibration",
+      "step": 21,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00024/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/6de30d9850d62c772433ece1.pt",
+      "group": "uniform:iid:280000053:None:None:None",
+      "split": "train",
+      "step": 57,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00051/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/6eab86805f5fc5b324260bad.pt",
+      "group": "uniform:iid:280000143:None:None:None",
+      "split": "train",
+      "step": 72,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00144/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/6eeadf34f392c8bcd4f5c67c.pt",
+      "group": "uniform:iid:280000058:None:None:None",
+      "split": "train",
+      "step": 126,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00059/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/6fade304e26fec0bcd1f93db.pt",
+      "group": "uniform:iid:280000052:None:None:None",
+      "split": "calibration",
+      "step": 85,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00055/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/70c0a73c0a70359f3e9b04ef.pt",
+      "group": "uniform:iid:280000058:None:None:None",
+      "split": "train",
+      "step": 173,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 3,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00059/episode.npz",
+      "input_row": 5,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/72cd9c1cf587828e07bde218.pt",
+      "group": "uniform:iid:280000130:None:None:None",
+      "split": "train",
+      "step": 118,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00131/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/7362e0fd614ac30ec58a9f83.pt",
+      "group": "uniform:iid:280000173:None:None:None",
+      "split": "train",
+      "step": 219,
+      "stage": "80-100%",
+      "labeled_alternatives": 0,
+      "deploy_labeled_alternatives": 0,
+      "deploy_reasons": [
+        "baseline"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00175/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/73758cf07d5eef9803773479.pt",
+      "group": "uniform:iid:280000160:None:None:None",
+      "split": "calibration",
+      "step": 186,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 3,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00157/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/741806eaefc5e56e963068ae.pt",
+      "group": "uniform:iid:280000044:None:None:None",
+      "split": "train",
+      "step": 124,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00041/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/747daed8c554c7b32f46dac9.pt",
+      "group": "uniform:iid:280000122:None:None:None",
+      "split": "train",
+      "step": 144,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00120/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/754efbae45a1825c18341afa.pt",
+      "group": "uniform:iid:280000145:None:None:None",
+      "split": "calibration",
+      "step": 156,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00145/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/770823235fbbe292ab122d01.pt",
+      "group": "uniform:iid:280000100:None:None:None",
+      "split": "train",
+      "step": 237,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 3,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00100/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/7731eafa4c373901b543fe22.pt",
+      "group": "uniform:iid:280000037:None:None:None",
+      "split": "train",
+      "step": 46,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00034/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/79ad15e3db3a192373c8ef62.pt",
+      "group": "uniform:iid:280000018:None:None:None",
+      "split": "train",
+      "step": 78,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00017/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/7cbf5174f9348e626865ef9f.pt",
+      "group": "uniform:iid:280000019:None:None:None",
+      "split": "train",
+      "step": 134,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00020/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/7d273c7a45950260fb5e54e1.pt",
+      "group": "uniform:iid:280000015:None:None:None",
+      "split": "train",
+      "step": 82,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00003/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/7e08a05d8200c3d8e655735a.pt",
+      "group": "uniform:iid:280000143:None:None:None",
+      "split": "train",
+      "step": 201,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00144/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/7ea6b5289875712dd38d2637.pt",
+      "group": "uniform:iid:280000062:None:None:None",
+      "split": "train",
+      "step": 130,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00063/episode.npz",
+      "input_row": 4,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/80022024481c8e63ef8341ef.pt",
+      "group": "uniform:iid:280000113:None:None:None",
+      "split": "train",
+      "step": 235,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00110/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8088ce3aad43701b3adfa27a.pt",
+      "group": "uniform:iid:280000056:None:None:None",
+      "split": "train",
+      "step": 126,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00052/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8123935bfc334fb442b3a116.pt",
+      "group": "uniform:iid:280000058:None:None:None",
+      "split": "train",
+      "step": 75,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00059/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8426b56cb89db92d629fef1b.pt",
+      "group": "uniform:iid:280000069:None:None:None",
+      "split": "train",
+      "step": 141,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00064/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8566779adcfac5e679786432.pt",
+      "group": "uniform:iid:280000001:None:None:None",
+      "split": "calibration",
+      "step": 149,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00006/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/864e8220fa76c7ce1a9cef54.pt",
+      "group": "uniform:iid:280000152:None:None:None",
+      "split": "train",
+      "step": 51,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00154/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/89961c8f95de3e963749e08e.pt",
+      "group": "uniform:iid:280000189:None:None:None",
+      "split": "train",
+      "step": 166,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00188/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8a2ee234aaeb4b7be410b4b4.pt",
+      "group": "uniform:iid:280000140:None:None:None",
+      "split": "train",
+      "step": 274,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 3,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00141/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8c87596095d9a2f86f4534dc.pt",
+      "group": "uniform:iid:280000062:None:None:None",
+      "split": "train",
+      "step": 101,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00063/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8cfa002acf614d211491a8fb.pt",
+      "group": "uniform:iid:280000092:None:None:None",
+      "split": "train",
+      "step": 76,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00090/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8d643da8030c0e71769d7d3e.pt",
+      "group": "uniform:iid:280000100:None:None:None",
+      "split": "train",
+      "step": 22,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00100/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8db5b23b2679c0caab89ff5b.pt",
+      "group": "uniform:iid:280000068:None:None:None",
+      "split": "train",
+      "step": 41,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00071/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/8fb40581da3cd73e9a69f4e3.pt",
+      "group": "uniform:iid:280000020:None:None:None",
+      "split": "train",
+      "step": 213,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00028/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/909c38a93c3e7e6355c00726.pt",
+      "group": "uniform:iid:280000141:None:None:None",
+      "split": "train",
+      "step": 215,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00139/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/913c138b0eba39a4be355800.pt",
+      "group": "uniform:iid:280000139:None:None:None",
+      "split": "train",
+      "step": 242,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00142/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/92f990fe5309354520e4bd89.pt",
+      "group": "uniform:iid:280000127:None:None:None",
+      "split": "train",
+      "step": 241,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00129/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/95f41c3e39d0cb6bc9b0d742.pt",
+      "group": "uniform:iid:280000116:None:None:None",
+      "split": "train",
+      "step": 87,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00113/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/97ff0ba0510665e3a8cb82fb.pt",
+      "group": "uniform:iid:280000035:None:None:None",
+      "split": "train",
+      "step": 0,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00036/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/984a377cefc1a0c0e989f5d1.pt",
+      "group": "uniform:iid:280000043:None:None:None",
+      "split": "train",
+      "step": 231,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00047/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/9a37be06a9899ee964cd14d8.pt",
+      "group": "uniform:iid:280000000:None:None:None",
+      "split": "calibration",
+      "step": 81,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00009/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/9a62652fba953c1689e00a1b.pt",
+      "group": "uniform:iid:280000017:None:None:None",
+      "split": "train",
+      "step": 77,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00019/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/9d7f261688c911c9d5e62ef8.pt",
+      "group": "uniform:iid:280000011:None:None:None",
+      "split": "calibration",
+      "step": 83,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00012/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/a0b49e6561fb6bf134fb1ae2.pt",
+      "group": "uniform:iid:280000132:None:None:None",
+      "split": "train",
+      "step": 0,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00130/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/a4caf5712ef4a654cf7ecd59.pt",
+      "group": "uniform:iid:280000160:None:None:None",
+      "split": "calibration",
+      "step": 163,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00157/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/a5e935a4ba4d04ca27a8cbea.pt",
+      "group": "uniform:iid:280000087:None:None:None",
+      "split": "train",
+      "step": 224,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00087/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/a7dd2accf619558d4a59ba66.pt",
+      "group": "uniform:iid:280000091:None:None:None",
+      "split": "train",
+      "step": 62,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00089/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/a85f819181ae962c00715b50.pt",
+      "group": "uniform:iid:280000034:None:None:None",
+      "split": "train",
+      "step": 205,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00038/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/aa43bf9c0dc15c4e057c519c.pt",
+      "group": "uniform:iid:280000054:None:None:None",
+      "split": "train",
+      "step": 39,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00053/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/aac57f941ed6e31b58b9cb77.pt",
+      "group": "uniform:iid:280000056:None:None:None",
+      "split": "train",
+      "step": 125,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00052/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ac079a43214e67e059959701.pt",
+      "group": "uniform:iid:280000087:None:None:None",
+      "split": "train",
+      "step": 201,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00087/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ad20753113753f6f232920b5.pt",
+      "group": "uniform:iid:280000083:None:None:None",
+      "split": "train",
+      "step": 52,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00079/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/adef1267a04ff17796964eb9.pt",
+      "group": "uniform:iid:280000122:None:None:None",
+      "split": "train",
+      "step": 198,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00120/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/aeb08fafdd2f420a101df38f.pt",
+      "group": "uniform:iid:280000022:None:None:None",
+      "split": "train",
+      "step": 0,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00022/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/b0ddafd473f3a78d7fadf397.pt",
+      "group": "uniform:iid:280000152:None:None:None",
+      "split": "train",
+      "step": 146,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00154/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/b35ab9f08784b30488f6f9d4.pt",
+      "group": "uniform:iid:280000115:None:None:None",
+      "split": "train",
+      "step": 162,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00114/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/b43d87d943f3f54b9526a419.pt",
+      "group": "uniform:iid:280000086:None:None:None",
+      "split": "train",
+      "step": 236,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00086/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/b62c4c4ca0ecd20e5ff77334.pt",
+      "group": "uniform:iid:280000136:None:None:None",
+      "split": "train",
+      "step": 191,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00136/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ba7563e035f44c0c675407bc.pt",
+      "group": "uniform:iid:280000139:None:None:None",
+      "split": "train",
+      "step": 163,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00142/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/bc9734abcdfc9a8078eb668a.pt",
+      "group": "uniform:iid:280000079:None:None:None",
+      "split": "train",
+      "step": 198,
+      "stage": "80-100%",
+      "labeled_alternatives": 3,
+      "deploy_labeled_alternatives": 3,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00081/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/bde1e55751cf97b7b3aa86b2.pt",
+      "group": "uniform:iid:280000002:None:None:None",
+      "split": "train",
+      "step": 201,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00002/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/bed0aabdaf0228a67ef2a4b6.pt",
+      "group": "uniform:iid:280000133:None:None:None",
+      "split": "train",
+      "step": 124,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00132/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/bf00017860d99d5b64c5d3d2.pt",
+      "group": "uniform:iid:280000032:None:None:None",
+      "split": "train",
+      "step": 22,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00032/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/bfb46eb023b05eaf0e315ccb.pt",
+      "group": "uniform:iid:280000054:None:None:None",
+      "split": "train",
+      "step": 56,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00053/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/c269719ddc9a97234a8891f6.pt",
+      "group": "uniform:iid:280000152:None:None:None",
+      "split": "train",
+      "step": 106,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00154/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/c409eed1ca9845be06235ac4.pt",
+      "group": "uniform:iid:280000086:None:None:None",
+      "split": "train",
+      "step": 249,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00086/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/c49981c6df17a32aec42180e.pt",
+      "group": "uniform:iid:280000017:None:None:None",
+      "split": "train",
+      "step": 261,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 3,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00019/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/c4bb885d8d19e5a505416f7f.pt",
+      "group": "uniform:iid:280000100:None:None:None",
+      "split": "train",
+      "step": 215,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00100/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/c87d9d10c7b58c7626bad5b6.pt",
+      "group": "uniform:iid:280000181:None:None:None",
+      "split": "calibration",
+      "step": 208,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00179/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/c8f5567d3edbdd44dfd478e4.pt",
+      "group": "uniform:iid:280000020:None:None:None",
+      "split": "train",
+      "step": 21,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00028/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/cadf140864288bd0879c89bf.pt",
+      "group": "uniform:iid:280000097:None:None:None",
+      "split": "train",
+      "step": 115,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00095/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/cb4cbfe9978d4823d49ba335.pt",
+      "group": "uniform:iid:280000003:None:None:None",
+      "split": "train",
+      "step": 39,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00007/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ceb8c644398ced5b197324bb.pt",
+      "group": "uniform:iid:280000064:None:None:None",
+      "split": "train",
+      "step": 98,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00062/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/cebe5beb0662af7ea71195c0.pt",
+      "group": "uniform:iid:280000071:None:None:None",
+      "split": "train",
+      "step": 163,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00073/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/cf4b0044fdb9aca40b8c03e6.pt",
+      "group": "uniform:iid:280000018:None:None:None",
+      "split": "train",
+      "step": 210,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00017/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/cf7766ab3b028566b9d07110.pt",
+      "group": "uniform:iid:280000153:None:None:None",
+      "split": "calibration",
+      "step": 63,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00151/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d06a85dd71dd3039da0cf6ae.pt",
+      "group": "uniform:iid:280000078:None:None:None",
+      "split": "train",
+      "step": 0,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00076/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d1ee0e3949edcf801f124f56.pt",
+      "group": "uniform:iid:280000040:None:None:None",
+      "split": "train",
+      "step": 25,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00039/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d28e362a9d130f2b3606f21a.pt",
+      "group": "uniform:iid:280000120:None:None:None",
+      "split": "train",
+      "step": 66,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00123/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d3d740b8e2073595024f1250.pt",
+      "group": "uniform:iid:280000113:None:None:None",
+      "split": "train",
+      "step": 127,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00110/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d49426aea51b04c426f1879e.pt",
+      "group": "uniform:iid:280000123:None:None:None",
+      "split": "train",
+      "step": 21,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00121/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d686a2477369ab71a41b1dd4.pt",
+      "group": "uniform:iid:280000035:None:None:None",
+      "split": "train",
+      "step": 58,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00036/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d6ca9d0328cc71ee8a5b1780.pt",
+      "group": "uniform:iid:280000106:None:None:None",
+      "split": "train",
+      "step": 40,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00108/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d753e8d5986cea051700a01a.pt",
+      "group": "uniform:iid:280000065:None:None:None",
+      "split": "calibration",
+      "step": 167,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00068/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d75f9eb26f37a9ddb7231844.pt",
+      "group": "uniform:iid:280000162:None:None:None",
+      "split": "train",
+      "step": 49,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00162/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d835874df8ba4224e81bd979.pt",
+      "group": "uniform:iid:280000069:None:None:None",
+      "split": "train",
+      "step": 269,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00064/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/d9835dd17ba33637fc5c85e9.pt",
+      "group": "uniform:iid:280000117:None:None:None",
+      "split": "train",
+      "step": 45,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00116/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/da0cfce4343fe895c33bd620.pt",
+      "group": "uniform:iid:280000019:None:None:None",
+      "split": "train",
+      "step": 132,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00020/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/da3eb5a1122ca7bcc2b4b83e.pt",
+      "group": "uniform:iid:280000169:None:None:None",
+      "split": "train",
+      "step": 143,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00166/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/dbfd96fd0cf8a48235796359.pt",
+      "group": "uniform:iid:280000001:None:None:None",
+      "split": "calibration",
+      "step": 148,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00006/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/dc29be9b3bcc5376a8b72718.pt",
+      "group": "uniform:iid:280000052:None:None:None",
+      "split": "calibration",
+      "step": 117,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00055/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ddf801b20904ec789d8c3187.pt",
+      "group": "uniform:iid:280000151:None:None:None",
+      "split": "train",
+      "step": 67,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00149/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/de3e0ae84b6a34f6ba436706.pt",
+      "group": "uniform:iid:280000030:None:None:None",
+      "split": "calibration",
+      "step": 166,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00024/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/deae71b64cf640e7a27bbc9f.pt",
+      "group": "uniform:iid:280000071:None:None:None",
+      "split": "train",
+      "step": 190,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00073/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/deb1f359862c314ec2699761.pt",
+      "group": "uniform:iid:280000009:None:None:None",
+      "split": "train",
+      "step": 224,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00005/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e09604dc6613f4c9373db786.pt",
+      "group": "uniform:iid:280000000:None:None:None",
+      "split": "calibration",
+      "step": 172,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00009/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e1060ba957ec96d4eb2fef51.pt",
+      "group": "uniform:iid:280000119:None:None:None",
+      "split": "train",
+      "step": 25,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00118/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e1b47caae9ad922ef5512313.pt",
+      "group": "uniform:iid:280000015:None:None:None",
+      "split": "train",
+      "step": 38,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00003/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e2e5e2b3c830f4ed40dda06c.pt",
+      "group": "uniform:iid:280000158:None:None:None",
+      "split": "train",
+      "step": 64,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00161/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e46d42d69677ab660a413bae.pt",
+      "group": "uniform:iid:280000138:None:None:None",
+      "split": "train",
+      "step": 22,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00138/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e55c3969eb729176f7f2934d.pt",
+      "group": "uniform:iid:280000131:None:None:None",
+      "split": "train",
+      "step": 55,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00134/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e7b9ff28bdd7ca4f2d9e97be.pt",
+      "group": "uniform:iid:280000106:None:None:None",
+      "split": "train",
+      "step": 109,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00108/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e7d4ae38cfd5860209aaf738.pt",
+      "group": "uniform:iid:280000014:None:None:None",
+      "split": "train",
+      "step": 92,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00004/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e976b15f035e8d701118d60b.pt",
+      "group": "uniform:iid:280000115:None:None:None",
+      "split": "train",
+      "step": 0,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00114/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e9d9d6c4ae3bfb093bb4fde8.pt",
+      "group": "uniform:iid:280000101:None:None:None",
+      "split": "train",
+      "step": 41,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00099/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/e9f811ad329b9530b79ace36.pt",
+      "group": "uniform:iid:280000085:None:None:None",
+      "split": "train",
+      "step": 158,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00085/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ea044fff3396a1ae4e646b2e.pt",
+      "group": "uniform:iid:280000058:None:None:None",
+      "split": "train",
+      "step": 163,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00059/episode.npz",
+      "input_row": 4,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ec554bdc93c494c01b4eb5fe.pt",
+      "group": "uniform:iid:280000058:None:None:None",
+      "split": "train",
+      "step": 148,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00059/episode.npz",
+      "input_row": 3,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ed1661cbc3b64e6760c1a81a.pt",
+      "group": "uniform:iid:280000106:None:None:None",
+      "split": "train",
+      "step": 126,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00108/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ef9ab959625994a691cdc1ea.pt",
+      "group": "uniform:iid:280000054:None:None:None",
+      "split": "train",
+      "step": 58,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00053/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/ef9f693f5fff0b18a7e01217.pt",
+      "group": "uniform:iid:280000143:None:None:None",
+      "split": "train",
+      "step": 20,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00144/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/f11a34876bbc70a371f1d170.pt",
+      "group": "uniform:iid:280000032:None:None:None",
+      "split": "train",
+      "step": 182,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00032/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/f19c34ebdddbbd1837c269fb.pt",
+      "group": "uniform:iid:280000062:None:None:None",
+      "split": "train",
+      "step": 43,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00063/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/f3dd9703aa7a549170f9a243.pt",
+      "group": "uniform:iid:280000004:None:None:None",
+      "split": "calibration",
+      "step": 200,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00014/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/f43a9a3d63614259bcda04e3.pt",
+      "group": "uniform:iid:280000068:None:None:None",
+      "split": "train",
+      "step": 117,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00071/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/f6bc767a00b81f84e0c1dedd.pt",
+      "group": "uniform:iid:280000122:None:None:None",
+      "split": "train",
+      "step": 275,
+      "stage": "80-100%",
+      "labeled_alternatives": 2,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00120/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/f6d8c5313f161bde5143f579.pt",
+      "group": "uniform:iid:280000019:None:None:None",
+      "split": "train",
+      "step": 107,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00020/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/f708bec543367cd020542d48.pt",
+      "group": "uniform:iid:280000103:None:None:None",
+      "split": "train",
+      "step": 55,
+      "stage": "20-40%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00102/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/f74d9bec35ec57749ddbd017.pt",
+      "group": "uniform:iid:280000119:None:None:None",
+      "split": "train",
+      "step": 123,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00118/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/fa77beda9417795676f633bc.pt",
+      "group": "uniform:iid:280000082:None:None:None",
+      "split": "train",
+      "step": 42,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 2,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00080/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/fa9f816597d62b6fcd2d5d83.pt",
+      "group": "uniform:iid:280000129:None:None:None",
+      "split": "train",
+      "step": 218,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00128/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/faddf995b5317fc02ee2cfe7.pt",
+      "group": "uniform:iid:280000119:None:None:None",
+      "split": "train",
+      "step": 121,
+      "stage": "40-60%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00118/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/fb4721d26ec435890af72394.pt",
+      "group": "uniform:iid:280000057:None:None:None",
+      "split": "train",
+      "step": 22,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_survey_proxy",
+        "best_bc_other"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00060/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/fbf4e3830f2a264196828110.pt",
+      "group": "uniform:iid:280000000:None:None:None",
+      "split": "calibration",
+      "step": 127,
+      "stage": "60-80%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00009/episode.npz",
+      "input_row": 2,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/fc322b613b1a76e77731f75a.pt",
+      "group": "uniform:iid:280000168:None:None:None",
+      "split": "train",
+      "step": 209,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00167/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/fcf361b6c5dc35b4016c1120.pt",
+      "group": "uniform:iid:280000062:None:None:None",
+      "split": "train",
+      "step": 23,
+      "stage": "0-20%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_local_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00063/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/fd4daf7dc8bbc3553a6786fe.pt",
+      "group": "uniform:iid:280000105:None:None:None",
+      "split": "train",
+      "step": 218,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 3,
+      "deploy_reasons": [
+        "baseline",
+        "best_bc_other",
+        "proxy_fill",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00104/episode.npz",
+      "input_row": 1,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    },
+    {
+      "path": "training_data/states/fe49d5eef73b9ddeef3f6b74.pt",
+      "group": "uniform:iid:280000076:None:None:None",
+      "split": "calibration",
+      "step": 235,
+      "stage": "80-100%",
+      "labeled_alternatives": 4,
+      "deploy_labeled_alternatives": 1,
+      "deploy_reasons": [
+        "baseline",
+        "best_survey_proxy",
+        "best_bc_other",
+        "proxy_fill"
+      ],
+      "complete": true,
+      "input_npz": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-170247-695356-cost-labels/labels/episode-00078/episode.npz",
+      "input_row": 0,
+      "bc_checkpoint_sha256": "9a044098931a10d5bdc982b6602caacd162914e959442158611ed573e635159a"
+    }
+  ],
+  "groups": {
+    "train": [
+      "uniform:iid:280000002:None:None:None",
+      "uniform:iid:280000003:None:None:None",
+      "uniform:iid:280000006:None:None:None",
+      "uniform:iid:280000009:None:None:None",
+      "uniform:iid:280000010:None:None:None",
+      "uniform:iid:280000014:None:None:None",
+      "uniform:iid:280000015:None:None:None",
+      "uniform:iid:280000017:None:None:None",
+      "uniform:iid:280000018:None:None:None",
+      "uniform:iid:280000019:None:None:None",
+      "uniform:iid:280000020:None:None:None",
+      "uniform:iid:280000021:None:None:None",
+      "uniform:iid:280000022:None:None:None",
+      "uniform:iid:280000026:None:None:None",
+      "uniform:iid:280000028:None:None:None",
+      "uniform:iid:280000032:None:None:None",
+      "uniform:iid:280000034:None:None:None",
+      "uniform:iid:280000035:None:None:None",
+      "uniform:iid:280000037:None:None:None",
+      "uniform:iid:280000038:None:None:None",
+      "uniform:iid:280000040:None:None:None",
+      "uniform:iid:280000043:None:None:None",
+      "uniform:iid:280000044:None:None:None",
+      "uniform:iid:280000047:None:None:None",
+      "uniform:iid:280000053:None:None:None",
+      "uniform:iid:280000054:None:None:None",
+      "uniform:iid:280000055:None:None:None",
+      "uniform:iid:280000056:None:None:None",
+      "uniform:iid:280000057:None:None:None",
+      "uniform:iid:280000058:None:None:None",
+      "uniform:iid:280000061:None:None:None",
+      "uniform:iid:280000062:None:None:None",
+      "uniform:iid:280000063:None:None:None",
+      "uniform:iid:280000064:None:None:None",
+      "uniform:iid:280000066:None:None:None",
+      "uniform:iid:280000067:None:None:None",
+      "uniform:iid:280000068:None:None:None",
+      "uniform:iid:280000069:None:None:None",
+      "uniform:iid:280000071:None:None:None",
+      "uniform:iid:280000073:None:None:None",
+      "uniform:iid:280000074:None:None:None",
+      "uniform:iid:280000077:None:None:None",
+      "uniform:iid:280000078:None:None:None",
+      "uniform:iid:280000079:None:None:None",
+      "uniform:iid:280000082:None:None:None",
+      "uniform:iid:280000083:None:None:None",
+      "uniform:iid:280000085:None:None:None",
+      "uniform:iid:280000086:None:None:None",
+      "uniform:iid:280000087:None:None:None",
+      "uniform:iid:280000088:None:None:None",
+      "uniform:iid:280000091:None:None:None",
+      "uniform:iid:280000092:None:None:None",
+      "uniform:iid:280000097:None:None:None",
+      "uniform:iid:280000100:None:None:None",
+      "uniform:iid:280000101:None:None:None",
+      "uniform:iid:280000103:None:None:None",
+      "uniform:iid:280000105:None:None:None",
+      "uniform:iid:280000106:None:None:None",
+      "uniform:iid:280000107:None:None:None",
+      "uniform:iid:280000108:None:None:None",
+      "uniform:iid:280000112:None:None:None",
+      "uniform:iid:280000113:None:None:None",
+      "uniform:iid:280000115:None:None:None",
+      "uniform:iid:280000116:None:None:None",
+      "uniform:iid:280000117:None:None:None",
+      "uniform:iid:280000119:None:None:None",
+      "uniform:iid:280000120:None:None:None",
+      "uniform:iid:280000122:None:None:None",
+      "uniform:iid:280000123:None:None:None",
+      "uniform:iid:280000127:None:None:None",
+      "uniform:iid:280000129:None:None:None",
+      "uniform:iid:280000130:None:None:None",
+      "uniform:iid:280000131:None:None:None",
+      "uniform:iid:280000132:None:None:None",
+      "uniform:iid:280000133:None:None:None",
+      "uniform:iid:280000136:None:None:None",
+      "uniform:iid:280000138:None:None:None",
+      "uniform:iid:280000139:None:None:None",
+      "uniform:iid:280000140:None:None:None",
+      "uniform:iid:280000141:None:None:None",
+      "uniform:iid:280000143:None:None:None",
+      "uniform:iid:280000151:None:None:None",
+      "uniform:iid:280000152:None:None:None",
+      "uniform:iid:280000154:None:None:None",
+      "uniform:iid:280000155:None:None:None",
+      "uniform:iid:280000158:None:None:None",
+      "uniform:iid:280000162:None:None:None",
+      "uniform:iid:280000166:None:None:None",
+      "uniform:iid:280000168:None:None:None",
+      "uniform:iid:280000169:None:None:None",
+      "uniform:iid:280000171:None:None:None",
+      "uniform:iid:280000173:None:None:None",
+      "uniform:iid:280000189:None:None:None"
+    ],
+    "calibration": [
+      "uniform:iid:280000000:None:None:None",
+      "uniform:iid:280000001:None:None:None",
+      "uniform:iid:280000004:None:None:None",
+      "uniform:iid:280000011:None:None:None",
+      "uniform:iid:280000016:None:None:None",
+      "uniform:iid:280000027:None:None:None",
+      "uniform:iid:280000030:None:None:None",
+      "uniform:iid:280000041:None:None:None",
+      "uniform:iid:280000046:None:None:None",
+      "uniform:iid:280000052:None:None:None",
+      "uniform:iid:280000065:None:None:None",
+      "uniform:iid:280000076:None:None:None",
+      "uniform:iid:280000080:None:None:None",
+      "uniform:iid:280000084:None:None:None",
+      "uniform:iid:280000096:None:None:None",
+      "uniform:iid:280000110:None:None:None",
+      "uniform:iid:280000118:None:None:None",
+      "uniform:iid:280000145:None:None:None",
+      "uniform:iid:280000153:None:None:None",
+      "uniform:iid:280000160:None:None:None",
+      "uniform:iid:280000181:None:None:None"
+    ]
+  },
+  "states": 213,
+  "split_rule": "sha256(q4-relative-cost-split-v1:source_group) first8 modulo5; 0=calibration",
+  "labeled_alternatives": 844,
+  "real_world_files_read": false,
+  "calibration_is_independent_full_model_test": false
+}

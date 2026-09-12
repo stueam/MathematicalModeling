@@ -1,0 +1,95 @@
+{
+  "all_complete_and_audited": true,
+  "aggregate": {
+    "groups": {
+      "finetuned_advantage": {
+        "episodes": 32,
+        "complete": 32,
+        "aggregate_s_per_source": 442.62508287841194,
+        "map_bootstrap_95pct": [
+          403.7238322806604,
+          483.6359172210385
+        ],
+        "mean_movement_m": 20499.98567239816,
+        "mean_real_time_s": 78.27149552618789,
+        "mean_actions": 251.34375,
+        "fallback_episodes": 0,
+        "errors": []
+      },
+      "frozen_advantage": {
+        "episodes": 32,
+        "complete": 32,
+        "aggregate_s_per_source": 445.7279476848636,
+        "map_bootstrap_95pct": [
+          407.77388109925073,
+          485.64051881187913
+        ],
+        "mean_movement_m": 20638.494190311707,
+        "mean_real_time_s": 72.85987262025071,
+        "mean_actions": 252.9375,
+        "fallback_episodes": 0,
+        "errors": []
+      },
+      "probes": {
+        "episodes": 32,
+        "complete": 32,
+        "aggregate_s_per_source": 446.8513697022332,
+        "map_bootstrap_95pct": [
+          411.0081336242218,
+          484.57268241542624
+        ],
+        "mean_movement_m": 20611.265918369678,
+        "mean_real_time_s": 51.901374961093666,
+        "mean_actions": 256.625,
+        "fallback_episodes": 0,
+        "errors": []
+      }
+    },
+    "paired_to_probes": {
+      "finetuned_advantage": {
+        "relative_improvement": 0.0094579251858119,
+        "paired_map_95pct": [
+          -0.00839281621490977,
+          0.02917295690063875
+        ]
+      },
+      "frozen_advantage": {
+        "relative_improvement": 0.0025140843097746224,
+        "paired_map_95pct": [
+          -0.014270457835728428,
+          0.021235900470449313
+        ]
+      }
+    }
+  },
+  "variants": {
+    "frozen_advantage": {
+      "continue_condition_met": false,
+      "reasons": [
+        "improvement_below_2_percent",
+        "bootstrap_lower_bound_not_positive"
+      ],
+      "overrides": 173
+    },
+    "finetuned_advantage": {
+      "continue_condition_met": false,
+      "reasons": [
+        "improvement_below_2_percent",
+        "bootstrap_lower_bound_not_positive"
+      ],
+      "overrides": 182
+    }
+  },
+  "finetuned_vs_frozen": {
+    "relative_improvement": 0.006961342277431837,
+    "paired_95pct": [
+      -0.0058165342915280855,
+      0.023070269193107083
+    ]
+  },
+  "automatic_next_round": false,
+  "conclusion": "stop",
+  "final_300_target_validated": false,
+  "reserved_test_or_stress_run": false,
+  "local_simulator_only": true
+}

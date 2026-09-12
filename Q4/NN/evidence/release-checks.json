@@ -1,0 +1,30 @@
+{
+  "unit_tests_passed": 84,
+  "smoke_maps": 2,
+  "smoke_episodes": 4,
+  "smoke_costs_equal_original": true,
+  "smoke_complete_and_audited": true,
+  "smoke_control": {
+    "status": "complete",
+    "real_time_s": 46.831835928001965,
+    "hard_limit_s": 1800.0,
+    "dispatch_limit_s": 1620.0,
+    "returncode": 0,
+    "live_worker_pids_after_shutdown": [],
+    "error": null,
+    "automatic_next_round": false,
+    "local_simulator_only": true
+  },
+  "tests_sha256": {
+    "test_relative.py": "812a9ed0492d868d4e0ee81dd5ba5ec6bff9abf7f566c658c12014f56d69c724",
+    "test_advantage.py": "24424c57f8b3add7b1fbb0c9e402fb2ccc5e102570db5b5ee1cc9e95646f723a",
+    "test_network.py": "1c4ec11608e96b75201a1f70bea93ca42b61ea440d01e50ac1f6e5fe3a9b1fe1",
+    "test_features_v2.py": "c3d3cfc53bcfe98fb646120b0598a3622b5a835d558f2ff03caa76f25630fecc",
+    "test_training.py": "32ea023b1430722cae611ad86432b0ab1704624c6ba7bcf5d16f2a1e561cebe1",
+    "test_cost_learning.py": "285d40dee07e8442592a32d3d2a91874a9f0343e9e37ade0a19c28e3a101cde2",
+    "test_state.py": "4218ce3e6c31417f30d93ef67290c5c2e07e1fd11111941069726fd2a202851d",
+    "test_proposals.py": "ef1e1d4c4722346600f1f5854b9cf72dbcc054c15cbe61a3d056f54f2bee871b",
+    "test_physics.py": "297a61657040733d356ed932de7dca427e344b14d2d25112142e15ffbd6a780c"
+  },
+  "local_simulator_only": true
+}

@@ -1,0 +1,455 @@
+{
+  "ok": true,
+  "complete": true,
+  "status": "complete",
+  "audit_scope": "frozen_local_q4_simulator",
+  "official_validation": false,
+  "world_distribution_is_local_assumption": true,
+  "certified_complete": true,
+  "all_cleared": true,
+  "source_count": 11,
+  "problem_source_count_valid": true,
+  "cleared_count": 11,
+  "events_seen": 289,
+  "accepted_steps": 289,
+  "rejected_requests": 0,
+  "duplicate_requests": 0,
+  "spent_virtual_s": 6010.525231,
+  "completed_virtual_s": 6010.525231,
+  "seconds_per_source": 546.4113846363636,
+  "move_m": 21572.626145908256,
+  "costs": {
+    "move_s": 4314.5252310000005,
+    "switch_s": 255.0,
+    "measure_s": 1380.0,
+    "clear_success_s": 55.0,
+    "clear_failure_s": 6.0
+  },
+  "executor_steps": {
+    "baseline": 51,
+    "macro_continuation": 230,
+    "network_override": 8
+  },
+  "max_clock_error_s": 0.0,
+  "max_bearing_error_deg": 0.9875033933953432,
+  "truth_support_checks": 1934,
+  "fixed_point_checks": 0,
+  "absence_certificates_checked": 9,
+  "exact_surround_certificates": [
+    {
+      "channel": 1,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    },
+    {
+      "channel": 3,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    },
+    {
+      "channel": 5,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    },
+    {
+      "channel": 7,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    },
+    {
+      "channel": 12,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    },
+    {
+      "channel": 13,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    },
+    {
+      "channel": 15,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    },
+    {
+      "channel": 19,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    },
+    {
+      "channel": 20,
+      "union_residual_area_m2": 1.2924697071141057e-26,
+      "components": [
+        {
+          "negative_station_hull": [
+            [
+              -1154.3408269401646,
+              -1447.4976131277328
+            ],
+            [
+              -411.979471274221,
+              -1805.0
+            ],
+            [
+              -216.95791060740672,
+              -950.5547143772781
+            ],
+            [
+              -878.4446462048587,
+              -423.03664563961905
+            ]
+          ],
+          "residual_vertices": [
+            [
+              -627.0114615610324,
+              -1167.939943725191
+            ],
+            [
+              -627.0114615610323,
+              -1167.9399437251911
+            ],
+            [
+              -627.0114615610323,
+              -1167.939943725191
+            ]
+          ],
+          "minimum_strict_hull_cross_m2": 307973.51677183865,
+          "minimum_radius_squared_slack_m2": 381900.4301611008,
+          "arithmetic": "exact Fraction of stored binary floating-point coordinates"
+        }
+      ]
+    }
+  ],
+  "receiver": 20,
+  "position": [
+    1154.3408269401643,
+    1447.497613127733
+  ],
+  "channel_statuses": {
+    "1": "absent_certified",
+    "2": "cleared",
+    "3": "absent_certified",
+    "4": "cleared",
+    "5": "absent_certified",
+    "6": "cleared",
+    "7": "absent_certified",
+    "8": "cleared",
+    "9": "cleared",
+    "10": "cleared",
+    "11": "cleared",
+    "12": "absent_certified",
+    "13": "absent_certified",
+    "14": "cleared",
+    "15": "absent_certified",
+    "16": "cleared",
+    "17": "cleared",
+    "18": "cleared",
+    "19": "absent_certified",
+    "20": "absent_certified"
+  },
+  "errors": []
+}

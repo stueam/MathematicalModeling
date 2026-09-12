@@ -1,0 +1,79 @@
+{
+  "case": "uniform-iid-280020018-finetuned_advantage",
+  "seed": 280020018,
+  "mode": "finetuned_advantage",
+  "source_count": 16,
+  "cleared_count": 16,
+  "all_cleared": true,
+  "clearance_fraction": 1.0,
+  "directional_count": 6,
+  "world_sha256": "ac5150eccb5917e6a1649bf36b8204975e7c1bb37c77aff1036adb652b562bf6",
+  "complete": true,
+  "public_complete": true,
+  "error": null,
+  "virtual_time_s": 4429.861867,
+  "seconds_per_source": 276.8663666875,
+  "costs": {
+    "move_s": 3422.8618670000005,
+    "switch_s": 147.0,
+    "measure_s": 780.0,
+    "clear_success_s": 80.0,
+    "clear_failure_s": 0.0
+  },
+  "movement_m": 17114.30932689915,
+  "long_moves_over_1km": 0,
+  "long_move_distance_m": 0,
+  "real_time_s": 110.35518636300185,
+  "audit_time_s": 0.3109894640001585,
+  "environment_kind": "local_simulator",
+  "official_connection": false,
+  "audit_ok": true,
+  "actions": 172,
+  "measure_count": 156,
+  "failed_clears": 0,
+  "executor_actions": {
+    "network": 0,
+    "teacher": 0,
+    "macro_continuation": 114,
+    "fallback": 0,
+    "probes": 0,
+    "network_override": 9,
+    "baseline": 49
+  },
+  "executor_costs_s": {
+    "network": 0.0,
+    "teacher": 0.0,
+    "macro_continuation": 684.0,
+    "fallback": 0.0,
+    "probes": 0.0,
+    "network_override": 676.3528869999999,
+    "baseline": 3069.50898
+  },
+  "stats": {
+    "neural_decisions": 58,
+    "teacher_decisions": 0,
+    "macro_continuation_actions": 114,
+    "fallback_actions": 0,
+    "forward_s": 3.3714260689885123,
+    "encode_menu_s": 106.44492185500349,
+    "network_overrides": 9,
+    "baseline_decisions": 49
+  },
+  "menu_stats": {
+    "frames": 58,
+    "reference_missing": 0,
+    "posterior_failures": 0,
+    "candidate_families": {
+      "survey": 724,
+      "local": 2683
+    }
+  },
+  "menu": "full",
+  "layout": "ring22",
+  "features": "v2",
+  "planner_config": {},
+  "folder": "/home/zypca/mathmodel/B题/第三四问-nn算法/第四问/results/20260912-210143-406723-advantage-round/benchmark/uniform-iid-280020018-finetuned_advantage",
+  "supervised_states": 0,
+  "source_group": "uniform:iid:280020018:None:None:None",
+  "split": "development"
+}

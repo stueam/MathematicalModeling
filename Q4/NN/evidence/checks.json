@@ -1,0 +1,21 @@
+{
+  "full_suite_passed": 83,
+  "budget_regression_passed": 3,
+  "advantage_and_extension_passed": 10,
+  "post_run_verification": "verification.json",
+  "new_cost_sampling": false,
+  "legacy_jobs_resumed": false,
+  "official_connection": false,
+  "artifact_sha256": {
+    "training-frozen/best.pt": "a0afa9ddd5f07df8ed1ece7c01ab668cc2ab46fddaac361b3e9efe93611bf9d1",
+    "training-finetuned/best.pt": "7f60344c2377e7c2403cea8d2ed2fb02b43a72d43aa8e60259d363fc338cf869",
+    "paired-results.csv": "6f9e93d45b19f92898ef93a813836a3a4fdba9169d307c6357be753434b55faa",
+    "verification.json": "1a5a00eece5e5b4d385d60110983298d3031ddf78edfa1511044a07c9e6b8df1",
+    "control.json": "edfdce8d1e0b1910ae844e41e94657378095743bba282c2759594577721e9204",
+    "tests.log": "c9ff6f9035da48acf5810fb51c4c32a0878ac989ca5fbcd96519a6901e8eeffe",
+    "budget30-tests.log": "98dd0239e25101674d94b35cb7c340f3bcccb9b44a9a4a2a3b60c2e0e9f90f6d",
+    "extension-tests.log": "e0fc522ccb74b6eecebe0620de8214893084e79e6a6c0287abaebc168c1d59f1",
+    "run.log": "8a170ad419a3eae54d473fffdbed9e3c505c45def211c9be924f75976d614966",
+    "extension-run.log": "f600400d7135e24e5e2f96d364e9f6fd4112463f12db6833721f7b102fada318"
+  }
+}
