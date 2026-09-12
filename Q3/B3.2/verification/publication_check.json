@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "Publication verification on existing development screening cases, not independent evaluation",
+  "checks": {
+    "source_hashes": {
+      "passed": true,
+      "files": 26
+    },
+    "unit_tests": {
+      "passed": true,
+      "tests": 9
+    },
+    "offline_screening": {
+      "cases": 20,
+      "full_clear_cases": 20,
+      "total_sources": 257,
+      "total_cleared": 257,
+      "mean_s_per_source": 229.59406429093556,
+      "median_s_per_source": 231.8822936816722,
+      "p90_s_per_source": 290.5647226606404,
+      "worst_s_per_source": 356.0412668253851,
+      "cases_under200": 5
+    }
+  },
+  "environment": {
+    "python": "3.12.5",
+    "numpy": "2.4.0",
+    "scipy": "1.17.1"
+  },
+  "scenario_sha256": "2abea77dbfbf21b06c10ed26ff4548179e50b65b9d4872c9ea97af468e7cc08c",
+  "completed_at": "2026-09-12T01:56:47.592900+00:00",
+  "formal_tests_used": 0,
+  "commands": [
+    "python -m unittest discover -s tests -v",
+    "python benchmark.py --methods current --output outputs/b32_check"
+  ]
+}
