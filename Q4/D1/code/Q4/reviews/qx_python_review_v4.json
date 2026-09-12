@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "question_id": "Q4",
+  "language": "python",
+  "decision_id": "q4_q3_service_optimization",
+  "reviewed_files": [
+    "service_geometry.py",
+    "service_routes.py",
+    "service_strategy.py",
+    "compact_strategy.py",
+    "benchmark_service.py",
+    "tests/test_service.py"
+  ],
+  "checks": {
+    "syntax": {
+      "status": "PASS",
+      "evidence": [
+        "29 targeted and regression tests; all changed modules compile"
+      ]
+    },
+    "input_contract": {
+      "status": "PASS",
+      "evidence": [
+        "Same offline scenes, costs, feedback and fixed position errors for both policies; truth held only by evaluator"
+      ]
+    },
+    "method_alignment": {
+      "status": "PASS",
+      "evidence": [
+        "Scan replacement requires original continuous certificate; all-polygon clear constraints; unchanged Q4 observation cuts and completion",
+        "Exact route compared with brute-force permutations; moved-cell membership independently checked by linear programming",
+        "Local geometric improvement is not a full-policy optimality guarantee"
+      ]
+    },
+    "reproducibility": {
+      "status": "PASS",
+      "evidence": [
+        "28 historical v3 cases reproduce every non-runtime field",
+        "Two v4 scenarios reproduce all non-runtime fields and mechanism counters",
+        "Both run source hashes stable and match current source; scenario hashes match"
+      ]
+    },
+    "output_contract": {
+      "status": "PASS",
+      "evidence": [
+        "CSV totals and mixed means reconciled; failures and individual regressions retained",
+        "Local leg savings recorded separately from realized movement savings"
+      ]
+    }
+  },
+  "verdict": "PASSED",
+  "findings": [],
+  "test_count": 29,
+  "baseline_cases_reproduced": 28,
+  "replays": [
+    "2026091183_001_boundary_outward",
+    "2026091183_005_all_directional_stress"
+  ],
+  "mechanism_counts": {
+    "service_attempts": 1109.0,
+    "service_accepts": 814.0,
+    "clear_adjustments": 592.0,
+    "local_leg_saving_m": 11910.746829178492,
+    "exact_route_calls": 1218.0
+  },
+  "source_sha256": {
+    "adaptive_coverage.py": "b0761fff91a020e0c5fb72362d573d3be9513de2150fc0de09cbff47217e9638",
+    "adaptive_strategy.py": "9a63c353d83e49ad8f2864daddb4691742a243e4e18f2af268a0d9646c5702f0",
+    "analyze.py": "002b521c3798ed73ea6e7515c9b4599bcaf594c0c51fe644baa2d05603ff457a",
+    "benchmark.py": "380b86fe42dc8f92d5151cab32a90ffa4390a6c81130816711e35cd7f7e9b173",
+    "benchmark_adaptive.py": "d9d3c2370bb07ea233d5e80de22bb62e7f0525dd31d78ab7a55b9b851b65b27d",
+    "benchmark_compact.py": "346b4eff15c420b61a4b6651951403d233d2cb382dbec0513d0738aaf5885f62",
+    "benchmark_service.py": "54b6fa3eff11e319d136a1d07d64633723f08ff058694e4ec7006164d7b217b7",
+    "compact_strategy.py": "db84050b933b1dab672f42e18f6b114f79076e835f7db789d779682e99186126",
+    "coverage.py": "79f6f55f44d984784eaaa8bfa8093cc9257fdf653b18743461c26a0d9cad024f",
+    "offline.py": "e1427774747cde69224a13b518433608d770349f60c2c55f9aff1164d06e589e",
+    "practice_adaptive.py": "cc90ea33a751014c6793bbd1ff498414752ac005ab1cc8be31318051c98c4427",
+    "service_geometry.py": "83adfde123979a2885cbdfaa985109a2df830113b2fc7d08f8ddc0d2dbd8db08",
+    "service_routes.py": "6b72aece08cdcaee72f22d64ddd6feba55b02a61870168bf54b000111b7a8488",
+    "service_strategy.py": "b6bebde8ff223a11a15c672a692f692d2c830fea38c4b9d230efbc6460ce272c",
+    "strategy.py": "05b8d1e967e6f43859310399e9efde3ed74f183656d72a3d2b4dc80cd64176f2",
+    "vendor_b2\\analyze_q2.py": "f7f18c43e3b48cdde3e4bb0a2bb4b1595f14effc2159da84c6572191fc354855",
+    "vendor_b2\\b3_strategy.py": "57879b5264be530bf52e2b126c0790bdae684990fc23a8807186409e505455d0",
+    "vendor_b2\\benchmark.py": "37f3f5cf8331ddf907e0251808947cfd2410ec12b87255e0ae03a133bfbb5ee9",
+    "vendor_b2\\fast_strategy.py": "dc33513defe9b521b3884137dd94b8a0a47fd2a0268ec78a2374af5f0f886074",
+    "vendor_b2\\flexible_b3.py": "34c6130450f1b4461bec52a8e88e7b661e87930b462b3fbec495d6df9a1f57b5",
+    "vendor_b2\\joint_strategy.py": "39e374b16fa16a660d319dfabb1b5d9db1189f4f0460dc62fa4cd684d777e932",
+    "vendor_b2\\localization_probe.py": "450a42b7c3f717ddcfc1da63e199caeb8c906c715d0fe7a465c4fd0bea6d2f37",
+    "vendor_b2\\negative_strategy.py": "7250a751925a6db3e51cf3e657fdad5c96ea271eb27fba8a28577a30d0eadbba",
+    "vendor_b2\\offline_environment.py": "d502210d97c2fee0ba56fa4685cfacd319a56db4668f8aaf46219da91e64748d",
+    "vendor_b2\\peripheral_prior.py": "e31186d53dffc030d68dc6463c882253e5b43eaad770b0315f8cc43a00b07f6b",
+    "vendor_b2\\q2_geometry.py": "142de65f75a6e21513e3df1a56497c7c21c7cb75b1fe0b98ba5f3394ad263607",
+    "vendor_b2\\q2_lookahead.py": "af6f26d38aa6df25c44f386d9a6eb1805ad31a5efd5ec630758a1cb8c4c361b7",
+    "vendor_b2\\q3_strategy.py": "e76ea7ec5b4248bb6775d94ac7efb59ced54bf086ba40967d097d23a3da12560",
+    "vendor_b2\\radius_coupling.py": "2be3424d660853ea85a3cbe97cce3f9d17d4a74d130e3bc9465014c73201c40c",
+    "vendor_b2\\route_search_probe.py": "928495487f4256b7396c663777f08844ce5cebde205fe78483ca9b2fd90ce426",
+    "vendor_b2\\route_tuning.py": "d788b4ad46b007f43ed68e5e2e77c70c6e5fdfb4d055bab9e270606bf55ab965",
+    "vendor_b2\\solver.py": "a1332ce990825c4aa38a3903d28a82bc692b3f42dad996c89a9e7f47b8873c7f",
+    "vendor_b2\\sweep_strategy.py": "2f48234450e30ff6e8391198f3c239fffdc6294d57a6aeccea1e650c0ebf51a4"
+  },
+  "evidence": [
+    "results\\Q4\\experiments\\round18_service_regression\\run_summary.json",
+    "results\\Q4\\experiments\\round19_service_holdout\\run_summary.json"
+  ],
+  "limitations": [
+    "Synthetic tests only, not official simulator distribution",
+    "No global policy optimality or official performance claim"
+  ],
+  "reviewed_at": "2026-09-11T12:50:42.138449+00:00"
+}

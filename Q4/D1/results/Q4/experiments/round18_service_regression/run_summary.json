@@ -1,0 +1,206 @@
+{
+  "question": "Q4",
+  "round": "round18_service_regression",
+  "decision_id": "q4_q3_service_optimization",
+  "approved_methods": [
+    "q4_service",
+    "q4_compact"
+  ],
+  "roles": {
+    "q4_service": "main_candidate",
+    "q4_compact": "usable_baseline"
+  },
+  "status": "PASS",
+  "seed": 2026091161,
+  "source_start_sha256": {
+    "adaptive_coverage.py": "b0761fff91a020e0c5fb72362d573d3be9513de2150fc0de09cbff47217e9638",
+    "adaptive_strategy.py": "9a63c353d83e49ad8f2864daddb4691742a243e4e18f2af268a0d9646c5702f0",
+    "analyze.py": "002b521c3798ed73ea6e7515c9b4599bcaf594c0c51fe644baa2d05603ff457a",
+    "benchmark.py": "380b86fe42dc8f92d5151cab32a90ffa4390a6c81130816711e35cd7f7e9b173",
+    "benchmark_adaptive.py": "d9d3c2370bb07ea233d5e80de22bb62e7f0525dd31d78ab7a55b9b851b65b27d",
+    "benchmark_compact.py": "346b4eff15c420b61a4b6651951403d233d2cb382dbec0513d0738aaf5885f62",
+    "benchmark_service.py": "54b6fa3eff11e319d136a1d07d64633723f08ff058694e4ec7006164d7b217b7",
+    "compact_strategy.py": "db84050b933b1dab672f42e18f6b114f79076e835f7db789d779682e99186126",
+    "coverage.py": "79f6f55f44d984784eaaa8bfa8093cc9257fdf653b18743461c26a0d9cad024f",
+    "offline.py": "e1427774747cde69224a13b518433608d770349f60c2c55f9aff1164d06e589e",
+    "practice_adaptive.py": "cc90ea33a751014c6793bbd1ff498414752ac005ab1cc8be31318051c98c4427",
+    "service_geometry.py": "83adfde123979a2885cbdfaa985109a2df830113b2fc7d08f8ddc0d2dbd8db08",
+    "service_routes.py": "6b72aece08cdcaee72f22d64ddd6feba55b02a61870168bf54b000111b7a8488",
+    "service_strategy.py": "b6bebde8ff223a11a15c672a692f692d2c830fea38c4b9d230efbc6460ce272c",
+    "strategy.py": "05b8d1e967e6f43859310399e9efde3ed74f183656d72a3d2b4dc80cd64176f2",
+    "vendor_b2\\analyze_q2.py": "f7f18c43e3b48cdde3e4bb0a2bb4b1595f14effc2159da84c6572191fc354855",
+    "vendor_b2\\b3_strategy.py": "57879b5264be530bf52e2b126c0790bdae684990fc23a8807186409e505455d0",
+    "vendor_b2\\benchmark.py": "37f3f5cf8331ddf907e0251808947cfd2410ec12b87255e0ae03a133bfbb5ee9",
+    "vendor_b2\\fast_strategy.py": "dc33513defe9b521b3884137dd94b8a0a47fd2a0268ec78a2374af5f0f886074",
+    "vendor_b2\\flexible_b3.py": "34c6130450f1b4461bec52a8e88e7b661e87930b462b3fbec495d6df9a1f57b5",
+    "vendor_b2\\joint_strategy.py": "39e374b16fa16a660d319dfabb1b5d9db1189f4f0460dc62fa4cd684d777e932",
+    "vendor_b2\\localization_probe.py": "450a42b7c3f717ddcfc1da63e199caeb8c906c715d0fe7a465c4fd0bea6d2f37",
+    "vendor_b2\\negative_strategy.py": "7250a751925a6db3e51cf3e657fdad5c96ea271eb27fba8a28577a30d0eadbba",
+    "vendor_b2\\offline_environment.py": "d502210d97c2fee0ba56fa4685cfacd319a56db4668f8aaf46219da91e64748d",
+    "vendor_b2\\peripheral_prior.py": "e31186d53dffc030d68dc6463c882253e5b43eaad770b0315f8cc43a00b07f6b",
+    "vendor_b2\\q2_geometry.py": "142de65f75a6e21513e3df1a56497c7c21c7cb75b1fe0b98ba5f3394ad263607",
+    "vendor_b2\\q2_lookahead.py": "af6f26d38aa6df25c44f386d9a6eb1805ad31a5efd5ec630758a1cb8c4c361b7",
+    "vendor_b2\\q3_strategy.py": "e76ea7ec5b4248bb6775d94ac7efb59ced54bf086ba40967d097d23a3da12560",
+    "vendor_b2\\radius_coupling.py": "2be3424d660853ea85a3cbe97cce3f9d17d4a74d130e3bc9465014c73201c40c",
+    "vendor_b2\\route_search_probe.py": "928495487f4256b7396c663777f08844ce5cebde205fe78483ca9b2fd90ce426",
+    "vendor_b2\\route_tuning.py": "d788b4ad46b007f43ed68e5e2e77c70c6e5fdfb4d055bab9e270606bf55ab965",
+    "vendor_b2\\solver.py": "a1332ce990825c4aa38a3903d28a82bc692b3f42dad996c89a9e7f47b8873c7f",
+    "vendor_b2\\sweep_strategy.py": "2f48234450e30ff6e8391198f3c239fffdc6294d57a6aeccea1e650c0ebf51a4"
+  },
+  "source_end_sha256": {
+    "adaptive_coverage.py": "b0761fff91a020e0c5fb72362d573d3be9513de2150fc0de09cbff47217e9638",
+    "adaptive_strategy.py": "9a63c353d83e49ad8f2864daddb4691742a243e4e18f2af268a0d9646c5702f0",
+    "analyze.py": "002b521c3798ed73ea6e7515c9b4599bcaf594c0c51fe644baa2d05603ff457a",
+    "benchmark.py": "380b86fe42dc8f92d5151cab32a90ffa4390a6c81130816711e35cd7f7e9b173",
+    "benchmark_adaptive.py": "d9d3c2370bb07ea233d5e80de22bb62e7f0525dd31d78ab7a55b9b851b65b27d",
+    "benchmark_compact.py": "346b4eff15c420b61a4b6651951403d233d2cb382dbec0513d0738aaf5885f62",
+    "benchmark_service.py": "54b6fa3eff11e319d136a1d07d64633723f08ff058694e4ec7006164d7b217b7",
+    "compact_strategy.py": "db84050b933b1dab672f42e18f6b114f79076e835f7db789d779682e99186126",
+    "coverage.py": "79f6f55f44d984784eaaa8bfa8093cc9257fdf653b18743461c26a0d9cad024f",
+    "offline.py": "e1427774747cde69224a13b518433608d770349f60c2c55f9aff1164d06e589e",
+    "practice_adaptive.py": "cc90ea33a751014c6793bbd1ff498414752ac005ab1cc8be31318051c98c4427",
+    "service_geometry.py": "83adfde123979a2885cbdfaa985109a2df830113b2fc7d08f8ddc0d2dbd8db08",
+    "service_routes.py": "6b72aece08cdcaee72f22d64ddd6feba55b02a61870168bf54b000111b7a8488",
+    "service_strategy.py": "b6bebde8ff223a11a15c672a692f692d2c830fea38c4b9d230efbc6460ce272c",
+    "strategy.py": "05b8d1e967e6f43859310399e9efde3ed74f183656d72a3d2b4dc80cd64176f2",
+    "vendor_b2\\analyze_q2.py": "f7f18c43e3b48cdde3e4bb0a2bb4b1595f14effc2159da84c6572191fc354855",
+    "vendor_b2\\b3_strategy.py": "57879b5264be530bf52e2b126c0790bdae684990fc23a8807186409e505455d0",
+    "vendor_b2\\benchmark.py": "37f3f5cf8331ddf907e0251808947cfd2410ec12b87255e0ae03a133bfbb5ee9",
+    "vendor_b2\\fast_strategy.py": "dc33513defe9b521b3884137dd94b8a0a47fd2a0268ec78a2374af5f0f886074",
+    "vendor_b2\\flexible_b3.py": "34c6130450f1b4461bec52a8e88e7b661e87930b462b3fbec495d6df9a1f57b5",
+    "vendor_b2\\joint_strategy.py": "39e374b16fa16a660d319dfabb1b5d9db1189f4f0460dc62fa4cd684d777e932",
+    "vendor_b2\\localization_probe.py": "450a42b7c3f717ddcfc1da63e199caeb8c906c715d0fe7a465c4fd0bea6d2f37",
+    "vendor_b2\\negative_strategy.py": "7250a751925a6db3e51cf3e657fdad5c96ea271eb27fba8a28577a30d0eadbba",
+    "vendor_b2\\offline_environment.py": "d502210d97c2fee0ba56fa4685cfacd319a56db4668f8aaf46219da91e64748d",
+    "vendor_b2\\peripheral_prior.py": "e31186d53dffc030d68dc6463c882253e5b43eaad770b0315f8cc43a00b07f6b",
+    "vendor_b2\\q2_geometry.py": "142de65f75a6e21513e3df1a56497c7c21c7cb75b1fe0b98ba5f3394ad263607",
+    "vendor_b2\\q2_lookahead.py": "af6f26d38aa6df25c44f386d9a6eb1805ad31a5efd5ec630758a1cb8c4c361b7",
+    "vendor_b2\\q3_strategy.py": "e76ea7ec5b4248bb6775d94ac7efb59ced54bf086ba40967d097d23a3da12560",
+    "vendor_b2\\radius_coupling.py": "2be3424d660853ea85a3cbe97cce3f9d17d4a74d130e3bc9465014c73201c40c",
+    "vendor_b2\\route_search_probe.py": "928495487f4256b7396c663777f08844ce5cebde205fe78483ca9b2fd90ce426",
+    "vendor_b2\\route_tuning.py": "d788b4ad46b007f43ed68e5e2e77c70c6e5fdfb4d055bab9e270606bf55ab965",
+    "vendor_b2\\solver.py": "a1332ce990825c4aa38a3903d28a82bc692b3f42dad996c89a9e7f47b8873c7f",
+    "vendor_b2\\sweep_strategy.py": "2f48234450e30ff6e8391198f3c239fffdc6294d57a6aeccea1e650c0ebf51a4"
+  },
+  "inputs": [
+    "metrics/scenarios.json"
+  ],
+  "outputs": [
+    "tables/cases.csv"
+  ],
+  "scenario_sha256": "9d9377ec464992cc8a3f6971a899325d7013e3e02a8c6a69bc7c93f57f637be0",
+  "metrics": {
+    "all": {
+      "methods": {
+        "q4_compact": {
+          "cases": 28,
+          "passed": 28,
+          "sources": 364,
+          "cleared": 364,
+          "false_absent": 0,
+          "envelope_checks": 1383,
+          "envelope_violations": 0,
+          "total_runtime_s": 122.89079710002989,
+          "mean_runtime_s": 4.388957039286781,
+          "max_runtime_s": 5.5678171000035945,
+          "optical_cover_count": 0,
+          "mean_virtual_time_s": 6277.930212572269,
+          "mean_seconds_per_cleared": 499.33124907104855,
+          "mean_movement_m": 21359.29392000421,
+          "mean_measures": 323.89285714285717,
+          "mean_clear_failures": 2.142857142857143,
+          "mean_after_last_clear_s": 384.564445005049,
+          "p90_seconds_per_cleared": 668.6252244657518,
+          "max_seconds_per_cleared": 810.450766588719
+        },
+        "q4_service": {
+          "cases": 28,
+          "passed": 28,
+          "sources": 364,
+          "cleared": 364,
+          "false_absent": 0,
+          "envelope_checks": 1379,
+          "envelope_violations": 0,
+          "total_runtime_s": 125.14121460000752,
+          "mean_runtime_s": 4.469329092857412,
+          "max_runtime_s": 6.169808600003307,
+          "optical_cover_count": 0,
+          "mean_virtual_time_s": 6247.590044509708,
+          "mean_seconds_per_cleared": 496.7781536492797,
+          "mean_movement_m": 21124.557365405686,
+          "mean_measures": 326.75,
+          "mean_clear_failures": 2.0357142857142856,
+          "mean_after_last_clear_s": 395.2063498107219,
+          "p90_seconds_per_cleared": 682.3916209218374,
+          "max_seconds_per_cleared": 768.8368815921439
+        }
+      },
+      "paired": {
+        "faster": 22,
+        "slower": 6,
+        "improvement_percent": 0.5113029530033564
+      }
+    },
+    "mixed": {
+      "methods": {
+        "q4_compact": {
+          "cases": 20,
+          "passed": 20,
+          "sources": 263,
+          "cleared": 263,
+          "false_absent": 0,
+          "envelope_checks": 1062,
+          "envelope_violations": 0,
+          "total_runtime_s": 87.27931510002963,
+          "mean_runtime_s": 4.363965755001482,
+          "max_runtime_s": 5.5678171000035945,
+          "optical_cover_count": 0,
+          "mean_virtual_time_s": 6274.930907042532,
+          "mean_seconds_per_cleared": 490.8861953031739,
+          "mean_movement_m": 21062.404535212663,
+          "mean_measures": 333.5,
+          "mean_clear_failures": 2.2,
+          "mean_after_last_clear_s": 440.678946286831,
+          "p90_seconds_per_cleared": 651.0497129631229,
+          "max_seconds_per_cleared": 810.450766588719
+        },
+        "q4_service": {
+          "cases": 20,
+          "passed": 20,
+          "sources": 263,
+          "cleared": 263,
+          "false_absent": 0,
+          "envelope_checks": 1059,
+          "envelope_violations": 0,
+          "total_runtime_s": 89.71393350001017,
+          "mean_runtime_s": 4.485696675000509,
+          "max_runtime_s": 6.169808600003307,
+          "optical_cover_count": 0,
+          "mean_virtual_time_s": 6249.453592045893,
+          "mean_seconds_per_cleared": 488.74806365597317,
+          "mean_movement_m": 20835.267960229467,
+          "mean_measures": 336.9,
+          "mean_clear_failures": 2.2,
+          "mean_after_last_clear_s": 451.94151539990906,
+          "p90_seconds_per_cleared": 665.3684184126306,
+          "max_seconds_per_cleared": 768.8368815921439
+        }
+      },
+      "paired": {
+        "faster": 15,
+        "slower": 5,
+        "improvement_percent": 0.4355656499731464
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.5",
+    "numpy": "2.4.0"
+  },
+  "network_requests": 0,
+  "formal_tests_used": 0,
+  "warnings": [
+    "Synthetic cases, not official simulator distribution"
+  ],
+  "completed_at": "2026-09-11T12:49:19.043863+00:00"
+}

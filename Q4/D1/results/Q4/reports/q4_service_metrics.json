@@ -1,0 +1,89 @@
+{
+  "mixed": {
+    "cases": 40,
+    "baseline": 494.1864237028909,
+    "main": 490.0454409805142,
+    "improvement_percent": 0.8379393936702617,
+    "faster": 32,
+    "slower": 8
+  },
+  "all": {
+    "cases": 56,
+    "baseline": 501.5735876830896,
+    "main": 498.3445945449858,
+    "improvement_percent": 0.6437725624707347,
+    "faster": 46,
+    "slower": 10
+  },
+  "mechanisms": {
+    "service_attempts": 1109.0,
+    "service_accepts": 814.0,
+    "clear_adjustments": 592.0,
+    "local_leg_saving_m": 11910.746829178492,
+    "exact_route_calls": 1218.0
+  },
+  "family": {
+    "all_directional_stress": {
+      "cases": 8,
+      "baseline": 558.5487459716333,
+      "main": 552.0685099848315,
+      "improvement_percent": 1.1601916634024323,
+      "faster": 7,
+      "slower": 1
+    },
+    "all_omni_regression": {
+      "cases": 8,
+      "baseline": 481.53424929553944,
+      "main": 486.1164469274979,
+      "improvement_percent": -0.9515829120487318,
+      "faster": 7,
+      "slower": 1
+    },
+    "boundary_outward": {
+      "cases": 8,
+      "baseline": 660.8456948870223,
+      "main": 659.6532914282149,
+      "improvement_percent": 0.18043598801249505,
+      "faster": 4,
+      "slower": 4
+    },
+    "narrow_sector": {
+      "cases": 8,
+      "baseline": 364.17625916391046,
+      "main": 354.9028907852872,
+      "improvement_percent": 2.5463956381762576,
+      "faster": 7,
+      "slower": 1
+    },
+    "tangent_heading": {
+      "cases": 8,
+      "baseline": 444.46799215192004,
+      "main": 441.5003539298027,
+      "improvement_percent": 0.6676832245555708,
+      "faster": 8,
+      "slower": 0
+    },
+    "two_clusters": {
+      "cases": 8,
+      "baseline": 453.351445987497,
+      "main": 451.50170644078173,
+      "improvement_percent": 0.4080144803963681,
+      "faster": 6,
+      "slower": 2
+    },
+    "uniform_mixed": {
+      "cases": 8,
+      "baseline": 548.0907263241045,
+      "main": 542.6689623184847,
+      "improvement_percent": 0.9892092212510306,
+      "faster": 7,
+      "slower": 1
+    }
+  },
+  "worst_mixed_regression": {
+    "case": "2026091183_008_boundary_outward",
+    "extra_seconds_per_source": 19.68392921004147
+  },
+  "average_runtime_s": 4.494138242857583,
+  "peak_runtime_s": 6.169808600003307
+}
