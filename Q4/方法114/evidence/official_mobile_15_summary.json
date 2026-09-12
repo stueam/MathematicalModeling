@@ -1,0 +1,209 @@
+{
+  "cases": 15,
+  "complete": 15,
+  "source_count_total": 194,
+  "directional_count_total": 106,
+  "zero_omnidirectional_cases": 1,
+  "zero_directional_cases": 0,
+  "virtual_time_s": {
+    "mean": 7814.029032533333,
+    "median": 7909.306089,
+    "p90": 8518.983847,
+    "p95": 8636.0497155,
+    "min": 6571.342303,
+    "max": 8902.89142
+  },
+  "movement_m": {
+    "mean": 25722.145162666668,
+    "median": 25614.6307,
+    "p90": 27631.270098999998,
+    "p95": 28202.268612999997,
+    "min": 23281.711515000006,
+    "max": 28458.444924999996
+  },
+  "real_time_s": {
+    "mean": 7.950272857133344,
+    "median": 7.34871107500021,
+    "p90": 10.281809535800129,
+    "p95": 11.012526039600015,
+    "min": 6.7061798879999515,
+    "max": 11.287636820999978
+  },
+  "planning_time_s": {
+    "mean": 7.179057990532268,
+    "median": 6.743345825993856,
+    "p90": 9.4661357666002,
+    "p95": 10.069621549000932,
+    "min": 5.976060176993542,
+    "max": 10.156950399002199
+  },
+  "mean_measurements": 440.1333333333333,
+  "per_source_pooled_s": 604.177502515464,
+  "costs_mean_s": {
+    "move_s": 5144.429032533333,
+    "switch_s": 402.46666666666664,
+    "measure_s": 2200.6666666666665,
+    "clear_success_s": 64.66666666666667,
+    "clear_failure_s": 1.8
+  },
+  "cost_fractions": {
+    "move_s": 0.6583580648491004,
+    "switch_s": 0.05150565284452055,
+    "measure_s": 0.28163021374815694,
+    "clear_success_s": 0.008275713642402673,
+    "clear_failure_s": 0.00023035491581945583
+  },
+  "phases": {
+    "search": {
+      "mean_s": 5288.2856184,
+      "fraction": 0.6767681046976506,
+      "mean_movement_m": 15854.761424117094,
+      "mean_actions": 356.93333333333334,
+      "costs_mean_s": {
+        "move_s": 3170.952285066667,
+        "switch_s": 332.6666666666667,
+        "measure_s": 1784.6666666666667,
+        "clear_success_s": 0.0,
+        "clear_failure_s": 0.0
+      }
+    },
+    "localize_clear": {
+      "mean_s": 1355.5617624,
+      "fraction": 0.1734779531476251,
+      "mean_movement_m": 5794.808808980291,
+      "mean_actions": 36.266666666666666,
+      "costs_mean_s": {
+        "move_s": 1158.9617623999998,
+        "switch_s": 16.466666666666665,
+        "measure_s": 113.66666666666667,
+        "clear_success_s": 64.66666666666667,
+        "clear_failure_s": 1.8
+      }
+    },
+    "completion_tail": {
+      "mean_s": 1170.1816517333334,
+      "fraction": 0.14975394215472435,
+      "mean_movement_m": 4072.574926996926,
+      "mean_actions": 60.46666666666667,
+      "costs_mean_s": {
+        "move_s": 814.5149850666668,
+        "switch_s": 53.333333333333336,
+        "measure_s": 302.3333333333333,
+        "clear_success_s": 0.0,
+        "clear_failure_s": 0.0
+      }
+    }
+  },
+  "stats_totals": {
+    "max_cost_error_s": 0,
+    "search_s": 96877.00905200001,
+    "search_movement_m": 298910.0452667102,
+    "reason:station_batch": 5623,
+    "planning_s": 107.68586985798402,
+    "moving_actions": 952,
+    "outside_domain_actions": 2728,
+    "completion_mode_actions": 0,
+    "search_measurements": 6261,
+    "repeated_measurements": 0,
+    "feedback:no_signal": 6135,
+    "eventually_absent_measurements": 4663,
+    "eventually_absent_operation_s": 27591,
+    "feedback:direction": 464,
+    "discoveries_at_origin": 71,
+    "reason:joint_route": 1119,
+    "long_move_m": 360205.69462225784,
+    "long_move_s": 72041.13892445157,
+    "root_route_decisions": 1119,
+    "root_route_exact_decisions": 276,
+    "survey_route_nodes": 28506,
+    "source_route_nodes": 3980,
+    "localize_clear_s": 20333.426436,
+    "localize_clear_movement_m": 86922.13213470437,
+    "localize_clear_measurements": 341,
+    "reason:shared_station_replacement": 56,
+    "reason:guaranteed_clear": 7,
+    "search_sites": 653,
+    "search_sites_outside_domain": 317,
+    "after_last_clear_s": 17552.724776,
+    "after_last_clear_actions": 907,
+    "feedback:near": 3
+  },
+  "counters_totals": {
+    "quadrature_fallbacks": 0,
+    "finite_clears": 0,
+    "shared_replacements": 56,
+    "station_moves": 595,
+    "certificate_reviews": 1273,
+    "exact_route_calls": 1530,
+    "heuristic_route_calls": 5006
+  },
+  "max_clock_error_s": 0,
+  "http_retries_or_errors": 0,
+  "recovered_evaluations": [
+    "766S-UZDZ-AFP3-CV3A"
+  ],
+  "by_source_count": {
+    "10": {
+      "cases": 1,
+      "mean_virtual_s": 8393.581765,
+      "mean_tail_s": 2244.083268000001,
+      "mean_measurements": 514.0
+    },
+    "11": {
+      "cases": 3,
+      "mean_virtual_s": 8399.823214333333,
+      "mean_tail_s": 1720.6599406666664,
+      "mean_measurements": 515.3333333333334
+    },
+    "12": {
+      "cases": 1,
+      "mean_virtual_s": 7909.306089,
+      "mean_tail_s": 1277.5381529999995,
+      "mean_measurements": 465.0
+    },
+    "13": {
+      "cases": 4,
+      "mean_virtual_s": 7737.3917185,
+      "mean_tail_s": 1196.0360887499999,
+      "mean_measurements": 413.75
+    },
+    "14": {
+      "cases": 4,
+      "mean_virtual_s": 7736.90423625,
+      "mean_tail_s": 796.2229787500003,
+      "mean_measurements": 437.75
+    },
+    "15": {
+      "cases": 1,
+      "mean_virtual_s": 7239.551869,
+      "mean_tail_s": 900.0872630000003,
+      "mean_measurements": 360.0
+    },
+    "16": {
+      "cases": 1,
+      "mean_virtual_s": 6571.342303,
+      "mean_tail_s": 0.0,
+      "mean_measurements": 311.0
+    }
+  },
+  "exact_root_route_fraction": 0.24664879356568364,
+  "mean_root_route_nodes": 29.036753665255087,
+  "clear_point_geometry_references": {
+    "fixed_clear_points_actual_order_m": 11967.29708808298,
+    "fixed_clear_points_exact_order_m": 8865.404197455431,
+    "fixed_clear_points_order_gap_m": 3101.892890627553
+  },
+  "tail_counterfactual": {
+    "cases": 15,
+    "complete_certificates": 15,
+    "exact_original_suffix_route_cases": 14,
+    "mean_actual_s": 1170.1816517333332,
+    "mean_reordered_s": 1170.1816517333332,
+    "mean_pruned_s": 1036.7028102,
+    "mean_reordering_saved_s": 0.0,
+    "mean_pruning_additional_saved_s": 133.4788415333335,
+    "mean_original_sites": 7.933333333333334,
+    "mean_pruned_sites": 5.466666666666667,
+    "note": "Offline recorded negative-only suffixes. Same fixed-location feedback; all final public certificates rebuilt. Not live-policy performance."
+  }
+}

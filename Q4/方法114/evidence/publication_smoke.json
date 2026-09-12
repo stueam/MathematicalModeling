@@ -1,0 +1,26 @@
+{
+  "seed": 800,
+  "policy": "probes",
+  "implementation": "q4_v4_ring22_route_probes",
+  "source_and_release_actions_identical": true,
+  "source_and_release_public_feedback_identical_except_wall_clock": true,
+  "source_and_release_world_identical": true,
+  "compared_actions": 290,
+  "source_count": 10,
+  "cleared_count": 10,
+  "certified_complete": true,
+  "virtual_time_s": 5667.875379,
+  "movement_m": 19794.376871739496,
+  "measure_count": 279,
+  "failed_clears": 1,
+  "costs": {
+    "move_s": 3958.8753789999987,
+    "switch_s": 261.0,
+    "measure_s": 1395.0,
+    "clear_success_s": 50.0,
+    "clear_failure_s": 3.0
+  },
+  "release_real_time_s": 4.000815053999759,
+  "source_real_time_s": 4.18559669699971,
+  "scope": "Current source versus publication under the same environment; not a reproduction of the historical 16-world batch."
+}
