@@ -128,7 +128,7 @@ $j,k=1,\ldots,m$ 表示多边形顶点；坐标分量用下标 $x,y$ 区分。
 
 
 
-本问的定位多边形指全部示向约束形成的楔形交集，不叠加距离或圆形活动范围的裁剪；
+本问的定位区域指全部示向约束形成的交集，在区域非空、有界且具有非空内部时，为凸多边形。不叠加距离或圆形活动范围的裁剪；
 若加入这些约束，边界可能含有圆弧，需另行处理。
 示向度误差为 $\pm1^\circ$，因此干扰源应在 $\theta_i-\varepsilon$ 与
 $\theta_i+\varepsilon$ 两条射线夹成的楔形内。直接比较角度需要处理跨越 $0^\circ$ 的情况，
@@ -140,7 +140,7 @@ $\theta_i+\varepsilon$ 两条射线夹成的楔形内。直接比较角度需要
     \boldsymbol n_i^+&=\bigl(\sin(\theta_i+\varepsilon),\ -\cos(\theta_i+\varepsilon)\bigr)^{\mathsf T}.
   \end{aligned}
 \]
-这两个单位法向量分别朝向各自边界包含楔形的那一侧，于是
+这两个单位法向量均指向楔形内侧，于是
 \begin{equation}
   W_i=\left\{\boldsymbol x\in\mathbb R^2:
   (\boldsymbol n_i^-)^{\mathsf T}(\boldsymbol x-\boldsymbol p_i)\geq0,\quad
@@ -150,28 +150,18 @@ $\theta_i+\varepsilon$ 两条射线夹成的楔形内。直接比较角度需要
 
 
 式~\eqref{eq:q1-wedge} 中，$\boldsymbol x-\boldsymbol p_i$ 是从检测点指向待判断位置的向量，
-它与单位法向量的内积，就是沿该法向量的投影，也就是到边界直线的有向距离。
-\textbf{内积为正时，点在朝向楔形内部的一侧；为零时在边界上；为负时在外侧。}
-两项必须同时非负，才能说明该点位于两条射线之间。
-例如，沿示向方向前进距离 $t>0$，两项内积都为 $t\sin\varepsilon>0$；
-若反向移动，则两项均为负。因此，该判据也排除了检测点后方的区域。
+它与单位法向量$\boldsymbol n_i^-$的内积，就是到边界直线的有向距离，当且仅当两项同时非负说明该点位于闭楔形区域内。
 
 
 
 
-将每次检测的两个约束合并，可得
+综合全部检测结果，定位区域为
 \begin{equation}
-  P=\bigcap_{i=1}^{n}W_i=\{\boldsymbol x:H\boldsymbol x\leq\boldsymbol g\}.
+  P=\bigcap_{i=1}^{n}W_i.
   \label{eq:q1-intersection}
 \end{equation}
-矩阵 $H$ 的第 $2i-1,2i$ 行分别为 $-(\boldsymbol n_i^-)^{\mathsf T}$、
-$-(\boldsymbol n_i^+)^{\mathsf T}$，$\boldsymbol g$ 的对应分量为这两行与 $\boldsymbol p_i$ 的乘积。
-对任意 $\boldsymbol x,\boldsymbol y\in P$ 及 $\lambda\in[0,1]$，有
-\[
-  H\bigl(\lambda\boldsymbol x+(1-\lambda)\boldsymbol y\bigr)
-  \leq\lambda\boldsymbol g+(1-\lambda)\boldsymbol g=\boldsymbol g.
-\]
-因此两点间的整条线段仍在 $P$ 内，故 $P$ 为凸集，这也是交集保凸性的直接体现。
+如图~\ref{fig:q1-wedges} 所示，多次测向分别形成楔形约束，其共同部分构成定位区域。
+每个 $W_i$ 均为两个闭半平面的交集，因此 $P$ 为闭凸集。
 下文先讨论 $P$ 非空、有界且内部非空的情形，此时它是凸多边形。
 由有界多面体的顶点表示定理\cite{boyd2004convex}，
 $P=\operatorname{conv}(V)$，其中 $V=\{\boldsymbol v_1,\ldots,\boldsymbol v_m\}$ 为全部顶点集合，
@@ -190,26 +180,19 @@ $\operatorname{conv}(V)$ 表示顶点所有凸组合构成的集合。
 
 \label{sec:q1-filter}
 \label{sec:q1-polygon}
-求取多边形时，最直接的办法是\textbf{枚举边界交点}。
-将 $2n$ 条边界射线所在的直线作为候选边界，仅对不平行的直线求交，
-再用式~\eqref{eq:q1-intersection} 的全部约束筛选；平行或重合直线不作为唯一交点的来源。
-保留点去重后求凸包，得到按逆时针排列的顶点，无须额外判断射线参数。
-记保留点集为 $S_{\mathrm f}$。每个多边形顶点至少位于两条不平行的活跃边界上
-（即对应不等式在该点取等号），否则该点可沿边界方向向两侧移动而仍保持可行，不能成为顶点。
-因此枚举不会遗漏顶点，且筛选保证 $V\subseteq S_{\mathrm f}\subseteq P$，从而
-\[
-  P=\operatorname{conv}(V)\subseteq\operatorname{conv}(S_{\mathrm f})\subseteq P.
-\]
-这证明所得凸包恰好是完整定位区域。候选交点为 $O(n^2)$ 个，每点检查 $2n$ 个约束，
-连同去重和凸包计算，区域构造复杂度为 $O(n^3)$。
+求解前先进行区域状态预检：以线性规划检查全部半平面约束是否可行；对非空区域，
+根据单位法向量是否位于同一闭半圆判别无界性，位于同一闭半圆时存在无界方向。
+对有界区域，再通过线性规划求最大内切圆半径，按数值容差区分二维区域与退化区域。
+当前算例主流程仅处理非空有界二维区域，特殊状态另行测试；下述复杂度仅计区域构造，不含状态预检。
 
-另一种办法是直接求\textbf{半平面交}。先将边界统一为可行半平面位于左侧的有向直线，
-按方向角排序，同向平行边界仅保留较严格者；再用双端队列维护有效边界。
-加入新约束时，删除队首或队尾使相邻交点落在新半平面外侧的边界，最后检查首尾闭合。
-排序耗时 $O(n\log n)$，每条边界至多入队、出队一次，故区域构造复杂度为 $O(n\log n)$。
-交点枚举便于逐项检查约束，半平面交降低构造阶段的渐近复杂度；两者基于同一模型，结果比较用于核对实现。
+求取多边形时，我们主要采用半平面交算法构造定位区域。对于非空、有界的二维交集，将边界按方向角排序，同向平行约束仅保留较严格者，
+再用双端队列维护有效边界，由相邻边界交点得到多边形顶点。排序耗时为 $O(n\log n)$，
+每条边界至多入队、出队一次，故区域构造复杂度为 $O(n\log n)$。
 
-算法还需识别区域状态：空集表示约束不相容，非空无界区域没有有限直径；
+另可用边界交点枚举法核验：枚举不平行边界的交点，筛选满足全部约束的点后求凸包。
+该方法不会遗漏多边形顶点，复杂度为 $O(n^3)$。
+
+对于定位区域$P$的其他情况：空集表示观测约束不相容，应检查输入数据及误差设定;非空无界区域没有有限直径；
 退化为点或有界线段时，直径分别为零或线段长度。
 不能仅凭没有找到交点判断为空，也不能以人为边框将无界区域当成有界多边形。
 
@@ -219,8 +202,7 @@ $\operatorname{conv}(V)$ 表示顶点所有凸组合构成的集合。
 
 
 
-
-区域直径描述仍与观测相容的任意两个位置之间的最大距离。
+得到定位多边形的全部顶点后，进一步计算区域直径，即区域内任意两点之间的最大距离。
 由于 $P$ 是闭且有界的非空多边形，该最大值能够取得。
 
 \noindent\textbf{命题1（顶点直径）}\quad 定位多边形的直径可由一对顶点取得，即
@@ -231,7 +213,7 @@ $\operatorname{conv}(V)$ 表示顶点所有凸组合构成的集合。
 \end{equation}
 \noindent\textbf{证明：}由 $P=\operatorname{conv}(V)$，任意 $\boldsymbol x,\boldsymbol y\in P$ 均可写成顶点的凸组合
 $\boldsymbol x=\sum_j\alpha_j\boldsymbol v_j$、$\boldsymbol y=\sum_k\beta_k\boldsymbol v_k$，
-其中权重非负且各自的和为 $1$。由三角不等式，
+其中系数均非负，且 $\sum_j\alpha_j=\sum_k\beta_k=1$。利用系数和为 $1$ 及三角不等式，有
 \[
   \|\boldsymbol x-\boldsymbol y\|_2
   =\left\|\sum_{j,k}\alpha_j\beta_k(\boldsymbol v_j-\boldsymbol v_k)\right\|_2
@@ -240,16 +222,18 @@ $\boldsymbol x=\sum_j\alpha_j\boldsymbol v_j$、$\boldsymbol y=\sum_k\beta_k\bol
 \]
 又因顶点本身属于 $P$，等号可以由一对最远顶点取得。
 因此，无须对区域内部进行空间采样，枚举顶点对即可在 $O(m^2)$ 时间内求出 $D$，
-并记录对应端点 $\boldsymbol a,\boldsymbol b$。该化简消除了空间网格近似，但计算仍受浮点精度影响。
+并记录对应端点 $\boldsymbol a,\boldsymbol b$，用于下一节的直径圆覆盖判断。
+该化简消除了空间网格近似，但计算仍受浮点精度影响。
 
 
-\subsubsection{圆的覆盖}
+\subsubsection{直径圆覆盖判定}
 \label{sec:q1-cover-counterexample}
 \label{sec:q1-cover-condition}
 
 
 
 
+已知区域直径 \(D\)，进一步判断是否存在半径为 \(D/2\) 的圆盘覆盖整个定位区域。
 下文所称覆盖圆均指包含内部及边界的闭圆盘，记
 $B(\boldsymbol c,r)=\{\boldsymbol x:\|\boldsymbol x-\boldsymbol c\|_2\leq r\}$。
 取直径端点 $\boldsymbol a,\boldsymbol b$，记其中点为 $\boldsymbol c_D=(\boldsymbol a+\boldsymbol b)/2$。
@@ -266,7 +250,8 @@ $B(\boldsymbol c,r)=\{\boldsymbol x:\|\boldsymbol x-\boldsymbol c\|_2\leq r\}$�
 任取一条边，其对顶点到该边中点的距离为 $\sqrt{3}D/2>D/2$。
 结合圆心唯一性可知，不存在半径为 $D/2$ 的圆盘覆盖该三角形。
 图~\ref{fig:q1-cover-cases} 给出了三个检测点的楔形交形成三角形时，不能覆盖与可以覆盖的两种情形，
-各楔形张角均为 $2^\circ$。
+各楔形张角均为 $2^\circ$。构造时，使三条楔形边界分别支撑三角形的三条边，其余边界均不切入三角形内部，故交集恰为该三角形。
+测点坐标、示向度及交集顶点见支撑材料 \path{data/q1_cover_cases/q1_cover_cases.json}。
 
 
 \begin{figure}[htbp]
@@ -290,21 +275,30 @@ $B(\boldsymbol c,r)=\{\boldsymbol x:\|\boldsymbol x-\boldsymbol c\|_2\leq r\}$�
 全部顶点均满足距离条件。反之，若全部顶点都在该圆盘内，由圆盘的凸性及
 $P=\operatorname{conv}(V)$，整个多边形也在其中，充分性成立。
 
+为说明浮点计算下的判定方式，定义覆盖超差
+\[
+  \delta=\max_{1\leq j\leq m}\|\boldsymbol v_j-\boldsymbol c_D\|_2-D/2.
+\]
+理论判据为 $\delta\leq0$；现有米制坐标实现采用绝对距离容差 $\tau=10^{-8}\,\mathrm m$，
+当 $\delta\leq\tau$ 时报告在该容差内满足覆盖判据。该容差用于浮点计算，不表示测量误差或实际定位精度。
+
 因此无须搜索圆心，得到任一对直径端点后，用 $O(m)$ 时间检查全部顶点即可完成判定。
 点和有界线段分别可由零半径圆盘和以该线段为直径的圆盘覆盖。
-采用半平面交、顶点对枚举和上述判据时，区域构造、直径计算与覆盖判断的总复杂度为
-$O(n\log n+m^2)$；此处不包括下面作为补充的最小覆盖圆计算。
+对已确认的非空有界二维区域，采用半平面交、顶点对枚举和上述判据时，
+区域构造、直径计算与覆盖判断的总复杂度为 $O(n\log n+m^2)$，不含状态预检及最小覆盖圆计算。
 
-为描述不能由直径圆覆盖时所需的尺度，定义最小覆盖圆半径
+在真实源位于 $P$ 的前提下，以 $\boldsymbol c$ 作为位置估计时，最坏情况误差为
+$\max_{\boldsymbol x\in P}\|\boldsymbol x-\boldsymbol c\|_2$。选择使该误差最小的位置，得到最小覆盖圆半径
 \begin{equation}
-  R_*=\min_{\boldsymbol c\in\mathbb R^2}\max_j\|\boldsymbol v_j-\boldsymbol c\|_2
-  \geq D/2.
+  R_*=\min_{\boldsymbol c\in\mathbb R^2}
+      \max_{\boldsymbol x\in P}\|\boldsymbol x-\boldsymbol c\|_2.
   \label{eq:q1-minimum-circle}
 \end{equation}
-下界由任一覆盖圆必须包含直径两端点得到，等号成立当且仅当式~\eqref{eq:q1-cover-test} 成立。
-有限点集的最小覆盖圆由至多三个边界点确定：非退化时由两点作为直径端点，
-或由三个不共线点确定外接圆。因此算例枚举不同两点的直径圆及不共线三点的外接圆，
-在包含全部顶点的候选圆中取半径最小者；单点情形取零半径。
+因此，$D$ 描述两个可行位置之间的最大跨度，$R_*$ 则表示选择单个位置作为估计时能够达到的最小最坏情况误差。
+第二问据此采用 $R_*$ 衡量定位效果，并比较不同候选检测点的期望覆盖半径。
+
+任一覆盖圆均须包含直径两端点，故 $R_*\geq D/2$，等号成立当且仅当式~\eqref{eq:q1-cover-test} 成立。
+计算时，枚举顶点对的直径圆与不共线顶点三元组的外接圆，在覆盖全部顶点的候选圆中取半径最小者；单点情形取零半径。
 
 
 \subsubsection{算例检验}
