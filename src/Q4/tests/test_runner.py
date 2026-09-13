@@ -40,3 +40,27 @@ def test_s21_launcher_modes_cannot_conflict():
     with pytest.raises(SystemExit) as error:
         main(['--self-test', '--connect'])
     assert error.value.code == 2
+
+
+def test_certificate_cli_resolves_default_independently_of_cwd(tmp_path):
+    result = subprocess.run(
+        [sys.executable, str(ROOT / 'check_s21_certificate.py')],
+        cwd=tmp_path,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr
+    certificate = json.loads(result.stdout)
+    assert certificate['passed'] and certificate['boundary_covered']
+    assert certificate['verified_cells'] == 3832
+
+
+def test_practice_journal_preserves_coordinates_matching_team_digits(tmp_path):
+    from practice_windows import LoggedSession
+
+    with LoggedSession(tmp_path, '12345') as session:
+        session.record({'request': {'robot_id': '12345', 'position': {'x': 12.12345, 'y': 0.0}}})
+    record = json.loads((tmp_path / 'http-attempts.jsonl').read_text())
+    assert record['request']['robot_id'] == '<已隐去>'
+    assert record['request']['position'] == {'x': 12.12345, 'y': 0.0}

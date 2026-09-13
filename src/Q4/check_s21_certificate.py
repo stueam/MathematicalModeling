@@ -79,9 +79,7 @@ def verify(path):
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
-    ap.add_argument(
-        'certificate', nargs='?', default=str(Path(__file__).parent / 'proofs' / 's21_certificate.json')
-    )
+    ap.add_argument('certificate', nargs='?', default=str(Path(__file__).parent / 's21_certificate.json'))
     ap.add_argument('--output')
     a = ap.parse_args()
     r = verify(a.certificate)

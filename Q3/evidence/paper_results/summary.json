@@ -1,0 +1,27 @@
+{
+  "random": {
+    "cases": 40,
+    "sources": 545,
+    "complete": 40,
+    "move_s_per_source": 161.51063733944952,
+    "total_s_per_source": 216.00971990825687,
+    "batch": "20260911-192929-110364",
+    "source_sha256": "ed73e5d61c2bb1ead0de20c45953b09a70fd16be8c26163f721bae943686f9ea"
+  },
+  "stress": {
+    "cases": 24,
+    "sources": 312,
+    "complete": 24,
+    "move_s_per_source": 149.0376864647436,
+    "total_s_per_source": 207.45755825961538,
+    "batch": "20260911-193444-954565",
+    "source_sha256": "803409ddbcc8a243463333743a9b0cdab8b98903d5165dd477c75595853af094"
+  },
+  "oracle": {
+    "cases": 100000,
+    "move_s_per_source": 136.5153344221223,
+    "move_and_clear_s_per_source": 141.5153344221223,
+    "source_sha256": "15d21dcad7ab65bfefa9265ab9a1d500b17dacb2ae71ab72a2a7aad32761fb8e"
+  },
+  "random_minus_oracle_s_per_source": 74.49438548613458
+}

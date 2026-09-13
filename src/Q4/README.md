@@ -9,6 +9,7 @@
 ```bash
 python -m pip install -r requirements.txt
 python start_s21.py --self-test
+python check_s21_certificate.py
 python run.py local --seed 800
 python run.py reproduce --workers 4
 ```

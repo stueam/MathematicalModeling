@@ -132,6 +132,7 @@ def main():
     try:
         report['imports'] = {question: import_audit(ROOT / question) for question in QUESTIONS}
         run('lint', ['-m', 'ruff', 'check', '.'])
+        run('format', ['-m', 'ruff', 'format', '--check', *code])
         run('unused', ['-m', 'vulture', *QUESTIONS, '--exclude', 'results,.venv', '--min-confidence', '100'])
         for question in QUESTIONS:
             run(f'{question}-tests', ['-m', 'pytest', '-q'], ROOT / question)
@@ -143,10 +144,27 @@ def main():
             )
         run('Q3-local', ['run.py', 'local', '--seed', '0', '--output', output / 'Q3-local'], ROOT / 'Q3')
         run('Q4-coverage', ['start_s21.py', '--self-test'], ROOT / 'Q4')
+        run('Q4-certificate-cli', ['check_s21_certificate.py'], ROOT / 'Q4')
         run('Q4-local', ['run.py', 'local', '--seed', '800', '--output', output / 'Q4-local'], ROOT / 'Q4')
         for question in ('Q3', 'Q4'):
             run(f'{question}-formal-help', ['start_formal.py', '--help'], ROOT / question)
             run(f'{question}-practice-help', ['practice_windows.py', '--help'], ROOT / question)
+        paper_import = ROOT.parent / 'essay/data/q3_execution_case/prepare_case.py'
+        paper_results = ROOT.parent / 'Q3/evidence/paper_results/verify.py'
+        integrations = [
+            ('Q3-figure-import', paper_import, ['--run-dir', output / 'Q3-local', '--check']),
+            ('Q3-paper-results', paper_results, ['--paper', ROOT.parent / 'essay/essay.tex']),
+        ]
+        report['skipped_integrations'] = []
+        report['integration_sha256'] = {}
+        for label, script, arguments in integrations:
+            if script.is_file():
+                report['integration_sha256'][str(script.relative_to(ROOT.parent))] = hashlib.sha256(
+                    script.read_bytes()
+                ).hexdigest()
+                run(label, [script, *arguments])
+            else:
+                report['skipped_integrations'].append(label)  # Standalone src copies remain supported.
         report['status'] = 'passed'
     except (OSError, RuntimeError, subprocess.TimeoutExpired) as error:
         report.update(status='failed', error=str(error))

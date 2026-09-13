@@ -1,4 +1,5 @@
-# Numerical routines extracted unchanged from ../q1_n10_geometry/generate.py.
+# Numerical routines extracted unchanged from essay/data/q1_n10_geometry/generate.py
+# in Git commit 0056aff; that unused historical figure is no longer in the current tree.
 from collections import deque
 import numpy as np
 TOL = 1e-8

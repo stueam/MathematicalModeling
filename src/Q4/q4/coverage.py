@@ -1,4 +1,5 @@
 """Inner exclusion certificates for half-disk emitters, independently by channel."""
+
 from functools import lru_cache
 from itertools import combinations
 
@@ -8,8 +9,12 @@ from shapely.geometry import MultiPoint, Polygon
 
 from .shared import disk, distance
 
-DIAGNOSTICS = {'invalid_pieces_omitted': 0, 'union_retries': 0, 'union_pieces_omitted': 0,
-               'candidate_certificate_errors': 0}
+DIAGNOSTICS = {
+    'invalid_pieces_omitted': 0,
+    'union_retries': 0,
+    'union_pieces_omitted': 0,
+    'candidate_certificate_errors': 0,
+}
 
 
 def safe_union(pieces):
@@ -43,8 +48,7 @@ def safe_union(pieces):
 
 def square_stations():
     """The outer domain fits inside this grid; each cell diagonal < 1000 m."""
-    return tuple((float(x), float(y)) for x in range(-2100, 2101, 700)
-                 for y in range(-2100, 2101, 700))
+    return tuple((float(x), float(y)) for x in range(-2100, 2101, 700) for y in range(-2100, 2101, 700))
 
 
 @lru_cache(maxsize=4096)
@@ -78,8 +82,11 @@ def triangle_exclusion(points):
 @lru_cache(maxsize=256)
 def added_exclusion(new, old):
     close = [p for p in old if distance(p, new) < 2000]
-    pieces = [triangle_exclusion(tuple(sorted((new, a, b))))
-              for a, b in combinations(close, 2) if distance(a, b) < 2000]
+    pieces = [
+        triangle_exclusion(tuple(sorted((new, a, b))))
+        for a, b in combinations(close, 2)
+        if distance(a, b) < 2000
+    ]
     return safe_union(pieces)
 
 

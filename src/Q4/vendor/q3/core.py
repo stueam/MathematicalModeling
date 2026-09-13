@@ -1,4 +1,5 @@
 """Public types and conservative geometry. No simulator truth is imported here."""
+
 from dataclasses import dataclass, field
 import math
 import copy
@@ -31,13 +32,14 @@ class Action:
             raise ValueError('Only measure and clear are physical actions')
         if type(self.channel) is not int or not 1 <= self.channel <= 20:
             raise ValueError('Invalid channel')
-        if len(self.position) != 2 or any(not math.isfinite(x) or abs(x) > 2e6
-                                          for x in self.position):
+        if len(self.position) != 2 or any(not math.isfinite(x) or abs(x) > 2e6 for x in self.position):
             raise ValueError('Invalid position')
 
     def payload(self):
-        return {'position': {'x': float(self.position[0]), 'y': float(self.position[1])},
-                'channel': self.channel}
+        return {
+            'position': {'x': float(self.position[0]), 'y': float(self.position[1])},
+            'channel': self.channel,
+        }
 
 
 @dataclass(frozen=True)
@@ -60,8 +62,13 @@ DOMAIN = disk((0, 0), 1800, outer=True)
 def bearing_wedge(p, angle):
     th, eps = math.radians(angle), math.radians(EPS_DEG)
     reach = 4000  # Beyond the allowed 1500 m receiving disk, including outer error.
-    return Polygon([p, (p[0] + reach * math.cos(th-eps), p[1] + reach * math.sin(th-eps)),
-                    (p[0] + reach * math.cos(th+eps), p[1] + reach * math.sin(th+eps))])
+    return Polygon(
+        [
+            p,
+            (p[0] + reach * math.cos(th - eps), p[1] + reach * math.sin(th - eps)),
+            (p[0] + reach * math.cos(th + eps), p[1] + reach * math.sin(th + eps)),
+        ]
+    )
 
 
 def region_summary(p):
@@ -69,7 +76,7 @@ def region_summary(p):
         raise ValueError('Cannot summarize empty region')
     circle = shapely.minimum_bounding_circle(p)
     x0, y0, x1, y1 = circle.bounds
-    center = ((x0+x1)/2, (y0+y1)/2)
+    center = ((x0 + x1) / 2, (y0 + y1) / 2)
     vertices = shapely.get_coordinates(p.convex_hull)
     radius = float(np.linalg.norm(vertices - center, axis=1).max()) + SAFETY
     return center, radius
@@ -104,26 +111,25 @@ class Channel:
         return [o for o in self.history if o.result == 'direction']
 
 
-
 @dataclass
 class Belief:
-    position: tuple = (0., 0.)
+    position: tuple = (0.0, 0.0)
     receiver: int = 1
-    virtual_time: float = 0.
+    virtual_time: float = 0.0
     channels: dict = field(default_factory=lambda: {c: Channel() for c in range(1, 21)})
     applied: dict = field(default_factory=dict)
     steps: int = 0
     deadline: float = math.inf
-    virtual_limit: float = 360000.
-
+    virtual_limit: float = 360000.0
 
     @property
     def cleared(self):
         return {c for c, p in self.channels.items() if p.status == 'cleared'}
 
     def done(self):
-        return len(self.cleared) == 16 or all(p.status in ('cleared', 'absent_certified')
-                                             for p in self.channels.values())
+        return len(self.cleared) == 16 or all(
+            p.status in ('cleared', 'absent_certified') for p in self.channels.values()
+        )
 
     def apply(self, action, response, request_id):
         if response.get('accepted') is not True:
@@ -136,7 +142,11 @@ class Belief:
         if not math.isfinite(t) or t + 1e-6 < self.virtual_time:
             raise ValueError('Invalid or backwards virtual clock')
         result = response['measure_result' if action.kind == 'measure' else 'clear_result']
-        allowed = ('direction', 'near', 'no_signal') if action.kind == 'measure' else ('success', 'no_target_in_range')
+        allowed = (
+            ('direction', 'near', 'no_signal')
+            if action.kind == 'measure'
+            else ('success', 'no_target_in_range')
+        )
         if result not in allowed:
             raise ValueError('Feedback does not match action')
         angle = float(response['svd_deg']) if result == 'direction' else None

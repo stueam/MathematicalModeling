@@ -1,4 +1,5 @@
 """Q4 public geometry: negative readings never directly subtract a 1000 m disk."""
+
 from dataclasses import dataclass, field
 
 from .coverage import added_exclusion, full_exclusion
@@ -9,7 +10,6 @@ DOMAIN = core.DOMAIN
 
 @dataclass
 class Channel(core.Channel):
-
     @property
     def negatives(self):
         return tuple(o.action.position for o in self.history if o.result == 'no_signal')
@@ -23,8 +23,11 @@ class Channel(core.Channel):
             return
         a, result = obs.action, obs.result
         if a.kind == 'measure':
-            old = [o for o in self.history if o.action.kind == 'measure'
-                   and point_key(o.action.position) == point_key(a.position)]
+            old = [
+                o
+                for o in self.history
+                if o.action.kind == 'measure' and point_key(o.action.position) == point_key(a.position)
+            ]
             if old and old[0] != obs:
                 raise GeometryError('Fixed active source has conflicting same-point feedback')
         candidate = self.clone()
@@ -39,12 +42,12 @@ class Channel(core.Channel):
         elif result == 'no_signal':
             exclusion = added_exclusion(a.position, tuple(sorted(candidate.negatives)))
             region = region.difference(exclusion)
-            if not region.is_empty and region.area < 1.:
+            if not region.is_empty and region.area < 1.0:
                 # Re-evaluate a real certificate, NOT an area cutoff. Different
                 # orders of polygon subtraction can retain machine-size slivers.
                 # Only the union of actual same-channel negative observations
                 # may remove them; nonempty residuals of any size remain.
-                actual = tuple(sorted(set(candidate.negatives+(a.position,))))
+                actual = tuple(sorted(set(candidate.negatives + (a.position,))))
                 region = region.difference(full_exclusion(actual))
         elif result == 'no_target_in_range':
             region = region.difference(disk(a.position, 20))
@@ -75,8 +78,15 @@ class Belief(core.Belief):
         return {c for c, p in self.channels.items() if p.status in ('detected', 'cleared')}
 
     def apply(self, action, response, request_id):
-        positive = response.get('measure_result') in ('direction', 'near') or response.get('clear_result') == 'success'
-        if (response.get('accepted') is True and positive and action.channel not in self.known
-                and len(self.known) >= 16):
+        positive = (
+            response.get('measure_result') in ('direction', 'near')
+            or response.get('clear_result') == 'success'
+        )
+        if (
+            response.get('accepted') is True
+            and positive
+            and action.channel not in self.known
+            and len(self.known) >= 16
+        ):
             raise GeometryError('More than 16 observed source channels')
         return super().apply(action, response, request_id)
