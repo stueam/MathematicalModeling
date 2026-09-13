@@ -1,13 +1,14 @@
-"""Three actual +/-1 degree wedges intersect in prescribed triangles.
+"""Two exact +/-1 degree wedge intersections and their diameter-circle coverage.
 
-Each detector is 600 m back along one triangle edge. Its lower angular
-boundary supports that edge; the upper boundary contains all three vertices.
-Thus the intersection of the six halfplanes equals the target triangle.
-This is a synthetic, verified construction, not an observed experiment.
+Synthetic construction using three detectors per triangle. Each detector is
+600 m behind its triangle edge. Run python generate.py to regenerate the PNG
+and construction JSON in this directory; add --pdf for a vector PDF.
+All coordinates and intersection checks are retained from the original script.
 """
 from pathlib import Path
-import json
 import itertools
+import argparse
+import json
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
@@ -16,13 +17,9 @@ from matplotlib.patches import Polygon, Circle, Rectangle, ConnectionPatch
 from matplotlib.lines import Line2D
 
 OUT = Path(__file__).resolve().parent
-plt.rcParams.update({'font.family':'sans-serif',
-    'font.sans-serif':['Microsoft YaHei','SimHei'], 'font.size':11,
-    'mathtext.fontset':'stix','axes.unicode_minus':False,
-    'pdf.fonttype':42,'svg.fonttype':'none','savefig.facecolor':'white'})
-INK='#263748'; MUTED='#687888'
-COLORS=['#3275A8','#278574','#7864A2']
-RED='#BA543E'; GREEN='#267D69'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--pdf', action='store_true', help='Also export vector PDF')
+args = parser.parse_args()
 epsilon=np.deg2rad(1)
 
 def rotate(u,a):
@@ -73,69 +70,148 @@ def construct(vertices):
 
 triangles=[np.array([[-10,0],[10,0],[0,10*np.sqrt(3)]]),
            np.array([[-10,0],[10,0],[0,10/np.sqrt(3)]])]
-data=[]
-fig=plt.figure(figsize=(11.8,8.0))
-for k,vertices in enumerate(triangles):
-    x0=.055+.49*k
-    p,rays,record=construct(vertices);data.append(record)
-    accent=RED if k==0 else GREEN
-    title='(a)  等边三角形：不能覆盖' if k==0 else '(b)  钝角三角形：可以覆盖'
-    fig.text(x0,.945,title,fontsize=13,weight='bold',color=accent)
-    overview=fig.add_axes([x0+.055,.62,.31,.29])
-    main=fig.add_axes([x0+.012,.095,.40,.49])
-    for ax in [overview,main]:
-        ax.set_aspect('equal');ax.set_axis_off()
-        for detector,(lo,hi),color in zip(p,rays,COLORS):
-            ax.add_patch(Polygon([detector,detector+1800*lo,detector+1800*hi],
-                                 facecolor=color,alpha=.035,edgecolor='none',zorder=0))
-            for u in [lo,hi]:
-                points=np.array([detector,detector+1800*u])
-                ax.plot(*points.T,lw=.75 if ax is overview else .9,color=color,alpha=.8,zorder=1)
-            mid=(lo+hi)/np.linalg.norm(lo+hi)
-            points=np.array([detector,detector+1800*mid])
-            ax.plot(*points.T,color=color,lw=.7,ls=(0,(5,5)),alpha=.55,zorder=1)
-        ax.add_patch(Polygon(vertices,facecolor='#F3DDD1' if k==0 else '#D8ECE3',
-                             edgecolor=accent,lw=1.8,zorder=3))
-    overview.set(xlim=(-760,760),ylim=(-680,690))
-    for i,(q,color) in enumerate(zip(p,COLORS),1):
-        overview.scatter(*q,s=32,color=color,edgecolor='white',lw=.8,zorder=5)
-        overview.annotate(rf'$\mathbf{{p}}_{i}$',q,xytext=((-13,-10) if i==1 else (10,0)),
-                          textcoords='offset points',color=color,fontsize=12,ha='center',va='center')
-    overview.scatter(0,vertices[:,1].mean(),s=14,color=accent,zorder=5)
-    overview.annotate('定位区域',xy=(0,vertices[:,1].mean()),xytext=(-220,200),
-                       color=MUTED,fontsize=9,arrowprops=dict(arrowstyle='-',color='#A2ACB5',lw=.7))
-    main.set(xlim=(-15,15),ylim=(-12.2,20.2))
-    # Exact radius and equal x/y scaling are essential for this comparison.
-    main.add_patch(Circle((0,0),10,facecolor='#E7EFF5',alpha=.36,edgecolor='none',zorder=0))
-    main.add_patch(Circle((0,0),10,fill=False,edgecolor=INK,lw=1.3,ls=(0,(5,3)),zorder=4))
-    if k==0:
-        arc=np.linspace(np.pi/3,2*np.pi/3,100)
-        cap=np.vstack(([[-5,5*np.sqrt(3)],[0,10*np.sqrt(3)],[5,5*np.sqrt(3)]],
-                       np.column_stack((10*np.cos(arc),10*np.sin(arc)))))
-        main.add_patch(Polygon(cap,facecolor='#E6A38C',edgecolor=RED,hatch='///',lw=.6,zorder=3.5))
-        main.annotate('圆外区域',xy=(1.7,12.3),xytext=(7.3,17.3),fontsize=10,color=RED,
-                      arrowprops=dict(arrowstyle='-',color=RED,lw=.8),ha='center')
-    main.plot([-10,10],[0,0],color=INK,lw=2,zorder=5)
-    main.plot([0,0],[0,vertices[2,1]],color=accent,lw=1,ls=(0,(2,3)),zorder=5)
-    main.scatter(*vertices.T,s=31,color=accent,edgecolor='white',lw=.7,zorder=6)
-    main.scatter(0,0,s=22,color=INK,zorder=6)
-    for name,q,offset in [('A',vertices[0],(-10,-12)),('B',vertices[1],(10,-12)),
-                           ('C',vertices[2],(-12,9)),('O',np.zeros(2),(0,-15))]:
-        main.annotate(rf'${name}$',q,xytext=offset,textcoords='offset points',
-                      ha='center',fontsize=12,color=INK,zorder=7)
-    main.text(-14.5,19.4,'局部放大',fontsize=9.5,color=MUTED)
+TRIANGLES = triangles
+CASES = [construct(v) for v in TRIANGLES]
+plt.rcParams.update({'font.family': 'sans-serif', 'font.sans-serif': ['Microsoft YaHei'],
+                     'mathtext.fontset': 'stix', 'font.size': 11, 'axes.unicode_minus': False,
+                     'pdf.fonttype': 42, 'savefig.facecolor': 'white'})
+INK = '#263748'
+MUTED = '#687888'
+COLORS = ['#3275A8', '#278574', '#7864A2']
+ACCENTS = ['#B64E35', '#237E69']
+NAMES = ['等边三角形', '钝角三角形']
+WINDOW = np.array([[-17., -13.], [17., -13.], [17., 24.], [-17., 24.]])
 
+def clip(poly, normal, b):
+    out = []
+    for s, e in zip(poly, np.roll(poly, -1, axis=0)):
+        fs, fe = normal @ s - b, normal @ e - b
+        if fs >= -1e-10:
+            out.append(s)
+        if (fs >= 0) != (fe >= 0):
+            out.append(s + fs / (fs - fe) * (e - s))
+    return np.array(out)
+
+def intersection(k, count):
+    poly = WINDOW.copy()
+    ps, rays, _ = CASES[k]
+    for p, (lo, hi) in zip(ps[:count], rays[:count]):
+        for n in (np.array([-lo[1], lo[0]]), np.array([hi[1], -hi[0]])):
+            poly = clip(poly, n, n @ p)
+    return poly
+
+def setup(ax, ylim=(-13,24)):
+    ax.set(xlim=(-17,17), ylim=ylim, aspect='equal')
+    ax.set_axis_off()
+
+def vertex_labels(ax, k):
+    for name, q, offset in zip('ABC', TRIANGLES[k], [(-9,-13),(9,-13),(0,9)]):
+        ax.annotate('$'+name+'$', q, xytext=offset, textcoords='offset points',
+                    ha='center', color=INK, fontsize=12, zorder=12)
+
+def boundaries(ax, k, count=3, arrows=False):
+    ps, rays, _ = CASES[k]
+    for i, (p, (lo,hi)) in enumerate(zip(ps[:count], rays[:count])):
+        for j, u in enumerate((lo,hi)):
+            q = np.array([p, p+1800*u])
+            ax.plot(*q.T, color=COLORS[i], lw=1.3 if j==0 else .9,
+                    ls='-', alpha=1 if j==0 else .45, zorder=3)
+        if arrows:
+            v, w = TRIANGLES[k][i], TRIANGLES[k][(i+1)%3]
+            mid = (v+w)/2
+            n = np.array([-lo[1],lo[0]])
+            ax.annotate('', xy=mid+2.5*n, xytext=mid+.3*n,
+                        arrowprops=dict(arrowstyle='->',color=COLORS[i],lw=1.2),zorder=10)
+
+def construction(ax, k, count=3, label=True):
+    setup(ax)
+    ps, rays, _ = CASES[k]
+    for i,(p,(lo,hi)) in enumerate(zip(ps[:count], rays[:count])):
+        ax.add_patch(Polygon([p,p+1800*lo,p+1800*hi],facecolor=COLORS[i],alpha=.045,edgecolor='none'))
+    poly = intersection(k,count)
+    ax.add_patch(Polygon(poly,facecolor='#E8D3AE' if count<3 else '#E2E7EB',edgecolor='none',alpha=.85,zorder=2))
+    boundaries(ax,k,count,arrows=count==3)
+    if count==3:
+        for i,(v,w) in enumerate(zip(TRIANGLES[k],np.roll(TRIANGLES[k],-1,axis=0))):
+            ax.plot(*np.array([v,w]).T,color=COLORS[i],lw=3.2,zorder=6)
+        ax.scatter(*TRIANGLES[k].T,color=INK,edgecolor='white',s=22,zorder=8)
+        if label:vertex_labels(ax,k)
+    if count<3:
+        ax.plot(*np.vstack([TRIANGLES[k],TRIANGLES[k][0]]).T,color='#6D7781',lw=.9,ls=':',zorder=4)
+
+def coverage(ax,k):
+    setup(ax)
+    v=TRIANGLES[k];color=ACCENTS[k]
+    ax.add_patch(Polygon(v,facecolor='#F2DCCF' if k==0 else '#D8EAE2',edgecolor=color,lw=1.8))
+    ax.add_patch(Circle((0,0),10,fill=False,edgecolor=INK,lw=1.3,ls=(0,(6,3)),zorder=6))
+    if k==0:
+        arc=np.linspace(np.pi/3,2*np.pi/3,150)
+        cap=np.vstack(([[-5,5*np.sqrt(3)],[0,10*np.sqrt(3)],[5,5*np.sqrt(3)]],np.column_stack((10*np.cos(arc),10*np.sin(arc)))))
+        ax.add_patch(Polygon(cap,facecolor='#E5A88F',edgecolor=color,hatch='///',lw=.5,zorder=3))
+    ax.plot([-10,10],[0,0],color=INK,lw=2)
+    ax.plot([0,0],[0,v[2,1]],color=color,ls=':',lw=1.1)
+    ax.scatter(*v.T,color=color,edgecolor='white',s=28,zorder=10)
+    ax.scatter(0,0,color=INK,s=20,zorder=10)
+    vertex_labels(ax,k)
+    ax.annotate('$O$',(0,0),xytext=(0,-14),textcoords='offset points',ha='center',fontsize=12)
+    formula = r'$OC=10\sqrt{3}\,\mathrm{m}>10\,\mathrm{m}$' if k==0 else r'$OC=(10/\sqrt{3})\,\mathrm{m}<10\,\mathrm{m}$'
+    ax.text(.5,.015,formula,transform=ax.transAxes,ha='center',color=color,fontsize=13)
+
+def footer(fig, text, y=.026):
+    fig.text(.5,y,text,ha='center',color=MUTED,fontsize=10)
+
+def save(fig,name):
+    for ext in (('png','pdf') if args.pdf else ('png',)):
+        fig.savefig(OUT/f'{name}.{ext}',dpi=300)
+    plt.close(fig)
+
+# 1. Establish the real detector geometry, then explicitly connect its local crop.
+fig=plt.figure(figsize=(14,9.6))
+gs=fig.add_gridspec(2,3,left=.06,right=.97,bottom=.10,top=.88,wspace=.25,hspace=.43)
+for k in range(2):
+    a,b,c=[fig.add_subplot(gs[k,j]) for j in range(3)]
+    for ax,title in zip((a,b,c),('检测点与楔形布局','交会处放大：三条边的来源','同一三角形的直径圆判定')):
+        ax.set_title(title,fontsize=12,color=INK,pad=12)
+    ps,rays,_=CASES[k]
+    a.set(xlim=(-750,750),ylim=(-650,650),aspect='equal');a.set_axis_off()
+    for i,(p,(lo,hi)) in enumerate(zip(ps,rays)):
+        a.add_patch(Polygon([p,p+1600*lo,p+1600*hi],facecolor=COLORS[i],alpha=.08,edgecolor='none'))
+        for u in (lo,hi):a.plot(*np.array([p,p+1600*u]).T,color=COLORS[i],lw=.8)
+        mid=(lo+hi)/np.linalg.norm(lo+hi)
+        a.plot(*np.array([p,p+1600*mid]).T,color=COLORS[i],lw=.65,ls=(0,(6,4)),alpha=.65)
+        a.scatter(*p,color=COLORS[i],s=24,zorder=4)
+        a.annotate(rf'$p_{i+1}$',p,xytext=(-10,-12),textcoords='offset points',color=COLORS[i],fontsize=12)
+    a.add_patch(Polygon(TRIANGLES[k],facecolor=INK))
+    a.add_patch(Rectangle((-17,-13),34,37,fill=False,edgecolor=INK,lw=1.2,zorder=5))
+    a.annotate('放大框',xy=(17,24),xytext=(200,210),fontsize=10,color=INK,
+               arrowprops=dict(arrowstyle='-',lw=.8,color=INK))
+    a.plot([-650,-350],[-570,-570],color=INK,lw=2)
+    a.text(-500,-535,'300 m',ha='center',fontsize=9,color=MUTED)
+    construction(b,k);coverage(c,k)
+    fig.add_artist(ConnectionPatch(xyA=(17,24),coordsA=a.transData,xyB=(-17,20),coordsB=b.transData,
+                                  color='#9EAAB3',lw=.8,ls=(0,(3,4)),arrowstyle='->'))
+    fig.canvas.draw()
+    bounds=a.get_position()
+    fig.text(bounds.x0,gs[k,0].get_position(fig).y1+.080,
+             ['(a) 等边三角形：不能覆盖', '(b) 钝角三角形：可以覆盖'][k],
+             ha='left',va='bottom',color=ACCENTS[k],fontsize=18,weight='bold')
 handles=[Line2D([0],[0],color='#526F83',lw=1.1,label='楔形边界'),
-         Line2D([0],[0],color='#526F83',lw=.9,ls=(0,(5,5)),label='中心示向线'),
-         Line2D([0],[0],color=INK,lw=1.3,ls=(0,(5,3)),label='直径圆')]
-fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,.024),ncol=3,
-           frameon=False,fontsize=9.5,columnspacing=3)
-for ext in ['png']:
-    fig.savefig(OUT/f'q1_cover_cases.{ext}',dpi=300)
-plt.close(fig)
-(OUT/'q1_cover_cases.json').write_text(json.dumps(dict(
-    construction='synthetic exact halfplane intersection, not measured data',
-    equal_triangle=data[0],covered_triangle=data[1]),ensure_ascii=False,indent=2),encoding='utf-8')
-assert not data[0]['covered'] and data[1]['covered']
-print('Verified: 3 vertices in both intersections; equilateral uncovered, obtuse covered.')
-print('Wrote q1_cover_cases.png and reproducible coordinates.')
+         Line2D([0],[0],color='#526F83',lw=.9,ls=(0,(6,4)),label='中心示向线'),
+         Line2D([0],[0],color=INK,lw=1.3,ls=(0,(6,3)),label='直径圆')]
+fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,.027),ncol=3,
+           frameon=False,fontsize=11,columnspacing=3)
+for k in range(2):
+    recovered = intersection(k, 3)
+    assert len(recovered) == 3
+    assert max(min(np.linalg.norm(q-v) for v in TRIANGLES[k]) for q in recovered) < 1e-7
+assert not CASES[0][2]['covered'] and CASES[1][2]['covered']
+save(fig, 'q1_cover_cases')
+(OUT/'q1_cover_cases.json').write_text(json.dumps({
+    'construction': 'synthetic exact halfplane intersection, not measured data',
+    'equal_triangle': CASES[0][2], 'covered_triangle': CASES[1][2],
+    'layout': {'panels': 'two rows: overview, local intersection, circle coverage',
+               'row_titles': ['(a) 等边三角形：不能覆盖', '(b) 钝角三角形：可以覆盖'],
+               'figure_size_inches': [14, 9.6], 'dpi': 300},
+    'outputs': {'png': 'q1_cover_cases.png'}
+}, ensure_ascii=False, indent=2), encoding='utf-8')
+print('Verified both triangles; wrote q1_cover_cases.png and q1_cover_cases.json.')
