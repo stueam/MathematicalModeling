@@ -1,0 +1,18 @@
+{
+  "kind": "constructed_geometric_illustration",
+  "unit": "m",
+  "coverage_radius_m": 997.0,
+  "points": {
+    "O": [0.0, 0.0],
+    "A": [350.0, 0.0],
+    "B": [950.0, 0.0],
+    "C": [1650.0, -200.0],
+    "U": [400.0, 1000.0],
+    "V": [1450.0, 1100.0]
+  },
+  "regions": {
+    "region_1": [[200.0, 500.0], [650.0, 500.0], [650.0, 850.0], [200.0, 850.0]],
+    "region_2": [[1100.0, 750.0], [1380.0, 750.0], [1380.0, 1000.0], [1100.0, 1000.0]]
+  },
+  "description": "The same two remaining search regions and three clearing stops are used in every panel. Distances illustrate this fixed geometry only. A replaces U as the scan location for region_1. V may move while all of region_2 remains within the 997 m coverage disk. No statistical or global optimality claim is made."
+}
