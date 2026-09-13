@@ -37,7 +37,17 @@ python -X utf8 start_s21.py --local --seed 800
 
 ## 范围与来源
 
-本入口适配官方Windows桌面程序“问题4演练测试”，不能直接用于正式测试。正式测试同样通过 HTTP+JSON 通信，但界面标题不同，且不显示源总数或类型数量；本演练入口会检查演练标题，并在结束后读取源数核验。正式测试前须单独准备并验证单局入口，保留算法及参数，调整模式校验与结果记录，不依赖这些不可见的真值。迁移目录不代表正式测试入口已就绪。
+`start_s21.py --connect` 适配官方Windows桌面程序“问题4演练测试”，不能直接用于正式测试。正式测试使用新增的独立 `start_formal.py`；两种入口共享原 Ultra 算法及参数，演练功能保持不变。
+
+## 正式单局入口
+
+默认 `python -X utf8 start_formal.py` 只检查可见界面，不连接接口。队员在官方模拟器中手动开始“问题4正式测试”，待倒计时结束、显示“尚未进入”后，运行：
+
+```powershell
+python -X utf8 start_formal.py --connect --case XXXX-XXXX-XXXX-XXXX
+```
+
+把示例编码换成本局真实编码；正式入口固定使用 Ultra S21 的 probes 策略，不启动测试或连跑下一局。日志写入 `results/formal/案例编码-时间戳/`。正常退出后计算总虚拟时间÷成功清除数；正式源总数未知，不能由此声称官方已确认全清。仍需导出官方加密行为日志。完整操作和异常处理见 [正式单局说明](../FORMAL_TESTING.md)。
 
 源码验证命令：`python -m pip install pytest`，然后 `python -m pytest -q`。`results/` 默认不纳入Git，账号和演练日志不随代码发布。
 
