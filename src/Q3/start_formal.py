@@ -6,8 +6,8 @@ from formal_session import main
 
 
 def build():
-    policy = practice.make_policy('bayes-fast', practice.SectorConfig())
-    return policy, practice.make_belief(policy), practice.load('client').HttpClient
+    policy = practice.Policy(practice.Config())
+    return policy, practice.CoupledBelief(), practice.load('client').HttpClient
 
 
 if __name__ == '__main__':

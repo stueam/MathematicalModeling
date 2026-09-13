@@ -1,4 +1,4 @@
-"""Windows UI-verified problem-three PRACTICE ONLY, with selectable V5/V6 policies.
+"""Windows UI-verified problem-three PRACTICE ONLY, using the paper algorithm.
 
 Adapted from the existing algorithm-two practice guard. No formal controls,
 generic confirmation clicks, hidden simulator data, or unpublished endpoints.
@@ -16,9 +16,10 @@ import time
 
 import requests
 
-from bayes_tsp.sectors import SectorConfig
+from bayes_tsp.policy import Config, Policy
+from bayes_tsp.coupling import CoupledBelief
 from bayes_tsp.shared import distance, load
-from run import code_manifest, dump, make_belief, make_policy, new_output
+from run import code_manifest, dump, new_output
 
 
 POWERSHELL = '/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
@@ -30,11 +31,11 @@ $ProgressPreference='SilentlyContinue'
 [Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
 Add-Type -AssemblyName UIAutomationClient
 Add-Type -AssemblyName UIAutomationTypes
-Add-Type -TypeDefinition 'using System; using System.Runtime.InteropServices; public class V5Window { [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr h,int n); [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr h); }'
+Add-Type -TypeDefinition 'using System; using System.Runtime.InteropServices; public class PracticeWindow { [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr h,int n); [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr h); }'
 $windows=@(Get-Process -Name 'jammers-simulator' -ErrorAction SilentlyContinue | Where-Object {$_.MainWindowHandle -ne 0})
 if ($windows.Count -ne 1) {throw 'Expected exactly one visible simulator window'}
-[V5Window]::ShowWindow($windows[0].MainWindowHandle,9) | Out-Null
-[V5Window]::SetForegroundWindow($windows[0].MainWindowHandle) | Out-Null
+[PracticeWindow]::ShowWindow($windows[0].MainWindowHandle,9) | Out-Null
+[PracticeWindow]::SetForegroundWindow($windows[0].MainWindowHandle) | Out-Null
 Start-Sleep -Milliseconds 200
 $root=[System.Windows.Automation.AutomationElement]::FromHandle($windows[0].MainWindowHandle)
 '''
@@ -141,7 +142,7 @@ def result_count(items):
     return total if 10 <= total <= 16 else None
 
 
-def run_once(folder, expected_case, config, policy_name='bayes-fast'):
+def run_once(folder, expected_case, config):
     # This fresh UI check precedes client creation and every first /enter.
     items = inspect_ui()
     robot_id, case = practice_identity(items, awaiting=True)
@@ -151,10 +152,10 @@ def run_once(folder, expected_case, config, policy_name='bayes-fast'):
     session = requests.Session()
     session.trust_env = False
     client = load('client').HttpClient(robot_id, 'http://127.0.0.1:2026', session=session)
-    policy = make_policy(policy_name, config)
-    belief = make_belief(policy)
+    policy = Policy(config)
+    belief = CoupledBelief()
     rows, costs = [], {'move_s': 0., 'switch_s': 0., 'measure_s': 0., 'clear_success_s': 0., 'clear_failure_s': 0.}
-    summary = {'mode': 'problem3_practice_only', 'policy': policy_name, 'case_code': case,
+    summary = {'mode': 'problem3_practice_only', 'policy': 'bayes-fast', 'case_code': case,
                'entered': False, 'exited': False, 'error': None, 'source_count': None}
     started = time.monotonic()
     max_cost_difference = 0.
@@ -238,7 +239,6 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--connect', action='store_true')
     parser.add_argument('--rounds', type=int, default=3)
-    parser.add_argument('--policy', choices=('bayes-fast', 'bayes-sector-fast', 'bayes-sector'), default='bayes-fast')
     parser.add_argument('--resume-ready-practice', action='store_true')
     args = parser.parse_args()
     if not args.connect:
@@ -247,9 +247,9 @@ def main():
     if not 1 <= args.rounds <= 10:
         parser.error('rounds must be 1..10')
     out = new_output()
-    config = SectorConfig()
-    dump(out/'config.json', {'mode': 'problem3_practice_only', 'policy': args.policy,
-        'rounds': args.rounds, 'policy_config': asdict(make_policy(args.policy, config).config),
+    config = Config()
+    dump(out/'config.json', {'mode': 'problem3_practice_only', 'policy': 'bayes-fast',
+        'rounds': args.rounds, 'policy_config': asdict(config),
         'code_sha256': code_manifest()})
     manifest = {'status': 'running', 'planned_rounds': args.rounds, 'completed_rounds': 0}
     summaries = []
@@ -261,7 +261,7 @@ def main():
             items = start_practice(args.resume_ready_practice and index == 0)
             _, case = practice_identity(items, awaiting=True)
             dump(folder/'practice-ready.json', redact_ui(items))
-            summaries.append(run_once(folder, case, config, args.policy))
+            summaries.append(run_once(folder, case, config))
             manifest['completed_rounds'] = len(summaries)
             dump(out/'summary.json', summaries)
             dump(out/'batch.json', manifest)

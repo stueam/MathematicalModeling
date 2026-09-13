@@ -25,7 +25,7 @@ def source_files(folder):
 
 def import_audit(folder):
     """Check local module reachability, including the explicit vendored load() API."""
-    files = set(source_files(folder))
+    files = {path for path in source_files(folder) if 'tests' not in path.relative_to(folder).parts}
     edges = {path: set() for path in files}
 
     def add(source, target):
@@ -35,22 +35,20 @@ def import_audit(folder):
         )
         edges[source].update(path for path in candidates if path in files)
 
-    entries = set()
+    entries = {
+        folder / name
+        for name in (
+            'run.py',
+            'start_formal.py',
+            'practice_windows.py',
+            'start_s21.py',
+            'check_s21_certificate.py',
+        )
+        if folder / name in files
+    }
     for path in files:
         tree = ast.parse(path.read_text(encoding='utf-8'))
-        if 'tests' in path.relative_to(folder).parts:
-            entries.add(path)
         for node in ast.walk(tree):
-            if (
-                isinstance(node, ast.Compare)
-                and isinstance(node.left, ast.Name)
-                and node.left.id == '__name__'
-                and any(
-                    isinstance(value, ast.Constant) and value.value == '__main__'
-                    for value in node.comparators
-                )
-            ):
-                entries.add(path)
             if isinstance(node, ast.Import):
                 for alias in node.names:
                     add(path, folder.joinpath(*alias.name.split('.')))
@@ -72,7 +70,7 @@ def import_audit(folder):
                 and isinstance(node.args[0].value, str)
             ):
                 add(path, folder / 'vendor' / 'q3' / node.args[0].value)
-    # Start with actual script guards and tests, not arbitrary files at the root.
+    # Tests and stray script guards cannot make unused runtime modules look reachable.
     pending = list(entries)
     reached = set()
     while pending:
@@ -146,7 +144,6 @@ def main():
         run('Q3-local', ['run.py', 'local', '--seed', '0', '--output', output / 'Q3-local'], ROOT / 'Q3')
         run('Q4-coverage', ['start_s21.py', '--self-test'], ROOT / 'Q4')
         run('Q4-local', ['run.py', 'local', '--seed', '800', '--output', output / 'Q4-local'], ROOT / 'Q4')
-        run('Q3-archived-evidence', ['evidence/paper_results/verify.py'], ROOT / 'Q3')
         for question in ('Q3', 'Q4'):
             run(f'{question}-formal-help', ['start_formal.py', '--help'], ROOT / question)
             run(f'{question}-practice-help', ['practice_windows.py', '--help'], ROOT / question)

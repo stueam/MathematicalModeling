@@ -1,4 +1,4 @@
-"""Windows UI-verified problem-four PRACTICE ONLY, with explicit Q4 policy selection.
+"""Windows UI-verified problem-four PRACTICE ONLY, using the paper S21 + probes algorithm.
 
 Adapted from the existing algorithm-two practice guard. No formal controls,
 generic confirmation clicks, hidden simulator data, or unpublished endpoints.
@@ -20,8 +20,7 @@ import shutil
 import requests
 
 from q4.core import Belief
-from q4.policy import Config
-from q4.compact import make_policy
+from q4.policy import Config, Policy
 from q4.shared import SHARED_DIR, distance, load
 from run import ROOT, dump, manifest
 
@@ -224,8 +223,8 @@ class LoggedSession(requests.Session):
         return response
 
 
-def run_once(folder, expected_case, config, policy_name='mobile'):
-    policy = make_policy(policy_name, config)
+def run_once(folder, expected_case, config):
+    policy = Policy(config)
     # This fresh UI check precedes client creation and every first /enter.
     items = inspect_ui()
     robot_id, case = practice_identity(items, awaiting=True)
@@ -236,7 +235,7 @@ def run_once(folder, expected_case, config, policy_name='mobile'):
     client = load('client').HttpClient(robot_id, 'http://127.0.0.1:2026', session=session)
     belief = Belief()  # Exactly the Q4 public state used in local validation.
     rows, costs = [], {'move_s': 0., 'switch_s': 0., 'measure_s': 0., 'clear_success_s': 0., 'clear_failure_s': 0.}
-    summary = {'mode': 'problem4_practice_only', 'policy': policy_name, 'case_code': case,
+    summary = {'mode': 'problem4_practice_only', 'policy': 's21-probes', 'case_code': case,
                'entered': False, 'exited': False, 'error': None, 'source_count': None}
     started = time.monotonic()
     started_utc = datetime.now(timezone.utc)
@@ -342,7 +341,6 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--connect', action='store_true')
     parser.add_argument('--rounds', type=int, default=1)
-    parser.add_argument('--policy', choices=('mobile', 'trim', 'adaptive', 'probes'), default='probes')
     parser.add_argument('--resume-ready-practice', action='store_true')
     args = parser.parse_args(argv)
     if not args.connect:
@@ -352,7 +350,7 @@ def main(argv=None):
         parser.error('rounds must be 1..100')
     out = new_output()
     config = Config()
-    dump(out/'config.json', {'mode': 'problem4_practice_only', 'policy': args.policy,
+    dump(out/'config.json', {'mode': 'problem4_practice_only', 'policy': 's21-probes',
         'rounds': args.rounds, 'policy_config': asdict(config), 'code_sha256': code_manifest()})
     manifest = {'status': 'running', 'planned_rounds': args.rounds, 'completed_rounds': 0}
     summaries = []
@@ -365,7 +363,7 @@ def main(argv=None):
             items = start_practice(args.resume_ready_practice and index == 0)
             _, case = practice_identity(items, awaiting=True)
             dump(folder/'practice-ready.json', redact_ui(items))
-            summaries.append(run_once(folder, case, config, args.policy))
+            summaries.append(run_once(folder, case, config))
             manifest['completed_rounds'] = len(summaries)
             dump(out/'summary.json', summaries)
             dump(out/'batch.json', manifest)

@@ -1,60 +1,51 @@
-# 可运行源码
+# 论文算法代码
 
-这里包含论文使用的 Q2 数值设计、Q3 `bayes-fast` 和 Q4 Ultra S21 `probes`。三个目录各自带齐运行依赖的源码；Q3、Q4 的 `vendor/` 是独立运行所需的协议与几何代码。无需从仓库旧算法目录导入模块。
+本目录以 [`essay/essay.tex`](../essay/essay.tex) 为保留范围，仅提供以下算法及其运行、验证依赖：
 
-## 安装与完整验证
+| 目录 | 论文内容 | 唯一运行算法 |
+| --- | --- | --- |
+| `Q2` | 问题二：固定接收半径下的贝叶斯选点 | 反馈后完整可行区域的期望最小覆盖圆半径最小化 |
+| `Q3` | 问题三 | `bayes-fast`：固定未知半径后验、联合任务路线、覆盖与有限完成 |
+| `Q4` | 问题四 | S21＋probes：定向源后验、21点覆盖证书、联合路线与补测 |
 
-支持 Python 3.10+，本次使用 Python 3.12.3 的全新虚拟环境验证。在 `src` 目录执行：
+Q3、Q4 分别只有一个 `Policy`。本地、演练、正式入口均调用同一实现；没有策略选择或消融开关。文件与论文的逐项对应关系见 [PAPER_SCOPE.md](PAPER_SCOPE.md)。问题一的几何计算仍在论文引用的 `essay/data/q1_two_cases/`，未复制到本目录。
+
+## 安装和运行
+
+实测环境为 Python 3.12。先创建并激活虚拟环境，在 `src` 下安装运行与验证依赖：
 
 ```bash
 python -m venv .venv
+# Linux/macOS: source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements-tested.txt
+python verify.py
 ```
 
-Windows PowerShell：
+`requirements-tested.txt` 固定本次验证使用的版本。只运行程序可安装 `requirements.txt`；各题也可独立复制目录并安装该目录的 `requirements.txt`。
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
-.\.venv\Scripts\python.exe -X utf8 verify.py
-```
-
-Linux / macOS：
+分别运行完整本地流程：
 
 ```bash
-.venv/bin/python -m pip install -r requirements-dev.txt
-.venv/bin/python -X utf8 verify.py
+python Q2/run.py --scenario symmetric
+python Q2/run.py --scenario asymmetric
+python Q3/run.py local --seed 0
+python Q4/run.py local --seed 800
 ```
 
-`verify.py` 检查源码引用、未使用代码和静态错误，分别运行三个目录的测试，再完整运行 Q2 两种情形的默认网格搜索、Q3/Q4 单局、S21 覆盖证书、历史结果数值核验和启动入口帮助。任何检查失败都会返回非零退出码；日志和源码哈希保存在新的 `results/validation-时间戳/` 中。整个验证过程只使用本地模拟器与模拟 HTTP。
-
-仅运行算法时安装 `requirements.txt` 即可。`requirements-tested.txt` 冻结本次 Python 3.12 环境的完整包版本，供精确复现环境使用。测试应由 `verify.py` 分目录执行，或进入对应题目目录运行 `python -m pytest -q`，避免三套独立程序的同名入口互相覆盖。
-
-## 运行入口
-
-激活环境后，以下命令都在 `src` 执行：
+运行论文对应的完整地图批次：
 
 ```bash
-# Q2：单点评估；省略 --evaluate 就运行完整搜索并导出 CSV / JSON
-python Q2/run.py --scenario symmetric --R0 1200 --evaluate 840 495
-python Q2/run.py --scenario asymmetric --R0 1200
-
-# Q3 / Q4：完整离线任务
-python Q3/run.py local --policy bayes-fast --seed 0
-python Q4/start_s21.py --self-test
-python Q4/start_s21.py --local --seed 800
-
-# 同地图比较与覆盖布局复核
-python Q3/run.py benchmark --compare baseline bayes-fast --rounds 2 --workers 2
-python Q4/benchmark_layouts.py --workers 2
+python Q3/run.py reproduce --workers 4
+python Q4/run.py reproduce --workers 4
 ```
 
-Q3/Q4 的 `run.py --help` 列出保留的本地比较策略和参数；`--output` 可指定新输出目录，已有目录不会被覆盖。Q2 默认同名搜索结果会覆盖，保留多批结果时应指定不同 `--output`。
+Q3 固定为 40 个随机地图＋24 个压力地图；Q4 固定为 16 个随机地图＋14 个压力地图。`--workers` 仅并行本地独立地图。`benchmark --seed N --rounds M` 可连续运行相同论文算法，`validate` 仅运行论文压力地图。
 
-Windows 演练与正式单局分别使用各目录的 `practice_windows.py` / `start_s21.py`、`start_formal.py`，操作见 [正式单局说明](FORMAL_TESTING.md) 和 [Q3](Q3/README.md)、[Q4](Q4/README.md) 的说明。正式单局仍需队员先在官方软件中启动案例，再传入 `--connect --case`。
+Q3/Q4 每次执行新建结果目录，保存配置、代码哈希、动作反馈、决策与汇总，`--output` 指定目录必须尚不存在；超时、动作截断或未完成时返回非零退出码。Q2 默认输出到算例目录，保留多次结果时请指定不同的 `--output` 路径。
 
-## 辅助程序与清理范围
+## 验证与模拟器入口
 
-Q3 的 `analyze.py` 用于本地配对结果汇总，`summarize_practice.py` 汇总演练日志，`audit_movement.py`、`audit_routes.py`、`audit_practice.py` 用于已有动作日志的移动和路线核验。各自的 `--help` 给出输入文件要求。Q4 的 `check_s21_certificate.py` 可独立复核整数覆盖证书；`benchmark_layouts.py` 复现 S22/S21 的 30 组配对。
+`verify.py` 检查运行模块可达性、未使用代码、单元测试、Q2 两个完整网格搜索、Q3/Q4 完整本地任务、S21 证书和入口帮助。测试不能使闲置的运行模块通过可达性检查。
 
-已移除 Q3 未接入的 MC 规划器、随机世界采样和候选生成方法，保留移动基线实际使用的确定性 `likelihood.py`。Q4 移除未用于交付与回归的实验策略、MC、共享采样及旧 Q3 巡逻代码，保留最终策略、有限完成后备和文档中的比较功能。历史实现仍在仓库原算法目录或 Git 历史中。
-
-`SOURCE_MANIFEST.json` 与 `evidence/` 中的旧报告用于历史溯源，其哈希描述当时的文件，不作为当前运行文件清单。当前运行清单由程序根据实际源码生成。整理结果与实测边界见 [清理验证记录](CLEANUP_REPORT.md)。
+本次实测结果见 [PAPER_VALIDATION.md](PAPER_VALIDATION.md)。本地验证不会连接官方模拟器。Windows 演练与正式运行说明见 [FORMAL_TESTING.md](FORMAL_TESTING.md)。

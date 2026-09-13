@@ -1,6 +1,6 @@
 # Q3 / Q4 正式单局运行说明
 
-正式入口是各目录的 `start_formal.py`。Q3 使用 `bayes-fast`，Q4 使用 Ultra 的 `ultra_s21_route_probes_v1`（S21 布局＋probes）。算法、参数、覆盖点与原有演练入口保持原样。
+正式入口是各目录的 `start_formal.py`。Q3 固定使用论文的 `bayes-fast`，Q4 固定使用论文的 S21＋probes；两者均调用各自唯一的 `Policy`，参数与本地和演练入口一致。
 
 ## 正式与演练分开
 

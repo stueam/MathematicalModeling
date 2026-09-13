@@ -22,9 +22,9 @@ def main(argv=None):
         parser.error('--seed requires --local')
     if args.self_test:
         from q4.core import Belief
-        from q4.sector import ProbePolicy
+        from q4.policy import Policy
 
-        policy = ProbePolicy()
+        policy = Policy()
         action = policy.choose(Belief())
         if len(policy.points) != 21:
             raise RuntimeError('S21 requires exactly 21 certified stations')
@@ -43,11 +43,11 @@ def main(argv=None):
     elif args.local:
         import run
 
-        run.main(['local', '--policy', 'probes', '--seed', str(args.seed)])
+        run.main(['local', '--seed', str(args.seed)])
     else:
         import practice_windows
 
-        options = ['--policy', 'probes', '--rounds', str(args.rounds)]
+        options = ['--rounds', str(args.rounds)]
         if args.connect:
             options.append('--connect')
         if args.resume_ready_practice:

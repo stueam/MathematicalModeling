@@ -6,7 +6,7 @@ from formal_session import main
 
 
 def build():
-    policy = practice.make_policy('probes', practice.Config())
+    policy = practice.Policy(practice.Config())
     return policy, practice.Belief(), practice.load('client').HttpClient
 
 

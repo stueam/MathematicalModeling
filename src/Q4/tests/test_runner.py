@@ -2,25 +2,9 @@ import json
 import subprocess
 import sys
 from pathlib import Path
-
 import pytest
 
-from q4.compact import POLICIES, make_policy
-from q4.policy import Config
-
 ROOT = Path(__file__).resolve().parents[1]
-
-
-@pytest.mark.parametrize('name', POLICIES)
-def test_supported_policy_initializes(name):
-    policy = make_policy(name, Config())
-    assert policy.points
-    assert callable(policy.choose)
-
-
-def test_removed_experiment_is_rejected():
-    with pytest.raises(ValueError, match='Unknown Q4 policy'):
-        make_policy('mc-probes')
 
 
 def test_incomplete_local_run_exits_unsuccessfully_and_keeps_logs(tmp_path):

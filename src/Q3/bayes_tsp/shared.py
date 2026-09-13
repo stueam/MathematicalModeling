@@ -1,4 +1,4 @@
-"""Reuse the repository's audited geometry/protocol without importing its MC.
+"""Shared conservative geometry, public protocol and local evaluation environment.
 
 The vendored directory is an explicit delivery dependency. A private package
 namespace prevents collisions with other projects called q3; no sys.path edits.
@@ -27,4 +27,3 @@ core = load('core')
 Action, Belief, Observation = core.Action, core.Belief, core.Observation
 GeometryError = core.GeometryError
 disk, distance, point_key = core.disk, core.distance, core.point_key
-Baseline = load('policy').Baseline

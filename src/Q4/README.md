@@ -1,62 +1,20 @@
-# Ultra：方法114的S21覆盖优化版
+# Q4：论文 S21＋probes
 
-本目录从 `Q4/Ultra` 整理而来，可独立运行；最终策略、参数、21点坐标及覆盖证书保持不变。默认策略为 `ultra_s21_route_probes_v1`，本地 `run.py` 和官方演练入口均使用21点；[原方法114](../../Q4/方法114/README.md)保留22点。
+本目录实现 `essay.tex` 问题四的唯一策略。`q4/policy.py` 包含 21 点覆盖计划、已知源与搜索任务的联合路线、移动补测候选和有限后备。
 
-本地入口保留 `baseline`、`bayes`、`joint`、`mobile`、`trim`、`adaptive`、`probes`，演练入口保留其中的 `mobile`、`trim`、`adaptive`、`probes`。其余旧实验分支及 MC 参数已移出本交付目录，历史版本可在原算法目录或 Git 历史中查阅。统一安装与验证见 [src 说明](../README.md)。
+定向源的类型、朝向、位置与固定接收半径通过公开反馈更新。未知源排除使用实际负观测形成的多点几何证书；站点移动或删除前验证剩余覆盖计划，实际停止判定仍依赖已收到的反馈。
 
-S21是原点＋内圈8点＋外圈12点。后验积分、候选动作、联合路线与反馈停止规则沿用方法114。30组配对中S21获胜21组，平均总任务时间5861.51→5688.76 s，路程21.030→20.362 km，两版均30/30全清。随机16组单独改善2.12%，配对检验p=0.102，不宣称已证实稳定优势。详见 [实验报告](evidence/comparison_report.md) 和 [逐场数据](evidence/paired.csv)。
+在本目录运行：
 
-这是完整Python源码运行包，不是要上传给评测器的点位表。解压后启动本地程序，由程序通过 http://127.0.0.1:2026 与官方桌面评测器交互。
-
-## Windows使用
-
-需要Python 3.10或更高版本。保持所有文件夹结构，在仓库的 `src/Q4` 目录打开PowerShell：
-
-```powershell
+```bash
 python -m pip install -r requirements.txt
-python -X utf8 start_s21.py --self-test
+python start_s21.py --self-test
+python run.py local --seed 800
+python run.py reproduce --workers 4
 ```
 
-self-test只检查覆盖和策略初始化，不连接评测器。出现passed后，打开官方桌面评测器，登录自己的账号并停留在“问题4演练测试”页面，然后运行一次：
+`reproduce` 固定使用随机种子 800–815，加上七类地图各两个压力配置，种子 9100–9113，共 30 局。全部使用相同 S21＋probes 参数。`s21_certificate.json` 是 21 点布局的整数证书，`check_s21_certificate.py` 可独立复核，`s21_layout.py` 加载时还会核验当前几何环境中的完整域覆盖。
 
-```powershell
-python -X utf8 start_s21.py --connect --rounds 1
-```
+每次新建 `results/时间戳/` 保存逐条动作反馈、决策、评估地图、批次清单与汇总。算法不会读取评估地图真值；未完整清除并获得停止证书时返回非零退出码。
 
-程序将启动一场Q4演练，默认使用S21和方法114的probes策略。无需手填队号，程序从可见演练界面读取。若已经手动启动演练并停留在“尚未进入”状态，使用：
-
-```powershell
-python -X utf8 start_s21.py --connect --rounds 1 --resume-ready-practice
-```
-
-连续演练可改为 `--rounds 10`（范围1–100）。出现接口错误、覆盖失败或结果未核验时会停止批次。每次日志保存在 results/official-practice-时间戳/，其中summary.json记录结果，actions.jsonl与http-log.json记录过程。
-
-## 不接评测器的本地测试
-
-```powershell
-python -X utf8 start_s21.py --local --seed 800
-```
-
-## 范围与来源
-
-`start_s21.py --connect` 适配官方Windows桌面程序“问题4演练测试”，不能直接用于正式测试。正式测试使用新增的独立 `start_formal.py`；两种入口共享原 Ultra 算法及参数，演练功能保持不变。
-
-## 正式单局入口
-
-默认 `python -X utf8 start_formal.py` 只检查可见界面，不连接接口。队员在官方模拟器中手动开始“问题4正式测试”，待倒计时结束、显示“尚未进入”后，运行：
-
-```powershell
-python -X utf8 start_formal.py --connect --case XXXX-XXXX-XXXX-XXXX
-```
-
-把示例编码换成本局真实编码；正式入口固定使用 Ultra S21 的 probes 策略，不启动测试或连跑下一局。日志写入 `results/formal/案例编码-时间戳/`。正常退出后计算总虚拟时间÷成功清除数；正式源总数未知，不能由此声称官方已确认全清。仍需导出官方加密行为日志。完整操作和异常处理见 [正式单局说明](../FORMAL_TESTING.md)。
-
-源码验证命令：`python -m pip install pytest`，然后 `python -m pytest -q`。`results/` 默认不纳入Git，账号和演练日志不随代码发布。
-
-重新运行30组本地配对：`python -X utf8 benchmark_layouts.py --workers 2`。每次输出至新的 `results/paired-时间戳/`，也可指定 `--output 新目录`。`run.py` 同样支持 `--output`，任务未完成会返回非零退出码并保留日志。evidence内为原实验的冻结摘要；当前清理核验另见 [清理验证记录](../CLEANUP_REPORT.md)。
-
-S21坐标与证书来自 https://github.com/3371879035-lang/shxjm-B-RL ，提交 b4af97c4cc6fbec14fcb4dfb76acd56d4753f87c。仅替换方法114初始测站，保留Bayes、调度和实际反馈停止规则。覆盖初始化使用整数证书和原顺序多边形合并双重检查，不忽略小面积残片。
-
-本地30组配对两版均全清，S21平均总时间降低2.95%；尚不代表官方成绩。此包生成时只做离线核验，没有启动官方演练。
-
-需完整保留 q4/、vendor/、run.py、practice_windows.py、start_s21.py、s21_layout.py、s21_certificate.json、check_s21_certificate.py。不要只复制启动脚本。
+Windows 演练入口为 `start_s21.py --connect`，正式入口为 `start_formal.py --connect --case 本局编码`；使用方法见 [正式运行说明](../FORMAL_TESTING.md)。

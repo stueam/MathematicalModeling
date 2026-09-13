@@ -1,4 +1,4 @@
-"""S21 initialization from the audited paired experiment; runtime rules unchanged."""
+"""Load and verify the paper's 21-station coverage certificate."""
 
 import json
 from functools import lru_cache
