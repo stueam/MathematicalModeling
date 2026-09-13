@@ -1,0 +1,56 @@
+{
+  "purpose": "Constructed illustrations of two coverage outcomes, not a sample-frequency experiment",
+  "region_algorithm": "sorted half-plane intersection",
+  "error_half_angle_deg": 1,
+  "numerical_tolerance_m": 1e-08,
+  "cases": [
+    {
+      "case": 1,
+      "detector_count": 10,
+      "vertex_count": 6,
+      "diameter_m": 19.99999999999983,
+      "diameter_circle_radius_m": 9.999999999999915,
+      "max_vertex_distance_m": 9.999999999999915,
+      "coverage_excess_m": 0.0,
+      "covered": true,
+      "diameter_center_m": [
+        90.00000000000009,
+        -50.00000000000004
+      ],
+      "diameter_endpoints_m": [
+        [
+          80.00000000000017,
+          -50.00000000000007
+        ],
+        [
+          100.0,
+          -50.00000000000001
+        ]
+      ]
+    },
+    {
+      "case": 2,
+      "detector_count": 10,
+      "vertex_count": 6,
+      "diameter_m": 20.0249843944998,
+      "diameter_circle_radius_m": 10.0124921972499,
+      "max_vertex_distance_m": 15.532224567008784,
+      "coverage_excess_m": 5.519732369758884,
+      "covered": false,
+      "diameter_center_m": [
+        -79.99999999999972,
+        70.50000000000003
+      ],
+      "diameter_endpoints_m": [
+        [
+          -89.99999999999923,
+          70.00000000000023
+        ],
+        [
+          -70.0000000000002,
+          70.99999999999982
+        ]
+      ]
+    }
+  ]
+}

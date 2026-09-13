@@ -1,0 +1,37 @@
+{
+  "worlds": 100000,
+  "workers": 16,
+  "seed": 20260912,
+  "speed_m_per_s": 5,
+  "origin": [
+    0,
+    0
+  ],
+  "return_to_origin": false,
+  "primary_N_distribution": "DiscreteUniform{10,...,16}",
+  "positions_given_N": "iid area-uniform in origin-centered disk radius 1800m",
+  "position_sampler": "theta=2*pi*U1, r=1800*sqrt(U2)",
+  "random_generator": "NumPy PCG64, SeedSequence([seed,world_index])",
+  "TSP": "Exact Held-Karp open path, N<=16; numerical float64 distances",
+  "fees": "Movement only; no switch, measurement, or clear fees",
+  "spatial_model": "User-specified model, not inferred from official spatial coordinates",
+  "official_N_probability_sensitivity": [
+    0.13245033112582782,
+    0.11920529801324503,
+    0.1456953642384106,
+    0.152317880794702,
+    0.1456953642384106,
+    0.1390728476821192,
+    0.16556291390728478
+  ],
+  "environment": {
+    "python": "3.14.6 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:37:38) [GCC 14.3.0]",
+    "numpy": "2.4.6"
+  },
+  "sha256": {
+    "第三问-算法3/bayes_tsp/open_routes.py": "54fc4c4590380e17e38ed9c13da2ee05ddcd1888fdcf7d498459aaf39d70ada4",
+    "全知TSP蒙特卡洛.py": "17a01716a592f80b1f4dfaa4cb93d9e62f86430311ed83dec4abb91d73fc8c0e",
+    "全知纯移动基准.py": "dc1b29d09eb7645e607e27f7f4fe11e5c9f17cc56abbaa2c30167b68981d3102",
+    "results/official-q3-counts-20260912-015926-285304/summary.json": "34e7c1251ca99ccda443c277360d4804ac5ea95c07b5b1dbe97f431969152e90"
+  }
+}

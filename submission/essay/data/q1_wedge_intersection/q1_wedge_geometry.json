@@ -1,0 +1,90 @@
+{
+  "kind": "schematic, reconstructed from reference; not experimental data",
+  "detectors": [
+    [
+      0.71,
+      2.71
+    ],
+    [
+      2.5,
+      0.62
+    ],
+    [
+      5.66,
+      0.61
+    ]
+  ],
+  "polygon_vertices": [
+    [
+      5.197405078034008,
+      3.6060587002096436
+    ],
+    [
+      4.606818160933121,
+      3.4881285075714312
+    ],
+    [
+      4.785746471317934,
+      2.999154380001598
+    ],
+    [
+      5.221139445160017,
+      3.4523398551785744
+    ]
+  ],
+  "error_half_angles_degrees": [
+    5.646234786577477,
+    5.668207261138941,
+    5.660829656915888
+  ],
+  "layout": {
+    "figure_size_inches": [
+      12.6,
+      7.0
+    ],
+    "main_axes_bounds": [
+      0.055,
+      0.155,
+      0.45,
+      0.675
+    ],
+    "main_xlim": [
+      0.32,
+      7.42
+    ],
+    "main_ylim": [
+      0.08,
+      6.9
+    ],
+    "main_anchor": "W",
+    "zoom_axes_bounds": [
+      0.61,
+      0.275,
+      0.35,
+      0.495
+    ],
+    "panel_title_alignment": "center",
+    "panel_title_gap": 0.02,
+    "zoom_note_y": 0.215,
+    "aspect": "equal",
+    "output_dpi": 300,
+    "connector": {
+      "target_axes_fraction": [
+        0,
+        0.94
+      ],
+      "line_color": "#B4BDC5",
+      "line_width_points": 0.8,
+      "dash_pattern_points": [
+        3,
+        4
+      ],
+      "arrow_shape": "equilateral_triangle",
+      "arrow_side_points": 7.5,
+      "arrow_fill": "#A6B2BD"
+    }
+  },
+  "outputs": {
+    "png": "q1_wedge_intersection.png"
+  }
+}

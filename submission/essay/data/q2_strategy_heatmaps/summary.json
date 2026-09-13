@@ -1,0 +1,131 @@
+{
+  "parameters": {
+    "target_radius_m": 1800,
+    "R0_m": 1200,
+    "error_half_angle_deg": 1,
+    "angle_bin_deg": 0.125,
+    "radial_cells": 80,
+    "angular_cells": 16,
+    "candidate_spacing_m": 60.0,
+    "local_spacing_m": 15,
+    "objective": "Expected minimum enclosing radius; includes normal, near, no-signal outcomes",
+    "geometry": "Union of wedges in each angle bin; circular boundaries polygon-approximated",
+    "prior": "Uniform area on target disk; independent uniform angular errors at distinct sites",
+    "search_domain": "Candidate second detectors restricted to target disk"
+  },
+  "scenarios": {
+    "symmetric": {
+      "p1": [
+        0.0,
+        0.0
+      ],
+      "theta": 0.0,
+      "initial_radius_m": 597.5925455417879,
+      "initial_area_m2": 25132.30458489257,
+      "best": {
+        "x": 840.0,
+        "y": 495.0,
+        "J": 23.147696339288032,
+        "ED": 46.29520302022789,
+        "p_near": 0.0,
+        "p_none": 0.0,
+        "probability_sum": 0.9999999999999888
+      },
+      "reduction": 0.9612650851956295,
+      "area_partition_error": 2.220446049250313e-16,
+      "probability_sum_max_error": 1.1546319456101628e-14,
+      "reflection_max_error_m": 2.8421709430404007e-12,
+      "baselines": {
+        "repeat": {
+          "x": 0.0,
+          "y": 0.0,
+          "J": 597.5925455417879,
+          "ED": 1195.0030586051948,
+          "p_near": 0.0,
+          "p_none": 0.0,
+          "probability_sum": 1.0
+        },
+        "forward_300m": {
+          "x": 300.0,
+          "y": 0.0,
+          "J": 409.03116166154365,
+          "ED": 818.0039385262932,
+          "p_near": 0.0,
+          "p_none": 0.0,
+          "probability_sum": 0.9999999999999964
+        },
+        "lateral_300m": {
+          "x": 0.0,
+          "y": 300.0,
+          "J": 72.74241390899861,
+          "ED": 145.48376916380255,
+          "p_near": 0.0,
+          "p_none": 0.06249999999999996,
+          "probability_sum": 0.9999999999999892
+        }
+      },
+      "validation_J_m": [
+        23.147696339288032,
+        23.14501399481301,
+        22.869187439032007,
+        22.73189784435265
+      ]
+    },
+    "asymmetric": {
+      "p1": [
+        1200.0,
+        400.0
+      ],
+      "theta": 65.0,
+      "initial_radius_m": 340.22204441481773,
+      "initial_area_m2": 8031.134497799809,
+      "best": {
+        "x": 1140.0,
+        "y": 945.0,
+        "J": 12.932211482338605,
+        "ED": 25.844100657531733,
+        "p_near": 0.0,
+        "p_none": 0.0,
+        "probability_sum": 0.9999999999999911
+      },
+      "reduction": 0.9619889078481613,
+      "area_partition_error": 6.217248937900877e-14,
+      "probability_sum_max_error": 1.1546319456101628e-14,
+      "baselines": {
+        "repeat": {
+          "x": 1200.0,
+          "y": 400.0,
+          "J": 340.22204441481773,
+          "ED": 680.4440888296353,
+          "p_near": 0.0,
+          "p_none": 0.0,
+          "probability_sum": 1.0
+        },
+        "forward_300m": {
+          "x": 1326.7854785222098,
+          "y": 671.892336110995,
+          "J": 157.36334417469772,
+          "ED": 314.72668834939543,
+          "p_near": 0.0,
+          "p_none": 0.0,
+          "probability_sum": 0.9999999999999991
+        },
+        "lateral_300m": {
+          "x": 928.107663889005,
+          "y": 526.7854785222098,
+          "J": 31.15028709840847,
+          "ED": 62.30057419681692,
+          "p_near": 0.0,
+          "p_none": 0.0,
+          "probability_sum": 1.0000000000000009
+        }
+      },
+      "validation_J_m": [
+        12.932211482338605,
+        12.927812419144745,
+        12.772079219667182,
+        12.694608864907375
+      ]
+    }
+  }
+}
