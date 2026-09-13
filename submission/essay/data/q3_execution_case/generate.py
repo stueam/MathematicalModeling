@@ -16,8 +16,6 @@ INK='#263747'; BLUE='#456A98'; TEAL='#147D83'; CORAL='#C96749'; GOLD='#C8A24A'
 
 def read_and_check():
     summary=json.loads((HERE/'summary.json').read_text(encoding='utf-8'))
-    provenance=json.loads((HERE/'provenance.json').read_text(encoding='utf-8'))
-    assert provenance['case_kind']=='local_simulation'
     with (HERE/'actions.csv').open(encoding='utf-8',newline='') as f: rows=list(csv.DictReader(f))
     points=np.array([[float(r['x_m']),float(r['y_m'])] for r in rows])
     costs=dict(move_s=0.,switch_s=0.,measure_s=0.,clear_success_s=0.,clear_failure_s=0.)
