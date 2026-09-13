@@ -2,7 +2,7 @@
 
 Angles are intentionally enlarged to match the reference diagram. Polygon
 vertices are computed by half-plane intersection rather than hand-positioned.
-Run: python q1_wedge_geometry.py
+Run: python generate.py
 """
 from pathlib import Path
 import itertools
@@ -100,8 +100,6 @@ fig = plt.figure(figsize=LAYOUT['figure_size_inches'])
 ax = fig.add_axes(LAYOUT['main_axes_bounds'])
 ax.set_anchor(LAYOUT['main_anchor'])
 zoom = fig.add_axes(LAYOUT['zoom_axes_bounds'])
-fig.text(.055,.94,'楔形约束与交会定位区域', fontsize=19, weight='bold', color=INK)
-fig.text(.055,.895,'三组示向度约束取交集，得到干扰源的共同可行区域',fontsize=11,color=MUTED)
 
 for panel in [ax,zoom]:
     panel.set_aspect(LAYOUT['aspect'])
@@ -190,7 +188,7 @@ fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,.079),
            ncol=4,frameon=False,handlelength=2.4,columnspacing=2.6,fontsize=10)
 fig.text(.5,.036,'几何示意图：误差角经放大以便展示，不代表实际 ±1° 数据。',
          ha='center',fontsize=9,color=MUTED)
-for suffix in ['png','svg','pdf']:
+for suffix in ['png']:
     fig.savefig(OUT/f'q1_wedge_intersection.{suffix}',dpi=LAYOUT['output_dpi'])
 plt.close(fig)
 (OUT/'q1_wedge_geometry.json').write_text(json.dumps({
