@@ -94,12 +94,10 @@ def main():
     bars.grid(axis='x',color='#E8EDF0',lw=.7,zorder=0)
     for yi,value in zip(y,values):
         bars.text(value+45,yi,f'{value:,.1f} s',va='center',fontsize=12,color=INK)
-        bars.text(0,yi+.33,f'占总时间 {value/s["virtual_time_s"]:.1%}',va='center',fontsize=11.5,color='#768490')
     fig.text(.61,.94,'(b) 虚拟耗时构成',fontsize=15,fontweight='bold',color=INK)
     fig.text(.61,.87,f'完成 {s["cleared_count"]}/{s["source_count"]} 个源  ·  总计 {s["virtual_time_s"]:,.2f} s',fontsize=12.5,color=INK)
     fig.text(.61,.205,f'移动距离  {s["movement_m"]/1000:.2f} km\n检测 {s["measure_count"]} 次  ·  清除失败 {s["failed_clears"]} 次',
         fontsize=12,color=INK,linespacing=1.8)
-    fig.text(.61,.10,'末次清除后继续原地扫描 30 s，\n用于完成剩余频道排查。',fontsize=11,color='#687785',linespacing=1.7)
     handles=[Line2D([],[],color=BLUE,lw=1.8,label='实际路线'),
              Line2D([],[],marker='o',color='none',mfc='white',mec=TEAL,markersize=7,label='检测位置'),
              Line2D([],[],marker='s',color='none',mfc=CORAL,mec='white',markersize=8,label='成功清除位置')]
