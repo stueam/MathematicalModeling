@@ -20,4 +20,4 @@
 
 全知者136.5153344221秒/源仅计访问源坐标的最短移动；加每源5秒光学定位与清除后为141.5153344221秒/源。与随机40图的平均任务时间相差74.4943854861秒/源。两批地图没有逐图配对，不将差额解释为同图信息成本或近似最优比；压力地图不与均匀地图直接排名。
 
-在仓库根目录运行 `python src/Q3/evidence/paper_results/verify.py` 可复算表格，并检查正文数值。
+运行 `python src/Q3/evidence/paper_results/verify.py` 可复算表格，不依赖目录外的论文文件。需要同时检查正文数值时，在仓库根目录运行 `python src/Q3/evidence/paper_results/verify.py --paper essay/essay.tex`。

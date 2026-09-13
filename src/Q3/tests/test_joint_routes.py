@@ -76,8 +76,9 @@ def test_joint_forecast_does_not_change_actual_unknown_regions():
 
 def test_refined_score_is_recomputed_instead_of_reusing_coarse_metadata():
     from bayes_tsp.posterior import Posterior
-    p = lambda x: Posterior(np.array([[float(x), 0.]]), np.array([1.]), np.array([1000.]),
-                           np.array([1500.]), np.array([float(x), 0.]), 1., 1, 8)
+    def p(x):
+        return Posterior(np.array([[float(x), 0.]]), np.array([1.]), np.array([1000.]),
+                               np.array([1500.]), np.array([float(x), 0.]), 1., 1, 8)
     policy = JointPolicy(JointConfig(resolution=8))
     b = Belief()
     points = {1: (100., 0.)}

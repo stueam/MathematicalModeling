@@ -10,7 +10,6 @@ def route_length(start, route, points):
 class DynamicTour:
     def __init__(self):
         self.route = []
-        self.revisions = 0
 
     def update(self, start, points):
         route = [k for k in self.route if k in points]
@@ -40,5 +39,4 @@ class DynamicTour:
                 break
             route = best
         self.route = route
-        self.revisions += 1
         return route.copy()

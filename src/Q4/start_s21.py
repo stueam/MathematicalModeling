@@ -1,38 +1,59 @@
-"""S21 Q4 practice launcher. --self-test is fully offline; --connect starts practice."""
-import sys, os, shutil, json
-from pathlib import Path
-from s21_layout import install
+"""Run the S21 probes policy locally, check coverage, or join Windows practice."""
 
-def main():
-    points=install()
-    from q4.sector import ProbePolicy
-    if '--self-test' in sys.argv:
+import argparse
+import json
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument('--self-test', action='store_true', help='Check coverage without network access')
+    mode.add_argument('--local', action='store_true', help='Complete a local simulated mission')
+    mode.add_argument('--connect', action='store_true', help='Connect to the Windows practice simulator')
+    parser.add_argument('--seed', type=int, default=800, help='Local world seed')
+    parser.add_argument('--rounds', type=int, default=1, help='Number of practice rounds, 1..100')
+    parser.add_argument('--resume-ready-practice', action='store_true')
+    args = parser.parse_args(argv)
+    if not 1 <= args.rounds <= 100:
+        parser.error('rounds must be 1..100')
+    if (args.local or args.self_test) and (args.rounds != 1 or args.resume_ready_practice):
+        parser.error('Practice options require practice mode')
+    if not args.local and args.seed != 800:
+        parser.error('--seed requires --local')
+    if args.self_test:
         from q4.core import Belief
-        p=ProbePolicy()
-        action=p.choose(Belief())
-        assert len(p.points)==21
-        print(json.dumps({'coverage':'passed','stations':21,'implementation':p.implementation,
-                          'first_action':action.payload(),'network_used':False},ensure_ascii=False))
-        return
-    if '--local' in sys.argv:
-        import run
-        sys.argv=[sys.argv[0],'local','--policy','probes']+[a for a in sys.argv[1:] if a!='--local']
-        run.main()
-        return
-    import practice_windows as adapter
-    if os.name=='nt':
-        adapter.POWERSHELL=shutil.which('powershell.exe') or str(Path(os.environ['SystemRoot'])/'System32/WindowsPowerShell/v1.0/powershell.exe')
-    original_manifest=adapter.code_manifest
-    def code_manifest():
-        import hashlib
-        result=original_manifest()
-        for name in ('start_s21.py','s21_layout.py','s21_certificate.json','check_s21_certificate.py'):
-            result[name]=hashlib.sha256((Path(__file__).parent/name).read_bytes()).hexdigest()
-        return result
-    adapter.code_manifest=code_manifest
-    if '--policy' in sys.argv:
-        raise SystemExit('This launcher fixes the S21 probes policy; omit --policy.')
-    sys.argv += ['--policy','probes']
-    adapter.main()
+        from q4.sector import ProbePolicy
 
-if __name__=='__main__':main()
+        policy = ProbePolicy()
+        action = policy.choose(Belief())
+        if len(policy.points) != 21:
+            raise RuntimeError('S21 requires exactly 21 certified stations')
+        print(
+            json.dumps(
+                {
+                    'coverage': 'passed',
+                    'stations': len(policy.points),
+                    'implementation': policy.implementation,
+                    'first_action': action.payload(),
+                    'network_used': False,
+                },
+                ensure_ascii=False,
+            )
+        )
+    elif args.local:
+        import run
+
+        run.main(['local', '--policy', 'probes', '--seed', str(args.seed)])
+    else:
+        import practice_windows
+
+        options = ['--policy', 'probes', '--rounds', str(args.rounds)]
+        if args.connect:
+            options.append('--connect')
+        if args.resume_ready_practice:
+            options.append('--resume-ready-practice')
+        practice_windows.main(options)
+
+
+if __name__ == '__main__':
+    main()

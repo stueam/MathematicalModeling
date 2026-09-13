@@ -4,7 +4,7 @@ import math
 
 import numpy as np
 
-from .shared import distance, load, point_key
+from .shared import load
 
 base = load('simulator')
 LocalSimulator = base.LocalSimulator

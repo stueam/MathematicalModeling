@@ -8,7 +8,8 @@ from bayes_tsp.coupling import CoupledBelief
 
 
 def test_tiny_violation_repaired_without_relaxing_radius():
-    constraint = lambda p: np.array([997.-np.linalg.norm(p)])
+    def constraint(p):
+        return np.array([997.-np.linalg.norm(p)])
     point = repair_segment((0., 0.), (997.+1e-7, 0.), constraint)
     assert point is not None
     assert constraint(point).min() >= 0
@@ -17,7 +18,8 @@ def test_tiny_violation_repaired_without_relaxing_radius():
 
 def test_repair_checks_all_constraints_and_rejects_large_violation():
     centers = np.array([[0., 0.], [10., 0.]])
-    constraint = lambda p: 20.-np.linalg.norm(centers-p, axis=1)
+    def constraint(p):
+        return 20.-np.linalg.norm(centers-p, axis=1)
     point = repair_segment((5., 0.), (20.+1e-7, 0.), constraint)
     assert point is not None and constraint(point).min() >= 0
     assert repair_segment((5., 0.), (21., 0.), constraint) is None

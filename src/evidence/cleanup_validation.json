@@ -1,0 +1,438 @@
+{
+  "date": "2026-09-13",
+  "baseline_revision": "cba9db17dae44caffb6447a6a1f0f1ea629dc75a",
+  "parent_revision": "d54cc2efededd95a49fc21c89ba972ab329e2553",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "scope": "src only",
+  "official_evaluator_contacted": false,
+  "environment_lock": "requirements-tested.txt",
+  "inventory": {
+    "before_python_files": 86,
+    "after_python_files": 71,
+    "before_python_lines": 11322,
+    "after_python_lines": 9329,
+    "removed_python_paths": [
+      "Q3/vendor/q3/mission.py",
+      "Q3/vendor/q3/planner.py",
+      "Q3/vendor/q3/racing.py",
+      "Q3/vendor/q3/rollout_engine.py",
+      "Q3/vendor/q3/sampling.py",
+      "Q4/q4/bundles.py",
+      "Q4/q4/collected.py",
+      "Q4/q4/corridor.py",
+      "Q4/q4/deferred.py",
+      "Q4/q4/external_candidates.py",
+      "Q4/q4/hull_certificate.py",
+      "Q4/q4/joint_sampling.py",
+      "Q4/q4/monte_carlo.py",
+      "Q4/q4/phased.py",
+      "Q4/q4/pooled.py",
+      "Q4/q4/rollout.py",
+      "Q4/q4/sampling.py",
+      "Q4/q4/shared_probes.py",
+      "Q4/vendor/q3/policy.py"
+    ]
+  },
+  "import_audit": {
+    "Q2": {
+      "python_files": 3,
+      "reachable_files": 3,
+      "unreferenced_files": []
+    },
+    "Q3": {
+      "python_files": 40,
+      "reachable_files": 40,
+      "unreferenced_files": []
+    },
+    "Q4": {
+      "python_files": 27,
+      "reachable_files": 27,
+      "unreferenced_files": []
+    }
+  },
+  "tests": {
+    "Q2": {
+      "passed": 12,
+      "elapsed_s": 4.92
+    },
+    "Q3": {
+      "passed": 109,
+      "elapsed_s": 29.73
+    },
+    "Q4": {
+      "passed": 62,
+      "elapsed_s": 57.8
+    }
+  },
+  "verification_steps": [
+    {
+      "name": "lint",
+      "returncode": 0
+    },
+    {
+      "name": "unused",
+      "returncode": 0
+    },
+    {
+      "name": "Q2-tests",
+      "returncode": 0
+    },
+    {
+      "name": "Q3-tests",
+      "returncode": 0
+    },
+    {
+      "name": "Q4-tests",
+      "returncode": 0
+    },
+    {
+      "name": "Q2-symmetric",
+      "returncode": 0
+    },
+    {
+      "name": "Q2-asymmetric",
+      "returncode": 0
+    },
+    {
+      "name": "Q3-local",
+      "returncode": 0
+    },
+    {
+      "name": "Q4-coverage",
+      "returncode": 0
+    },
+    {
+      "name": "Q4-local",
+      "returncode": 0
+    },
+    {
+      "name": "Q3-archived-evidence",
+      "returncode": 0
+    },
+    {
+      "name": "Q3-formal-help",
+      "returncode": 0
+    },
+    {
+      "name": "Q3-practice-help",
+      "returncode": 0
+    },
+    {
+      "name": "Q4-formal-help",
+      "returncode": 0
+    },
+    {
+      "name": "Q4-practice-help",
+      "returncode": 0
+    }
+  ],
+  "equivalence_excluded_fields": [
+    "real_timestamp_ms",
+    "planning_s"
+  ],
+  "equivalence": {
+    "Q3": {
+      "traces": [
+        {
+          "trace": "0-actions.json",
+          "actions": 120,
+          "identical": true,
+          "sha256": "d502db16e31bf8a8dcbfa5bd59461beb0dd7f83f6b8b36892e57a6bc4a33f1a9"
+        },
+        {
+          "trace": "10000-actions.json",
+          "actions": 165,
+          "identical": true,
+          "sha256": "43b6f746ebea2588b08eda0b59ef658e48ea05f41a6ec1ac29af8a76c378afba"
+        },
+        {
+          "trace": "10001-actions.json",
+          "actions": 112,
+          "identical": true,
+          "sha256": "11bb4cc682b73d7b5c1f89eee848ce4fc597e84ee669d910311cc4c9c35391f3"
+        }
+      ],
+      "summaries": [
+        {
+          "seed": 0,
+          "scenario": "uniform",
+          "error_mode": "iid",
+          "source_count": 15,
+          "cleared_count": 15,
+          "all_cleared": true,
+          "certified_complete": true,
+          "virtual_time_s": 2738.940927,
+          "movement_m": 10204.704635000002,
+          "steps": 120,
+          "error": null
+        },
+        {
+          "seed": 10000,
+          "scenario": "boundary",
+          "error_mode": "extreme",
+          "source_count": 10,
+          "cleared_count": 10,
+          "all_cleared": true,
+          "certified_complete": true,
+          "virtual_time_s": 3255.050512,
+          "movement_m": 11510.252560000004,
+          "steps": 165,
+          "error": null
+        },
+        {
+          "seed": 10001,
+          "scenario": "near",
+          "error_mode": "correlated",
+          "source_count": 16,
+          "cleared_count": 16,
+          "all_cleared": true,
+          "certified_complete": true,
+          "virtual_time_s": 2934.925921,
+          "movement_m": 11509.629605,
+          "steps": 112,
+          "error": null
+        }
+      ]
+    },
+    "Q4": {
+      "traces": [
+        {
+          "trace": "boundary-extreme-n10-r1000.0-d10-10000-probes-actions.jsonl",
+          "actions": 357,
+          "identical": true,
+          "sha256": "9982994c37ccc336735f888a4ecc074cee59487d72ff932865767a29fba920da"
+        },
+        {
+          "trace": "outward-correlated-n16-r1500.0-d16-10001-probes-actions.jsonl",
+          "actions": 389,
+          "identical": true,
+          "sha256": "fe94dea818d57b7e2a3f5c0b52ed8c0f3d3e890402fce25a45d2309739ca701f"
+        },
+        {
+          "trace": "uniform-iid-nNone-rNone-dNone-800-probes-actions.jsonl",
+          "actions": 294,
+          "identical": true,
+          "sha256": "4781c6e1c99609a4bb1d2ef98103c7ad66d42af78cf84580514dab9e3d855660"
+        }
+      ],
+      "summaries": [
+        {
+          "seed": 800,
+          "scenario": "uniform",
+          "error_mode": "iid",
+          "source_count": 10,
+          "cleared_count": 10,
+          "all_cleared": true,
+          "certified_complete": true,
+          "virtual_time_s": 5720.143045,
+          "movement_m": 19915.715229413006,
+          "steps": 294,
+          "error": null
+        },
+        {
+          "seed": 10000,
+          "scenario": "boundary",
+          "error_mode": "extreme",
+          "source_count": 10,
+          "cleared_count": 10,
+          "all_cleared": true,
+          "certified_complete": true,
+          "virtual_time_s": 6302.909902,
+          "movement_m": 20984.54949823331,
+          "steps": 357,
+          "error": null
+        },
+        {
+          "seed": 10001,
+          "scenario": "outward",
+          "error_mode": "correlated",
+          "source_count": 16,
+          "cleared_count": 16,
+          "all_cleared": true,
+          "certified_complete": true,
+          "virtual_time_s": 6851.105267,
+          "movement_m": 22895.5263347429,
+          "steps": 389,
+          "error": null
+        }
+      ]
+    }
+  },
+  "q2_default_grid_search": {
+    "symmetric": {
+      "scenario": "symmetric",
+      "R0": 1200.0,
+      "p1": [
+        0.0,
+        0.0
+      ],
+      "theta": 0.0,
+      "nr": 80,
+      "na": 16,
+      "arc": 128,
+      "angle_bin_deg": 0.125,
+      "step_m": 60.0,
+      "local_step_m": 15,
+      "objective": "expected full-region minimum enclosing radius in metres",
+      "initial_radius_m": 597.5925455417879,
+      "area_partition_relative_error": 2.220446049250313e-16,
+      "best": {
+        "x": 840.0,
+        "y": 495.0,
+        "J": 23.14769633928804,
+        "ED": 46.29520302022789,
+        "p_near": 0.0,
+        "p_none": 0.0,
+        "probability_sum": 0.9999999999999888
+      },
+      "coarse_points": 2821,
+      "refined_points": 338
+    },
+    "asymmetric": {
+      "scenario": "asymmetric",
+      "R0": 1200.0,
+      "p1": [
+        1200.0,
+        400.0
+      ],
+      "theta": 65.0,
+      "nr": 80,
+      "na": 16,
+      "arc": 128,
+      "angle_bin_deg": 0.125,
+      "step_m": 60.0,
+      "local_step_m": 15,
+      "objective": "expected full-region minimum enclosing radius in metres",
+      "initial_radius_m": 340.22204441481773,
+      "area_partition_relative_error": 6.195044477408373e-14,
+      "best": {
+        "x": 1140.0,
+        "y": 945.0,
+        "J": 12.932211482338602,
+        "ED": 25.84410065753174,
+        "p_near": 0.0,
+        "p_none": 0.0,
+        "probability_sum": 0.9999999999999911
+      },
+      "coarse_points": 2821,
+      "refined_points": 169
+    }
+  },
+  "q3_parallel_benchmark": {
+    "cases": 4,
+    "completed": 4,
+    "workers": 2
+  },
+  "q4_layout_benchmark": {
+    "cases": 60,
+    "completed": 60,
+    "workers": 2,
+    "aggregate": {
+      "s21": {
+        "cases": 30,
+        "fully_completed": 30,
+        "failures": [],
+        "mean_virtual_time_s": 5694.319194566666,
+        "mean_movement_m": 20384.095967638197,
+        "mean_real_time_s": 6.352900576432391,
+        "mean_measure_count": 261.0,
+        "mean_failed_clears": 2.0,
+        "mean_s_per_source": 467.70946334078667,
+        "weighted_s_per_source": 446.0302241174935,
+        "complete_under_350_s_per_source": 5
+      },
+      "s22": {
+        "cases": 30,
+        "fully_completed": 30,
+        "failures": [],
+        "mean_virtual_time_s": 5859.0009967666665,
+        "mean_movement_m": 21018.671636082483,
+        "mean_real_time_s": 7.084268610900229,
+        "mean_measure_count": 267.46666666666664,
+        "mean_failed_clears": 2.433333333333333,
+        "mean_s_per_source": 479.351660065645,
+        "weighted_s_per_source": 458.9295819921671,
+        "complete_under_350_s_per_source": 3
+      }
+    }
+  },
+  "standalone_copy_check": {
+    "Q2": "paper point evaluation passed",
+    "Q3": "complete seed 0 local CLI passed",
+    "Q4": "complete seed 800 start_s21 CLI passed"
+  },
+  "archived_evidence_check": "64 archived rows recomputed; paper values checked; not new 64-case simulation results",
+  "source_sha256": {
+    "Q2/model_core.py": "f4f91fd6c303007f13e0b4ad1a1c9e3d468a7674c2de5feede5852ab1bd017ba",
+    "Q2/run.py": "0854fd7490b4ad26e3d9853bc110ae8c9788a490df2c1a3f856d24c98c24b0cb",
+    "Q2/tests/test_model.py": "9b2a04bd64aee881931f1c311d4297f70fe35b02e2d3c7df39bab2778264df7b",
+    "Q3/analyze.py": "227f620892cec27f14dd4ce9b8980589ff22fa0bd0835afa534e60279527b124",
+    "Q3/audit_movement.py": "8aa38e26a51479c0e417bd2485c669c808444f501d46cea6e2f9fd91e3db189a",
+    "Q3/audit_practice.py": "7dd746fca2f3bb8c10c9d24c60670da3da9268a063cba7e6f5c805e14e07f827",
+    "Q3/audit_routes.py": "d44db55692c8f302e04497cc7084acda4f06b37081a57d580f15abf4298b7373",
+    "Q3/bayes_tsp/__init__.py": "c6b877ac50223572ea9507e93f37e4cf85ecd74c070b6aa1a57164a34d836e2b",
+    "Q3/bayes_tsp/cached.py": "948e4e823dfb8dd8dd3e419c20aeeda66a046b196ce19343d15e7c5290e509fd",
+    "Q3/bayes_tsp/coupling.py": "e5ea1b6439bce29858192f80f199f82730d2f9f31918a9786cd441f5b3d760fd",
+    "Q3/bayes_tsp/efficient.py": "98e4a8fda932907943de3c2b1bd5afb6b4451680f648716772e6eb3dc4377df7",
+    "Q3/bayes_tsp/joint.py": "0d9d952b76a17f56d1e34858e7e568140fb69686d6f3ade6c3177394cd0db07c",
+    "Q3/bayes_tsp/open_routes.py": "54fc4c4590380e17e38ed9c13da2ee05ddcd1888fdcf7d498459aaf39d70ada4",
+    "Q3/bayes_tsp/policy.py": "cc3d753247580d97a1153457c8829797c8fd218df497ead7ad58c2fdc6e5312a",
+    "Q3/bayes_tsp/posterior.py": "bca41a136b699536a443c91264124410ddc3125021af97df66481f31c6a0202f",
+    "Q3/bayes_tsp/refinement.py": "cc7836cc6e68fc2f7524ba9d5845c466bddd5b86ead104f127aebe986a5ebbbb",
+    "Q3/bayes_tsp/repair.py": "700294976ea6778b817420bea52e97c481b1a055416ae0dc6dd738b382e60d51",
+    "Q3/bayes_tsp/routing.py": "b7687dfdf42b4e6ac1bf2b3b6e4080258376fe38fa2f4ed5ff8757d8e5bbdfc0",
+    "Q3/bayes_tsp/scheduling.py": "97c5068dc8e4dfc1294c6dca806274c3e115dd2e86240072b46db3e260bf3546",
+    "Q3/bayes_tsp/sectors.py": "ce081bd58dcdcce9656235ab5209ea0e1bf9180ad2b055bd7deb6a7ab82eddbf",
+    "Q3/bayes_tsp/shared.py": "252911812374047d07dbb89f6071cb5529eb9f4a5d39ff18de09e03628343f2e",
+    "Q3/evidence/paper_results/verify.py": "dc73dbd6e16f7ac625dccb59c65bad72d164ab6726742927b9cfe53fc00da766",
+    "Q3/formal_session.py": "d69b8c1f6c15cf2cd41c5eff5d4a7cb44df32f67e77b563ba1084d91c1e88199",
+    "Q3/practice_windows.py": "5362bff9c3805280bd0975d3d526f0ef325ab109c488742387a5e92df9cfd23d",
+    "Q3/run.py": "214c609f0715aa267060bf090b0fca71b6838dd6e2a86e94fc18fa77ecf6960f",
+    "Q3/start_formal.py": "4649247d8a0930efedbc4aa8bf4a52c3194e274c3afe069b3f3eaa2f37360a18",
+    "Q3/summarize_practice.py": "e84762bd4cc9ea142d1c6d3139329bb5ceb6e3cce21ff7618f1489b1711983ba",
+    "Q3/tests/test_bayes_tsp.py": "dc6350c2507bb08b9a28a066c09a393df674f13b18b03b7d7eb22951df34bcbb",
+    "Q3/tests/test_cached.py": "6035164c518b60ffcc8056dd4362504e6ce5b8ec0e9c771b182906e39221c69d",
+    "Q3/tests/test_formal_entry.py": "ebbeac58c939efb5ae18d50075fd659bb57a74123026e87ca40a21e3fddf9259",
+    "Q3/tests/test_joint_routes.py": "f6194135d568e9189251b7f047f9970d6e2e93ccd08adaac420fd8840c681bab",
+    "Q3/tests/test_movement_audit.py": "4ec2b63aed05e221e097c014bac1c1ef09605c9352894f9c965daeea41511077",
+    "Q3/tests/test_practice_audit.py": "b6505d81729a82eb295565cb36196683be5938ef482ab90a7987f1f672d35a3d",
+    "Q3/tests/test_practice_guard.py": "18c692b5bd681f7bf82257e02d73b87517e2429a9431a1647d105993315492b8",
+    "Q3/tests/test_scheduling.py": "c0e7876dddb5889bf0a6ecabef43f76f163d2d783748a6a6ecbfac232ba68015",
+    "Q3/tests/test_sectors.py": "e2a578c2978d252a167d5caceba896f757fe520bcafb2484a99b18b603432ef1",
+    "Q3/vendor/q3/__init__.py": "74a6060ce7e2b9d50f380eec3b04d004d3a81147575e6c6f4763184f7994f721",
+    "Q3/vendor/q3/client.py": "6538b9c0a1bebba6abcc890a2ef5dd19ad220996adb1416fb288ed37589b3979",
+    "Q3/vendor/q3/core.py": "9741ae7b3cbb98132b7c980d1bf2e63a17094a0ad04ddf4c3037544921c1e65a",
+    "Q3/vendor/q3/likelihood.py": "6b43efe7d1acf36f276c93f069b302370e83ec5ab0e155c8ad863b77a3e657d5",
+    "Q3/vendor/q3/movement.py": "2126d9c05de1c2318bac640358435e4568d9bce2c6bf2b13abf1d5c3c6584bef",
+    "Q3/vendor/q3/policy.py": "b8e9834d230bdb7e04ad4e611fa8a1564010e4d43e2cd4d95690d9ece491bcbf",
+    "Q3/vendor/q3/simulator.py": "737847e7526b35c122593000f92dddd5f011952cd7c9d6604f3effc51cd45203",
+    "Q4/benchmark_layouts.py": "051b0a2e71d408b440bbecd03997ec17fb3d9b3c0f3f0746c11900f3183e6bcd",
+    "Q4/check_s21_certificate.py": "1774a06fd0f149535cd6a87a3a6e663848e6ab3d954ae8d738dd8a5dae0b7e74",
+    "Q4/formal_session.py": "d69b8c1f6c15cf2cd41c5eff5d4a7cb44df32f67e77b563ba1084d91c1e88199",
+    "Q4/practice_windows.py": "53d7c9cb53935c7be158bab0eb63834db140707caf1b2b393098e8622c5ae15f",
+    "Q4/q4/__init__.py": "213714c4462dae889fe95a0fbde47c440900a886d650bb23f5aa0f267548edf7",
+    "Q4/q4/compact.py": "754ac819e58af43a331fd7c0e1790e6a328fb9b69377ace07c8c1f380d738deb",
+    "Q4/q4/core.py": "adf25b8e8e981943d7cda4a6f3d849d581cdbffef4473c16ba3ef10f9cb5be08",
+    "Q4/q4/coverage.py": "80fd9bc8e4aae48a2a197cc3a97bcba13233d7276cf5677577d409fb77630ecb",
+    "Q4/q4/localization.py": "de10d89ca9d00480d7d406cb105b38adfcc203d8671d931eb42396c8f1ffcf7a",
+    "Q4/q4/policy.py": "d718cd633b3cdd468a7b9b5e8db98d87358018c0d9431a66fec84dccaaf19c8c",
+    "Q4/q4/posterior.py": "63e93d360c2b9f7133a1311d170200726c8827cea302bf0196e03573677596fd",
+    "Q4/q4/routing.py": "78cf7357feae5648d9f75153582bc9cb7cf9c9bfd00a0354cda2240900e1c819",
+    "Q4/q4/sector.py": "b4eec904f6755575d556a5522bd5a680280e50a0ca90cb2cfd043d96e475738e",
+    "Q4/q4/shared.py": "1555f81398f61e2a19218011d10da34cab0b8b196b25b4e86ec8cf65933fb5b2",
+    "Q4/q4/simulator.py": "814bd281a335a2b59696e29e4c62d47f6ca815e5889db03ade65a7fad0af75f2",
+    "Q4/run.py": "4eccdd545a481c61820b0428b2a8fd2d64d38602faad4a57ed58cbebf56d9ff9",
+    "Q4/s21_layout.py": "b8ca486a18ce6fa42cef44ce5025a97546110987f15d531bea5b5cc3b78ccfc5",
+    "Q4/start_formal.py": "bfbc8c89935f0da8bc43a36b27145b1e80cf2f871a38b16fe5fc4e28401bf6ef",
+    "Q4/start_s21.py": "cf2647d94b2064a521b9ddce60c9599bae4a462e8c5e59e0300f381bc7eec795",
+    "Q4/tests/test_formal_entry.py": "ebbeac58c939efb5ae18d50075fd659bb57a74123026e87ca40a21e3fddf9259",
+    "Q4/tests/test_practice_guard.py": "b6f9fa9279f44935189c36fc8685dc3d641aad133b89f53d4a353c932d4cd8cd",
+    "Q4/tests/test_runner.py": "cbc24de7c4068fe056f9321e39ad804439b923c3d6928d72c7389116f6799c66",
+    "Q4/tests/test_ultra_layout.py": "f3cdb73fcd13613f90393d66c03d983bf26b137e3f43895c2fc4459baabe01d5",
+    "Q4/vendor/q3/__init__.py": "74a6060ce7e2b9d50f380eec3b04d004d3a81147575e6c6f4763184f7994f721",
+    "Q4/vendor/q3/client.py": "6538b9c0a1bebba6abcc890a2ef5dd19ad220996adb1416fb288ed37589b3979",
+    "Q4/vendor/q3/core.py": "b2024f1c0e04917d6cbe1b2846c5c3a507a930dfadf4e650355d6c84aa651838",
+    "Q4/vendor/q3/simulator.py": "5f20376f770088906a4bc29f91afe9aad8f820b21fd4348ad515222f34c9a8ba",
+    "verify.py": "925419c2a9dc1f9bca3260832e74ae62d245a2f9939915e4562e4f95a3931def"
+  }
+}

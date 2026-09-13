@@ -11,7 +11,7 @@ import shapely
 
 from .core import Action, distance, point_key
 from .policy import Baseline
-from .sampling import likelihood
+from .likelihood import likelihood
 
 
 def _radical_inverse(n, base):
@@ -73,7 +73,7 @@ def measurement_costs(channel, positions):
     Covariance contraction, no-signal risk and measurement count are charged
     in seconds; information/entropy is not used as an arbitrary reward.
     """
-    xy, weights, lo, hi, mean, cov = support(channel)
+    xy, weights, lo, hi, _mean, cov = support(channel)
     positions = np.asarray(positions, dtype=float).reshape(-1, 2)
     delta = xy[None, :, :]-positions[:, None, :]
     dd = np.maximum(np.linalg.norm(delta, axis=2), 1e-6)
@@ -120,7 +120,7 @@ class MovementPolicy(Baseline):
         cached = getattr(channel, '_movement_menu', None)
         if cached is not None and cached[0] == channel.revision:
             return cached[1]
-        xy, w, _, _, mean, _ = support(channel)
+        _xy, _w, _, _, mean, _ = support(channel)
         obs = channel.directions[-1]
         origin = np.asarray(obs.action.position)
         toward = mean-origin
@@ -190,7 +190,7 @@ class MovementPolicy(Baseline):
             if len(ranked) >= 3*limit+2:
                 break
         if self.speculative_clear:
-            xy, w, _, _, mean, _ = support(p)
+            _xy, _w, _, _, mean, _ = support(p)
             positions = np.asarray([b.position, mean])
             finishing, chance = clear_costs(p, positions)
             failed = {point_key(o.action.position) for o in p.history if o.result == 'no_target_in_range'}
@@ -278,55 +278,6 @@ class MovementPolicy(Baseline):
         order = shortest_open_route(b.position, remaining)
         return self.scan_action(b, remaining[order[0]])
 
-    def proposals(self, b, max_candidates=12, speculative_clear=None):
-        base = self.choose(b)
-        if base.kind == 'clear' and distance(base.position, b.position) < 1e-6:
-            return [base]
-        detected = sorted((c for c, p in b.channels.items() if p.status == 'detected'),
-                          key=lambda c: distance(b.position, support(b.channels[c])[4]))[:3]
-        centers = [tuple(support(b.channels[c])[4]) for c in detected]
-        stops = [s for s in self.stations if self.unknown_at(b, s)]
-        stops.sort(key=lambda s: distance(b.position, s))
-        # Shared/route points can serve different channels. Each is still an
-        # atomic legal action; future scans react to intermediate feedback.
-        shared = centers + [tuple((np.asarray(b.position)+s)/2) for s in stops[:2]]
-        shared += [tuple((np.asarray(x)+y)/2) for i, x in enumerate(centers) for y in centers[i+1:]]
-        groups = []
-        for c in detected:
-            groups.append([a for _, a in self.ranked_local(b, c, extra_points=shared, limit=4)])
-        unknown = self.unknown_at(b, b.position)
-        unknown.sort(key=lambda c: self.scan_merit(b, c, b.position), reverse=True)
-        scan_group = [Action('measure', b.position, c) for c in unknown[:2]]
-        patrol_group = [self.scan_action(b, s) for s in stops[:2]]
-        shared_group = []
-        shared_ranked = []
-        for c in detected:
-            if not shared or self.guaranteed_clear(b, c) is not None:
-                continue
-            p = b.channels[c]
-            values = measurement_costs(p, shared)
-            other_centers = [support(b.channels[k])[4] for k in detected if k != c]
-            for pos, value in zip(shared, values):
-                if point_key(pos) in p.measured or distance(b.position, pos) < 10:
-                    continue
-                connection = min((distance(pos, q) for q in other_centers), default=0.)/5
-                score = distance(b.position, pos)/5+float(value)+.25*connection
-                shared_ranked.append((score, Action('measure', tuple(map(float, pos)), c)))
-        for _, action in sorted(shared_ranked, key=lambda z: z[0]):
-            if not any(distance(action.position, old.position) < 25 for old in shared_group):
-                shared_group.append(action)
-            if len(shared_group) == 2:
-                break
-        # Reserve slots for all action classes before filling by round-robin.
-        result = [base]
-        for group in [scan_group, patrol_group, shared_group] + groups:
-            if group and group[0] not in result:
-                result.append(group[0])
-        for i in range(1, 4):
-            for group in groups + [scan_group, patrol_group, shared_group]:
-                if len(group) > i and group[i] not in result:
-                    result.append(group[i])
-        return result[:max_candidates]
 
 
 def shortest_open_route(start, points):

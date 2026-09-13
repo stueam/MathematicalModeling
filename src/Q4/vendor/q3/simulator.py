@@ -1,28 +1,21 @@
 """Local hidden-state environment, never passed to the real action policy.
 
 Fixed error at a point is keyed by (world seed, channel, exact coordinates),
-not by query order: different candidate rollouts share the same error field.
+not by query order, so repeated observations share the same error field.
 """
-from dataclasses import dataclass
 import copy
 import hashlib
 import math
 import time
 
-import numpy as np
 
 from .core import distance, point_key
 
 
-@dataclass(frozen=True)
-class Source:
-    channel: int
-    position: tuple
-    radius: float
 
 
 class World:
-    def __init__(self, sources, seed=0, error_mode='iid', cleared=(), known_bearings=None):
+    def __init__(self, sources, seed=0, error_mode='iid', cleared=()):
         self._sources = {s.channel: s for s in sources}
         if len(self._sources) != len(sources):
             raise ValueError('Source channels must be unique')
@@ -31,7 +24,6 @@ class World:
                 raise ValueError('Source outside problem bounds')
         self._cleared = set(cleared)
         self.seed, self.error_mode = int(seed), error_mode
-        self._known_bearings = dict(known_bearings or {})
 
     def clone(self):
         w = copy.copy(self)
@@ -63,11 +55,8 @@ class World:
             return {'measure_result': 'no_signal'}, 5
         if d <= 5:
             return {'measure_result': 'near'}, 5
-        key = (action.channel, point_key(action.position))
-        bearing = self._known_bearings.get(key)
-        if bearing is None:
-            phi = math.degrees(math.atan2(s.position[1]-action.position[1], s.position[0]-action.position[0]))
-            bearing = round((phi + self.error(action.channel, action.position)) % 360, 2) % 360
+        phi = math.degrees(math.atan2(s.position[1]-action.position[1], s.position[0]-action.position[0]))
+        bearing = round((phi + self.error(action.channel, action.position)) % 360, 2) % 360
         return {'measure_result': 'direction', 'svd_deg': bearing}, 5
 
     def score(self):
@@ -106,26 +95,3 @@ class LocalSimulator:
                     'real_timestamp_ms': int(time.time()*1000), **feedback}
         self._responses[request_id] = (action, response)
         return dict(response)
-
-
-def generate_world(seed, n=None, scenario='uniform', radius=None, error_mode='iid'):
-    rng = np.random.default_rng(seed)
-    n = int(rng.integers(10, 17)) if n is None else n
-    if not 10 <= n <= 16:
-        raise ValueError('Full-task source count must be 10..16')
-    channels = rng.choice(np.arange(1, 21), n, replace=False)
-    theta = rng.uniform(0, 2*math.pi, n)
-    rr = 1800*np.sqrt(rng.random(n))
-    if scenario == 'boundary':
-        rr = rng.uniform(1750, 1800, n)
-    elif scenario == 'cluster':
-        theta = rng.normal(.8, .03, n)
-        rr = rng.uniform(1450, 1550, n)
-    elif scenario == 'near':
-        rr[0] = 2
-    elif scenario != 'uniform':
-        raise ValueError('Unknown scenario')
-    radii = rng.uniform(1000, 1500, n) if radius is None else np.full(n, radius)
-    sources = [Source(int(c), (float(r*math.cos(t)), float(r*math.sin(t))), float(rad))
-               for c, r, t, rad in zip(channels, rr, theta, radii)]
-    return World(sources, seed=seed, error_mode=error_mode)

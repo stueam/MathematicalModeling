@@ -10,7 +10,6 @@ from scipy.optimize import minimize
 
 from .repair import repair_segment
 from .sectors import SectorConfig, SectorPolicy, covers_vertices
-from .shared import distance
 
 
 @dataclass(frozen=True)

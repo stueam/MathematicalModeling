@@ -16,7 +16,7 @@ import shapely
 from q4.core import Belief
 from q4.coverage import DIAGNOSTICS
 from q4.policy import Config
-from q4.compact import make_policy, make_belief
+from q4.compact import POLICIES, make_policy
 from q4.shared import SHARED_DIR, distance
 from q4.simulator import LocalSimulator, SCENARIOS, generate_world
 
@@ -28,9 +28,9 @@ def dump(path, data):
 
 
 def manifest():
-    files = list((ROOT/'q4').glob('*.py'))+[ROOT/'run.py']
-    files += [ROOT/n for n in ('s21_layout.py', 's21_certificate.json', 'check_s21_certificate.py')]
-    files += [SHARED_DIR/f'{s}.py' for s in ('core', 'simulator', 'policy')]
+    files = sorted(ROOT.glob('*.py')) + sorted((ROOT/'q4').glob('*.py'))
+    files += sorted(SHARED_DIR.glob('*.py'))
+    files += [ROOT/'s21_certificate.json']
     return {str(p.relative_to(ROOT.parent)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 
 
@@ -45,8 +45,8 @@ def run_case(job, out):
     world = generate_world(job['seed'], job['n'], job['scenario'], job['radius'], job['error_mode'], job['directional_count'])
     # Evaluation-only world line. Policy receives neither this file nor World.
     dump(out/f'{tag}-world.json', world.manifest())
-    env, belief = LocalSimulator(world), make_belief(job['policy'])
-    policy = make_policy(job['policy'], Config(**job['config']), **job.get('policy_options',{}))
+    env, belief = LocalSimulator(world), Belief()
+    policy = make_policy(job['policy'], Config(**job['config']))
     started = time.monotonic()
     belief.deadline = started+job['real_limit']
     planning, actions = [], []
@@ -84,9 +84,6 @@ def run_case(job, out):
                     decision_log.flush()
         except Exception as exc:
             error, reason = f'{type(exc).__name__}: {exc}', 'error'
-        finally:
-            if hasattr(policy,'close'):
-                policy.close()
     elapsed = time.monotonic()-started
     if belief.done():
         reason = 'certified_complete'
@@ -127,19 +124,14 @@ def aggregate(rows):
     return result
 
 
-def main():
+def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('mode', choices=('local', 'benchmark', 'validate'))
-    policies_available = ('baseline', 'bayes', 'joint', 'mobile', 'sparse', 'trim', 'compact', 'adaptive', 'ring', 'sector', 'probes', 'reuse', 'aligned', 'corridor', 'mc-probes', 'bundle', 'share', 'heading', 'front', 'miss', 'witness', 'polar22', 'hull', 'boundary', 'deferred', 'phased', 'pooled', 'mc-stable', 'collect', 'collect-value')
-    p.add_argument('--policy', choices=policies_available, default='probes')
-    p.add_argument('--compare', nargs='+', choices=policies_available, default=['mobile', 'probes'])
+    p.add_argument('--policy', choices=POLICIES, default='probes')
+    p.add_argument('--compare', nargs='+', choices=POLICIES, default=['mobile', 'probes'])
     p.add_argument('--seed', type=int, default=0)
     p.add_argument('--rounds', type=int, default=6)
     p.add_argument('--workers', type=int, default=1)
-    p.add_argument('--mc-worlds',type=int,default=4)
-    p.add_argument('--mc-workers',type=int,default=16)
-    p.add_argument('--mc-candidates',type=int,default=3)
-    p.add_argument('--mc-budget',type=float,default=30.)
     p.add_argument('--scenario', choices=SCENARIOS, default='uniform')
     p.add_argument('--error-mode', choices=('iid', 'extreme', 'correlated'), default='iid')
     p.add_argument('--n', type=int)
@@ -151,14 +143,13 @@ def main():
     p.add_argument('--exact-limit', type=int, default=16, choices=range(17))
     p.add_argument('--real-limit', type=float, default=1200.)
     p.add_argument('--max-steps', type=int, default=6000)
-    args = p.parse_args()
+    p.add_argument('--output', help='New output directory; existing directories are rejected')
+    args = p.parse_args(argv)
     if args.workers < 1 or args.rounds < 1 or args.real_limit <= 0 or args.max_steps < 1:
         p.error('Invalid execution limits')
     config = Config(resolution=args.resolution, bearing_bin=args.bearing_bin,
                     directional_prior=args.directional_prior, exact_limit=args.exact_limit)
     policies = [args.policy] if args.mode == 'local' else list(dict.fromkeys(args.compare))
-    if any(p in ('mc-probes','mc-stable') for p in policies) and args.workers!=1:
-        p.error('MC policies parallelize hypothetical worlds: use --workers 1 --mc-workers 16')
     scenarios = [(args.seed+i, args.scenario, args.error_mode, args.n, args.radius, args.directional_count)
                  for i in range(1 if args.mode == 'local' else args.rounds)]
     if args.mode == 'validate':
@@ -167,11 +158,9 @@ def main():
                      for i, (n, r, nd) in enumerate(((10, 1000., 9), (16, 1500., 1)))]
     jobs = [{'seed': seed, 'scenario': scene, 'error_mode': noise, 'n': n, 'radius': r,
              'directional_count': nd, 'policy': policy, 'config': asdict(config),
-             'policy_options':{'mc_worlds':args.mc_worlds,'mc_workers':args.mc_workers,
-                               'mc_candidates':args.mc_candidates,'mc_budget':args.mc_budget},
              'real_limit': args.real_limit, 'max_steps': args.max_steps}
             for seed, scene, noise, n, r, nd in scenarios for policy in policies]
-    out = ROOT/'results'/datetime.now().strftime('%Y%m%d-%H%M%S-%f')
+    out = Path(args.output) if args.output else ROOT/'results'/datetime.now().strftime('%Y%m%d-%H%M%S-%f')
     out.mkdir(parents=True, exist_ok=False)
     dump(out/'config.json', {'arguments': vars(args), 'jobs': jobs, 'code_sha256': manifest(),
                              'environment': {'python': sys.version, 'numpy': np.__version__, 'shapely': shapely.__version__}})
@@ -205,6 +194,7 @@ def main():
         if 'pool' in locals() and pool is not None:
             pool.shutdown(wait=True, cancel_futures=True)
     print(json.dumps(aggregate(rows), ensure_ascii=False, indent=2))
+    raise SystemExit(any(r['error'] or not r['all_cleared'] or not r['certified_complete'] for r in rows))
 
 
 if __name__ == '__main__':

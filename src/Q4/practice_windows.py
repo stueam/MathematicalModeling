@@ -338,13 +338,13 @@ def run_once(folder, expected_case, config, policy_name='mobile'):
     return summary
 
 
-def main():
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--connect', action='store_true')
     parser.add_argument('--rounds', type=int, default=1)
     parser.add_argument('--policy', choices=('mobile', 'trim', 'adaptive', 'probes'), default='probes')
     parser.add_argument('--resume-ready-practice', action='store_true')
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     if not args.connect:
         print(json.dumps(redact_ui(inspect_ui()), ensure_ascii=False, indent=2))
         return

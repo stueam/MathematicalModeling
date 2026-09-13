@@ -2,7 +2,6 @@
 from functools import lru_cache
 from itertools import combinations
 
-import numpy as np
 import shapely
 from shapely.errors import GEOSException
 from shapely.geometry import MultiPoint, Polygon
@@ -55,7 +54,7 @@ def receiving_disk(p):
 
 @lru_cache(maxsize=8192)
 def triangle_exclusion(points):
-    a, b, c = points
+    _a, _b, _c = points
     if any(distance(p, q) >= 2000 for p, q in combinations(points, 2)):
         return Polygon()
     triangle = MultiPoint(points).convex_hull

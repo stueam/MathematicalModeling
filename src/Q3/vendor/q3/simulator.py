@@ -1,7 +1,7 @@
 """Local hidden-state environment, never passed to the real action policy.
 
 Fixed error at a point is keyed by (world seed, channel, exact coordinates),
-not by query order: different candidate rollouts share the same error field.
+not by query order, so repeated observations share the same error field.
 """
 from dataclasses import dataclass
 import copy
@@ -22,7 +22,7 @@ class Source:
 
 
 class World:
-    def __init__(self, sources, seed=0, error_mode='iid', cleared=(), known_bearings=None):
+    def __init__(self, sources, seed=0, error_mode='iid', cleared=()):
         self._sources = {s.channel: s for s in sources}
         if len(self._sources) != len(sources):
             raise ValueError('Source channels must be unique')
@@ -31,7 +31,6 @@ class World:
                 raise ValueError('Source outside problem bounds')
         self._cleared = set(cleared)
         self.seed, self.error_mode = int(seed), error_mode
-        self._known_bearings = dict(known_bearings or {})
 
     def clone(self):
         w = copy.copy(self)
@@ -63,11 +62,8 @@ class World:
             return {'measure_result': 'no_signal'}, 5
         if d <= 5:
             return {'measure_result': 'near'}, 5
-        key = (action.channel, point_key(action.position))
-        bearing = self._known_bearings.get(key)
-        if bearing is None:
-            phi = math.degrees(math.atan2(s.position[1]-action.position[1], s.position[0]-action.position[0]))
-            bearing = round((phi + self.error(action.channel, action.position)) % 360, 2) % 360
+        phi = math.degrees(math.atan2(s.position[1]-action.position[1], s.position[0]-action.position[0]))
+        bearing = round((phi + self.error(action.channel, action.position)) % 360, 2) % 360
         return {'measure_result': 'direction', 'svd_deg': bearing}, 5
 
     def score(self):

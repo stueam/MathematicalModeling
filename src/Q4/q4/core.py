@@ -2,14 +2,13 @@
 from dataclasses import dataclass, field
 
 from .coverage import added_exclusion, full_exclusion
-from .shared import Action, Observation, GeometryError, core, disk, point_key
+from .shared import GeometryError, core, disk, point_key
 
 DOMAIN = core.DOMAIN
 
 
 @dataclass
 class Channel(core.Channel):
-    certificate_updates: int = 0
 
     @property
     def negatives(self):
@@ -40,7 +39,6 @@ class Channel(core.Channel):
         elif result == 'no_signal':
             exclusion = added_exclusion(a.position, tuple(sorted(candidate.negatives)))
             region = region.difference(exclusion)
-            candidate.certificate_updates += int(not exclusion.is_empty)
             if not region.is_empty and region.area < 1.:
                 # Re-evaluate a real certificate, NOT an area cutoff. Different
                 # orders of polygon subtraction can retain machine-size slivers.

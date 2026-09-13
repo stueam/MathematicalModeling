@@ -1,6 +1,5 @@
 """Finite Q4 baseline and Bayesian joint routing; never imports simulator truth."""
 from dataclasses import asdict, dataclass
-import math
 import time
 
 import numpy as np
@@ -8,7 +7,7 @@ import numpy as np
 from .coverage import certifies, relevant, square_stations
 from .localization import finite_clear, guaranteed_clear, local_attempts, measure_points
 from .posterior import Model, QuadratureError, expected_measure, finish_proxy
-from .routing import length, open_route
+from .routing import open_route
 from .shared import Action, GeometryError, distance, point_key
 
 
@@ -187,7 +186,7 @@ class Policy:
         if response.get('clear_result') != 'success' or not self.needed(b, b.position):
             return None
         remaining = {k: p for k, p in self.points.items() if self.needed(b, p)}
-        route, before = self.route(b.position, remaining)
+        _route, before = self.route(b.position, remaining)
         trials = sorted(remaining, key=lambda k: distance(b.position, remaining[k]))[:3]
         audit = []
         for key in trials:

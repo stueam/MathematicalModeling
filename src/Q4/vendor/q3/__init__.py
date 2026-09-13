@@ -1,1 +1,1 @@
-"""Question 3: public belief state, private simulator and rollout planner."""
+"""Vendored public geometry, protocol client and local simulator support."""

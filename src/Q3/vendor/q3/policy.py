@@ -129,30 +129,3 @@ class Baseline:
             if scan is not None:
                 return scan
         raise GeometryError('Patrol exhausted but completion not certified')
-
-    def proposals(self, b, max_candidates=8, speculative_clear=False):
-        base = self.choose(b)
-        actions = [base]
-        if base.kind == 'clear' and distance(base.position, b.position) < 1e-6:
-            return actions
-        unknown = self.unknown_at(b, b.position)
-        for c in sorted(unknown, key=lambda c: (c != b.receiver, c))[:2]:
-            actions.append(Action('measure', b.position, c))
-        detected = sorted((c for c, p in b.channels.items() if p.status == 'detected'),
-                          key=lambda c: distance(b.position, b.channels[c].summary()[0]))[:2]
-        for c in detected:
-            clear = self.guaranteed_clear(b, c)
-            if clear:
-                actions.append(clear)
-            else:
-                actions.extend(self.measurement_candidates(b, c)[:2])
-                center, radius = b.channels[c].summary()
-                if speculative_clear and radius < 100:
-                    actions.append(Action('clear', center, c))
-        stops = sorted(self.stations, key=lambda s: distance(b.position, s))
-        for station in stops:
-            scan = self.scan_action(b, station)
-            if scan is not None and distance(station, b.position) > 1e-6:
-                actions.append(scan)
-                break
-        return list(dict.fromkeys(actions))[:max_candidates]

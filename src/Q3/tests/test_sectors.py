@@ -93,7 +93,7 @@ def test_station_adjustment_shortens_both_legs_and_verifies_feasibility(monkeypa
     assert record['accepted'] and record['saved_leg_m'] > 800
     assert covers_vertices(vertices, pos)
     import bayes_tsp.sectors as module
-    monkeypatch.setattr(module, 'minimize', lambda *a, **kw:
+    monkeypatch.setattr(module, 'minimize', lambda *a, **_kwargs:
         SimpleNamespace(success=False, x=np.array([1e9, 1e9]), nit=1))
     pos, record = adjust_station(vertices, original, (500., 100.), (500., -100.))
     assert pos == original and not record['accepted']

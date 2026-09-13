@@ -103,42 +103,6 @@ class Channel:
     def directions(self):
         return [o for o in self.history if o.result == 'direction']
 
-    def update(self, obs):
-        a, result = obs.action, obs.result
-        if self.status in ('cleared', 'absent_certified'):
-            if result in ('direction', 'near', 'success'):
-                raise GeometryError('Positive feedback conflicts with completed channel')
-            return
-        p = self.region
-        new_status = self.status
-        if result == 'direction':
-            p = p.intersection(bearing_wedge(a.position, obs.bearing))
-            p = p.intersection(disk(a.position, 1500, True)).difference(disk(a.position, 5))
-            new_status = 'detected'
-        elif result == 'near':
-            p = p.intersection(disk(a.position, 5, True))
-            new_status = 'detected'
-        elif result == 'no_signal':
-            p = p.difference(disk(a.position, 1000))
-        elif result == 'no_target_in_range':
-            p = p.difference(disk(a.position, 20))
-        elif result == 'success':
-            p = p.intersection(disk(a.position, 20, True))
-            new_status = 'cleared'
-        else:
-            raise ValueError(f'Unknown feedback: {result}')
-        if p.is_empty:
-            if new_status != 'unresolved':
-                raise GeometryError('Detected source has empty conservative region; do not certify absence')
-            new_status = 'absent_certified'
-        self.region, self.status = p, new_status
-        if a.kind == 'measure':
-            self.measured.add(point_key(a.position))
-        # Deterministic repeats must not multiply observation likelihoods.
-        if obs not in self.history:
-            self.history.append(obs)
-        self.revision += 1
-        self._summary = None
 
 
 @dataclass
@@ -152,11 +116,6 @@ class Belief:
     deadline: float = math.inf
     virtual_limit: float = 360000.
 
-    def clone(self):
-        b = copy.copy(self)
-        b.channels = {c: p.clone() for c, p in self.channels.items()}
-        b.applied = self.applied.copy()
-        return b
 
     @property
     def cleared(self):

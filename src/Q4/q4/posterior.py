@@ -95,9 +95,6 @@ class Posterior:
     def mean(self):
         return self.weights @ self.xy
 
-    @property
-    def directional_probability(self):
-        return float(self.atoms[:, 1:].sum())
 
     def reception(self, point):
         delta = np.asarray(point)-self.xy

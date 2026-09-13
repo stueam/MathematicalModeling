@@ -44,13 +44,14 @@ def new_output(path=None):
 
 
 def code_manifest():
-    files = list((ROOT/'bayes_tsp').glob('*.py'))+[ROOT/'run.py', ROOT/'analyze.py', ROOT/'audit_routes.py',
-                                               ROOT/'practice_windows.py']
-    files += [SHARED_DIR/f'{name}.py' for name in ('core', 'policy', 'simulator', 'client', 'movement', 'sampling')]
+    files = sorted(ROOT.glob('*.py')) + sorted((ROOT/'bayes_tsp').glob('*.py'))
+    files += sorted(SHARED_DIR.glob('*.py'))
     return {str(p.relative_to(ROOT.parent)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
 
 
 def make_policy(name, config):
+    if name not in POLICIES:
+        raise ValueError(f'Unknown Q3 policy: {name}')
     if name == 'bayes-fast':
         return CachedRefinementPolicy(RefinementConfig(**{**asdict(config), 'stable_routing': False}))
     if name == 'bayes-sector-fast':

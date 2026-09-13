@@ -7,6 +7,9 @@ import argparse
 import base64
 from dataclasses import asdict
 import json
+import os
+from pathlib import Path
+import shutil
 import re
 import subprocess
 import time
@@ -19,6 +22,8 @@ from run import code_manifest, dump, make_belief, make_policy, new_output
 
 
 POWERSHELL = '/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
+if os.name == 'nt':
+    POWERSHELL = shutil.which('powershell.exe') or str(Path(os.environ['SystemRoot'])/'System32/WindowsPowerShell/v1.0/powershell.exe')
 UI = r'''
 $ErrorActionPreference='Stop'
 $ProgressPreference='SilentlyContinue'

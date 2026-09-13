@@ -1,6 +1,8 @@
 # Ultra：方法114的S21覆盖优化版
 
-本目录由原 `Q4/Ultra` 整体迁移至 `src/Q4`，可独立运行；算法、参数、21点坐标及覆盖证书保持不变。默认策略为 `ultra_s21_route_probes_v1`，本地 `run.py` 和官方演练入口均使用21点；[原方法114](../../Q4/方法114/README.md)保留22点，不受本目录影响。
+本目录从 `Q4/Ultra` 整理而来，可独立运行；最终策略、参数、21点坐标及覆盖证书保持不变。默认策略为 `ultra_s21_route_probes_v1`，本地 `run.py` 和官方演练入口均使用21点；[原方法114](../../Q4/方法114/README.md)保留22点。
+
+本地入口保留 `baseline`、`bayes`、`joint`、`mobile`、`trim`、`adaptive`、`probes`，演练入口保留其中的 `mobile`、`trim`、`adaptive`、`probes`。其余旧实验分支及 MC 参数已移出本交付目录，历史版本可在原算法目录或 Git 历史中查阅。统一安装与验证见 [src 说明](../README.md)。
 
 S21是原点＋内圈8点＋外圈12点。后验积分、候选动作、联合路线与反馈停止规则沿用方法114。30组配对中S21获胜21组，平均总任务时间5861.51→5688.76 s，路程21.030→20.362 km，两版均30/30全清。随机16组单独改善2.12%，配对检验p=0.102，不宣称已证实稳定优势。详见 [实验报告](evidence/comparison_report.md) 和 [逐场数据](evidence/paired.csv)。
 
@@ -51,7 +53,7 @@ python -X utf8 start_formal.py --connect --case XXXX-XXXX-XXXX-XXXX
 
 源码验证命令：`python -m pip install pytest`，然后 `python -m pytest -q`。`results/` 默认不纳入Git，账号和演练日志不随代码发布。
 
-重新运行30组本地配对：`python -X utf8 benchmark_layouts.py`。输出至 `results/paired/`，会覆盖该目录同名实验输出。evidence内为本次已完成实验的冻结摘要；原实验报告所述本地目录结构仅用于记录原验证过程，仓库中的复现入口以上述命令为准。
+重新运行30组本地配对：`python -X utf8 benchmark_layouts.py --workers 2`。每次输出至新的 `results/paired-时间戳/`，也可指定 `--output 新目录`。`run.py` 同样支持 `--output`，任务未完成会返回非零退出码并保留日志。evidence内为原实验的冻结摘要；当前清理核验另见 [清理验证记录](../CLEANUP_REPORT.md)。
 
 S21坐标与证书来自 https://github.com/3371879035-lang/shxjm-B-RL ，提交 b4af97c4cc6fbec14fcb4dfb76acd56d4753f87c。仅替换方法114初始测站，保留Bayes、调度和实际反馈停止规则。覆盖初始化使用整数证书和原顺序多边形合并双重检查，不忽略小面积残片。
 

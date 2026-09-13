@@ -152,11 +152,6 @@ class Belief:
     deadline: float = math.inf
     virtual_limit: float = 360000.
 
-    def clone(self):
-        b = copy.copy(self)
-        b.channels = {c: p.clone() for c, p in self.channels.items()}
-        b.applied = self.applied.copy()
-        return b
 
     @property
     def cleared(self):
