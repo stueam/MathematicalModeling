@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "maps": 100000,
+  "sources": 1299298,
+  "by_N": [
+    {
+      "N": 10,
+      "maps": 14450,
+      "mean_length_m": 7831.678996914629,
+      "mean_movement_s_per_source": 156.6335799382926
+    },
+    {
+      "N": 11,
+      "maps": 14173,
+      "mean_length_m": 8197.380664063625,
+      "mean_movement_s_per_source": 149.0432848011568
+    },
+    {
+      "N": 12,
+      "maps": 14432,
+      "mean_length_m": 8563.642972410235,
+      "mean_movement_s_per_source": 142.72738287350393
+    },
+    {
+      "N": 13,
+      "maps": 14263,
+      "mean_length_m": 8903.515690461547,
+      "mean_movement_s_per_source": 136.9771644686392
+    },
+    {
+      "N": 14,
+      "maps": 14260,
+      "mean_length_m": 9218.119583008256,
+      "mean_movement_s_per_source": 131.68742261440366
+    },
+    {
+      "N": 15,
+      "maps": 14100,
+      "mean_length_m": 9534.950734223572,
+      "mean_movement_s_per_source": 127.13267645631429
+    },
+    {
+      "N": 16,
+      "maps": 14322,
+      "mean_length_m": 9848.257016174804,
+      "mean_movement_s_per_source": 123.10321270218505
+    }
+  ],
+  "direct_case_equal_s_per_source": 138.22810188877855,
+  "direct_pooled_s_per_source": 136.51533442212232,
+  "uniform_stratified_case_equal_and_pooled": [
+    138.18638912207078,
+    136.47812232364103
+  ],
+  "official152_case_equal_and_pooled": [
+    137.3257958193339,
+    135.64547168305
+  ],
+  "official152_pooled_plus_clear_s_per_source": 140.64547168305,
+  "all_ten_table_rows_match_archived_data": true,
+  "input_sha256": {
+    "Q3/results/oracle-tsp-mc-20260912-021030-302657/summary.json": "996cf8e63e6d70889b249071de2f12b987ee6262fa987e65813b48f958ed179e",
+    "Q3/results/oracle-tsp-mc-20260912-021030-302657/batch.json": "3d5fd6b97b3ee852321f97245d11168a49a104e1735eea4c38134378bea2fbea",
+    "Q3/results/oracle-tsp-mc-20260912-021030-302657/verification.json": "f09e18111c4eaa91443f6003984383a6e82e4605e48aaae2d8db3e2a553f1746",
+    "Q3/results/official-q3-counts-20260912-022136-803657/summary.json": "869f8912cd99c7c506bfa1a1dac71db00aff2c9ed091ed76734351b176e3b0cb",
+    "Q3/results/oracle-chain-20260912-022300-858289/summary.json": "387ac963968bd9b15c7b505e0fbcdcd15b483ac24bdec2ee2bef7419e252395e"
+  },
+  "limits": "Independent random maps; movement only; 20m disk optimum not solved; no paired strategy comparison.",
+  "archived_routes": {
+    "file": "worlds_and_exact_routes.npz",
+    "sha256": "b6d60481e78d3d8d0210c3857e7f7faf352045e6ad7d045e8f750572ffd1aca0",
+    "checked_routes": 100000,
+    "maximum_length_error_m": 5.4569682106375694e-12,
+    "all_routes_visit_each_source_once": true,
+    "all_positions_inside_disk": true,
+    "case_equal_mc_standard_error": 0.05746113318696621,
+    "case_equal_20m_visit_geometric_bounds": [
+      130.54342300882266,
+      138.22810188877855
+    ],
+    "note": "Routes and statistics rechecked; optimality independently checked in archived verification.json."
+  }
+}
